@@ -54,7 +54,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 /* left top: photo, with personal info + all-time record beside it */
 .ptop{flex:0 0 auto;display:flex;gap:clamp(12px,1.8vw,26px);
   align-items:stretch;min-width:0}
-.pphoto{flex:0 0 clamp(140px,15.5vw,232px);height:auto;aspect-ratio:7/9;
+.pphoto{flex:0 0 clamp(128px,14.2vw,216px);height:auto;aspect-ratio:7/9;
   position:relative;border-radius:var(--r);
   overflow:hidden;background:linear-gradient(160deg,var(--panel),var(--panel2));
   border:1px solid var(--line)}
@@ -72,12 +72,13 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 /* full-width stat boxes below the photo block */
 .pbox{flex:0 0 auto;background:linear-gradient(160deg,var(--panel),var(--panel2));
   border:1px solid var(--line);border-radius:16px;
-  padding:clamp(10px,1.5vh,18px) clamp(12px,1.3vw,20px)}
+  padding:clamp(8px,1.15vh,15px) clamp(11px,1.2vw,18px)}
 .boxlegend{font-size:clamp(8.5px,.82vw,10.5px);letter-spacing:.2em;text-transform:uppercase;
   color:var(--dim2);font-weight:700;margin-bottom:clamp(5px,.85vh,10px)}
 .boxgrid{display:grid;gap:clamp(6px,1vw,16px)}
 .boxgrid.four{grid-template-columns:repeat(4,1fr)}
 .boxgrid.six{grid-template-columns:repeat(6,1fr)}
+.boxgrid.seven{grid-template-columns:repeat(7,1fr)}
 .cell{min-width:0}
 .cell b{display:block;font-size:clamp(13px,1.32vw,20px);font-weight:700;line-height:1;
   letter-spacing:-.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -393,7 +394,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .pphoto{flex:0 0 clamp(112px,32vw,170px)}
   .pinfo{justify-content:flex-start;gap:5px}
   .boxgrid.four{grid-template-columns:repeat(2,1fr);row-gap:11px}
-  .boxgrid.six{grid-template-columns:repeat(3,1fr);row-gap:11px}
+  .boxgrid.six,.boxgrid.seven{grid-template-columns:repeat(3,1fr);row-gap:11px}
   .cell b{font-size:clamp(15px,4.2vw,21px)}
 
   .pane{min-height:46vh}
@@ -430,7 +431,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 
 /* phones: the info column beside the photo is too narrow for a 4-up all-time row */
 @media(max-width:560px){
-  .boxgrid.six{grid-template-columns:repeat(2,1fr)}
+  .boxgrid.six,.boxgrid.seven{grid-template-columns:repeat(2,1fr)}
 }
 
 </style>
@@ -565,7 +566,8 @@ function playerCard(p) {
 
           <div class="pbox">
             <div class="boxlegend">2026 Scoring</div>
-            <div class="boxgrid six">
+            <div class="boxgrid seven">
+              <div class="cell"><b>${pts(sc.holes || 0)}</b><i>Holes</i></div>
               <div class="cell"><b>${pts(sc.shots || 0)}</b><i>Shots</i></div>
               <div class="cell${sc.eagle ? " hero" : ""}"><b>${esc(sc.eagle || 0)}</b><i>Eagles</i></div>
               <div class="cell"><b>${pts(sc.birdie || 0)}</b><i>Birdies</i></div>
