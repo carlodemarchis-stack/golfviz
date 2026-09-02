@@ -345,9 +345,21 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .pane{min-height:46vh}
   .evlist,.lb,.rows{overflow-y:auto}
   .evlist{max-width:none}
-  .ev,.evhead{grid-template-columns:48px minmax(0,1fr) 34px 42px 46px;gap:5px}
-  .ev{font-size:10.5px}
-  .ev .r,.evhead .r,.ev .tt,.evhead .tt{display:none}
+  /* two lines per event so nothing has to be dropped on a phone */
+  .evhead{display:none}
+  .ev{grid-template-columns:52px minmax(0,1fr) auto auto auto auto;
+    grid-template-areas:"d n n n n p" "r r tt tp pt mo";
+    row-gap:2px;column-gap:7px;padding:6px 8px;font-size:11px;line-height:1.2}
+  .ev .d{grid-area:d}
+  .ev .n{grid-area:n}
+  .ev .p{grid-area:p}
+  .ev .r{grid-area:r;text-align:left}
+  .ev .tt{grid-area:tt}
+  .ev .tp{grid-area:tp}
+  .ev .pt{grid-area:pt}
+  .ev .mo{grid-area:mo}
+  .ev .pt::after{content:" pts";font-size:.82em;letter-spacing:.04em}
+  .ev .pt:empty::after,.ev .pt[data-none]::after{content:""}
   .ev,.lbrow{flex:0 0 auto;max-height:none;padding:5px 7px;line-height:1.25}
   .lbrow,.lbhead{grid-template-columns:34px minmax(0,1fr) 78px 42px;gap:5px}
   .rrow{flex:0 0 auto}
@@ -534,7 +546,7 @@ function evRow(e, p) {
     <span class="r">${(e.rounds || []).filter(r => r && r !== "-").join(" ") || "—"}</span>
     <span class="tt">${esc(e.total || "—")}</span>
     <span class="tp">${esc(e.toPar || "—")}</span>
-    <span class="pt">${e.pts ? pts(e.pts) : "—"}</span>
+    <span class="pt"${e.pts ? "" : " data-none"}>${e.pts ? pts(e.pts) : "—"}</span>
     <span class="mo">${e.money && e.money !== "-" ? abbrMoney(e.money) : "—"}</span></div>`;
 }
 
