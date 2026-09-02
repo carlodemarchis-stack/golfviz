@@ -57,10 +57,13 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   position:relative;border-radius:var(--r);
   overflow:hidden;background:linear-gradient(160deg,var(--panel),var(--panel2));
   border:1px solid var(--line)}
-.pphoto::after{content:"";position:absolute;inset:0;
+.pphoto::after{content:"";position:absolute;inset:0;z-index:0;
   background:radial-gradient(120% 80% at 50% 108%,rgba(242,149,46,.22),transparent 62%)}
+.phrank{position:absolute;left:0;right:0;top:4%;z-index:1;text-align:center;
+  font-size:clamp(96px,12.5vw,190px);font-weight:700;line-height:.78;letter-spacing:-.05em;
+  color:rgba(186,199,226,.17);pointer-events:none}
 .pphoto img{position:absolute;left:50%;bottom:0;transform:translateX(-50%);
-  height:100%;width:auto;object-fit:contain;object-position:bottom;z-index:1;
+  height:88%;width:auto;object-fit:contain;object-position:bottom;z-index:2;
   filter:drop-shadow(0 14px 32px rgba(0,0,0,.55))}
 .pinfo{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;
   justify-content:center;gap:clamp(5px,1vh,12px)}
@@ -432,7 +435,7 @@ function playerCard(p) {
         <div class="pcol">
 
           <div class="ptop">
-            <div class="pphoto"><img src="img/full/${p.id}.webp" alt="${esc(p.name)}" loading="lazy"></div>
+            <div class="pphoto"><div class="phrank">${p.rank}</div><img src="img/full/${p.id}.webp" alt="${esc(p.name)}" loading="lazy"></div>
             <div class="pinfo">
               <div class="pname" style="font-size:clamp(20px,${nameSize / 13}vw,${nameSize}px)">${esc(p.name)}</div>
               <div class="crumb"><span>${flag(p.flag)}${esc(p.country)}</span></div>
@@ -470,10 +473,12 @@ function playerCard(p) {
 
           <div class="pbox">
             <div class="boxlegend">All-time on TOUR</div>
-            <div class="boxgrid four">
-              <div class="cell"><b>${esc(c.events || "—")}</b><i>Starts</i></div>
-              <div class="cell"><b>${esc(c.wins || p.bio.careerWins || "—")}</b><i>Wins</i></div>
-              <div class="cell"><b>${esc(c.top10 || "—")}</b><i>Top 10s</i></div>
+            <div class="boxgrid six">
+              <div class="cell"><b>${esc(c.events || "—")}</b><i>Events</i></div>
+              <div class="cell"><b>${esc(c.cuts || "—")}</b><i>Cuts made</i></div>
+              <div class="cell"><b>${esc(c.wins ?? p.bio.careerWins ?? "—")}</b><i>Wins</i></div>
+              <div class="cell"><b>${esc(c.top10 || "—")}</b><i>Top 10</i></div>
+              <div class="cell"><b>${esc(c.top25 || "—")}</b><i>Top 25</i></div>
               <div class="cell"><b>${abbrMoney(c.money)}</b><i>Earnings</i></div>
             </div>
           </div>
