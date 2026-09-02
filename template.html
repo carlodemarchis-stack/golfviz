@@ -48,7 +48,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .pl-inner{flex-direction:column;gap:0}
 .pbody{flex:1 1 auto;min-height:0;display:flex;gap:clamp(16px,2.6vw,44px)}
 .pcol{flex:0 0 45%;min-width:0;display:flex;flex-direction:column;
-  gap:clamp(10px,1.9vh,24px);justify-content:center}
+  gap:clamp(9px,1.5vh,18px);justify-content:flex-start}
 
 /* left top: photo, with personal info + all-time record beside it */
 .ptop{flex:0 0 auto;display:flex;gap:clamp(12px,1.8vw,26px);
@@ -63,20 +63,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   height:100%;width:auto;object-fit:contain;object-position:bottom;z-index:1;
   filter:drop-shadow(0 14px 32px rgba(0,0,0,.55))}
 .pinfo{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;
-  justify-content:center;gap:clamp(5px,.9vh,11px)}
+  justify-content:center;gap:clamp(5px,1vh,12px)}
 .pinfo > *{flex:0 0 auto}
-.alltime{margin-top:clamp(4px,1vh,12px);padding-top:clamp(7px,1.2vh,14px);
-  border-top:1px solid var(--line)}
-.atlegend{font-size:clamp(8.5px,.82vw,10.5px);letter-spacing:.2em;text-transform:uppercase;
-  color:var(--dim2);font-weight:700;margin-bottom:clamp(5px,.9vh,10px)}
-.atgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(6px,.9vw,16px)}
-.atgrid div{min-width:0}
-.atgrid b{display:block;font-size:clamp(13px,1.35vw,20px);font-weight:700;line-height:1;
-  letter-spacing:-.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.atgrid i{display:block;font-style:normal;font-size:clamp(8.5px,.82vw,10.5px);
-  letter-spacing:.12em;text-transform:uppercase;color:var(--dim2);margin-top:4px;
-  white-space:nowrap}
-
 /* full-width stat boxes below the photo block */
 .pbox{flex:0 0 auto;background:linear-gradient(160deg,var(--panel),var(--panel2));
   border:1px solid var(--line);border-radius:16px;
@@ -335,8 +323,6 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .ptop{flex:0 0 auto}
   .pphoto{flex:0 0 clamp(112px,32vw,170px)}
   .pinfo{justify-content:flex-start;gap:5px}
-  .atgrid{grid-template-columns:repeat(4,1fr);gap:6px}
-  .atgrid b{font-size:clamp(13px,3.6vw,18px)}
   .boxgrid.four{grid-template-columns:repeat(2,1fr);row-gap:11px}
   .boxgrid.six{grid-template-columns:repeat(3,1fr);row-gap:11px}
   .cell b{font-size:clamp(15px,4.2vw,21px)}
@@ -361,7 +347,6 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 
 /* phones: the info column beside the photo is too narrow for a 4-up all-time row */
 @media(max-width:560px){
-  .atgrid{grid-template-columns:repeat(2,1fr);gap:8px 10px}
   .boxgrid.six{grid-template-columns:repeat(2,1fr)}
 }
 
@@ -458,20 +443,11 @@ function playerCard(p) {
               </div>
               ${p.bio.college ? `<div class="psub"><span>College <b>${esc(p.bio.college)}</b></span></div>` : ""}
               ${p.bio.birthplace ? `<div class="psub"><span>Born <b>${esc(p.bio.birthplace)}</b></span></div>` : ""}
-              <div class="alltime">
-                <div class="atlegend">All-time on TOUR</div>
-                <div class="atgrid">
-                  <div><b>${esc(c.events || "—")}</b><i>Starts</i></div>
-                  <div><b>${esc(c.wins || p.bio.careerWins || "—")}</b><i>Wins</i></div>
-                  <div><b>${esc(c.top10 || "—")}</b><i>Top 10s</i></div>
-                  <div><b>${abbrMoney(c.money)}</b><i>Earnings</i></div>
-                </div>
-              </div>
             </div>
           </div>
 
           <div class="pbox">
-            <div class="boxlegend">Rankings</div>
+            <div class="boxlegend">2026 Rankings</div>
             <div class="boxgrid four">
               <div class="cell hero"><b>${p.rank}</b><i>FedExCup</i></div>
               <div class="cell"><b>${pts(p.points)}</b><i>Points</i></div>
@@ -489,6 +465,16 @@ function playerCard(p) {
               <div class="cell"><b>${esc(p.season.top10 || 0)}</b><i>Top 10</i></div>
               <div class="cell"><b>${esc(p.season.top25 || 0)}</b><i>Top 25</i></div>
               <div class="cell"><b>${abbrMoney(p.season.money)}</b><i>Earnings</i></div>
+            </div>
+          </div>
+
+          <div class="pbox">
+            <div class="boxlegend">All-time on TOUR</div>
+            <div class="boxgrid four">
+              <div class="cell"><b>${esc(c.events || "—")}</b><i>Starts</i></div>
+              <div class="cell"><b>${esc(c.wins || p.bio.careerWins || "—")}</b><i>Wins</i></div>
+              <div class="cell"><b>${esc(c.top10 || "—")}</b><i>Top 10s</i></div>
+              <div class="cell"><b>${abbrMoney(c.money)}</b><i>Earnings</i></div>
             </div>
           </div>
         </div>
