@@ -320,6 +320,36 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .mrounds span i{display:block;font-style:normal;font-size:9px;color:var(--dim2);
   letter-spacing:.12em}
 
+/* ---- hole-by-hole scorecard ---- */
+.scwrap{margin-top:6px;overflow-x:auto;padding-bottom:4px}
+.sc{margin-top:14px;min-width:600px}
+.scr{display:flex;align-items:baseline;gap:9px;margin-bottom:6px;
+  font-size:12px;color:var(--dim)}
+.scr b{color:var(--ink);font-size:13px;font-weight:700}
+.scr em{font-style:normal;color:var(--acc);font-weight:700}
+.scg{display:grid;grid-template-columns:34px repeat(9,1fr) 38px repeat(9,1fr) 38px 42px;
+  gap:2px;align-items:center}
+.scg > div{text-align:center;font-size:11px;padding:3px 0;font-variant-numeric:tabular-nums}
+.scg .lab{text-align:left;font-size:9px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--dim2)}
+.scg .hn{color:var(--dim2);font-size:9.5px}
+.scg .pr{color:var(--dim);font-size:10px}
+.scg .sub{font-weight:700;color:var(--dim);background:rgba(255,255,255,.04);border-radius:5px}
+.scg .tot{font-weight:700;color:var(--ink);background:rgba(255,255,255,.07);border-radius:5px}
+.sq{display:inline-grid;place-items:center;width:21px;height:21px;font-weight:700;
+  font-size:11.5px;line-height:1}
+.sq.eagle{background:var(--acc);color:#160c02;border-radius:50%;
+  box-shadow:0 0 0 2px rgba(242,149,46,.35)}
+.sq.birdie{border:1.5px solid var(--acc);color:var(--acc);border-radius:50%}
+.sq.par{color:var(--dim)}
+.sq.bogey{border:1.5px solid rgba(150,166,205,.4);color:var(--ink);border-radius:4px}
+.sq.dbl{background:rgba(232,83,78,.22);border:1.5px solid rgba(232,83,78,.5);
+  color:#ffb3b0;border-radius:4px}
+.sclegend{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px;font-size:10.5px;
+  color:var(--dim2);align-items:center}
+.sclegend span{display:flex;gap:5px;align-items:center}
+@media(max-width:600px){.sc{min-width:560px}}
+
 /* -------------------------------------------------------- portrait/mobile */
 @media(max-aspect-ratio:1/1){
   /* the top bar stacks: context, pills, credit */
@@ -793,12 +823,61 @@ function openEvent(pid, tid) {
       <div><div class="k">FedExCup</div><div class="v">${e.pts ? pts(e.pts) : "0"}</div></div>
       <div><div class="k">Earnings</div><div class="v">${abbrMoney(e.money)}</div></div>
     </div>
-    ${rounds.length ? `<div class="mrounds">${rounds.map((r, i) =>
+    ${rounds.length && !(e.card || []).length ? `<div class="mrounds">${rounds.map((r, i) =>
       `<span><i>R${i + 1}</i>${esc(r)}</span>`).join("")}</div>` : ""}
+    ${scorecard(e.card)}
     ${t ? `<h5>Champion</h5><p>${esc(t.champion.name)} · ${esc(t.champion.score || "")}
       ${t.champion.earnings ? " · " + esc(t.champion.earnings) : ""}</p>` : ""}`;
   document.getElementById("emodal").classList.add("on");
 }
+const SCLASS = d => d <= -2 ? "eagle" : d === -1 ? "birdie" : d === 0 ? "par"
+  : d === 1 ? "bogey" : "dbl";
+
+function scorecard(card) {
+  if (!card || !card.length) return "";
+  const sum = a => a.reduce((x, y) => x + y, 0);
+  const rounds = card.map(r => {
+    const par = r.p.split("").map(Number);
+    const sc = r.s;
+    const out = sum(sc.slice(0, 9)), inn = sum(sc.slice(9)), tot = out + inn;
+    const pOut = sum(par.slice(0, 9)), pIn = sum(par.slice(9));
+    const cells = (from, to, cls, fn) => sc.slice(from, to)
+      .map((v, i) => fn(v, par[from + i])).join("");
+    const hole = (v, p) => v ? `<div><span class="sq ${SCLASS(v - p)}">${v}</span></div>`
+                             : `<div><span class="sq par">–</span></div>`;
+    return `<div class="sc">
+      <div class="scr"><b>Round ${r.n}</b>
+        ${r.c ? `<span>${esc(r.c)}</span>` : ""}
+        <span>${esc(r.t)} <em>(${esc(r.tp)})</em></span></div>
+      <div class="scg">
+        <div class="lab">Hole</div>
+        ${par.slice(0, 9).map((_, i) => `<div class="hn">${i + 1}</div>`).join("")}
+        <div class="hn">Out</div>
+        ${par.slice(9).map((_, i) => `<div class="hn">${i + 10}</div>`).join("")}
+        <div class="hn">In</div><div class="hn">Tot</div>
+
+        <div class="lab">Par</div>
+        ${par.slice(0, 9).map(p => `<div class="pr">${p}</div>`).join("")}
+        <div class="pr">${pOut}</div>
+        ${par.slice(9).map(p => `<div class="pr">${p}</div>`).join("")}
+        <div class="pr">${pIn}</div><div class="pr">${pOut + pIn}</div>
+
+        <div class="lab">Score</div>
+        ${cells(0, 9, "", hole)}
+        <div class="sub">${out}</div>
+        ${cells(9, 18, "", hole)}
+        <div class="sub">${inn}</div><div class="tot">${tot}</div>
+      </div></div>`;
+  }).join("");
+  return `<h5>Scorecard</h5><div class="scwrap">${rounds}</div>
+    <div class="sclegend">
+      <span><i class="sq eagle" style="font-style:normal">2</i> Eagle or better</span>
+      <span><i class="sq birdie" style="font-style:normal">3</i> Birdie</span>
+      <span><i class="sq bogey" style="font-style:normal">5</i> Bogey</span>
+      <span><i class="sq dbl" style="font-style:normal">6</i> Double or worse</span>
+    </div>`;
+}
+
 function closeModal(id) { document.getElementById(id).classList.remove("on"); }
 document.querySelectorAll(".modal").forEach(m =>
   m.addEventListener("click", e => { if (e.target === m) m.classList.remove("on"); }));
