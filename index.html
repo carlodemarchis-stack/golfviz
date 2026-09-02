@@ -435,7 +435,7 @@ function playerCard(p) {
         <div class="pcol">
 
           <div class="ptop">
-            <div class="pphoto"><div class="phrank">${p.rank}</div><img src="img/full/${p.id}.webp" alt="${esc(p.name)}" loading="lazy"></div>
+            <div class="pphoto"><div class="phrank">${String(p.rank).padStart(2, "0")}</div><img src="img/full/${p.id}.webp" alt="${esc(p.name)}" loading="lazy"></div>
             <div class="pinfo">
               <div class="pname" style="font-size:clamp(20px,${nameSize / 13}vw,${nameSize}px)">${esc(p.name)}</div>
               <div class="crumb"><span>${flag(p.flag)}${esc(p.country)}</span></div>
