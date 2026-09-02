@@ -1,0 +1,5 @@
+scratch/
+.DS_Store
+data/players_raw.json
+data/points_list.json
+data/leaderboards_raw.json

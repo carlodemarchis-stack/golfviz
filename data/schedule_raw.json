@@ -1,0 +1,7297 @@
+[
+ {
+  "tournamentId": "R2026006",
+  "name": "Sony Open in Hawaii",
+  "year": "2026",
+  "month": "January",
+  "displayDate": "Jan 15 - 18",
+  "dateAccessibilityText": "January 15th through January 18th",
+  "display": "SHOW",
+  "status": "COMPLETED",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "Chris Gotterup",
+    "playerId": "59095"
+   }
+  ],
+  "championEarnings": "$1,638,000",
+  "courseData": {
+   "name": "Waialae Country Club",
+   "city": "Honolulu",
+   "stateCode": "HI",
+   "country": "United States of America",
+   "countryCode": "USA"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r006",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r006/006/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": true,
+   "ticketsUrl": "https://www.sonyopeninhawaii.com/admission-guidelines",
+   "ticketMasterAttractionId": null,
+   "ios": {
+    "ticketMasterKey": null
+   },
+   "android": {
+    "ticketMasterScheme": null,
+    "ticketMasterKey": null
+   }
+  },
+  "purse": "$9,100,000",
+  "standings": {
+   "heading": "FEDEXCUP",
+   "value": "500 pts"
+  },
+  "networks": [
+   {
+    "id": "243",
+    "name": "HBO Max",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.max.com/",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/243",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/243",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "244",
+    "name": "Discovery+",
+    "simulcast": false,
+    "priorityNum": 4,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://play.max.com/sport-event/golf-pga-tour",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/244",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/244",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "132",
+    "name": "PGA TOUR Radio",
+    "simulcast": false,
+    "priorityNum": 5,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.pgatour.com/liveaudio.html",
+     "appleAppStore": "",
+     "ios": "https://www.pgatour.com/liveaudio.html",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "https://www.pgatour.com/liveaudio.html",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/132",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/132",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "208",
+    "name": "Eurosport 2",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/208",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/208",
+     "assetType": "image"
+    }
+   }
+  ],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": "https://www.sonyopeninhawaii.com"
+ },
+ {
+  "tournamentId": "R2026002",
+  "name": "The American Express",
+  "year": "2026",
+  "month": "January",
+  "displayDate": "Jan 22 - 25",
+  "dateAccessibilityText": "January 22nd through January 25th",
+  "display": "SHOW",
+  "status": "COMPLETED",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "Scottie Scheffler",
+    "playerId": "46046"
+   }
+  ],
+  "championEarnings": "$1,656,000",
+  "courseData": {
+   "name": "Pete Dye Stadium Course",
+   "city": "La Quinta",
+   "stateCode": "CA",
+   "country": "United States of America",
+   "countryCode": "USA"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r002",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r002/704/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": true,
+   "ticketsUrl": "https://www.theamexgolf.com/tickets/",
+   "ticketMasterAttractionId": null,
+   "ios": {
+    "ticketMasterKey": null
+   },
+   "android": {
+    "ticketMasterScheme": null,
+    "ticketMasterKey": null
+   }
+  },
+  "purse": "$9,200,000",
+  "standings": {
+   "heading": "FEDEXCUP",
+   "value": "500 pts"
+  },
+  "networks": [
+   {
+    "id": "243",
+    "name": "HBO Max",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.max.com/",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/243",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/243",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "244",
+    "name": "Discovery+",
+    "simulcast": false,
+    "priorityNum": 4,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://play.max.com/sport-event/golf-pga-tour",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/244",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/244",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "132",
+    "name": "PGA TOUR Radio",
+    "simulcast": false,
+    "priorityNum": 5,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.pgatour.com/liveaudio.html",
+     "appleAppStore": "",
+     "ios": "https://www.pgatour.com/liveaudio.html",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "https://www.pgatour.com/liveaudio.html",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/132",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/132",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "208",
+    "name": "Eurosport 2",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/208",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/208",
+     "assetType": "image"
+    }
+   }
+  ],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": "https://www.theamexgolf.com"
+ },
+ {
+  "tournamentId": "R2026004",
+  "name": "Farmers Insurance Open",
+  "year": "2026",
+  "month": "January",
+  "displayDate": "Jan 29 - Feb 1",
+  "dateAccessibilityText": "January 29th through February 1st",
+  "display": "SHOW",
+  "status": "COMPLETED",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "Justin Rose",
+    "playerId": "22405"
+   }
+  ],
+  "championEarnings": "$1,728,000",
+  "courseData": {
+   "name": "Torrey Pines Golf Course (South Course)",
+   "city": "San Diego",
+   "stateCode": "CA",
+   "country": "United States of America",
+   "countryCode": "USA"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r004",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r004/004/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": true,
+   "ticketsUrl": "https://www.farmersinsuranceopen.com/Tickets/",
+   "ticketMasterAttractionId": "2814680",
+   "ios": {
+    "ticketMasterKey": "vJgXVkXyA36wMIR4syi08mgNNjxqZLdk"
+   },
+   "android": {
+    "ticketMasterScheme": "psdkschemefarmersinsuranceopen",
+    "ticketMasterKey": "VCXXn1iW6VltoL7JZmCwRGQNZRMAkAIr"
+   }
+  },
+  "purse": "$9,600,000",
+  "standings": {
+   "heading": "FEDEXCUP",
+   "value": "500 pts"
+  },
+  "networks": [
+   {
+    "id": "243",
+    "name": "HBO Max",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.max.com/",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/243",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/243",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "244",
+    "name": "Discovery+",
+    "simulcast": false,
+    "priorityNum": 4,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://play.max.com/sport-event/golf-pga-tour",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/244",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/244",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "132",
+    "name": "PGA TOUR Radio",
+    "simulcast": false,
+    "priorityNum": 5,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.pgatour.com/liveaudio.html",
+     "appleAppStore": "",
+     "ios": "https://www.pgatour.com/liveaudio.html",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "https://www.pgatour.com/liveaudio.html",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/132",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/132",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "208",
+    "name": "Eurosport 2",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/208",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/208",
+     "assetType": "image"
+    }
+   }
+  ],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": "https://www.farmersinsuranceopen.com"
+ },
+ {
+  "tournamentId": "R2026003",
+  "name": "WM Phoenix Open",
+  "year": "2026",
+  "month": "February",
+  "displayDate": "Feb 5 - 8",
+  "dateAccessibilityText": "February 5th through February 8th",
+  "display": "SHOW",
+  "status": "COMPLETED",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "Chris Gotterup",
+    "playerId": "59095"
+   }
+  ],
+  "championEarnings": "$1,728,000",
+  "courseData": {
+   "name": "TPC Scottsdale (Stadium Course)",
+   "city": "Scottsdale",
+   "stateCode": "AZ",
+   "country": "United States of America",
+   "countryCode": "USA"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r003",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r003/510/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": true,
+   "ticketsUrl": "https://wmphoenixopen.com/tickets/",
+   "ticketMasterAttractionId": null,
+   "ios": {
+    "ticketMasterKey": null
+   },
+   "android": {
+    "ticketMasterScheme": null,
+    "ticketMasterKey": null
+   }
+  },
+  "purse": "$9,600,000",
+  "standings": {
+   "heading": "FEDEXCUP",
+   "value": "500 pts"
+  },
+  "networks": [
+   {
+    "id": "243",
+    "name": "HBO Max",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.max.com/",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/243",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/243",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "244",
+    "name": "Discovery+",
+    "simulcast": false,
+    "priorityNum": 4,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://play.max.com/sport-event/golf-pga-tour",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/244",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/244",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "132",
+    "name": "PGA TOUR Radio",
+    "simulcast": false,
+    "priorityNum": 5,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.pgatour.com/liveaudio.html",
+     "appleAppStore": "",
+     "ios": "https://www.pgatour.com/liveaudio.html",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "https://www.pgatour.com/liveaudio.html",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/132",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/132",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "208",
+    "name": "Eurosport 2",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/208",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/208",
+     "assetType": "image"
+    }
+   }
+  ],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": "https://wmphoenixopen.com"
+ },
+ {
+  "tournamentId": "R2026005",
+  "name": "AT&T Pebble Beach Pro-Am",
+  "year": "2026",
+  "month": "February",
+  "displayDate": "Feb 12 - 15",
+  "dateAccessibilityText": "February 12th through February 15th",
+  "display": "SHOW",
+  "status": "COMPLETED",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "Collin Morikawa",
+    "playerId": "50525"
+   }
+  ],
+  "championEarnings": "$3,600,000",
+  "courseData": {
+   "name": "Pebble Beach Golf Links",
+   "city": "Pebble Beach",
+   "stateCode": "CA",
+   "country": "United States of America",
+   "countryCode": "USA"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r005",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r005/005/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": true,
+   "ticketsUrl": "https://www.attpbgolf.com/tickets/",
+   "ticketMasterAttractionId": null,
+   "ios": {
+    "ticketMasterKey": "rgNrNjrAtvcTq1GL2zD1gtG85uaPBCmY"
+   },
+   "android": {
+    "ticketMasterScheme": "psdkschemeattpbgolf",
+    "ticketMasterKey": "8Dipppegb8ZwEqSrV8ZA0JIaWkEOJpAP"
+   }
+  },
+  "purse": "$20,000,000",
+  "standings": {
+   "heading": "FEDEXCUP",
+   "value": "700 pts"
+  },
+  "tournamentCategoryInfo": {
+   "type": "SIGNATURE",
+   "label": "Signature Event",
+   "logoLight": {
+    "imageOrg": "pgatour-prod",
+    "imagePath": "/pgatour/sponsors/tour-cup-logos/SwingingGolfer_Red-%283%29"
+   },
+   "logoDark": {
+    "imageOrg": "pgatour-prod",
+    "imagePath": "/pgatour/sponsors/tour-cup-logos/SwingingGolfer_Red-%283%29"
+   }
+  },
+  "networks": [
+   {
+    "id": "243",
+    "name": "HBO Max",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.max.com/",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/243",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/243",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "244",
+    "name": "Discovery+",
+    "simulcast": false,
+    "priorityNum": 4,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://play.max.com/sport-event/golf-pga-tour",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/244",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/244",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "132",
+    "name": "PGA TOUR Radio",
+    "simulcast": false,
+    "priorityNum": 5,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.pgatour.com/liveaudio.html",
+     "appleAppStore": "",
+     "ios": "https://www.pgatour.com/liveaudio.html",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "https://www.pgatour.com/liveaudio.html",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/132",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/132",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "208",
+    "name": "Eurosport 2",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/208",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/208",
+     "assetType": "image"
+    }
+   }
+  ],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": "https://www.attpbgolf.com"
+ },
+ {
+  "tournamentId": "R2026007",
+  "name": "The Genesis Invitational",
+  "year": "2026",
+  "month": "February",
+  "displayDate": "Feb 19 - 22",
+  "dateAccessibilityText": "February 19th through February 22nd",
+  "display": "SHOW",
+  "status": "COMPLETED",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "Jacob Bridgeman",
+    "playerId": "60004"
+   }
+  ],
+  "championEarnings": "$4,000,000",
+  "courseData": {
+   "name": "The Riviera Country Club",
+   "city": "Pacific Palisades",
+   "stateCode": "CA",
+   "country": "United States of America",
+   "countryCode": "USA"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r007",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r007/500/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": true,
+   "ticketsUrl": "https://genesisinvitational.com/tickets/",
+   "ticketMasterAttractionId": "2414911",
+   "ios": {
+    "ticketMasterKey": "F2rrTKAxuoJTAOqQGAPShPj9N1DGS4gX"
+   },
+   "android": {
+    "ticketMasterScheme": "psdkschemegenesisinvitational",
+    "ticketMasterKey": "FL3ECg6qCi9sAmwgq9dSNDOA2ljulQkO"
+   }
+  },
+  "purse": "$20,000,000",
+  "standings": {
+   "heading": "FEDEXCUP",
+   "value": "700 pts"
+  },
+  "tournamentCategoryInfo": {
+   "type": "SIGNATURE",
+   "label": "Signature Event",
+   "logoLight": {
+    "imageOrg": "pgatour-prod",
+    "imagePath": "/pgatour/sponsors/tour-cup-logos/SwingingGolfer_Red-%283%29"
+   },
+   "logoDark": {
+    "imageOrg": "pgatour-prod",
+    "imagePath": "/pgatour/sponsors/tour-cup-logos/SwingingGolfer_Red-%283%29"
+   }
+  },
+  "networks": [
+   {
+    "id": "243",
+    "name": "HBO Max",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.max.com/",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/243",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/243",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "244",
+    "name": "Discovery+",
+    "simulcast": false,
+    "priorityNum": 4,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://play.max.com/sport-event/golf-pga-tour",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/244",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/244",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "132",
+    "name": "PGA TOUR Radio",
+    "simulcast": false,
+    "priorityNum": 5,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.pgatour.com/liveaudio.html",
+     "appleAppStore": "",
+     "ios": "https://www.pgatour.com/liveaudio.html",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "https://www.pgatour.com/liveaudio.html",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/132",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/132",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "208",
+    "name": "Eurosport 2",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/208",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/208",
+     "assetType": "image"
+    }
+   }
+  ],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": "https://genesisinvitational.com"
+ },
+ {
+  "tournamentId": "R2026010",
+  "name": "Cognizant Classic in The Palm Beaches",
+  "year": "2026",
+  "month": "February",
+  "displayDate": "Feb 26 - Mar 1",
+  "dateAccessibilityText": "February 26th through March 1st",
+  "display": "SHOW",
+  "status": "COMPLETED",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "Nico Echavarria",
+    "playerId": "51349"
+   }
+  ],
+  "championEarnings": "$1,728,000",
+  "courseData": {
+   "name": "PGA National - Champion Course",
+   "city": "Palm Beach Gardens",
+   "stateCode": "FL",
+   "country": "United States of America",
+   "countryCode": "USA"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r010",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r010/928/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": true,
+   "ticketsUrl": "https://thecognizantclassic.com/tickets",
+   "ticketMasterAttractionId": "807302",
+   "ios": {
+    "ticketMasterKey": "MGQlOH8XVK60n5CqufHijOtajGzlCDEL"
+   },
+   "android": {
+    "ticketMasterScheme": "psdkschemepgapbc",
+    "ticketMasterKey": "FCdkjkf0cISswaxpOPOJMV61Vj02p6af"
+   }
+  },
+  "purse": "$9,600,000",
+  "standings": {
+   "heading": "FEDEXCUP",
+   "value": "500 pts"
+  },
+  "networks": [
+   {
+    "id": "243",
+    "name": "HBO Max",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.max.com/",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/243",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/243",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "244",
+    "name": "Discovery+",
+    "simulcast": false,
+    "priorityNum": 4,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://play.max.com/sport-event/golf-pga-tour",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/244",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/244",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "132",
+    "name": "PGA TOUR Radio",
+    "simulcast": false,
+    "priorityNum": 5,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.pgatour.com/liveaudio.html",
+     "appleAppStore": "",
+     "ios": "https://www.pgatour.com/liveaudio.html",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "https://www.pgatour.com/liveaudio.html",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/132",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/132",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "208",
+    "name": "Eurosport 2",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/208",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/208",
+     "assetType": "image"
+    }
+   }
+  ],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": "https://thecognizantclassic.com/"
+ },
+ {
+  "tournamentId": "R2026009",
+  "name": "Arnold Palmer Invitational presented by Mastercard",
+  "year": "2026",
+  "month": "March",
+  "displayDate": "Mar 5 - 8",
+  "dateAccessibilityText": "March 5th through March 8th",
+  "display": "SHOW",
+  "status": "COMPLETED",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "Akshay Bhatia",
+    "playerId": "56630"
+   }
+  ],
+  "championEarnings": "$4,000,000",
+  "courseData": {
+   "name": "Arnold Palmer's Bay Hill Club & Lodge",
+   "city": "Orlando",
+   "stateCode": "FL",
+   "country": "United States of America",
+   "countryCode": "USA"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r009",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r009/009/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": true,
+   "ticketsUrl": "https://arnoldpalmerinvitational.com/tickets",
+   "ticketMasterAttractionId": "2405477",
+   "ios": {
+    "ticketMasterKey": "7m2WdfpEV6PVgD4CTnsGW6A4gMUokI0P"
+   },
+   "android": {
+    "ticketMasterScheme": "psdkschemearnoldpalmer",
+    "ticketMasterKey": "0CxNsBevIHqQ4S5bU5Qv6CYLWUAGlBIQ"
+   }
+  },
+  "purse": "$20,000,000",
+  "standings": {
+   "heading": "FEDEXCUP",
+   "value": "700 pts"
+  },
+  "tournamentCategoryInfo": {
+   "type": "SIGNATURE",
+   "label": "Signature Event",
+   "logoLight": {
+    "imageOrg": "pgatour-prod",
+    "imagePath": "/pgatour/sponsors/tour-cup-logos/SwingingGolfer_Red-%283%29"
+   },
+   "logoDark": {
+    "imageOrg": "pgatour-prod",
+    "imagePath": "/pgatour/sponsors/tour-cup-logos/SwingingGolfer_Red-%283%29"
+   }
+  },
+  "networks": [
+   {
+    "id": "243",
+    "name": "HBO Max",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.max.com/",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/243",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/243",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "244",
+    "name": "Discovery+",
+    "simulcast": false,
+    "priorityNum": 4,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://play.max.com/sport-event/golf-pga-tour",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/244",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/244",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "132",
+    "name": "PGA TOUR Radio",
+    "simulcast": false,
+    "priorityNum": 5,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.pgatour.com/liveaudio.html",
+     "appleAppStore": "",
+     "ios": "https://www.pgatour.com/liveaudio.html",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "https://www.pgatour.com/liveaudio.html",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/132",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/132",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "208",
+    "name": "Eurosport 2",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/208",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/208",
+     "assetType": "image"
+    }
+   }
+  ],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": "https://arnoldpalmerinvitational.com"
+ },
+ {
+  "tournamentId": "R2026483",
+  "name": "Puerto Rico Open",
+  "year": "2026",
+  "month": "March",
+  "displayDate": "Mar 5 - 8",
+  "dateAccessibilityText": "March 5th through March 8th",
+  "display": "SHOW",
+  "status": "COMPLETED",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "Ricky Castillo",
+    "playerId": "59440"
+   }
+  ],
+  "championEarnings": "$720,000",
+  "courseData": {
+   "name": "Grand Reserve Golf Club",
+   "city": "Rio Grande",
+   "stateCode": "",
+   "country": "Puerto Rico",
+   "countryCode": "PUR"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r483",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r483/940/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": true,
+   "ticketsUrl": "https://www.ticketera.com/events/detail/puerto-rico-open-2025-upnrrm",
+   "ticketMasterAttractionId": null,
+   "ios": {
+    "ticketMasterKey": null
+   },
+   "android": {
+    "ticketMasterScheme": null,
+    "ticketMasterKey": null
+   }
+  },
+  "purse": "$4,000,000",
+  "standings": {
+   "heading": "FEDEXCUP",
+   "value": "300 pts"
+  },
+  "networks": [
+   {
+    "id": "208",
+    "name": "Eurosport 2",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/208",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/208",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "243",
+    "name": "HBO Max",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.max.com/",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/243",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/243",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "244",
+    "name": "Discovery+",
+    "simulcast": false,
+    "priorityNum": 4,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://play.max.com/sport-event/golf-pga-tour",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/244",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/244",
+     "assetType": "image"
+    }
+   }
+  ],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": "https://www.puertoricoopen.golf/index.php"
+ },
+ {
+  "tournamentId": "R2026011",
+  "name": "THE PLAYERS Championship",
+  "year": "2026",
+  "month": "March",
+  "displayDate": "Mar 12 - 15",
+  "dateAccessibilityText": "March 12th through March 15th",
+  "display": "SHOW",
+  "status": "COMPLETED",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "Cameron Young",
+    "playerId": "57366"
+   }
+  ],
+  "championEarnings": "$4,500,000",
+  "courseData": {
+   "name": "TPC Sawgrass - THE PLAYERS Stadium Course",
+   "city": "Ponte Vedra Beach",
+   "stateCode": "FL",
+   "country": "United States of America",
+   "countryCode": "USA"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r011",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r011/011/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": true,
+   "ticketsUrl": "https://www.theplayers.com/tickets",
+   "ticketMasterAttractionId": "807297",
+   "ios": {
+    "ticketMasterKey": "VlYRNAf6yeMG6AVfaVLXHOvKXqsWSpnF"
+   },
+   "android": {
+    "ticketMasterScheme": "psdkschemepgaplayers",
+    "ticketMasterKey": "pJCImZic5OUYQQKzishCGTrCEAx73Aot"
+   }
+  },
+  "purse": "$25,000,000",
+  "standings": {
+   "heading": "FEDEXCUP",
+   "value": "750 pts"
+  },
+  "networks": [
+   {
+    "id": "243",
+    "name": "HBO Max",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.max.com/",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/243",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/243",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "244",
+    "name": "Discovery+",
+    "simulcast": false,
+    "priorityNum": 4,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://play.max.com/sport-event/golf-pga-tour",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/244",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/244",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "132",
+    "name": "PGA TOUR Radio",
+    "simulcast": false,
+    "priorityNum": 5,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.pgatour.com/liveaudio.html",
+     "appleAppStore": "",
+     "ios": "https://www.pgatour.com/liveaudio.html",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "https://www.pgatour.com/liveaudio.html",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/132",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/132",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "208",
+    "name": "Eurosport 2",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/208",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/208",
+     "assetType": "image"
+    }
+   }
+  ],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": "https://www.theplayers.com"
+ },
+ {
+  "tournamentId": "R2026475",
+  "name": "Valspar Championship",
+  "year": "2026",
+  "month": "March",
+  "displayDate": "Mar 19 - 22",
+  "dateAccessibilityText": "March 19th through March 22nd",
+  "display": "SHOW",
+  "status": "COMPLETED",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "Matt Fitzpatrick",
+    "playerId": "40098"
+   }
+  ],
+  "championEarnings": "$1,638,000",
+  "courseData": {
+   "name": "Innisbrook Resort and Golf Club - Copperhead Course",
+   "city": "Palm Harbor",
+   "stateCode": "FL",
+   "country": "United States of America",
+   "countryCode": "USA"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r475",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r475/665/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": false,
+   "ticketsUrl": "https://valsparchampionship.com/tickets-packages/",
+   "ticketMasterAttractionId": "2414923",
+   "ios": {
+    "ticketMasterKey": "QdHNW05T8afnVLAskTydxDi5AWGYpxzy"
+   },
+   "android": {
+    "ticketMasterScheme": "psdkschemecopperheads",
+    "ticketMasterKey": "r2f8NT4vk5JusrQnA3FOU8spInPFqbcU"
+   }
+  },
+  "purse": "$9,100,000",
+  "standings": {
+   "heading": "FEDEXCUP",
+   "value": "500 pts"
+  },
+  "networks": [
+   {
+    "id": "243",
+    "name": "HBO Max",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.max.com/",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/243",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/243",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "244",
+    "name": "Discovery+",
+    "simulcast": false,
+    "priorityNum": 4,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://play.max.com/sport-event/golf-pga-tour",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/244",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/244",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "132",
+    "name": "PGA TOUR Radio",
+    "simulcast": false,
+    "priorityNum": 5,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.pgatour.com/liveaudio.html",
+     "appleAppStore": "",
+     "ios": "https://www.pgatour.com/liveaudio.html",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "https://www.pgatour.com/liveaudio.html",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/132",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/132",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "208",
+    "name": "Eurosport 2",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/208",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/208",
+     "assetType": "image"
+    }
+   }
+  ],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": "https://valsparchampionship.com"
+ },
+ {
+  "tournamentId": "R2026020",
+  "name": "Texas Children's Houston Open",
+  "year": "2026",
+  "month": "March",
+  "displayDate": "Mar 26 - 29",
+  "dateAccessibilityText": "March 26th through March 29th",
+  "display": "SHOW",
+  "status": "COMPLETED",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "Gary Woodland",
+    "playerId": "31323"
+   }
+  ],
+  "championEarnings": "$1,782,000",
+  "courseData": {
+   "name": "Memorial Park Golf Course",
+   "city": "Houston",
+   "stateCode": "TX",
+   "country": "United States of America",
+   "countryCode": "USA"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r020",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r020/897/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": false,
+   "ticketsUrl": "https://am.ticketmaster.com/houstonopen/",
+   "ticketMasterAttractionId": null,
+   "ios": {
+    "ticketMasterKey": "mL27vg8oBlM6N6OKqs42HKpCSiQJaRjQ"
+   },
+   "android": {
+    "ticketMasterScheme": "psdkschemehoustonopen",
+    "ticketMasterKey": "M6ZAITxGyduh5k53n8x42SLPatj80sGW"
+   }
+  },
+  "purse": "$9,900,000",
+  "standings": {
+   "heading": "FEDEXCUP",
+   "value": "500 pts"
+  },
+  "networks": [
+   {
+    "id": "243",
+    "name": "HBO Max",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.max.com/",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/243",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/243",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "244",
+    "name": "Discovery+",
+    "simulcast": false,
+    "priorityNum": 4,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://play.max.com/sport-event/golf-pga-tour",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/244",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/244",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "132",
+    "name": "PGA TOUR Radio",
+    "simulcast": false,
+    "priorityNum": 5,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.pgatour.com/liveaudio.html",
+     "appleAppStore": "",
+     "ios": "https://www.pgatour.com/liveaudio.html",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "https://www.pgatour.com/liveaudio.html",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/132",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/132",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "208",
+    "name": "Eurosport 2",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/208",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/208",
+     "assetType": "image"
+    }
+   }
+  ],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": "https://www.tchouopen.com/"
+ },
+ {
+  "tournamentId": "R2026041",
+  "name": "Valero Texas Open",
+  "year": "2026",
+  "month": "April",
+  "displayDate": "Apr 2 - 5",
+  "dateAccessibilityText": "April 2nd through April 5th",
+  "display": "SHOW",
+  "status": "COMPLETED",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "J.J. Spaun",
+    "playerId": "39324"
+   }
+  ],
+  "championEarnings": "$1,764,000",
+  "courseData": {
+   "name": "TPC San Antonio - The Oaks Course",
+   "city": "San Antonio",
+   "stateCode": "TX",
+   "country": "United States of America",
+   "countryCode": "USA"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r041",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r041/770/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": true,
+   "ticketsUrl": "https://valerotexasopen.com/tickets/",
+   "ticketMasterAttractionId": "807240",
+   "ios": {
+    "ticketMasterKey": "iE8UB6mCX1NYp9gdlGoKrxehq64lAOt9"
+   },
+   "android": {
+    "ticketMasterScheme": "psdkschemevalerotexasopen",
+    "ticketMasterKey": "FGWp5tDmXHZPjtH3ZdytY7MvdAIZAjge"
+   }
+  },
+  "purse": "$9,800,000",
+  "standings": {
+   "heading": "FEDEXCUP",
+   "value": "500 pts"
+  },
+  "networks": [
+   {
+    "id": "243",
+    "name": "HBO Max",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.max.com/",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/243",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/243",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "244",
+    "name": "Discovery+",
+    "simulcast": false,
+    "priorityNum": 4,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://play.max.com/sport-event/golf-pga-tour",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/244",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/244",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "132",
+    "name": "PGA TOUR Radio",
+    "simulcast": false,
+    "priorityNum": 5,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.pgatour.com/liveaudio.html",
+     "appleAppStore": "",
+     "ios": "https://www.pgatour.com/liveaudio.html",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "https://www.pgatour.com/liveaudio.html",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/132",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/132",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "208",
+    "name": "Eurosport 2",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/208",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/208",
+     "assetType": "image"
+    }
+   }
+  ],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": "https://valerotexasopen.com"
+ },
+ {
+  "tournamentId": "R2026014",
+  "name": "Masters Tournament",
+  "year": "2026",
+  "month": "April",
+  "displayDate": "Apr 9 - 12",
+  "dateAccessibilityText": "April 9th through April 12th",
+  "display": "SHOW",
+  "status": "COMPLETED",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "Rory McIlroy",
+    "playerId": "28237"
+   }
+  ],
+  "championEarnings": "$4,500,000",
+  "courseData": {
+   "name": "Augusta National Golf Club",
+   "city": "Augusta",
+   "stateCode": "GA",
+   "country": "United States of America",
+   "countryCode": "USA"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r014",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r014/014/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": false,
+   "ticketsUrl": null,
+   "ticketMasterAttractionId": null,
+   "ios": {
+    "ticketMasterKey": null
+   },
+   "android": {
+    "ticketMasterScheme": null,
+    "ticketMasterKey": null
+   }
+  },
+  "purse": "$22,500,000",
+  "standings": {
+   "heading": "FEDEXCUP",
+   "value": "750 pts"
+  },
+  "networks": [],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": null
+ },
+ {
+  "tournamentId": "R2026012",
+  "name": "RBC Heritage",
+  "year": "2026",
+  "month": "April",
+  "displayDate": "Apr 16 - 19",
+  "dateAccessibilityText": "April 16th through April 19th",
+  "display": "SHOW",
+  "status": "COMPLETED",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "Matt Fitzpatrick",
+    "playerId": "40098"
+   }
+  ],
+  "championEarnings": "$3,600,000",
+  "courseData": {
+   "name": "Harbour Town Golf Links",
+   "city": "Hilton Head Island",
+   "stateCode": "SC",
+   "country": "United States of America",
+   "countryCode": "USA"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r012",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r012/012/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": true,
+   "ticketsUrl": "https://rbcheritage.com/tickets/",
+   "ticketMasterAttractionId": "2802305",
+   "ios": {
+    "ticketMasterKey": "oNSYG2ox6mQFN9F9psuNdt33bINJpAJe"
+   },
+   "android": {
+    "ticketMasterScheme": "psdkschemepgarbcheritage",
+    "ticketMasterKey": "3lBD9cUx13c700eRErWGEOrGKrecPgo1"
+   }
+  },
+  "purse": "$20,000,000",
+  "standings": {
+   "heading": "FEDEXCUP",
+   "value": "700 pts"
+  },
+  "tournamentCategoryInfo": {
+   "type": "SIGNATURE",
+   "label": "Signature Event",
+   "logoLight": {
+    "imageOrg": "pgatour-prod",
+    "imagePath": "/pgatour/sponsors/tour-cup-logos/SwingingGolfer_Red-%283%29"
+   },
+   "logoDark": {
+    "imageOrg": "pgatour-prod",
+    "imagePath": "/pgatour/sponsors/tour-cup-logos/SwingingGolfer_Red-%283%29"
+   }
+  },
+  "networks": [
+   {
+    "id": "243",
+    "name": "HBO Max",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.max.com/",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/243",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/243",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "244",
+    "name": "Discovery+",
+    "simulcast": false,
+    "priorityNum": 4,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://play.max.com/sport-event/golf-pga-tour",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/244",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/244",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "132",
+    "name": "PGA TOUR Radio",
+    "simulcast": false,
+    "priorityNum": 5,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.pgatour.com/liveaudio.html",
+     "appleAppStore": "",
+     "ios": "https://www.pgatour.com/liveaudio.html",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "https://www.pgatour.com/liveaudio.html",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/132",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/132",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "208",
+    "name": "Eurosport 2",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/208",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/208",
+     "assetType": "image"
+    }
+   }
+  ],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": "https://rbcheritage.com"
+ },
+ {
+  "tournamentId": "R2026018",
+  "name": "Zurich Classic of New Orleans",
+  "year": "2026",
+  "month": "April",
+  "displayDate": "Apr 23 - 26",
+  "dateAccessibilityText": "April 23rd through April 26th",
+  "display": "SHOW",
+  "status": "COMPLETED",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "Matt Fitzpatrick",
+    "playerId": "40098"
+   },
+   {
+    "displayName": "Alex Fitzpatrick",
+    "playerId": "55721"
+   }
+  ],
+  "championEarnings": "$1,372,750",
+  "courseData": {
+   "name": "TPC Louisiana",
+   "city": "Avondale",
+   "stateCode": "LA",
+   "country": "United States of America",
+   "countryCode": "USA"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r018",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r018/714/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": true,
+   "ticketsUrl": "https://zurichgolfclassic.com/tickets-2/",
+   "ticketMasterAttractionId": "1389861",
+   "ios": {
+    "ticketMasterKey": "Qmp21qfv9XPdA8rqjTlQoGv5ZZmDBvMp"
+   },
+   "android": {
+    "ticketMasterScheme": "psdkschemepgazurich",
+    "ticketMasterKey": "ARqMqEkA0t4NbAeHBqbtEtgyiTLK4Kty"
+   }
+  },
+  "purse": "$9,500,000",
+  "standings": {
+   "heading": "FEDEXCUP",
+   "value": "400 pts"
+  },
+  "networks": [
+   {
+    "id": "208",
+    "name": "Eurosport 2",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/208",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/208",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "243",
+    "name": "HBO Max",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.max.com/",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/243",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/243",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "244",
+    "name": "Discovery+",
+    "simulcast": false,
+    "priorityNum": 4,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://play.max.com/sport-event/golf-pga-tour",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/244",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/244",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "132",
+    "name": "PGA TOUR Radio",
+    "simulcast": false,
+    "priorityNum": 5,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.pgatour.com/liveaudio.html",
+     "appleAppStore": "",
+     "ios": "https://www.pgatour.com/liveaudio.html",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "https://www.pgatour.com/liveaudio.html",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/132",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/132",
+     "assetType": "image"
+    }
+   }
+  ],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": "https://zurichgolfclassic.com"
+ },
+ {
+  "tournamentId": "R2026556",
+  "name": "Cadillac Championship",
+  "year": "2026",
+  "month": "April",
+  "displayDate": "Apr 30 - May 3",
+  "dateAccessibilityText": "April 30th through May 3rd",
+  "display": "SHOW",
+  "status": "COMPLETED",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "Cameron Young",
+    "playerId": "57366"
+   }
+  ],
+  "championEarnings": "$3,600,000",
+  "courseData": {
+   "name": "Trump National Doral - Blue Monster Course",
+   "city": "Miami",
+   "stateCode": "FL",
+   "country": "United States of America",
+   "countryCode": "USA"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r556",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r556/008/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": true,
+   "ticketsUrl": "https://www.cadillacchampionship.com/tickets",
+   "ticketMasterAttractionId": "1531709",
+   "ios": {
+    "ticketMasterKey": "QI5OY05f1mik3xGrcHLh4cFR243MX3mL"
+   },
+   "android": {
+    "ticketMasterScheme": "psdkschemepgacadillac",
+    "ticketMasterKey": "BdBWbMX2a4uUp3zPYMldv51rqLtRksH2"
+   }
+  },
+  "purse": "$20,000,000",
+  "standings": {
+   "heading": "FEDEXCUP",
+   "value": "700 pts"
+  },
+  "tournamentCategoryInfo": {
+   "type": "SIGNATURE",
+   "label": "Signature Event",
+   "logoLight": {
+    "imageOrg": "pgatour-prod",
+    "imagePath": "/pgatour/sponsors/tour-cup-logos/SwingingGolfer_Red-%283%29"
+   },
+   "logoDark": {
+    "imageOrg": "pgatour-prod",
+    "imagePath": "/pgatour/sponsors/tour-cup-logos/SwingingGolfer_Red-%283%29"
+   }
+  },
+  "networks": [
+   {
+    "id": "243",
+    "name": "HBO Max",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.max.com/",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/243",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/243",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "244",
+    "name": "Discovery+",
+    "simulcast": false,
+    "priorityNum": 4,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://play.max.com/sport-event/golf-pga-tour",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/244",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/244",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "132",
+    "name": "PGA TOUR Radio",
+    "simulcast": false,
+    "priorityNum": 5,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.pgatour.com/liveaudio.html",
+     "appleAppStore": "",
+     "ios": "https://www.pgatour.com/liveaudio.html",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "https://www.pgatour.com/liveaudio.html",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/132",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/132",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "208",
+    "name": "Eurosport 2",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/208",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/208",
+     "assetType": "image"
+    }
+   }
+  ],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": "https://www.cadillacchampionship.com/"
+ },
+ {
+  "tournamentId": "R2026480",
+  "name": "Truist Championship",
+  "year": "2026",
+  "month": "May",
+  "displayDate": "May 7 - 10",
+  "dateAccessibilityText": "May 7th through May 10th",
+  "display": "SHOW",
+  "status": "COMPLETED",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "Kristoffer Reitan",
+    "playerId": "49855"
+   }
+  ],
+  "championEarnings": "$3,600,000",
+  "courseData": {
+   "name": "Quail Hollow Club",
+   "city": "Charlotte",
+   "stateCode": "NC",
+   "country": "United States of America",
+   "countryCode": "USA"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r480",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r480/872/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": true,
+   "ticketsUrl": "https://www.truistchampionship.com/tickets",
+   "ticketMasterAttractionId": "3413284",
+   "ios": {
+    "ticketMasterKey": "APRSaJzxpGPwDSgsfXandjL5O33vcW13"
+   },
+   "android": {
+    "ticketMasterScheme": "psdkschemepgatruist",
+    "ticketMasterKey": "ZecgRnl1d4F5lTHQnIZ5qt9UScXm0jdx"
+   }
+  },
+  "purse": "$20,000,000",
+  "standings": {
+   "heading": "FEDEXCUP",
+   "value": "700 pts"
+  },
+  "tournamentCategoryInfo": {
+   "type": "SIGNATURE",
+   "label": "Signature Event",
+   "logoLight": {
+    "imageOrg": "pgatour-prod",
+    "imagePath": "/pgatour/sponsors/tour-cup-logos/SwingingGolfer_Red-%283%29"
+   },
+   "logoDark": {
+    "imageOrg": "pgatour-prod",
+    "imagePath": "/pgatour/sponsors/tour-cup-logos/SwingingGolfer_Red-%283%29"
+   }
+  },
+  "networks": [
+   {
+    "id": "243",
+    "name": "HBO Max",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.max.com/",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/243",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/243",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "244",
+    "name": "Discovery+",
+    "simulcast": false,
+    "priorityNum": 4,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://play.max.com/sport-event/golf-pga-tour",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/244",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/244",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "132",
+    "name": "PGA TOUR Radio",
+    "simulcast": false,
+    "priorityNum": 5,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.pgatour.com/liveaudio.html",
+     "appleAppStore": "",
+     "ios": "https://www.pgatour.com/liveaudio.html",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "https://www.pgatour.com/liveaudio.html",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/132",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/132",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "208",
+    "name": "Eurosport 2",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/208",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/208",
+     "assetType": "image"
+    }
+   }
+  ],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": "https://www.truistchampionship.com/"
+ },
+ {
+  "tournamentId": "R2026553",
+  "name": "ONEflight Myrtle Beach Classic",
+  "year": "2026",
+  "month": "May",
+  "displayDate": "May 7 - 10",
+  "dateAccessibilityText": "May 7th through May 10th",
+  "display": "SHOW",
+  "status": "COMPLETED",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "Brandt Snedeker",
+    "playerId": "27649"
+   }
+  ],
+  "championEarnings": "$720,000",
+  "courseData": {
+   "name": "Dunes Golf and Beach Club",
+   "city": "Myrtle Beach",
+   "stateCode": "SC",
+   "country": "United States of America",
+   "countryCode": "USA"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r553",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r553/925/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": true,
+   "ticketsUrl": "https://am.ticketmaster.com/myrtlebeachclassic",
+   "ticketMasterAttractionId": null,
+   "ios": {
+    "ticketMasterKey": "DOUAcSAGjYaV5G7NKQghRGa4q4BGpxxY"
+   },
+   "android": {
+    "ticketMasterScheme": "psdkschememyrtlebeachclassic",
+    "ticketMasterKey": "evZcbDtwLBZGgnNcUff6dVM7Gm1PxwyS"
+   }
+  },
+  "purse": "$4,000,000",
+  "standings": {
+   "heading": "FEDEXCUP",
+   "value": "300 pts"
+  },
+  "networks": [
+   {
+    "id": "208",
+    "name": "Eurosport 2",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/208",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/208",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "243",
+    "name": "HBO Max",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.max.com/",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/243",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/243",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "244",
+    "name": "Discovery+",
+    "simulcast": false,
+    "priorityNum": 4,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://play.max.com/sport-event/golf-pga-tour",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/244",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/244",
+     "assetType": "image"
+    }
+   }
+  ],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": "https://myrtlebeachclassic.com/"
+ },
+ {
+  "tournamentId": "R2026033",
+  "name": "PGA Championship",
+  "year": "2026",
+  "month": "May",
+  "displayDate": "May 14 - 17",
+  "dateAccessibilityText": "May 14th through May 17th",
+  "display": "SHOW",
+  "status": "COMPLETED",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "Aaron Rai",
+    "playerId": "46414"
+   }
+  ],
+  "championEarnings": "$3,690,000",
+  "courseData": {
+   "name": "Aronimink Golf Club",
+   "city": "Newtown Square",
+   "stateCode": "PA",
+   "country": "United States of America",
+   "countryCode": "USA"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r033",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r033/773/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": false,
+   "ticketsUrl": null,
+   "ticketMasterAttractionId": null,
+   "ios": {
+    "ticketMasterKey": null
+   },
+   "android": {
+    "ticketMasterScheme": null,
+    "ticketMasterKey": null
+   }
+  },
+  "purse": "$20,500,000",
+  "standings": {
+   "heading": "FEDEXCUP",
+   "value": "750 pts"
+  },
+  "networks": [],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": null
+ },
+ {
+  "tournamentId": "R2026019",
+  "name": "THE CJ CUP Byron Nelson",
+  "year": "2026",
+  "month": "May",
+  "displayDate": "May 21 - 24",
+  "dateAccessibilityText": "May 21st through May 24th",
+  "display": "SHOW",
+  "status": "COMPLETED",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "Wyndham Clark",
+    "playerId": "51766"
+   }
+  ],
+  "championEarnings": "$1,854,000",
+  "courseData": {
+   "name": "TPC Craig Ranch",
+   "city": "McKinney",
+   "stateCode": "TX",
+   "country": "United States of America",
+   "countryCode": "USA"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r019",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r019/944/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": true,
+   "ticketsUrl": "https://am.ticketmaster.com/byronnel/tcjcbn-tickets",
+   "ticketMasterAttractionId": "3062522",
+   "ios": {
+    "ticketMasterKey": "xDGC5fGZGKUATx87oOOA3nv2JfuX6SnJ"
+   },
+   "android": {
+    "ticketMasterScheme": "psdkschemebyronnel",
+    "ticketMasterKey": "tNgeCiaVAu1RGh2QSwUVOfz1kwPtIq1M"
+   }
+  },
+  "purse": "$10,300,000",
+  "standings": {
+   "heading": "FEDEXCUP",
+   "value": "500 pts"
+  },
+  "networks": [
+   {
+    "id": "243",
+    "name": "HBO Max",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.max.com/",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/243",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/243",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "244",
+    "name": "Discovery+",
+    "simulcast": false,
+    "priorityNum": 4,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://play.max.com/sport-event/golf-pga-tour",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/244",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/244",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "132",
+    "name": "PGA TOUR Radio",
+    "simulcast": false,
+    "priorityNum": 5,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.pgatour.com/liveaudio.html",
+     "appleAppStore": "",
+     "ios": "https://www.pgatour.com/liveaudio.html",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "https://www.pgatour.com/liveaudio.html",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/132",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/132",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "208",
+    "name": "Eurosport 2",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/208",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/208",
+     "assetType": "image"
+    }
+   }
+  ],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": "https://thecjcupbyronnelson.org/"
+ },
+ {
+  "tournamentId": "R2026021",
+  "name": "Charles Schwab Challenge",
+  "year": "2026",
+  "month": "May",
+  "displayDate": "May 28 - 31",
+  "dateAccessibilityText": "May 28th through May 31st",
+  "display": "SHOW",
+  "status": "COMPLETED",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "Russell Henley",
+    "playerId": "34098"
+   }
+  ],
+  "championEarnings": "$1,782,000",
+  "courseData": {
+   "name": "Colonial Country Club",
+   "city": "Fort Worth",
+   "stateCode": "TX",
+   "country": "United States of America",
+   "countryCode": "USA"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r021",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r021/021/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": true,
+   "ticketsUrl": "https://am.ticketmaster.com/pgacsc",
+   "ticketMasterAttractionId": null,
+   "ios": {
+    "ticketMasterKey": "TATwb31rtB80XaIFz4BFr8edr9jR97k4"
+   },
+   "android": {
+    "ticketMasterScheme": "psdkschemepgacsc",
+    "ticketMasterKey": "LJGJQZPjGccrxXxXywfMT95PvGGDymZI"
+   }
+  },
+  "purse": "$9,900,000",
+  "standings": {
+   "heading": "FEDEXCUP",
+   "value": "500 pts"
+  },
+  "networks": [
+   {
+    "id": "243",
+    "name": "HBO Max",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.max.com/",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/243",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/243",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "244",
+    "name": "Discovery+",
+    "simulcast": false,
+    "priorityNum": 4,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://play.max.com/sport-event/golf-pga-tour",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/244",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/244",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "132",
+    "name": "PGA TOUR Radio",
+    "simulcast": false,
+    "priorityNum": 5,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.pgatour.com/liveaudio.html",
+     "appleAppStore": "",
+     "ios": "https://www.pgatour.com/liveaudio.html",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "https://www.pgatour.com/liveaudio.html",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/132",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/132",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "208",
+    "name": "Eurosport 2",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/208",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/208",
+     "assetType": "image"
+    }
+   }
+  ],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": "https://www.charlesschwabchallenge.com/"
+ },
+ {
+  "tournamentId": "R2026023",
+  "name": "the Memorial Tournament presented by Workday",
+  "year": "2026",
+  "month": "June",
+  "displayDate": "Jun 4 - 7",
+  "dateAccessibilityText": "June 4th through June 7th",
+  "display": "SHOW",
+  "status": "COMPLETED",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "J.T. Poston",
+    "playerId": "49771"
+   }
+  ],
+  "championEarnings": "$4,000,000",
+  "courseData": {
+   "name": "Muirfield Village Golf Club",
+   "city": "Dublin",
+   "stateCode": "OH",
+   "country": "United States of America",
+   "countryCode": "USA"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r023",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r023/023/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": true,
+   "ticketsUrl": "https://www.thememorialtournament.com/tickets/overview/",
+   "ticketMasterAttractionId": null,
+   "ios": {
+    "ticketMasterKey": "u8iPkTO6mAquhmWucVlpVnfnoakGegFA"
+   },
+   "android": {
+    "ticketMasterScheme": "psdkschemepgamemorial",
+    "ticketMasterKey": "y70ROjSzfmBljLzf0tXrQn19izlgLv0q"
+   }
+  },
+  "purse": "$20,000,000",
+  "standings": {
+   "heading": "FEDEXCUP",
+   "value": "700 pts"
+  },
+  "tournamentCategoryInfo": {
+   "type": "SIGNATURE",
+   "label": "Signature Event",
+   "logoLight": {
+    "imageOrg": "pgatour-prod",
+    "imagePath": "/pgatour/sponsors/tour-cup-logos/SwingingGolfer_Red-%283%29"
+   },
+   "logoDark": {
+    "imageOrg": "pgatour-prod",
+    "imagePath": "/pgatour/sponsors/tour-cup-logos/SwingingGolfer_Red-%283%29"
+   }
+  },
+  "networks": [
+   {
+    "id": "243",
+    "name": "HBO Max",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.max.com/",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/243",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/243",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "244",
+    "name": "Discovery+",
+    "simulcast": false,
+    "priorityNum": 4,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://play.max.com/sport-event/golf-pga-tour",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/244",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/244",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "132",
+    "name": "PGA TOUR Radio",
+    "simulcast": false,
+    "priorityNum": 5,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.pgatour.com/liveaudio.html",
+     "appleAppStore": "",
+     "ios": "https://www.pgatour.com/liveaudio.html",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "https://www.pgatour.com/liveaudio.html",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/132",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/132",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "208",
+    "name": "Eurosport 2",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/208",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/208",
+     "assetType": "image"
+    }
+   }
+  ],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": "https://www.thememorialtournament.com/"
+ },
+ {
+  "tournamentId": "R2026032",
+  "name": "RBC Canadian Open",
+  "year": "2026",
+  "month": "June",
+  "displayDate": "Jun 11 - 14",
+  "dateAccessibilityText": "June 11th through June 14th",
+  "display": "SHOW",
+  "status": "COMPLETED",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "Bud Cauley",
+    "playerId": "34021"
+   }
+  ],
+  "championEarnings": "$1,764,000",
+  "courseData": {
+   "name": "TPC Toronto at Osprey Valley - North Course",
+   "city": "Caledon, Ontario",
+   "stateCode": "",
+   "country": "Canada",
+   "countryCode": "CAN"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r032",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r032/935/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": true,
+   "ticketsUrl": "https://www.rbccanadianopen.com/tickets/",
+   "ticketMasterAttractionId": "1220794",
+   "ios": {
+    "ticketMasterKey": "AriDI8JcLzvddkI74MS1PVmP7TL7ZsV9"
+   },
+   "android": {
+    "ticketMasterScheme": "psdkschemecanadianopen",
+    "ticketMasterKey": "uAw9MPGvGxr83jbijfGxCG1ypFfUFgBc"
+   }
+  },
+  "purse": "$9,800,000",
+  "standings": {
+   "heading": "FEDEXCUP",
+   "value": "500 pts"
+  },
+  "networks": [
+   {
+    "id": "243",
+    "name": "HBO Max",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.max.com/",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/243",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/243",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "244",
+    "name": "Discovery+",
+    "simulcast": false,
+    "priorityNum": 4,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://play.max.com/sport-event/golf-pga-tour",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/244",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/244",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "132",
+    "name": "PGA TOUR Radio",
+    "simulcast": false,
+    "priorityNum": 5,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.pgatour.com/liveaudio.html",
+     "appleAppStore": "",
+     "ios": "https://www.pgatour.com/liveaudio.html",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "https://www.pgatour.com/liveaudio.html",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/132",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/132",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "208",
+    "name": "Eurosport 2",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/208",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/208",
+     "assetType": "image"
+    }
+   }
+  ],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": "https://www.rbccanadianopen.com/"
+ },
+ {
+  "tournamentId": "R2026026",
+  "name": "U.S. Open",
+  "year": "2026",
+  "month": "June",
+  "displayDate": "Jun 18 - 21",
+  "dateAccessibilityText": "June 18th through June 21st",
+  "display": "SHOW",
+  "status": "COMPLETED",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "Wyndham Clark",
+    "playerId": "51766"
+   }
+  ],
+  "championEarnings": "$4,500,000",
+  "courseData": {
+   "name": "Shinnecock Hills Golf Club",
+   "city": "Southampton",
+   "stateCode": "NY",
+   "country": "United States of America",
+   "countryCode": "USA"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r026",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r026/618/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": true,
+   "ticketsUrl": "https://www.usopen.com/content/usopen/2027/tickets.html?utm_source=pgatour&utm_medium=direct&utm_campaign=2027uso",
+   "ticketMasterAttractionId": null,
+   "ios": {
+    "ticketMasterKey": null
+   },
+   "android": {
+    "ticketMasterScheme": null,
+    "ticketMasterKey": null
+   }
+  },
+  "purse": "$22,500,000",
+  "standings": {
+   "heading": "FEDEXCUP",
+   "value": "750 pts"
+  },
+  "networks": [
+   {
+    "id": "93",
+    "name": "U.S. Open",
+    "simulcast": false,
+    "priorityNum": 3,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.usopen.com/watch.html?utm_source=pgatour&utm_medium=direct&utm_campaign=2024uso",
+     "appleAppStore": "https://www.usopen.com/watch.html?utm_source=pgatour&utm_medium=direct&utm_campaign=2024uso",
+     "ios": "https://www.usopen.com/watch.html?utm_source=pgatour&utm_medium=direct&utm_campaign=2024uso",
+     "iosStreamUrl": "",
+     "googlePlayStore": "https://www.usopen.com/watch.html?utm_source=pgatour&utm_medium=direct&utm_campaign=2024uso",
+     "android": "https://www.usopen.com/watch.html?utm_source=pgatour&utm_medium=direct&utm_campaign=2024uso",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/93",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/93",
+     "assetType": "image"
+    }
+   }
+  ],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": null
+ },
+ {
+  "tournamentId": "R2026034",
+  "name": "Travelers Championship",
+  "year": "2026",
+  "month": "June",
+  "displayDate": "Jun 25 - 28",
+  "dateAccessibilityText": "June 25th through June 28th",
+  "display": "SHOW",
+  "status": "COMPLETED",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "Viktor Hovland",
+    "playerId": "46717"
+   }
+  ],
+  "championEarnings": "$3,600,000",
+  "courseData": {
+   "name": "TPC River Highlands",
+   "city": "Cromwell",
+   "stateCode": "CT",
+   "country": "United States of America",
+   "countryCode": "USA"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r034",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r034/503/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": true,
+   "ticketsUrl": "https://travelerschampionship.com/tickets/",
+   "ticketMasterAttractionId": "1957349",
+   "ios": {
+    "ticketMasterKey": "zJddVeo3hMeaPG9TbGo0iE4kNiP2ADS9"
+   },
+   "android": {
+    "ticketMasterScheme": "psdkschemepgatravelers",
+    "ticketMasterKey": "3d23h3aXiCBGL0jX02P2i6hKLbakQNyC"
+   }
+  },
+  "purse": "$20,000,000",
+  "standings": {
+   "heading": "FEDEXCUP",
+   "value": "700 pts"
+  },
+  "tournamentCategoryInfo": {
+   "type": "SIGNATURE",
+   "label": "Signature Event",
+   "logoLight": {
+    "imageOrg": "pgatour-prod",
+    "imagePath": "/pgatour/sponsors/tour-cup-logos/SwingingGolfer_Red-%283%29"
+   },
+   "logoDark": {
+    "imageOrg": "pgatour-prod",
+    "imagePath": "/pgatour/sponsors/tour-cup-logos/SwingingGolfer_Red-%283%29"
+   }
+  },
+  "networks": [
+   {
+    "id": "243",
+    "name": "HBO Max",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.max.com/",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/243",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/243",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "244",
+    "name": "Discovery+",
+    "simulcast": false,
+    "priorityNum": 4,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://play.max.com/sport-event/golf-pga-tour",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/244",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/244",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "132",
+    "name": "PGA TOUR Radio",
+    "simulcast": false,
+    "priorityNum": 5,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.pgatour.com/liveaudio.html",
+     "appleAppStore": "",
+     "ios": "https://www.pgatour.com/liveaudio.html",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "https://www.pgatour.com/liveaudio.html",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/132",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/132",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "208",
+    "name": "Eurosport 2",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/208",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/208",
+     "assetType": "image"
+    }
+   }
+  ],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": "https://travelerschampionship.com/"
+ },
+ {
+  "tournamentId": "R2026030",
+  "name": "John Deere Classic",
+  "year": "2026",
+  "month": "July",
+  "displayDate": "Jul 2 - 5",
+  "dateAccessibilityText": "July 2nd through July 5th",
+  "display": "SHOW",
+  "status": "COMPLETED",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "Chris Gotterup",
+    "playerId": "59095"
+   }
+  ],
+  "championEarnings": "$1,584,000",
+  "courseData": {
+   "name": "TPC Deere Run",
+   "city": "Silvis",
+   "stateCode": "IL",
+   "country": "United States of America",
+   "countryCode": "USA"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r030",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r030/669/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": true,
+   "ticketsUrl": "https://johndeereclassic.com/sponsorship/ticket-packages",
+   "ticketMasterAttractionId": "807350",
+   "ios": {
+    "ticketMasterKey": "eqyq0DiejbAnnWDSxliKVl3GcHQwKSwf"
+   },
+   "android": {
+    "ticketMasterScheme": "psdkschemepgajohndeereclassic",
+    "ticketMasterKey": "SOaxVf5UsAyjE4ClKFArMcmXAhSi9dWp"
+   }
+  },
+  "purse": "$8,800,000",
+  "standings": {
+   "heading": "FEDEXCUP",
+   "value": "500 pts"
+  },
+  "networks": [
+   {
+    "id": "243",
+    "name": "HBO Max",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.max.com/",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/243",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/243",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "244",
+    "name": "Discovery+",
+    "simulcast": false,
+    "priorityNum": 4,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://play.max.com/sport-event/golf-pga-tour",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/244",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/244",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "132",
+    "name": "PGA TOUR Radio",
+    "simulcast": false,
+    "priorityNum": 5,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.pgatour.com/liveaudio.html",
+     "appleAppStore": "",
+     "ios": "https://www.pgatour.com/liveaudio.html",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "https://www.pgatour.com/liveaudio.html",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/132",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/132",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "208",
+    "name": "Eurosport 2",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/208",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/208",
+     "assetType": "image"
+    }
+   }
+  ],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": "https://johndeereclassic.com"
+ },
+ {
+  "tournamentId": "R2026541",
+  "name": "Genesis Scottish Open",
+  "year": "2026",
+  "month": "July",
+  "displayDate": "Jul 9 - 12",
+  "dateAccessibilityText": "July 9th through July 12th",
+  "display": "SHOW",
+  "status": "COMPLETED",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "Tom Kim",
+    "playerId": "55182"
+   }
+  ],
+  "championEarnings": "$1,575,000",
+  "courseData": {
+   "name": "The Renaissance Club",
+   "city": "North Berwick",
+   "stateCode": "",
+   "country": "Scotland",
+   "countryCode": "SCO"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r541",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r541/945/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": true,
+   "ticketsUrl": "https://www.europeantour.com/dpworld-tour/genesis-scottish-open-2025/tickets-packages/",
+   "ticketMasterAttractionId": null,
+   "ios": {
+    "ticketMasterKey": null
+   },
+   "android": {
+    "ticketMasterScheme": null,
+    "ticketMasterKey": null
+   }
+  },
+  "purse": "$9,000,000",
+  "standings": {
+   "heading": "FEDEXCUP",
+   "value": "500 pts"
+  },
+  "networks": [
+   {
+    "id": "132",
+    "name": "PGA TOUR Radio",
+    "simulcast": false,
+    "priorityNum": 5,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.pgatour.com/liveaudio.html",
+     "appleAppStore": "",
+     "ios": "https://www.pgatour.com/liveaudio.html",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "https://www.pgatour.com/liveaudio.html",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/132",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/132",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "243",
+    "name": "HBO Max",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.max.com/",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/243",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/243",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "244",
+    "name": "Discovery+",
+    "simulcast": false,
+    "priorityNum": 4,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://play.max.com/sport-event/golf-pga-tour",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/244",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/244",
+     "assetType": "image"
+    }
+   }
+  ],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": "https://www.europeantour.com/dpworld-tour/genesis-scottish-open-2025/"
+ },
+ {
+  "tournamentId": "R2026518",
+  "name": "ISCO Championship",
+  "year": "2026",
+  "month": "July",
+  "displayDate": "Jul 9 - 12",
+  "dateAccessibilityText": "July 9th through July 12th",
+  "display": "SHOW",
+  "status": "COMPLETED",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "Steven Fisk",
+    "playerId": "57123"
+   }
+  ],
+  "championEarnings": "$720,000",
+  "courseData": {
+   "name": "Hurstbourne Country Club",
+   "city": "Louisville",
+   "stateCode": "KY",
+   "country": "United States of America",
+   "countryCode": "USA"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r518",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r518/934/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": true,
+   "ticketsUrl": "https://am.ticketmaster.com/iscochampionship/buy/buytickets",
+   "ticketMasterAttractionId": null,
+   "ios": {
+    "ticketMasterKey": "oYAVK1hvkRMTLYTkcqYvL0b6WsAUvFbx"
+   },
+   "android": {
+    "ticketMasterScheme": "psdkschemeiscochampionship",
+    "ticketMasterKey": "qboNUgnrY9zG4racCAMdPqUmvqpOMudr"
+   }
+  },
+  "purse": "$4,000,000",
+  "standings": {
+   "heading": "FEDEXCUP",
+   "value": "300 pts"
+  },
+  "networks": [
+   {
+    "id": "208",
+    "name": "Eurosport 2",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/208",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/208",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "243",
+    "name": "HBO Max",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.max.com/",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/243",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/243",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "244",
+    "name": "Discovery+",
+    "simulcast": false,
+    "priorityNum": 4,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://play.max.com/sport-event/golf-pga-tour",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/244",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/244",
+     "assetType": "image"
+    }
+   }
+  ],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": "https://iscochampionship.com/"
+ },
+ {
+  "tournamentId": "R2026100",
+  "name": "The Open Championship",
+  "year": "2026",
+  "month": "July",
+  "displayDate": "Jul 16 - 19",
+  "dateAccessibilityText": "July 16th through July 19th",
+  "display": "SHOW",
+  "status": "COMPLETED",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "Ryan Fox",
+    "playerId": "29936"
+   }
+  ],
+  "championEarnings": "$3,200,000",
+  "courseData": {
+   "name": "Royal Birkdale Golf Club",
+   "city": "Southport",
+   "stateCode": "",
+   "country": "England",
+   "countryCode": "ENG"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r100",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r100/541/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": false,
+   "ticketsUrl": null,
+   "ticketMasterAttractionId": null,
+   "ios": {
+    "ticketMasterKey": null
+   },
+   "android": {
+    "ticketMasterScheme": null,
+    "ticketMasterKey": null
+   }
+  },
+  "purse": "$17,750,000",
+  "standings": {
+   "heading": "FEDEXCUP",
+   "value": "750 pts"
+  },
+  "networks": [],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": null
+ },
+ {
+  "tournamentId": "R2026522",
+  "name": "Corales Puntacana Championship",
+  "year": "2026",
+  "month": "July",
+  "displayDate": "Jul 16 - 19",
+  "dateAccessibilityText": "July 16th through July 19th",
+  "display": "SHOW",
+  "status": "COMPLETED",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "Stefano Mazzoli",
+    "playerId": "49037"
+   }
+  ],
+  "championEarnings": "$720,000",
+  "courseData": {
+   "name": "Puntacana Resort & Club (Corales Golf Course)",
+   "city": "Punta Cana",
+   "stateCode": "",
+   "country": "Dominican Republic",
+   "countryCode": "DOM"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r522",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r522/244/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": true,
+   "ticketsUrl": "https://www.puntacana.com/en/golf/corales-championship/pga-tickets",
+   "ticketMasterAttractionId": null,
+   "ios": {
+    "ticketMasterKey": null
+   },
+   "android": {
+    "ticketMasterScheme": null,
+    "ticketMasterKey": null
+   }
+  },
+  "purse": "$4,000,000",
+  "standings": {
+   "heading": "FEDEXCUP",
+   "value": "300 pts"
+  },
+  "networks": [
+   {
+    "id": "208",
+    "name": "Eurosport 2",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/208",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/208",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "243",
+    "name": "HBO Max",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.max.com/",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/243",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/243",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "244",
+    "name": "Discovery+",
+    "simulcast": false,
+    "priorityNum": 4,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://play.max.com/sport-event/golf-pga-tour",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/244",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/244",
+     "assetType": "image"
+    }
+   }
+  ],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": "https://www.puntacana.com/en/golf/corales-championship"
+ },
+ {
+  "tournamentId": "R2026525",
+  "name": "3M Open",
+  "year": "2026",
+  "month": "July",
+  "displayDate": "Jul 23 - 26",
+  "dateAccessibilityText": "July 23rd through July 26th",
+  "display": "SHOW",
+  "status": "COMPLETED",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "Jackson Koivun",
+    "playerId": "66701"
+   }
+  ],
+  "championEarnings": "$1,584,000",
+  "courseData": {
+   "name": "TPC Twin Cities",
+   "city": "Blaine",
+   "stateCode": "MN",
+   "country": "United States of America",
+   "countryCode": "USA"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r525",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r525/883/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": true,
+   "ticketsUrl": "https://3mopen.com",
+   "ticketMasterAttractionId": null,
+   "ios": {
+    "ticketMasterKey": "jhbCkcVmjwLhR5zk2UkAtGNFHy0imV0G"
+   },
+   "android": {
+    "ticketMasterScheme": "psdkschemepga3mopen",
+    "ticketMasterKey": "VYr1U4AdgGHhTLT7rwxIcZfkSfAFlc8B"
+   }
+  },
+  "purse": "$8,800,000",
+  "standings": {
+   "heading": "FEDEXCUP",
+   "value": "500 pts"
+  },
+  "networks": [
+   {
+    "id": "243",
+    "name": "HBO Max",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.max.com/",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/243",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/243",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "244",
+    "name": "Discovery+",
+    "simulcast": false,
+    "priorityNum": 4,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://play.max.com/sport-event/golf-pga-tour",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/244",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/244",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "132",
+    "name": "PGA TOUR Radio",
+    "simulcast": false,
+    "priorityNum": 5,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.pgatour.com/liveaudio.html",
+     "appleAppStore": "",
+     "ios": "https://www.pgatour.com/liveaudio.html",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "https://www.pgatour.com/liveaudio.html",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/132",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/132",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "208",
+    "name": "Eurosport 2",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/208",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/208",
+     "assetType": "image"
+    }
+   }
+  ],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": "https://3mopen.com"
+ },
+ {
+  "tournamentId": "R2026524",
+  "name": "Rocket Classic",
+  "year": "2026",
+  "month": "July",
+  "displayDate": "Jul 30 - Aug 2",
+  "dateAccessibilityText": "July 30th through August 2nd",
+  "display": "SHOW",
+  "status": "COMPLETED",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "Michael Thorbjornsen",
+    "playerId": "57364"
+   }
+  ],
+  "championEarnings": "$1,800,000",
+  "courseData": {
+   "name": "Detroit Golf Club",
+   "city": "Detroit",
+   "stateCode": "MI",
+   "country": "United States of America",
+   "countryCode": "USA"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r524",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r524/947/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": true,
+   "ticketsUrl": "https://www.rocketclassic.com/tickets2025",
+   "ticketMasterAttractionId": null,
+   "ios": {
+    "ticketMasterKey": "sMjxAsr9FI9wvss911fBA5tmxW3Q6Ssh"
+   },
+   "android": {
+    "ticketMasterScheme": "psdkschemepgarocket",
+    "ticketMasterKey": "jGpAjSlvxbDR0WqEB0CfFgMVNjGbiQ2C"
+   }
+  },
+  "purse": "$10,000,000",
+  "standings": {
+   "heading": "FEDEXCUP",
+   "value": "500 pts"
+  },
+  "networks": [
+   {
+    "id": "243",
+    "name": "HBO Max",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.max.com/",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/243",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/243",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "244",
+    "name": "Discovery+",
+    "simulcast": false,
+    "priorityNum": 4,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://play.max.com/sport-event/golf-pga-tour",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/244",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/244",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "132",
+    "name": "PGA TOUR Radio",
+    "simulcast": false,
+    "priorityNum": 5,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.pgatour.com/liveaudio.html",
+     "appleAppStore": "",
+     "ios": "https://www.pgatour.com/liveaudio.html",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "https://www.pgatour.com/liveaudio.html",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/132",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/132",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "208",
+    "name": "Eurosport 2",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/208",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/208",
+     "assetType": "image"
+    }
+   }
+  ],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": "http://www.rocketclassic.com/"
+ },
+ {
+  "tournamentId": "R2026013",
+  "name": "Wyndham Championship",
+  "year": "2026",
+  "month": "August",
+  "displayDate": "Aug 6 - 9",
+  "dateAccessibilityText": "August 6th through August 9th",
+  "display": "SHOW",
+  "status": "COMPLETED",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "Michael Brennan",
+    "playerId": "61522"
+   }
+  ],
+  "championEarnings": "$1,530,000",
+  "courseData": {
+   "name": "Sedgefield Country Club",
+   "city": "Greensboro",
+   "stateCode": "NC",
+   "country": "United States of America",
+   "countryCode": "USA"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r013",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r013/752/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": true,
+   "ticketsUrl": "https://www.wyndhamchampionship.com/spectators/tickets/",
+   "ticketMasterAttractionId": null,
+   "ios": {
+    "ticketMasterKey": "8fxU7XqokFUW2RekWQsukTGJIksAFFrd"
+   },
+   "android": {
+    "ticketMasterScheme": "psdkschemepgawyndham",
+    "ticketMasterKey": "DDkMJe6JcjbdF8Qogm2W6iAmyNlMUkIG"
+   }
+  },
+  "purse": "$8,500,000",
+  "standings": {
+   "heading": "FEDEXCUP",
+   "value": "500 pts"
+  },
+  "networks": [
+   {
+    "id": "132",
+    "name": "PGA TOUR Radio",
+    "simulcast": false,
+    "priorityNum": 5,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.pgatour.com/liveaudio.html",
+     "appleAppStore": "",
+     "ios": "https://www.pgatour.com/liveaudio.html",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "https://www.pgatour.com/liveaudio.html",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/132",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/132",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "243",
+    "name": "HBO Max",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.max.com/",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/243",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/243",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "244",
+    "name": "Discovery+",
+    "simulcast": false,
+    "priorityNum": 4,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://play.max.com/sport-event/golf-pga-tour",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/244",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/244",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "208",
+    "name": "Eurosport 2",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/208",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/208",
+     "assetType": "image"
+    }
+   }
+  ],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": "https://www.wyndhamchampionship.com"
+ },
+ {
+  "tournamentId": "R2026027",
+  "name": "FedEx St. Jude Championship",
+  "year": "2026",
+  "month": "August",
+  "displayDate": "Aug 13 - 16",
+  "dateAccessibilityText": "August 13th through August 16th",
+  "display": "SHOW",
+  "status": "COMPLETED",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "Scottie Scheffler",
+    "playerId": "46046"
+   }
+  ],
+  "championEarnings": "$3,600,000",
+  "courseData": {
+   "name": "TPC Southwind",
+   "city": "Memphis",
+   "stateCode": "TN",
+   "country": "United States of America",
+   "countryCode": "USA"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r027",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r027/513/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": true,
+   "ticketsUrl": "https://www.fedexchampionship.com/tickets",
+   "ticketMasterAttractionId": "807351",
+   "ios": {
+    "ticketMasterKey": "iWS9Z0Aw8ZTD0acsTC9J397ie0fLGYqp"
+   },
+   "android": {
+    "ticketMasterScheme": "psdkschemepgafedexstjude",
+    "ticketMasterKey": "oTATCL9PbNOWJ6q5Dp3vyH319uCZJQGN"
+   }
+  },
+  "purse": "$20,000,000",
+  "standings": {
+   "heading": "FEDEXCUP",
+   "value": "750 pts"
+  },
+  "tournamentCategoryInfo": {
+   "type": "PLAYOFF",
+   "label": "FedExCup Playoffs Event",
+   "logoLight": {
+    "imageOrg": "pgatour-prod",
+    "imagePath": "/pgatour/icons/playoff-indicator"
+   },
+   "logoDark": {
+    "imageOrg": "pgatour-prod",
+    "imagePath": "/pgatour/icons/playoff-indicator"
+   }
+  },
+  "networks": [
+   {
+    "id": "243",
+    "name": "HBO Max",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.max.com/",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/243",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/243",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "244",
+    "name": "Discovery+",
+    "simulcast": false,
+    "priorityNum": 4,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://play.max.com/sport-event/golf-pga-tour",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/244",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/244",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "132",
+    "name": "PGA TOUR Radio",
+    "simulcast": false,
+    "priorityNum": 5,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.pgatour.com/liveaudio.html",
+     "appleAppStore": "",
+     "ios": "https://www.pgatour.com/liveaudio.html",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "https://www.pgatour.com/liveaudio.html",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/132",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/132",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "208",
+    "name": "Eurosport 2",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/208",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/208",
+     "assetType": "image"
+    }
+   }
+  ],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": "https://www.fedexchampionship.com/"
+ },
+ {
+  "tournamentId": "R2026028",
+  "name": "BMW Championship",
+  "year": "2026",
+  "month": "August",
+  "displayDate": "Aug 20 - 23",
+  "dateAccessibilityText": "August 20th through August 23rd",
+  "display": "SHOW",
+  "status": "COMPLETED",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "Wyndham Clark",
+    "playerId": "51766"
+   }
+  ],
+  "championEarnings": "$3,600,000",
+  "courseData": {
+   "name": "Bellerive Country Club",
+   "city": "St. Louis",
+   "stateCode": "MO",
+   "country": "United States of America",
+   "countryCode": "USA"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r028",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r028/679/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": true,
+   "ticketsUrl": "https://bmwchampionship.com/tickets",
+   "ticketMasterAttractionId": null,
+   "ios": {
+    "ticketMasterKey": "LGlnTJGVnDkaXpoSQGUu8iQTgAtVcLC5"
+   },
+   "android": {
+    "ticketMasterScheme": "psdkschemepgabmw",
+    "ticketMasterKey": "mq7uq0hFIOrjQQ9f9c0vIDZOqOeHE0le"
+   }
+  },
+  "purse": "$20,000,000",
+  "standings": {
+   "heading": "FEDEXCUP",
+   "value": "750 pts"
+  },
+  "tournamentCategoryInfo": {
+   "type": "PLAYOFF",
+   "label": "FedExCup Playoffs Event",
+   "logoLight": {
+    "imageOrg": "pgatour-prod",
+    "imagePath": "/pgatour/icons/playoff-indicator"
+   },
+   "logoDark": {
+    "imageOrg": "pgatour-prod",
+    "imagePath": "/pgatour/icons/playoff-indicator"
+   }
+  },
+  "networks": [
+   {
+    "id": "243",
+    "name": "HBO Max",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.max.com/",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/243",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/243",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "244",
+    "name": "Discovery+",
+    "simulcast": false,
+    "priorityNum": 4,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://play.max.com/sport-event/golf-pga-tour",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/244",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/244",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "132",
+    "name": "PGA TOUR Radio",
+    "simulcast": false,
+    "priorityNum": 5,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.pgatour.com/liveaudio.html",
+     "appleAppStore": "",
+     "ios": "https://www.pgatour.com/liveaudio.html",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "https://www.pgatour.com/liveaudio.html",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/132",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/132",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "208",
+    "name": "Eurosport 2",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/208",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/208",
+     "assetType": "image"
+    }
+   }
+  ],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": "https://bmwchampionship.com/"
+ },
+ {
+  "tournamentId": "R2026060",
+  "name": "TOUR Championship",
+  "year": "2026",
+  "month": "August",
+  "displayDate": "Aug 27 - 30",
+  "dateAccessibilityText": "August 27th through August 30th",
+  "display": "SHOW",
+  "status": "COMPLETED",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "Scottie Scheffler",
+    "playerId": "46046"
+   }
+  ],
+  "championEarnings": "$10,000,000",
+  "courseData": {
+   "name": "East Lake Golf Club",
+   "city": "Atlanta",
+   "stateCode": "GA",
+   "country": "United States of America",
+   "countryCode": "USA"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r060",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r060/688/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": true,
+   "ticketsUrl": "https://www.tourchampionship.com/tickets",
+   "ticketMasterAttractionId": "807248",
+   "ios": {
+    "ticketMasterKey": "RwqKcLiWvfhgodqVGz85zjMpLdZNaJb2"
+   },
+   "android": {
+    "ticketMasterScheme": "psdkschemepgatoura",
+    "ticketMasterKey": "eGJFGvyOQwDAaTcDxMrc5PX1CLikO5lJ"
+   }
+  },
+  "purse": "$40,000,000",
+  "tournamentCategoryInfo": {
+   "type": "PLAYOFF",
+   "label": "FedExCup Playoffs Event",
+   "logoLight": {
+    "imageOrg": "pgatour-prod",
+    "imagePath": "/pgatour/icons/playoff-indicator"
+   },
+   "logoDark": {
+    "imageOrg": "pgatour-prod",
+    "imagePath": "/pgatour/icons/playoff-indicator"
+   }
+  },
+  "networks": [
+   {
+    "id": "243",
+    "name": "HBO Max",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.max.com/",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/243",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/243",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "244",
+    "name": "Discovery+",
+    "simulcast": false,
+    "priorityNum": 4,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://play.max.com/sport-event/golf-pga-tour",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/244",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/244",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "132",
+    "name": "PGA TOUR Radio",
+    "simulcast": false,
+    "priorityNum": 5,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "https://www.pgatour.com/liveaudio.html",
+     "appleAppStore": "",
+     "ios": "https://www.pgatour.com/liveaudio.html",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "https://www.pgatour.com/liveaudio.html",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/132",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/132",
+     "assetType": "image"
+    }
+   },
+   {
+    "id": "208",
+    "name": "Eurosport 2",
+    "simulcast": false,
+    "priorityNum": 1,
+    "background": {
+     "light": "#FFFFFF",
+     "dark": "#000000"
+    },
+    "links": {
+     "url": "",
+     "appleAppStore": "",
+     "ios": "",
+     "iosStreamUrl": "",
+     "googlePlayStore": "",
+     "android": "",
+     "androidStreamUrl": "",
+     "streamUrl": "",
+     "simulcastUrl": ""
+    },
+    "logo": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/mainlogo/208",
+     "assetType": "image"
+    },
+    "logoDark": {
+     "__typename": "ImageAsset",
+     "imageOrg": "pga-tour",
+     "imagePath": "/pgatour/logos/networks/altlogo/208",
+     "assetType": "image"
+    }
+   }
+  ],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": "https://www.tourchampionship.com/"
+ },
+ {
+  "tournamentId": "R2026557",
+  "name": "Biltmore Championship Asheville",
+  "year": "2026",
+  "month": "September",
+  "displayDate": "Sep 17 - 20",
+  "dateAccessibilityText": "September 17th through September 20th",
+  "display": "SHOW",
+  "status": "UPCOMING",
+  "thisWeek": false,
+  "champions": [],
+  "championEarnings": "",
+  "courseData": {
+   "name": "The Cliffs at Walnut Cove",
+   "city": "Asheville",
+   "stateCode": "NC",
+   "country": "United States of America",
+   "countryCode": "USA"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r557",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r557/942/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": true,
+   "ticketsUrl": "https://am.ticketmaster.com/pgabiltmorechamp/buy/2026tickets",
+   "ticketMasterAttractionId": null,
+   "ios": {
+    "ticketMasterKey": "WQRzuiaSCVz0Eq8FgpcQe9T4O46jbf0k"
+   },
+   "android": {
+    "ticketMasterScheme": "psdkschemepgabiltmorechamp",
+    "ticketMasterKey": "tOaxTecUw9QlGPEPHeg1rrGJ0EdmAHza"
+   }
+  },
+  "flights": {
+   "url": "https://www.delta.com/?mkcpgn=PGA_TOUR_Schedule_Biltmore_Championship_Asheville__;!!EuSotcx3mN0!I9CrWooc2213YxcyrAhPezyWdylLzqAUa6305faPU-sgHVnwrLxXywAiOEUcdAceNJLOhGnQpEUdU144G05RuP-_$"
+  },
+  "purse": "$5,000,000",
+  "standings": {
+   "heading": "FEDEXCUP FALL PTS",
+   "value": "500 pts"
+  },
+  "networks": [],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": "https://biltmorechampionship.com/"
+ },
+ {
+  "tournamentId": "R2026500",
+  "name": "Presidents Cup",
+  "year": "2026",
+  "month": "September",
+  "displayDate": "Sep 24 - 27",
+  "dateAccessibilityText": "September 24th through September 27th",
+  "display": "SHOW",
+  "status": "UPCOMING",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "United States",
+    "playerId": ""
+   }
+  ],
+  "championEarnings": "",
+  "courseData": {
+   "name": "Medinah CC (No. 3)",
+   "city": "Chicago",
+   "stateCode": "IL",
+   "country": "United States of America",
+   "countryCode": "USA"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r500",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r500/348/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": true,
+   "ticketsUrl": "https://presidentscup.com/tickets",
+   "ticketMasterAttractionId": "1333236",
+   "ios": {
+    "ticketMasterKey": "4jGCUlqnzu0PLNT9jdyYQ3D7cdAsWfHo"
+   },
+   "android": {
+    "ticketMasterScheme": "psdkschemepgaprescup",
+    "ticketMasterKey": "SHHXEIAujyNY9GqApPIsf1KkitAJ08XT"
+   }
+  },
+  "flights": {
+   "url": "https://www.delta.com/us/en/flight-deals/united-states-flights/flights-to-chicago?mkcpgn=PGA_TOUR_Schedule_Presidents_Cup__;!!EuSotcx3mN0!I9CrWooc2213YxcyrAhPezyWdylLzqAUa6305faPU-sgHVnwrLxXywAiOEUcdAceNJLOhGnQpEUdU144G9nsHCZ7$"
+  },
+  "purse": "$0",
+  "networks": [],
+  "useTournamentSiteUrl": true,
+  "tournamentSiteUrl": "https://www.presidentscup.com"
+ },
+ {
+  "tournamentId": "R2026554",
+  "name": "Bank of Utah Championship",
+  "year": "2026",
+  "month": "October",
+  "displayDate": "Oct 1 - 4",
+  "dateAccessibilityText": "October 1st through October 4th",
+  "display": "SHOW",
+  "status": "UPCOMING",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "Michael Brennan",
+    "playerId": "61522"
+   }
+  ],
+  "championEarnings": "$1,080,000",
+  "courseData": {
+   "name": "Black Desert Resort",
+   "city": "Ivins",
+   "stateCode": "UT",
+   "country": "United States of America",
+   "countryCode": "USA"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r554",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r554/930/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": true,
+   "ticketsUrl": "https://am.ticketmaster.com/blackdesertevents",
+   "ticketMasterAttractionId": null,
+   "ios": {
+    "ticketMasterKey": "WgHGuWuTrHRFf5hHPYNjc9lY8kzC3BBt"
+   },
+   "android": {
+    "ticketMasterScheme": "psdkschemeblackdesertevents",
+    "ticketMasterKey": "WLBu9eebU3qMU493u9LJCa9GuAPyvdI4"
+   }
+  },
+  "flights": {
+   "url": "https://www.delta.com/us/en/flight-deals/united-states-flights/flights-to-las-vegas?mkcpgn=PGA_TOUR_Schedule_Bank_of_Utah_Championship"
+  },
+  "purse": "$6,000,000",
+  "standings": {
+   "heading": "FEDEXCUP FALL PTS",
+   "value": "500 pts"
+  },
+  "networks": [],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": null
+ },
+ {
+  "tournamentId": "R2026527",
+  "name": "Baycurrent Classic",
+  "year": "2026",
+  "month": "October",
+  "displayDate": "Oct 8 - 11",
+  "dateAccessibilityText": "October 8th through October 11th",
+  "display": "SHOW",
+  "status": "UPCOMING",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "Xander Schauffele",
+    "playerId": "48081"
+   }
+  ],
+  "championEarnings": "$1,440,000",
+  "courseData": {
+   "name": "Yokohama Country Club",
+   "city": "Yokohama",
+   "stateCode": "",
+   "country": "Japan",
+   "countryCode": "JPN"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r527",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r527/936/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": true,
+   "ticketsUrl": "https://baycurrentclassic.com/ticket-en",
+   "ticketMasterAttractionId": null,
+   "ios": {
+    "ticketMasterKey": null
+   },
+   "android": {
+    "ticketMasterScheme": null,
+    "ticketMasterKey": null
+   }
+  },
+  "flights": {
+   "url": "https://urldefense.com/v3/__https://www.delta.com/us/en/flight-deals/asia-flights/flights-to-tokyo?mkcpgn=PGA_TOUR_Schedule_Baycrrent_Classic__;!!EuSotcx3mN0!I9CrWooc2213YxcyrAhPezyWdylLzqAUa6305faPU-sgHVnwrLxXywAiOEUcdAceNJLOhGnQpEUdU144G7WRyXhW$"
+  },
+  "purse": "$8,000,000",
+  "standings": {
+   "heading": "FEDEXCUP FALL PTS",
+   "value": "500 pts"
+  },
+  "networks": [],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": "https://baycurrentclassic.com/"
+ },
+ {
+  "tournamentId": "R2026528",
+  "name": "Butterfield Bermuda Championship",
+  "year": "2026",
+  "month": "October",
+  "displayDate": "Oct 22 - 25",
+  "dateAccessibilityText": "October 22nd through October 25th",
+  "display": "SHOW",
+  "status": "UPCOMING",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "Adam Schenk",
+    "playerId": "47347"
+   }
+  ],
+  "championEarnings": "$1,080,000",
+  "courseData": {
+   "name": "Port Royal Golf Course",
+   "city": "Southampton",
+   "stateCode": "",
+   "country": "Bermuda",
+   "countryCode": "BER"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r528",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r528/765/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": false,
+   "ticketsUrl": null,
+   "ticketMasterAttractionId": null,
+   "ios": {
+    "ticketMasterKey": null
+   },
+   "android": {
+    "ticketMasterScheme": null,
+    "ticketMasterKey": null
+   }
+  },
+  "flights": {
+   "url": "https://www.delta.com/us/en/flight-deals/caribbean-flights/flights-to-bermuda?mkcpgn=PGA_TOUR_Schedule_Butterfield_Bermuda_Championship__;!!EuSotcx3mN0!I9CrWooc2213YxcyrAhPezyWdylLzqAUa6305faPU-sgHVnwrLxXywAiOEUcdAceNJLOhGnQpEUd"
+  },
+  "purse": "$6,000,000",
+  "standings": {
+   "heading": "FEDEXCUP FALL PTS",
+   "value": "500 pts"
+  },
+  "networks": [],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": null
+ },
+ {
+  "tournamentId": "R2026540",
+  "name": "VidantaWorld Mexico Open",
+  "year": "2026",
+  "month": "October",
+  "displayDate": "Oct 29 - Nov 1",
+  "dateAccessibilityText": "October 29th through November 1st",
+  "display": "SHOW",
+  "status": "UPCOMING",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "Brian Campbell",
+    "playerId": "46443"
+   }
+  ],
+  "championEarnings": "$1,260,000",
+  "courseData": {
+   "name": "Vidanta Vallarta",
+   "city": "Vallarta",
+   "stateCode": "",
+   "country": "Mexico",
+   "countryCode": "MEX"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r540",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r540/978/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": true,
+   "ticketsUrl": "https://mexicoopen.vidantaworld.com/en",
+   "ticketMasterAttractionId": null,
+   "ios": {
+    "ticketMasterKey": null
+   },
+   "android": {
+    "ticketMasterScheme": null,
+    "ticketMasterKey": null
+   }
+  },
+  "flights": {
+   "url": "https://www.delta.com/us/en/flight-deals/mexico-flights/flights-to-puerto-vallarta?mkcpgn=PGA_TOUR_Schedule_VidantaWorld_Mexico_Open__;!!EuSotcx3mN0!I9CrWooc2213YxcyrAhPezyWdylLzqAUa6305faPU-sgHVnwrLxXywAiOEUcdAceNJLOhGnQpEUdU14"
+  },
+  "purse": "$6,000,000",
+  "standings": {
+   "heading": "FEDEXCUP FALL PTS",
+   "value": "500 pts"
+  },
+  "networks": [],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": "https://mexicoopen.vidantaworld.com/en"
+ },
+ {
+  "tournamentId": "R2026457",
+  "name": "World Wide Technology Championship",
+  "year": "2026",
+  "month": "November",
+  "displayDate": "Nov 5 - 8",
+  "dateAccessibilityText": "November 5th through November 8th",
+  "display": "SHOW",
+  "status": "UPCOMING",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "Ben Griffin",
+    "playerId": "54591"
+   }
+  ],
+  "championEarnings": "$1,080,000",
+  "courseData": {
+   "name": "El Cardonal at Diamante",
+   "city": "Los Cabos",
+   "stateCode": "",
+   "country": "Mexico",
+   "countryCode": "MEX"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r457",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r457/919/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": true,
+   "ticketsUrl": "https://tickets.wwtchampionship.com/e/world-wide-technology-championship-2025?lang=eng",
+   "ticketMasterAttractionId": null,
+   "ios": {
+    "ticketMasterKey": null
+   },
+   "android": {
+    "ticketMasterScheme": null,
+    "ticketMasterKey": null
+   }
+  },
+  "flights": {
+   "url": "https://www.delta.com/us/en/flight-deals/mexico-flights/flights-to-los-cabos?mkcpgn=PGA_TOUR_Schedule_World_Wide_Technology_Championship__;!!EuSotcx3mN0!I9CrWooc2213YxcyrAhPezyWdylLzqAUa6305faPU-sgHVnwrLxXywAiOEUcdAceNJLOhGnQpEU"
+  },
+  "purse": "$6,000,000",
+  "standings": {
+   "heading": "FEDEXCUP FALL PTS",
+   "value": "500 pts"
+  },
+  "networks": [],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": null
+ },
+ {
+  "tournamentId": "R2026558",
+  "name": "Austin Championship",
+  "year": "2026",
+  "month": "November",
+  "displayDate": "Nov 12 - 15",
+  "dateAccessibilityText": "November 12th through November 15th",
+  "display": "SHOW",
+  "status": "UPCOMING",
+  "thisWeek": false,
+  "champions": [],
+  "championEarnings": "",
+  "courseData": {
+   "name": "Omni Barton Creek Resort & Spa (Fazio Canyons Course)",
+   "city": "Austin",
+   "stateCode": "TX",
+   "country": "United States of America",
+   "countryCode": "USA"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r558",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r558/943/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": false,
+   "ticketsUrl": null,
+   "ticketMasterAttractionId": null,
+   "ios": {
+    "ticketMasterKey": null
+   },
+   "android": {
+    "ticketMasterScheme": null,
+    "ticketMasterKey": null
+   }
+  },
+  "flights": {
+   "url": "https://www.delta.com/us/en/flight-deals/united-states-flights/flights-to-austin?mkcpgn=PGA_TOUR_Schedule_Good_Good_Championship__;!!EuSotcx3mN0!I9CrWooc2213YxcyrAhPezyWdylLzqAUa6305faPU-sgHVnwrLxXywAiOEUcdAceNJLOhGnQpEUdU144G3d"
+  },
+  "purse": "$6,000,000",
+  "standings": {
+   "heading": "FEDEXCUP FALL PTS",
+   "value": "500 pts"
+  },
+  "networks": [],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": null
+ },
+ {
+  "tournamentId": "R2026493",
+  "name": "The RSM Classic",
+  "year": "2026",
+  "month": "November",
+  "displayDate": "Nov 19 - 22",
+  "dateAccessibilityText": "November 19th through November 22nd",
+  "display": "SHOW",
+  "status": "UPCOMING",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "Sami Valimaki",
+    "playerId": "52666"
+   }
+  ],
+  "championEarnings": "$1,260,000",
+  "courseData": {
+   "name": "Sea Island Golf Club (Seaside Course)",
+   "city": "St. Simons Island",
+   "stateCode": "GA",
+   "country": "United States of America",
+   "countryCode": "USA"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r493",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r493/776/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": true,
+   "ticketsUrl": "https://tickets.rsmclassic.com/e/2025-rsm-classic/tickets",
+   "ticketMasterAttractionId": null,
+   "ios": {
+    "ticketMasterKey": null
+   },
+   "android": {
+    "ticketMasterScheme": null,
+    "ticketMasterKey": null
+   }
+  },
+  "flights": {
+   "url": "https://www.delta.com/?mkcpgn=PGA_TOUR_Schedule_RSM_Classic__;!!EuSotcx3mN0!I9CrWooc2213YxcyrAhPezyWdylLzqAUa6305faPU-sgHVnwrLxXywAiOEUcdAceNJLOhGnQpEUdU144G29PLyiZ$"
+  },
+  "purse": "$7,400,000",
+  "standings": {
+   "heading": "FEDEXCUP FALL PTS",
+   "value": "500 pts"
+  },
+  "networks": [],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": null
+ },
+ {
+  "tournamentId": "R2026478",
+  "name": "Hero World Challenge",
+  "year": "2026",
+  "month": "December",
+  "displayDate": "Dec 3 - 6",
+  "dateAccessibilityText": "December 3rd through December 6th",
+  "display": "SHOW",
+  "status": "UPCOMING",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "Hideki Matsuyama",
+    "playerId": "32839"
+   }
+  ],
+  "championEarnings": "$1,000,000",
+  "courseData": {
+   "name": "Albany GC",
+   "city": "Albany",
+   "stateCode": "",
+   "country": "Bahamas",
+   "countryCode": "BAH"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r478",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r478/232/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": false,
+   "ticketsUrl": null,
+   "ticketMasterAttractionId": null,
+   "ios": {
+    "ticketMasterKey": null
+   },
+   "android": {
+    "ticketMasterScheme": null,
+    "ticketMasterKey": null
+   }
+  },
+  "flights": {
+   "url": "https://www.delta.com/us/en/flight-deals/caribbean-flights/flights-to-bahamas?mkcpgn=PGA_TOUR_Schedule_Hero_World_Challenge__;!!EuSotcx3mN0!I9CrWooc2213YxcyrAhPezyWdylLzqAUa6305faPU-sgHVnwrLxXywAiOEUcdAceNJLOhGnQpEUdU144Gw4gs70z"
+  },
+  "purse": "$5,000,000",
+  "networks": [],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": null
+ },
+ {
+  "tournamentId": "R2026088",
+  "name": "PGA TOUR Q-School presented by Korn Ferry",
+  "year": "2026",
+  "month": "December",
+  "displayDate": "Dec 10 - 13",
+  "dateAccessibilityText": "December 10th through December 13th",
+  "display": "SHOW",
+  "status": "UPCOMING",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "A.J. Ewart",
+    "playerId": "50286"
+   }
+  ],
+  "championEarnings": "$50,000",
+  "courseData": {
+   "name": "Dye's Valley Course",
+   "city": "Ponte Vedra Beach",
+   "stateCode": "FL",
+   "country": "United States of America",
+   "countryCode": "USA"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r088",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r088/922/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": false,
+   "ticketsUrl": null,
+   "ticketMasterAttractionId": null,
+   "ios": {
+    "ticketMasterKey": null
+   },
+   "android": {
+    "ticketMasterScheme": null,
+    "ticketMasterKey": null
+   }
+  },
+  "flights": {
+   "url": "https://www.delta.com/us/en/flight-deals/florida-flights/flights-to-jacksonville?mkcpgn=PGA_TOUR_Schedule_QSchool__;!!EuSotcx3mN0!I9CrWooc2213YxcyrAhPezyWdylLzqAUa6305faPU-sgHVnwrLxXywAiOEUcdAceNJLOhGnQpEUdU144G5QUK4Fl$"
+  },
+  "purse": "$1,200,000",
+  "networks": [],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": null
+ },
+ {
+  "tournamentId": "R2026551",
+  "name": "Grant Thornton Invitational",
+  "year": "2026",
+  "month": "December",
+  "displayDate": "Dec 11 - 13",
+  "dateAccessibilityText": "December 11th through December 13th",
+  "display": "SHOW",
+  "status": "UPCOMING",
+  "thisWeek": false,
+  "champions": [
+   {
+    "displayName": "Andrew Novak",
+    "playerId": "51997"
+   },
+   {
+    "displayName": "Lauren Coughlin",
+    "playerId": "66633"
+   }
+  ],
+  "championEarnings": "$500,000",
+  "courseData": {
+   "name": "Tibur\u00f3n Golf Club",
+   "city": "Naples",
+   "stateCode": "FL",
+   "country": "United States of America",
+   "countryCode": "USA"
+  },
+  "logo": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "tournaments/logos/2026/r551",
+   "assetType": "image",
+   "fallbackImage": "tournaments:logos:r000"
+  },
+  "beautyImageAsset": {
+   "__typename": "ImageAsset",
+   "imageOrg": "pgatour-prod",
+   "imagePath": "pgatour/courses/r551/920/holes/hole18",
+   "assetType": "image",
+   "fallbackImage": "placeholders:tournamentBackgroundSolid.png"
+  },
+  "ticketing": {
+   "enabled": true,
+   "ticketsUrl": "https://www.etix.com/ticket/v/15045/grantthorntoninvitational.com",
+   "ticketMasterAttractionId": null,
+   "ios": {
+    "ticketMasterKey": null
+   },
+   "android": {
+    "ticketMasterScheme": null,
+    "ticketMasterKey": null
+   }
+  },
+  "flights": {
+   "url": "https://www.delta.com/us/en/flight-deals/florida-flights/flights-to-fort-myers?mkcpgn=PGA_TOUR_Schedule_Grant_Thornton_Invitational__;!!EuSotcx3mN0!I9CrWooc2213YxcyrAhPezyWdylLzqAUa6305faPU-sgHVnwrLxXywAiOEUcdAceNJLOhGnQpEUdU144"
+  },
+  "purse": "$4,100,000",
+  "networks": [],
+  "useTournamentSiteUrl": false,
+  "tournamentSiteUrl": "https://grantthorntoninvitational.com/"
+ }
+]

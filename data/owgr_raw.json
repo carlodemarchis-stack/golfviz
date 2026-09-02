@@ -1,0 +1,6002 @@
+[
+ {
+  "rank": 1,
+  "name": "Scottie Scheffler",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 18.4823,
+  "total": 776.26,
+  "events": 42,
+  "lastWeek": 1
+ },
+ {
+  "rank": 2,
+  "name": "Rory McIlroy",
+  "country": "Northern Ireland",
+  "ioc": "",
+  "avg": 9.0956,
+  "total": 391.11,
+  "events": 43,
+  "lastWeek": 2
+ },
+ {
+  "rank": 3,
+  "name": "Cameron Young",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 7.7414,
+  "total": 363.85,
+  "events": 47,
+  "lastWeek": 3
+ },
+ {
+  "rank": 4,
+  "name": "Matt Fitzpatrick",
+  "country": "England",
+  "ioc": "",
+  "avg": 6.9217,
+  "total": 339.16,
+  "events": 49,
+  "lastWeek": 4
+ },
+ {
+  "rank": 5,
+  "name": "Wyndham Clark",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 6.6481,
+  "total": 325.76,
+  "events": 49,
+  "lastWeek": 5
+ },
+ {
+  "rank": 6,
+  "name": "Russell Henley",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 5.7184,
+  "total": 228.74,
+  "events": 40,
+  "lastWeek": 6
+ },
+ {
+  "rank": 7,
+  "name": "Chris Gotterup",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 5.5718,
+  "total": 289.73,
+  "events": 52,
+  "lastWeek": 8
+ },
+ {
+  "rank": 8,
+  "name": "Tommy Fleetwood",
+  "country": "England",
+  "ioc": "",
+  "avg": 5.5172,
+  "total": 281.37,
+  "events": 51,
+  "lastWeek": 7
+ },
+ {
+  "rank": 9,
+  "name": "Sam Burns",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 5.4394,
+  "total": 255.65,
+  "events": 47,
+  "lastWeek": 9
+ },
+ {
+  "rank": 10,
+  "name": "Xander Schauffele",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 5.2948,
+  "total": 211.79,
+  "events": 40,
+  "lastWeek": 11
+ },
+ {
+  "rank": 11,
+  "name": "Collin Morikawa",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 5.2836,
+  "total": 211.34,
+  "events": 40,
+  "lastWeek": 10
+ },
+ {
+  "rank": 12,
+  "name": "Viktor Hovland",
+  "country": "Norway",
+  "ioc": "NOR",
+  "avg": 5.2234,
+  "total": 219.38,
+  "events": 42,
+  "lastWeek": 15
+ },
+ {
+  "rank": 13,
+  "name": "Si Woo Kim",
+  "country": "South Korea",
+  "ioc": "KOR",
+  "avg": 4.8597,
+  "total": 252.7,
+  "events": 52,
+  "lastWeek": 13
+ },
+ {
+  "rank": 14,
+  "name": "Jon Rahm",
+  "country": "Spain",
+  "ioc": "ESP",
+  "avg": 4.8121,
+  "total": 192.48,
+  "events": 40,
+  "lastWeek": 12
+ },
+ {
+  "rank": 15,
+  "name": "Justin Rose",
+  "country": "England",
+  "ioc": "",
+  "avg": 4.6358,
+  "total": 203.98,
+  "events": 44,
+  "lastWeek": 14
+ },
+ {
+  "rank": 16,
+  "name": "Ludvig Aberg",
+  "country": "Sweden",
+  "ioc": "SWE",
+  "avg": 4.4999,
+  "total": 202.5,
+  "events": 45,
+  "lastWeek": 17
+ },
+ {
+  "rank": 17,
+  "name": "J.J. Spaun",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 4.3325,
+  "total": 225.29,
+  "events": 52,
+  "lastWeek": 16
+ },
+ {
+  "rank": 18,
+  "name": "Robert MacIntyre",
+  "country": "Scotland",
+  "ioc": "",
+  "avg": 4.1562,
+  "total": 216.12,
+  "events": 52,
+  "lastWeek": 18
+ },
+ {
+  "rank": 19,
+  "name": "Aaron Rai",
+  "country": "England",
+  "ioc": "",
+  "avg": 4.1273,
+  "total": 198.11,
+  "events": 48,
+  "lastWeek": 19
+ },
+ {
+  "rank": 20,
+  "name": "Alex Noren",
+  "country": "Sweden",
+  "ioc": "SWE",
+  "avg": 4.043,
+  "total": 161.72,
+  "events": 40,
+  "lastWeek": 20
+ },
+ {
+  "rank": 21,
+  "name": "Justin Thomas",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 3.9088,
+  "total": 156.35,
+  "events": 40,
+  "lastWeek": 22
+ },
+ {
+  "rank": 22,
+  "name": "Ryan Gerard",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 3.896,
+  "total": 202.59,
+  "events": 52,
+  "lastWeek": 27
+ },
+ {
+  "rank": 23,
+  "name": "Ben Griffin",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 3.8426,
+  "total": 199.81,
+  "events": 52,
+  "lastWeek": 21
+ },
+ {
+  "rank": 24,
+  "name": "Tyrrell Hatton",
+  "country": "England",
+  "ioc": "",
+  "avg": 3.8228,
+  "total": 152.91,
+  "events": 40,
+  "lastWeek": 23
+ },
+ {
+  "rank": 25,
+  "name": "Ryan Fox",
+  "country": "New Zealand",
+  "ioc": "NZL",
+  "avg": 3.7725,
+  "total": 196.17,
+  "events": 52,
+  "lastWeek": 25
+ },
+ {
+  "rank": 26,
+  "name": "Hideki Matsuyama",
+  "country": "Japan",
+  "ioc": "JPN",
+  "avg": 3.7635,
+  "total": 195.7,
+  "events": 52,
+  "lastWeek": 24
+ },
+ {
+  "rank": 27,
+  "name": "Patrick Cantlay",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 3.6914,
+  "total": 151.35,
+  "events": 41,
+  "lastWeek": 26
+ },
+ {
+  "rank": 28,
+  "name": "Jacob Bridgeman",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 3.4977,
+  "total": 181.88,
+  "events": 52,
+  "lastWeek": 28
+ },
+ {
+  "rank": 29,
+  "name": "Min Woo Lee",
+  "country": "Australia",
+  "ioc": "AUS",
+  "avg": 3.3955,
+  "total": 173.17,
+  "events": 51,
+  "lastWeek": 31
+ },
+ {
+  "rank": 30,
+  "name": "Tom Kim",
+  "country": "South Korea",
+  "ioc": "KOR",
+  "avg": 3.3543,
+  "total": 174.43,
+  "events": 52,
+  "lastWeek": 29
+ },
+ {
+  "rank": 31,
+  "name": "Kristoffer Reitan",
+  "country": "Norway",
+  "ioc": "NOR",
+  "avg": 3.3448,
+  "total": 173.93,
+  "events": 52,
+  "lastWeek": 30
+ },
+ {
+  "rank": 32,
+  "name": "Sepp Straka",
+  "country": "Austria",
+  "ioc": "AUT",
+  "avg": 3.2956,
+  "total": 154.89,
+  "events": 47,
+  "lastWeek": 32
+ },
+ {
+  "rank": 33,
+  "name": "Akshay Bhatia",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 3.2839,
+  "total": 167.48,
+  "events": 51,
+  "lastWeek": 33
+ },
+ {
+  "rank": 34,
+  "name": "Michael Brennan",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 3.2611,
+  "total": 150.01,
+  "events": 46,
+  "lastWeek": 34
+ },
+ {
+  "rank": 35,
+  "name": "Patrick Reed",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 3.1611,
+  "total": 126.44,
+  "events": 40,
+  "lastWeek": 35
+ },
+ {
+  "rank": 36,
+  "name": "Bryson DeChambeau",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 3.1522,
+  "total": 126.09,
+  "events": 40,
+  "lastWeek": 36
+ },
+ {
+  "rank": 37,
+  "name": "J.T. Poston",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 3.0852,
+  "total": 148.09,
+  "events": 48,
+  "lastWeek": 37
+ },
+ {
+  "rank": 38,
+  "name": "Kurt Kitayama",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 2.8879,
+  "total": 135.73,
+  "events": 47,
+  "lastWeek": 38
+ },
+ {
+  "rank": 39,
+  "name": "Nicolai Hojgaard",
+  "country": "Denmark",
+  "ioc": "DEN",
+  "avg": 2.7687,
+  "total": 143.97,
+  "events": 52,
+  "lastWeek": 40
+ },
+ {
+  "rank": 40,
+  "name": "Harris English",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 2.7633,
+  "total": 140.93,
+  "events": 51,
+  "lastWeek": 39
+ },
+ {
+  "rank": 41,
+  "name": "Michael Thorbjornsen",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 2.7321,
+  "total": 136.61,
+  "events": 50,
+  "lastWeek": 41
+ },
+ {
+  "rank": 42,
+  "name": "Joaquin Niemann",
+  "country": "Chile",
+  "ioc": "CHI",
+  "avg": 2.6962,
+  "total": 107.85,
+  "events": 40,
+  "lastWeek": 43
+ },
+ {
+  "rank": 43,
+  "name": "Gary Woodland",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 2.6902,
+  "total": 131.82,
+  "events": 49,
+  "lastWeek": 42
+ },
+ {
+  "rank": 44,
+  "name": "Bud Cauley",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 2.6625,
+  "total": 127.8,
+  "events": 48,
+  "lastWeek": 45
+ },
+ {
+  "rank": 45,
+  "name": "Maverick McNealy",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 2.6587,
+  "total": 138.25,
+  "events": 52,
+  "lastWeek": 44
+ },
+ {
+  "rank": 46,
+  "name": "Alex Smalley",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 2.6529,
+  "total": 137.95,
+  "events": 52,
+  "lastWeek": 46
+ },
+ {
+  "rank": 47,
+  "name": "Keegan Bradley",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 2.5502,
+  "total": 109.66,
+  "events": 43,
+  "lastWeek": 48
+ },
+ {
+  "rank": 48,
+  "name": "Rickie Fowler",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 2.5471,
+  "total": 114.62,
+  "events": 45,
+  "lastWeek": 47
+ },
+ {
+  "rank": 49,
+  "name": "Jake Knapp",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 2.4973,
+  "total": 99.89,
+  "events": 40,
+  "lastWeek": 49
+ },
+ {
+  "rank": 50,
+  "name": "Lucas Herbert",
+  "country": "Australia",
+  "ioc": "AUS",
+  "avg": 2.3498,
+  "total": 93.99,
+  "events": 40,
+  "lastWeek": 50
+ },
+ {
+  "rank": 51,
+  "name": "Adam Scott",
+  "country": "Australia",
+  "ioc": "AUS",
+  "avg": 2.3332,
+  "total": 109.66,
+  "events": 47,
+  "lastWeek": 51
+ },
+ {
+  "rank": 52,
+  "name": "Shane Lowry",
+  "country": "Ireland",
+  "ioc": "IRL",
+  "avg": 2.1733,
+  "total": 108.67,
+  "events": 50,
+  "lastWeek": 53
+ },
+ {
+  "rank": 53,
+  "name": "Marco Penge",
+  "country": "England",
+  "ioc": "",
+  "avg": 2.169,
+  "total": 112.79,
+  "events": 52,
+  "lastWeek": 54
+ },
+ {
+  "rank": 54,
+  "name": "Corey Conners",
+  "country": "Canada",
+  "ioc": "CAN",
+  "avg": 2.1626,
+  "total": 101.64,
+  "events": 47,
+  "lastWeek": 52
+ },
+ {
+  "rank": 55,
+  "name": "Jordan Spieth",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 2.0644,
+  "total": 86.71,
+  "events": 42,
+  "lastWeek": 55
+ },
+ {
+  "rank": 56,
+  "name": "Nicolas Echavarria",
+  "country": "Colombia",
+  "ioc": "COL",
+  "avg": 2.0053,
+  "total": 104.28,
+  "events": 52,
+  "lastWeek": 56
+ },
+ {
+  "rank": 57,
+  "name": "Sungjae Im",
+  "country": "South Korea",
+  "ioc": "KOR",
+  "avg": 2.0011,
+  "total": 104.06,
+  "events": 52,
+  "lastWeek": 57
+ },
+ {
+  "rank": 58,
+  "name": "Matt Wallace",
+  "country": "England",
+  "ioc": "",
+  "avg": 2,
+  "total": 104.0,
+  "events": 52,
+  "lastWeek": 60
+ },
+ {
+  "rank": 59,
+  "name": "Samuel Stevens",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 1.9787,
+  "total": 102.89,
+  "events": 52,
+  "lastWeek": 58
+ },
+ {
+  "rank": 60,
+  "name": "Daniel Berger",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 1.9633,
+  "total": 92.27,
+  "events": 47,
+  "lastWeek": 59
+ },
+ {
+  "rank": 61,
+  "name": "Alex Fitzpatrick",
+  "country": "England",
+  "ioc": "",
+  "avg": 1.9614,
+  "total": 101.99,
+  "events": 52,
+  "lastWeek": 68
+ },
+ {
+  "rank": 62,
+  "name": "Brian Harman",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 1.9388,
+  "total": 98.88,
+  "events": 51,
+  "lastWeek": 61
+ },
+ {
+  "rank": 63,
+  "name": "Michael Kim",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 1.9254,
+  "total": 100.12,
+  "events": 52,
+  "lastWeek": 62
+ },
+ {
+  "rank": 64,
+  "name": "Eugenio Chacarra",
+  "country": "Spain",
+  "ioc": "ESP",
+  "avg": 1.9042,
+  "total": 99.02,
+  "events": 52,
+  "lastWeek": 64
+ },
+ {
+  "rank": 65,
+  "name": "Ryo Hisatsune",
+  "country": "Japan",
+  "ioc": "JPN",
+  "avg": 1.8868,
+  "total": 98.11,
+  "events": 52,
+  "lastWeek": 63
+ },
+ {
+  "rank": 66,
+  "name": "Jackson Koivun",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 1.8763,
+  "total": 75.05,
+  "events": 40,
+  "lastWeek": 65
+ },
+ {
+  "rank": 67,
+  "name": "Jason Day",
+  "country": "Australia",
+  "ioc": "AUS",
+  "avg": 1.8317,
+  "total": 73.27,
+  "events": 40,
+  "lastWeek": 66
+ },
+ {
+  "rank": 68,
+  "name": "Pierceson Coody",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 1.8247,
+  "total": 94.88,
+  "events": 52,
+  "lastWeek": 67
+ },
+ {
+  "rank": 69,
+  "name": "John Keefer",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 1.7988,
+  "total": 93.54,
+  "events": 52,
+  "lastWeek": 69
+ },
+ {
+  "rank": 70,
+  "name": "Casey Jarvis",
+  "country": "South Africa",
+  "ioc": "RSA",
+  "avg": 1.7979,
+  "total": 93.49,
+  "events": 52,
+  "lastWeek": 70
+ },
+ {
+  "rank": 71,
+  "name": "Matt McCarty",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 1.7284,
+  "total": 89.87,
+  "events": 52,
+  "lastWeek": 71
+ },
+ {
+  "rank": 72,
+  "name": "Jordan Smith",
+  "country": "England",
+  "ioc": "",
+  "avg": 1.6982,
+  "total": 88.31,
+  "events": 52,
+  "lastWeek": 72
+ },
+ {
+  "rank": 73,
+  "name": "Harry Hall",
+  "country": "England",
+  "ioc": "",
+  "avg": 1.6919,
+  "total": 87.98,
+  "events": 52,
+  "lastWeek": 76
+ },
+ {
+  "rank": 74,
+  "name": "Keith Mitchell",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 1.6855,
+  "total": 87.65,
+  "events": 52,
+  "lastWeek": 74
+ },
+ {
+  "rank": 75,
+  "name": "Eric Cole",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 1.6813,
+  "total": 87.43,
+  "events": 52,
+  "lastWeek": 77
+ },
+ {
+  "rank": 76,
+  "name": "Rasmus Hojgaard",
+  "country": "Denmark",
+  "ioc": "DEN",
+  "avg": 1.6769,
+  "total": 87.2,
+  "events": 52,
+  "lastWeek": 73
+ },
+ {
+  "rank": 77,
+  "name": "Max Homa",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 1.6723,
+  "total": 78.6,
+  "events": 47,
+  "lastWeek": 79
+ },
+ {
+  "rank": 78,
+  "name": "Andrew Novak",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 1.6697,
+  "total": 86.83,
+  "events": 52,
+  "lastWeek": 75
+ },
+ {
+  "rank": 79,
+  "name": "David Puig",
+  "country": "Spain",
+  "ioc": "ESP",
+  "avg": 1.6604,
+  "total": 66.42,
+  "events": 40,
+  "lastWeek": 78
+ },
+ {
+  "rank": 80,
+  "name": "Nick Taylor",
+  "country": "Canada",
+  "ioc": "CAN",
+  "avg": 1.6362,
+  "total": 85.08,
+  "events": 52,
+  "lastWeek": 80
+ },
+ {
+  "rank": 81,
+  "name": "Sami Valimaki",
+  "country": "Finland",
+  "ioc": "FIN",
+  "avg": 1.5793,
+  "total": 75.81,
+  "events": 48,
+  "lastWeek": 81
+ },
+ {
+  "rank": 82,
+  "name": "Steven Fisk",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 1.5587,
+  "total": 77.94,
+  "events": 50,
+  "lastWeek": 82
+ },
+ {
+  "rank": 83,
+  "name": "Ross Steelman",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 1.5336,
+  "total": 70.54,
+  "events": 46,
+  "lastWeek": 84
+ },
+ {
+  "rank": 84,
+  "name": "Rasmus Neergaard-Petersen",
+  "country": "Denmark",
+  "ioc": "DEN",
+  "avg": 1.5318,
+  "total": 79.65,
+  "events": 52,
+  "lastWeek": 83
+ },
+ {
+  "rank": 85,
+  "name": "Sahith Theegala",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 1.5294,
+  "total": 74.94,
+  "events": 49,
+  "lastWeek": 85
+ },
+ {
+  "rank": 86,
+  "name": "Matti Schmid",
+  "country": "Germany",
+  "ioc": "GER",
+  "avg": 1.4948,
+  "total": 77.73,
+  "events": 52,
+  "lastWeek": 86
+ },
+ {
+  "rank": 87,
+  "name": "McClure Meissner",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 1.4883,
+  "total": 74.41,
+  "events": 50,
+  "lastWeek": 89
+ },
+ {
+  "rank": 88,
+  "name": "Thomas Detry",
+  "country": "Belgium",
+  "ioc": "BEL",
+  "avg": 1.4813,
+  "total": 77.03,
+  "events": 52,
+  "lastWeek": 87
+ },
+ {
+  "rank": 89,
+  "name": "Max Greyserman",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 1.4811,
+  "total": 75.54,
+  "events": 51,
+  "lastWeek": 88
+ },
+ {
+  "rank": 90,
+  "name": "Denny McCarthy",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 1.4563,
+  "total": 66.99,
+  "events": 46,
+  "lastWeek": 90
+ },
+ {
+  "rank": 91,
+  "name": "Aldrich Potgieter",
+  "country": "South Africa",
+  "ioc": "RSA",
+  "avg": 1.4516,
+  "total": 72.58,
+  "events": 50,
+  "lastWeek": 91
+ },
+ {
+  "rank": 92,
+  "name": "Jayden Schaper",
+  "country": "South Africa",
+  "ioc": "RSA",
+  "avg": 1.4306,
+  "total": 74.39,
+  "events": 52,
+  "lastWeek": 94
+ },
+ {
+  "rank": 93,
+  "name": "Keita Nakajima",
+  "country": "Japan",
+  "ioc": "JPN",
+  "avg": 1.4072,
+  "total": 67.54,
+  "events": 48,
+  "lastWeek": 92
+ },
+ {
+  "rank": 94,
+  "name": "Beau Hossler",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 1.4024,
+  "total": 72.92,
+  "events": 52,
+  "lastWeek": 93
+ },
+ {
+  "rank": 95,
+  "name": "Taylor Pendrith",
+  "country": "Canada",
+  "ioc": "CAN",
+  "avg": 1.3953,
+  "total": 66.97,
+  "events": 48,
+  "lastWeek": 96
+ },
+ {
+  "rank": 96,
+  "name": "Christiaan Bezuidenhout",
+  "country": "South Africa",
+  "ioc": "RSA",
+  "avg": 1.3856,
+  "total": 69.28,
+  "events": 50,
+  "lastWeek": 98
+ },
+ {
+  "rank": 97,
+  "name": "Ricky Castillo",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 1.3775,
+  "total": 67.5,
+  "events": 49,
+  "lastWeek": 95
+ },
+ {
+  "rank": 98,
+  "name": "Blades Brown",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 1.3483,
+  "total": 62.02,
+  "events": 46,
+  "lastWeek": 101
+ },
+ {
+  "rank": 99,
+  "name": "Shaun Norris",
+  "country": "South Africa",
+  "ioc": "RSA",
+  "avg": 1.3446,
+  "total": 69.92,
+  "events": 52,
+  "lastWeek": 99
+ },
+ {
+  "rank": 100,
+  "name": "Daniel Hillier",
+  "country": "New Zealand",
+  "ioc": "NZL",
+  "avg": 1.3411,
+  "total": 69.74,
+  "events": 52,
+  "lastWeek": 120
+ },
+ {
+  "rank": 101,
+  "name": "Chun-an Yu",
+  "country": "Taiwan (Chinese Taipei)",
+  "ioc": "TPE",
+  "avg": 1.3399,
+  "total": 69.68,
+  "events": 52,
+  "lastWeek": 100
+ },
+ {
+  "rank": 102,
+  "name": "Patrick Rodgers",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 1.3333,
+  "total": 69.33,
+  "events": 52,
+  "lastWeek": 102
+ },
+ {
+  "rank": 103,
+  "name": "Emiliano Grillo",
+  "country": "Argentina",
+  "ioc": "ARG",
+  "avg": 1.3314,
+  "total": 65.24,
+  "events": 49,
+  "lastWeek": 103
+ },
+ {
+  "rank": 104,
+  "name": "Jackson Suber",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 1.3278,
+  "total": 63.74,
+  "events": 48,
+  "lastWeek": 104
+ },
+ {
+  "rank": 105,
+  "name": "John Parry",
+  "country": "England",
+  "ioc": "",
+  "avg": 1.3214,
+  "total": 68.71,
+  "events": 52,
+  "lastWeek": 97
+ },
+ {
+  "rank": 106,
+  "name": "Ben Kohles",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 1.3128,
+  "total": 68.27,
+  "events": 52,
+  "lastWeek": 106
+ },
+ {
+  "rank": 107,
+  "name": "Andrew Putnam",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 1.3087,
+  "total": 68.05,
+  "events": 52,
+  "lastWeek": 105
+ },
+ {
+  "rank": 108,
+  "name": "Richard Hoey",
+  "country": "Philippines",
+  "ioc": "PHI",
+  "avg": 1.2905,
+  "total": 67.11,
+  "events": 52,
+  "lastWeek": 107
+ },
+ {
+  "rank": 109,
+  "name": "Sudarshan Yellamaraju",
+  "country": "Canada",
+  "ioc": "CAN",
+  "avg": 1.2903,
+  "total": 61.93,
+  "events": 48,
+  "lastWeek": 108
+ },
+ {
+  "rank": 110,
+  "name": "Oliver Lindell",
+  "country": "Finland",
+  "ioc": "FIN",
+  "avg": 1.2788,
+  "total": 66.5,
+  "events": 52,
+  "lastWeek": 113
+ },
+ {
+  "rank": 111,
+  "name": "Chris Kirk",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 1.2747,
+  "total": 54.81,
+  "events": 43,
+  "lastWeek": 112
+ },
+ {
+  "rank": 112,
+  "name": "Lucas Glover",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 1.2634,
+  "total": 60.64,
+  "events": 48,
+  "lastWeek": 109
+ },
+ {
+  "rank": 113,
+  "name": "Stephan Jaeger",
+  "country": "Germany",
+  "ioc": "GER",
+  "avg": 1.2533,
+  "total": 62.66,
+  "events": 50,
+  "lastWeek": 110
+ },
+ {
+  "rank": 114,
+  "name": "Davis Thompson",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 1.25,
+  "total": 60.0,
+  "events": 48,
+  "lastWeek": 111
+ },
+ {
+  "rank": 115,
+  "name": "Doc Redman",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 1.2385,
+  "total": 50.78,
+  "events": 41,
+  "lastWeek": 114
+ },
+ {
+  "rank": 116,
+  "name": "Kevin Roy",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 1.2283,
+  "total": 62.64,
+  "events": 51,
+  "lastWeek": 116
+ },
+ {
+  "rank": 117,
+  "name": "Austin Smotherman",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 1.2256,
+  "total": 61.28,
+  "events": 50,
+  "lastWeek": 115
+ },
+ {
+  "rank": 118,
+  "name": "Jacob Skov Olesen",
+  "country": "Denmark",
+  "ioc": "DEN",
+  "avg": 1.2159,
+  "total": 63.23,
+  "events": 52,
+  "lastWeek": 139
+ },
+ {
+  "rank": 119,
+  "name": "Kota Kaneko",
+  "country": "Japan",
+  "ioc": "JPN",
+  "avg": 1.2067,
+  "total": 62.75,
+  "events": 52,
+  "lastWeek": 117
+ },
+ {
+  "rank": 120,
+  "name": "Max McGreevy",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 1.1795,
+  "total": 61.34,
+  "events": 52,
+  "lastWeek": 118
+ },
+ {
+  "rank": 121,
+  "name": "Brooks Koepka",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 1.1769,
+  "total": 47.07,
+  "events": 40,
+  "lastWeek": 119
+ },
+ {
+  "rank": 122,
+  "name": "Chandler Blanchet",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 1.1579,
+  "total": 55.58,
+  "events": 48,
+  "lastWeek": 121
+ },
+ {
+  "rank": 123,
+  "name": "Andy Sullivan",
+  "country": "England",
+  "ioc": "",
+  "avg": 1.1543,
+  "total": 60.02,
+  "events": 52,
+  "lastWeek": 122
+ },
+ {
+  "rank": 124,
+  "name": "Haotong Li",
+  "country": "China",
+  "ioc": "CHN",
+  "avg": 1.1524,
+  "total": 59.92,
+  "events": 52,
+  "lastWeek": 125
+ },
+ {
+  "rank": 125,
+  "name": "Davis Riley",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 1.1522,
+  "total": 59.91,
+  "events": 52,
+  "lastWeek": 123
+ },
+ {
+  "rank": 126,
+  "name": "Hennie Du Plessis",
+  "country": "South Africa",
+  "ioc": "RSA",
+  "avg": 1.1491,
+  "total": 45.97,
+  "events": 40,
+  "lastWeek": 126
+ },
+ {
+  "rank": 127,
+  "name": "Garrick Higgo",
+  "country": "South Africa",
+  "ioc": "RSA",
+  "avg": 1.1445,
+  "total": 51.5,
+  "events": 45,
+  "lastWeek": 124
+ },
+ {
+  "rank": 128,
+  "name": "David Lipsky",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 1.1344,
+  "total": 58.99,
+  "events": 52,
+  "lastWeek": 127
+ },
+ {
+  "rank": 129,
+  "name": "Tom Hoge",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 1.1308,
+  "total": 58.8,
+  "events": 52,
+  "lastWeek": 128
+ },
+ {
+  "rank": 130,
+  "name": "Angel Ayora",
+  "country": "Spain",
+  "ioc": "ESP",
+  "avg": 1.1259,
+  "total": 58.55,
+  "events": 52,
+  "lastWeek": 129
+ },
+ {
+  "rank": 131,
+  "name": "Nacho Elvira",
+  "country": "Spain",
+  "ioc": "ESP",
+  "avg": 1.1218,
+  "total": 58.33,
+  "events": 52,
+  "lastWeek": 156
+ },
+ {
+  "rank": 132,
+  "name": "Brandt Snedeker",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 1.119,
+  "total": 50.35,
+  "events": 45,
+  "lastWeek": 130
+ },
+ {
+  "rank": 133,
+  "name": "Daniel Brown(Oct1994)",
+  "country": "England",
+  "ioc": "",
+  "avg": 1.1066,
+  "total": 53.12,
+  "events": 48,
+  "lastWeek": 131
+ },
+ {
+  "rank": 134,
+  "name": "Tom McKibbin",
+  "country": "Northern Ireland",
+  "ioc": "",
+  "avg": 1.0998,
+  "total": 48.39,
+  "events": 44,
+  "lastWeek": 142
+ },
+ {
+  "rank": 135,
+  "name": "Chandler Phillips",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 1.0892,
+  "total": 56.64,
+  "events": 52,
+  "lastWeek": 132
+ },
+ {
+  "rank": 136,
+  "name": "Tony Finau",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 1.081,
+  "total": 45.4,
+  "events": 42,
+  "lastWeek": 136
+ },
+ {
+  "rank": 137,
+  "name": "Cameron Smith",
+  "country": "Australia",
+  "ioc": "AUS",
+  "avg": 1.0771,
+  "total": 43.08,
+  "events": 40,
+  "lastWeek": 133
+ },
+ {
+  "rank": 138,
+  "name": "Lee Hodges",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 1.0681,
+  "total": 50.2,
+  "events": 47,
+  "lastWeek": 134
+ },
+ {
+  "rank": 139,
+  "name": "Scott Vincent",
+  "country": "Zimbabwe",
+  "ioc": "ZIM",
+  "avg": 1.0598,
+  "total": 46.63,
+  "events": 44,
+  "lastWeek": 135
+ },
+ {
+  "rank": 140,
+  "name": "Jose Luis Ballester",
+  "country": "Spain",
+  "ioc": "ESP",
+  "avg": 1.0553,
+  "total": 42.21,
+  "events": 40,
+  "lastWeek": 137
+ },
+ {
+  "rank": 141,
+  "name": "Zac Blair",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 1.0384,
+  "total": 54.0,
+  "events": 52,
+  "lastWeek": 140
+ },
+ {
+  "rank": 142,
+  "name": "William Mouw",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 1.0356,
+  "total": 46.6,
+  "events": 45,
+  "lastWeek": 138
+ },
+ {
+  "rank": 143,
+  "name": "Elvis Smylie",
+  "country": "Australia",
+  "ioc": "AUS",
+  "avg": 1.0116,
+  "total": 48.56,
+  "events": 48,
+  "lastWeek": 141
+ },
+ {
+  "rank": 144,
+  "name": "Mikael Lindberg",
+  "country": "Sweden",
+  "ioc": "SWE",
+  "avg": 1.0044,
+  "total": 52.23,
+  "events": 52,
+  "lastWeek": 143
+ },
+ {
+  "rank": 145,
+  "name": "Sergio Garcia",
+  "country": "Spain",
+  "ioc": "ESP",
+  "avg": 1.0014,
+  "total": 40.06,
+  "events": 40,
+  "lastWeek": 147
+ },
+ {
+  "rank": 146,
+  "name": "Richard Sterne",
+  "country": "South Africa",
+  "ioc": "RSA",
+  "avg": 0.9977,
+  "total": 43.9,
+  "events": 44,
+  "lastWeek": 146
+ },
+ {
+  "rank": 147,
+  "name": "Adrien Saddier",
+  "country": "France",
+  "ioc": "FRA",
+  "avg": 0.9968,
+  "total": 51.83,
+  "events": 52,
+  "lastWeek": 144
+ },
+ {
+  "rank": 148,
+  "name": "Mark Hubbard",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.9948,
+  "total": 51.73,
+  "events": 52,
+  "lastWeek": 145
+ },
+ {
+  "rank": 149,
+  "name": "Joe Dean",
+  "country": "England",
+  "ioc": "",
+  "avg": 0.9883,
+  "total": 51.39,
+  "events": 52,
+  "lastWeek": 292
+ },
+ {
+  "rank": 150,
+  "name": "Laurie Canter",
+  "country": "England",
+  "ioc": "",
+  "avg": 0.9789,
+  "total": 46.01,
+  "events": 47,
+  "lastWeek": 149
+ },
+ {
+  "rank": 151,
+  "name": "Ian Holt",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.9763,
+  "total": 44.91,
+  "events": 46,
+  "lastWeek": 152
+ },
+ {
+  "rank": 152,
+  "name": "Zachary Bauchou",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.9742,
+  "total": 50.66,
+  "events": 52,
+  "lastWeek": 148
+ },
+ {
+  "rank": 153,
+  "name": "Cole Sherwood",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.9675,
+  "total": 44.5,
+  "events": 46,
+  "lastWeek": 153
+ },
+ {
+  "rank": 154,
+  "name": "Doug Ghim",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.9569,
+  "total": 48.8,
+  "events": 51,
+  "lastWeek": 150
+ },
+ {
+  "rank": 155,
+  "name": "Billy Horschel",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.9546,
+  "total": 41.05,
+  "events": 43,
+  "lastWeek": 155
+ },
+ {
+  "rank": 156,
+  "name": "Mackenzie Hughes",
+  "country": "Canada",
+  "ioc": "CAN",
+  "avg": 0.9496,
+  "total": 48.43,
+  "events": 51,
+  "lastWeek": 151
+ },
+ {
+  "rank": 157,
+  "name": "Calum Hill",
+  "country": "Scotland",
+  "ioc": "",
+  "avg": 0.9394,
+  "total": 48.85,
+  "events": 52,
+  "lastWeek": 154
+ },
+ {
+  "rank": 158,
+  "name": "Thorbjorn Olesen",
+  "country": "Denmark",
+  "ioc": "DEN",
+  "avg": 0.9369,
+  "total": 48.72,
+  "events": 52,
+  "lastWeek": 166
+ },
+ {
+  "rank": 159,
+  "name": "Alistair Docherty",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.9246,
+  "total": 43.46,
+  "events": 47,
+  "lastWeek": 159
+ },
+ {
+  "rank": 160,
+  "name": "Victor Perez",
+  "country": "France",
+  "ioc": "FRA",
+  "avg": 0.9232,
+  "total": 44.31,
+  "events": 48,
+  "lastWeek": 160
+ },
+ {
+  "rank": 161,
+  "name": "Michael Hollick",
+  "country": "South Africa",
+  "ioc": "RSA",
+  "avg": 0.9231,
+  "total": 46.16,
+  "events": 50,
+  "lastWeek": 157
+ },
+ {
+  "rank": 162,
+  "name": "Bernd Wiesberger",
+  "country": "Austria",
+  "ioc": "AUT",
+  "avg": 0.9178,
+  "total": 47.72,
+  "events": 52,
+  "lastWeek": 164
+ },
+ {
+  "rank": 163,
+  "name": "Brian Campbell",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.9156,
+  "total": 45.78,
+  "events": 50,
+  "lastWeek": 158
+ },
+ {
+  "rank": 164,
+  "name": "Marcus Armitage",
+  "country": "England",
+  "ioc": "",
+  "avg": 0.9123,
+  "total": 47.44,
+  "events": 52,
+  "lastWeek": 161
+ },
+ {
+  "rank": 165,
+  "name": "Taylor Moore",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.9078,
+  "total": 41.76,
+  "events": 46,
+  "lastWeek": 162
+ },
+ {
+  "rank": 166,
+  "name": "Benjamin James",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.9058,
+  "total": 36.23,
+  "events": 40,
+  "lastWeek": 165
+ },
+ {
+  "rank": 167,
+  "name": "JC Ritchie",
+  "country": "South Africa",
+  "ioc": "RSA",
+  "avg": 0.9057,
+  "total": 47.09,
+  "events": 52,
+  "lastWeek": 163
+ },
+ {
+  "rank": 168,
+  "name": "Tommy Morrison",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.8999,
+  "total": 35.99,
+  "events": 40,
+  "lastWeek": 167
+ },
+ {
+  "rank": 169,
+  "name": "Davis Bryant",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.8943,
+  "total": 42.03,
+  "events": 47,
+  "lastWeek": 176
+ },
+ {
+  "rank": 170,
+  "name": "Jeremy Gandon",
+  "country": "France",
+  "ioc": "FRA",
+  "avg": 0.894,
+  "total": 41.12,
+  "events": 46,
+  "lastWeek": 169
+ },
+ {
+  "rank": 171,
+  "name": "Joakim Lagergren",
+  "country": "Sweden",
+  "ioc": "SWE",
+  "avg": 0.8877,
+  "total": 46.16,
+  "events": 52,
+  "lastWeek": 178
+ },
+ {
+  "rank": 172,
+  "name": "Travis Smyth",
+  "country": "Australia",
+  "ioc": "AUS",
+  "avg": 0.8764,
+  "total": 35.93,
+  "events": 41,
+  "lastWeek": 173
+ },
+ {
+  "rank": 173,
+  "name": "Seonghyeon Kim",
+  "country": "South Korea",
+  "ioc": "KOR",
+  "avg": 0.8753,
+  "total": 45.51,
+  "events": 52,
+  "lastWeek": 168
+ },
+ {
+  "rank": 174,
+  "name": "Dylan Menante",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.8746,
+  "total": 38.48,
+  "events": 44,
+  "lastWeek": 175
+ },
+ {
+  "rank": 175,
+  "name": "Davis Lamb",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.865,
+  "total": 34.6,
+  "events": 40,
+  "lastWeek": 170
+ },
+ {
+  "rank": 176,
+  "name": "Kazuki Higa",
+  "country": "Japan",
+  "ioc": "JPN",
+  "avg": 0.8637,
+  "total": 44.91,
+  "events": 52,
+  "lastWeek": 172
+ },
+ {
+  "rank": 177,
+  "name": "Carlos Ortiz",
+  "country": "Mexico",
+  "ioc": "MEX",
+  "avg": 0.8555,
+  "total": 34.22,
+  "events": 40,
+  "lastWeek": 174
+ },
+ {
+  "rank": 178,
+  "name": "Dan Bradbury",
+  "country": "England",
+  "ioc": "",
+  "avg": 0.8552,
+  "total": 44.47,
+  "events": 52,
+  "lastWeek": 171
+ },
+ {
+  "rank": 179,
+  "name": "Takumi Kanaya",
+  "country": "Japan",
+  "ioc": "JPN",
+  "avg": 0.8388,
+  "total": 43.62,
+  "events": 52,
+  "lastWeek": 178
+ },
+ {
+  "rank": 180,
+  "name": "Jesper Svensson",
+  "country": "Sweden",
+  "ioc": "SWE",
+  "avg": 0.8375,
+  "total": 43.55,
+  "events": 52,
+  "lastWeek": 177
+ },
+ {
+  "rank": 181,
+  "name": "Jeff Winther",
+  "country": "Denmark",
+  "ioc": "DEN",
+  "avg": 0.8302,
+  "total": 39.02,
+  "events": 47,
+  "lastWeek": 180
+ },
+ {
+  "rank": 182,
+  "name": "Martin Couvra",
+  "country": "France",
+  "ioc": "FRA",
+  "avg": 0.8124,
+  "total": 42.24,
+  "events": 52,
+  "lastWeek": 181
+ },
+ {
+  "rank": 183,
+  "name": "Thriston Lawrence",
+  "country": "South Africa",
+  "ioc": "RSA",
+  "avg": 0.8083,
+  "total": 42.03,
+  "events": 52,
+  "lastWeek": 185
+ },
+ {
+  "rank": 184,
+  "name": "Yuta Sugiura",
+  "country": "Japan",
+  "ioc": "JPN",
+  "avg": 0.804,
+  "total": 41.81,
+  "events": 52,
+  "lastWeek": 183
+ },
+ {
+  "rank": 185,
+  "name": "Kristoffer Ventura",
+  "country": "Norway",
+  "ioc": "NOR",
+  "avg": 0.7984,
+  "total": 37.52,
+  "events": 47,
+  "lastWeek": 184
+ },
+ {
+  "rank": 186,
+  "name": "Jhonattan Vegas",
+  "country": "Venezuela",
+  "ioc": "VEN",
+  "avg": 0.7916,
+  "total": 34.83,
+  "events": 44,
+  "lastWeek": 182
+ },
+ {
+  "rank": 187,
+  "name": "Austin Eckroat",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.7897,
+  "total": 38.7,
+  "events": 49,
+  "lastWeek": 186
+ },
+ {
+  "rank": 188,
+  "name": "Hunter Eichhorn",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.7865,
+  "total": 31.46,
+  "events": 40,
+  "lastWeek": 191
+ },
+ {
+  "rank": 189,
+  "name": "Dean Burmester",
+  "country": "South Africa",
+  "ioc": "RSA",
+  "avg": 0.7858,
+  "total": 31.43,
+  "events": 40,
+  "lastWeek": 187
+ },
+ {
+  "rank": 190,
+  "name": "A.J. Ewart",
+  "country": "Canada",
+  "ioc": "CAN",
+  "avg": 0.7845,
+  "total": 31.38,
+  "events": 40,
+  "lastWeek": 190
+ },
+ {
+  "rank": 191,
+  "name": "Marty Dou Zecheng",
+  "country": "China",
+  "ioc": "CHN",
+  "avg": 0.784,
+  "total": 37.63,
+  "events": 48,
+  "lastWeek": 189
+ },
+ {
+  "rank": 192,
+  "name": "Adrien Dumont de Chassart",
+  "country": "Belgium",
+  "ioc": "BEL",
+  "avg": 0.7819,
+  "total": 40.66,
+  "events": 52,
+  "lastWeek": 188
+ },
+ {
+  "rank": 193,
+  "name": "Jorge Campillo",
+  "country": "Spain",
+  "ioc": "ESP",
+  "avg": 0.7764,
+  "total": 40.37,
+  "events": 52,
+  "lastWeek": 195
+ },
+ {
+  "rank": 194,
+  "name": "Ewen Ferguson",
+  "country": "Scotland",
+  "ioc": "",
+  "avg": 0.7744,
+  "total": 40.27,
+  "events": 52,
+  "lastWeek": 200
+ },
+ {
+  "rank": 195,
+  "name": "Matt Kuchar",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.7704,
+  "total": 30.82,
+  "events": 40,
+  "lastWeek": 192
+ },
+ {
+  "rank": 196,
+  "name": "Jay Card III",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.7689,
+  "total": 30.76,
+  "events": 40,
+  "lastWeek": 193
+ },
+ {
+  "rank": 197,
+  "name": "Chad Ramey",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.7637,
+  "total": 39.71,
+  "events": 52,
+  "lastWeek": 194
+ },
+ {
+  "rank": 198,
+  "name": "Abraham Ancer",
+  "country": "Mexico",
+  "ioc": "MEX",
+  "avg": 0.7596,
+  "total": 30.38,
+  "events": 40,
+  "lastWeek": 197
+ },
+ {
+  "rank": 199,
+  "name": "Christofer Blomstrand",
+  "country": "Sweden",
+  "ioc": "SWE",
+  "avg": 0.7579,
+  "total": 30.32,
+  "events": 40,
+  "lastWeek": 341
+ },
+ {
+  "rank": 200,
+  "name": "Kazuma Kobori",
+  "country": "New Zealand",
+  "ioc": "NZL",
+  "avg": 0.7514,
+  "total": 39.08,
+  "events": 52,
+  "lastWeek": 212
+ },
+ {
+  "rank": 201,
+  "name": "Vincent Whaley",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.751,
+  "total": 39.05,
+  "events": 52,
+  "lastWeek": 196
+ },
+ {
+  "rank": 202,
+  "name": "Seamus Power",
+  "country": "Ireland",
+  "ioc": "IRL",
+  "avg": 0.7436,
+  "total": 38.67,
+  "events": 52,
+  "lastWeek": 198
+ },
+ {
+  "rank": 203,
+  "name": "Adam Schenk",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.7421,
+  "total": 38.59,
+  "events": 52,
+  "lastWeek": 199
+ },
+ {
+  "rank": 204,
+  "name": "Byeong Hun An",
+  "country": "South Korea",
+  "ioc": "KOR",
+  "avg": 0.7371,
+  "total": 32.43,
+  "events": 44,
+  "lastWeek": 203
+ },
+ {
+  "rank": 205,
+  "name": "Carson Young",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.7366,
+  "total": 38.3,
+  "events": 52,
+  "lastWeek": 201
+ },
+ {
+  "rank": 206,
+  "name": "Karl Vilips",
+  "country": "Australia",
+  "ioc": "AUS",
+  "avg": 0.7335,
+  "total": 31.54,
+  "events": 43,
+  "lastWeek": 201
+ },
+ {
+  "rank": 207,
+  "name": "Drew Nesbitt",
+  "country": "Canada",
+  "ioc": "CAN",
+  "avg": 0.7244,
+  "total": 28.97,
+  "events": 40,
+  "lastWeek": 204
+ },
+ {
+  "rank": 208,
+  "name": "Derek Hitchner",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.718,
+  "total": 28.72,
+  "events": 40,
+  "lastWeek": 205
+ },
+ {
+  "rank": 209,
+  "name": "Richard T. Lee",
+  "country": "Canada",
+  "ioc": "CAN",
+  "avg": 0.715,
+  "total": 35.03,
+  "events": 49,
+  "lastWeek": 210
+ },
+ {
+  "rank": 210,
+  "name": "Erik van Rooyen",
+  "country": "South Africa",
+  "ioc": "RSA",
+  "avg": 0.7121,
+  "total": 37.03,
+  "events": 52,
+  "lastWeek": 208
+ },
+ {
+  "rank": 211,
+  "name": "Todd Clements",
+  "country": "England",
+  "ioc": "",
+  "avg": 0.709,
+  "total": 36.87,
+  "events": 52,
+  "lastWeek": 207
+ },
+ {
+  "rank": 212,
+  "name": "Peter Uihlein",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.7072,
+  "total": 28.29,
+  "events": 40,
+  "lastWeek": 206
+ },
+ {
+  "rank": 213,
+  "name": "Matthew Jordan",
+  "country": "England",
+  "ioc": "",
+  "avg": 0.703,
+  "total": 36.56,
+  "events": 52,
+  "lastWeek": 220
+ },
+ {
+  "rank": 214,
+  "name": "Joe Highsmith",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.7002,
+  "total": 36.41,
+  "events": 52,
+  "lastWeek": 209
+ },
+ {
+  "rank": 215,
+  "name": "Neal Shipley",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.6987,
+  "total": 34.93,
+  "events": 50,
+  "lastWeek": 215
+ },
+ {
+  "rank": 216,
+  "name": "Julien Guerrier",
+  "country": "France",
+  "ioc": "FRA",
+  "avg": 0.6943,
+  "total": 36.1,
+  "events": 52,
+  "lastWeek": 217
+ },
+ {
+  "rank": 217,
+  "name": "Stefano Mazzoli",
+  "country": "Italy",
+  "ioc": "ITA",
+  "avg": 0.6914,
+  "total": 35.96,
+  "events": 52,
+  "lastWeek": 214
+ },
+ {
+  "rank": 218,
+  "name": "Joel Dahmen",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.6896,
+  "total": 35.86,
+  "events": 52,
+  "lastWeek": 213
+ },
+ {
+  "rank": 219,
+  "name": "Michael Johnson",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.6883,
+  "total": 33.73,
+  "events": 49,
+  "lastWeek": 216
+ },
+ {
+  "rank": 220,
+  "name": "Davis Shore",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.6868,
+  "total": 35.72,
+  "events": 52,
+  "lastWeek": 218
+ },
+ {
+  "rank": 221,
+  "name": "Zhou Yanhan",
+  "country": "China",
+  "ioc": "CHN",
+  "avg": 0.6852,
+  "total": 30.83,
+  "events": 45,
+  "lastWeek": 211
+ },
+ {
+  "rank": 222,
+  "name": "Frederik Schott",
+  "country": "Germany",
+  "ioc": "GER",
+  "avg": 0.6814,
+  "total": 35.43,
+  "events": 52,
+  "lastWeek": 219
+ },
+ {
+  "rank": 223,
+  "name": "Ian Gilligan",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.6799,
+  "total": 27.19,
+  "events": 40,
+  "lastWeek": 221
+ },
+ {
+  "rank": 224,
+  "name": "Patrick Fishburn",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.6656,
+  "total": 34.61,
+  "events": 52,
+  "lastWeek": 222
+ },
+ {
+  "rank": 225,
+  "name": "Joost Luiten",
+  "country": "Netherlands",
+  "ioc": "NED",
+  "avg": 0.6629,
+  "total": 34.47,
+  "events": 52,
+  "lastWeek": 225
+ },
+ {
+  "rank": 226,
+  "name": "Oihan Guillamoundeguy",
+  "country": "France",
+  "ioc": "FRA",
+  "avg": 0.6625,
+  "total": 33.79,
+  "events": 51,
+  "lastWeek": 228
+ },
+ {
+  "rank": 227,
+  "name": "Daniel Da Costa Rodrigues",
+  "country": "Portugal",
+  "ioc": "POR",
+  "avg": 0.6594,
+  "total": 26.37,
+  "events": 40,
+  "lastWeek": 265
+ },
+ {
+  "rank": 228,
+  "name": "Alejandro del Rey",
+  "country": "Spain",
+  "ioc": "ESP",
+  "avg": 0.6553,
+  "total": 34.07,
+  "events": 52,
+  "lastWeek": 227
+ },
+ {
+  "rank": 229,
+  "name": "Dustin Johnson",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.6548,
+  "total": 26.19,
+  "events": 40,
+  "lastWeek": 223
+ },
+ {
+  "rank": 230,
+  "name": "Harold Varner III",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.6521,
+  "total": 26.08,
+  "events": 40,
+  "lastWeek": 226
+ },
+ {
+  "rank": 231,
+  "name": "Thomas Rosenmueller",
+  "country": "Germany",
+  "ioc": "GER",
+  "avg": 0.6518,
+  "total": 31.94,
+  "events": 49,
+  "lastWeek": 268
+ },
+ {
+  "rank": 232,
+  "name": "Anthony Kim",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.6517,
+  "total": 26.07,
+  "events": 40,
+  "lastWeek": 224
+ },
+ {
+  "rank": 233,
+  "name": "Robby Shelton IV",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.6436,
+  "total": 33.47,
+  "events": 52,
+  "lastWeek": 230
+ },
+ {
+  "rank": 234,
+  "name": "Marc Leishman",
+  "country": "Australia",
+  "ioc": "AUS",
+  "avg": 0.6395,
+  "total": 25.58,
+  "events": 40,
+  "lastWeek": 229
+ },
+ {
+  "rank": 235,
+  "name": "Davis Chatfield",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.6393,
+  "total": 30.05,
+  "events": 47,
+  "lastWeek": 231
+ },
+ {
+  "rank": 236,
+  "name": "Austin Hitt",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.6366,
+  "total": 32.46,
+  "events": 51,
+  "lastWeek": 233
+ },
+ {
+  "rank": 237,
+  "name": "Darius Van Driel",
+  "country": "Netherlands",
+  "ioc": "NED",
+  "avg": 0.6365,
+  "total": 33.1,
+  "events": 52,
+  "lastWeek": 241
+ },
+ {
+  "rank": 238,
+  "name": "Antoine Rozner",
+  "country": "France",
+  "ioc": "FRA",
+  "avg": 0.6362,
+  "total": 33.08,
+  "events": 52,
+  "lastWeek": 243
+ },
+ {
+  "rank": 239,
+  "name": "Branden Grace",
+  "country": "South Africa",
+  "ioc": "RSA",
+  "avg": 0.6342,
+  "total": 25.37,
+  "events": 40,
+  "lastWeek": 232
+ },
+ {
+  "rank": 240,
+  "name": "Cameron John",
+  "country": "Australia",
+  "ioc": "AUS",
+  "avg": 0.6328,
+  "total": 25.31,
+  "events": 40,
+  "lastWeek": 234
+ },
+ {
+  "rank": 241,
+  "name": "Francesco Molinari",
+  "country": "Italy",
+  "ioc": "ITA",
+  "avg": 0.6323,
+  "total": 25.29,
+  "events": 40,
+  "lastWeek": 236
+ },
+ {
+  "rank": 242,
+  "name": "Yubin Jang",
+  "country": "South Korea",
+  "ioc": "KOR",
+  "avg": 0.6315,
+  "total": 25.26,
+  "events": 40,
+  "lastWeek": 239
+ },
+ {
+  "rank": 243,
+  "name": "Cooper Dossey",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.6306,
+  "total": 30.27,
+  "events": 48,
+  "lastWeek": 237
+ },
+ {
+  "rank": 244,
+  "name": "MJ Daffue",
+  "country": "South Africa",
+  "ioc": "RSA",
+  "avg": 0.6302,
+  "total": 32.77,
+  "events": 52,
+  "lastWeek": 238
+ },
+ {
+  "rank": 245,
+  "name": "Alvaro Ortiz Becerra",
+  "country": "Mexico",
+  "ioc": "MEX",
+  "avg": 0.6271,
+  "total": 32.61,
+  "events": 52,
+  "lastWeek": 240
+ },
+ {
+  "rank": 246,
+  "name": "Emilio Gonzalez",
+  "country": "Mexico",
+  "ioc": "MEX",
+  "avg": 0.6248,
+  "total": 24.99,
+  "events": 40,
+  "lastWeek": 235
+ },
+ {
+  "rank": 247,
+  "name": "Doyeob Mun",
+  "country": "South Korea",
+  "ioc": "KOR",
+  "avg": 0.6241,
+  "total": 29.95,
+  "events": 48,
+  "lastWeek": 244
+ },
+ {
+  "rank": 248,
+  "name": "Sandy Scott",
+  "country": "Scotland",
+  "ioc": "",
+  "avg": 0.6203,
+  "total": 26.05,
+  "events": 42,
+  "lastWeek": 251
+ },
+ {
+  "rank": 249,
+  "name": "Niklas Norgaard",
+  "country": "Denmark",
+  "ioc": "DEN",
+  "avg": 0.6198,
+  "total": 32.23,
+  "events": 52,
+  "lastWeek": 336
+ },
+ {
+  "rank": 250,
+  "name": "Ugo Coussaud",
+  "country": "France",
+  "ioc": "FRA",
+  "avg": 0.616,
+  "total": 32.03,
+  "events": 52,
+  "lastWeek": 253
+ },
+ {
+  "rank": 251,
+  "name": "John Pak",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.6155,
+  "total": 29.54,
+  "events": 48,
+  "lastWeek": 242
+ },
+ {
+  "rank": 252,
+  "name": "Maximilian Steinlechner",
+  "country": "Austria",
+  "ioc": "AUT",
+  "avg": 0.6107,
+  "total": 31.75,
+  "events": 52,
+  "lastWeek": 250
+ },
+ {
+  "rank": 253,
+  "name": "Thomas Ponder",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.6084,
+  "total": 24.33,
+  "events": 40,
+  "lastWeek": 252
+ },
+ {
+  "rank": 254,
+  "name": "Ben Silverman",
+  "country": "Canada",
+  "ioc": "CAN",
+  "avg": 0.6081,
+  "total": 29.19,
+  "events": 48,
+  "lastWeek": 246
+ },
+ {
+  "rank": 255,
+  "name": "Caleb VanArragon",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.6061,
+  "total": 27.28,
+  "events": 45,
+  "lastWeek": 257
+ },
+ {
+  "rank": 256,
+  "name": "Trace Crowe(Oct1996)",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.6053,
+  "total": 24.21,
+  "events": 40,
+  "lastWeek": 247
+ },
+ {
+  "rank": 257,
+  "name": "Grant Forrest",
+  "country": "Scotland",
+  "ioc": "",
+  "avg": 0.6042,
+  "total": 29.6,
+  "events": 49,
+  "lastWeek": 245
+ },
+ {
+  "rank": 258,
+  "name": "Sam Ryder",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.6022,
+  "total": 27.1,
+  "events": 45,
+  "lastWeek": 248
+ },
+ {
+  "rank": 259,
+  "name": "Taylor Dickson",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.6004,
+  "total": 28.82,
+  "events": 48,
+  "lastWeek": 254
+ },
+ {
+  "rank": 260,
+  "name": "Nathan Kimsey",
+  "country": "England",
+  "ioc": "",
+  "avg": 0.5954,
+  "total": 24.41,
+  "events": 41,
+  "lastWeek": 256
+ },
+ {
+  "rank": 261,
+  "name": "Ding Wenyi",
+  "country": "China",
+  "ioc": "CHN",
+  "avg": 0.5925,
+  "total": 30.81,
+  "events": 52,
+  "lastWeek": 249
+ },
+ {
+  "rank": 262,
+  "name": "Hank Lebioda",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.592,
+  "total": 26.64,
+  "events": 45,
+  "lastWeek": 255
+ },
+ {
+  "rank": 263,
+  "name": "Taichi Kho",
+  "country": "Hong Kong",
+  "ioc": "HKG",
+  "avg": 0.5896,
+  "total": 24.76,
+  "events": 42,
+  "lastWeek": 260
+ },
+ {
+  "rank": 264,
+  "name": "Caleb Surratt",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.5886,
+  "total": 23.54,
+  "events": 40,
+  "lastWeek": 258
+ },
+ {
+  "rank": 265,
+  "name": "Ricardo Gouveia",
+  "country": "Portugal",
+  "ioc": "POR",
+  "avg": 0.5877,
+  "total": 30.56,
+  "events": 52,
+  "lastWeek": 259
+ },
+ {
+  "rank": 266,
+  "name": "Rafa Cabrera Bello",
+  "country": "Spain",
+  "ioc": "ESP",
+  "avg": 0.5855,
+  "total": 30.45,
+  "events": 52,
+  "lastWeek": 262
+ },
+ {
+  "rank": 267,
+  "name": "Yusaku Hosono",
+  "country": "Japan",
+  "ioc": "JPN",
+  "avg": 0.5844,
+  "total": 28.63,
+  "events": 49,
+  "lastWeek": 301
+ },
+ {
+  "rank": 268,
+  "name": "Lanto Griffin",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.5827,
+  "total": 29.14,
+  "events": 50,
+  "lastWeek": 263
+ },
+ {
+  "rank": 269,
+  "name": "Taylor Montgomery",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.5819,
+  "total": 30.26,
+  "events": 52,
+  "lastWeek": 264
+ },
+ {
+  "rank": 270,
+  "name": "Francesco Laporta",
+  "country": "Italy",
+  "ioc": "ITA",
+  "avg": 0.5818,
+  "total": 30.25,
+  "events": 52,
+  "lastWeek": 261
+ },
+ {
+  "rank": 271,
+  "name": "Logan McAllister",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.5807,
+  "total": 26.71,
+  "events": 46,
+  "lastWeek": 266
+ },
+ {
+  "rank": 272,
+  "name": "Scott Jamieson",
+  "country": "Scotland",
+  "ioc": "",
+  "avg": 0.574,
+  "total": 29.85,
+  "events": 52,
+  "lastWeek": 267
+ },
+ {
+  "rank": 273,
+  "name": "Chan Kim",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.5682,
+  "total": 29.55,
+  "events": 52,
+  "lastWeek": 270
+ },
+ {
+  "rank": 273,
+  "name": "Pontus Nyholm",
+  "country": "Sweden",
+  "ioc": "SWE",
+  "avg": 0.5682,
+  "total": 27.27,
+  "events": 48,
+  "lastWeek": 269
+ },
+ {
+  "rank": 275,
+  "name": "Dominic Foos",
+  "country": "Germany",
+  "ioc": "GER",
+  "avg": 0.5669,
+  "total": 22.67,
+  "events": 40,
+  "lastWeek": 275
+ },
+ {
+  "rank": 275,
+  "name": "Guido Migliozzi",
+  "country": "Italy",
+  "ioc": "ITA",
+  "avg": 0.5669,
+  "total": 27.21,
+  "events": 48,
+  "lastWeek": 279
+ },
+ {
+  "rank": 277,
+  "name": "Thomas Pieters",
+  "country": "Belgium",
+  "ioc": "BEL",
+  "avg": 0.5626,
+  "total": 22.51,
+  "events": 40,
+  "lastWeek": 271
+ },
+ {
+  "rank": 278,
+  "name": "David Skinns",
+  "country": "England",
+  "ioc": "",
+  "avg": 0.5603,
+  "total": 28.02,
+  "events": 50,
+  "lastWeek": 272
+ },
+ {
+  "rank": 279,
+  "name": "Tatsunori Shogenji",
+  "country": "Japan",
+  "ioc": "JPN",
+  "avg": 0.5554,
+  "total": 28.88,
+  "events": 52,
+  "lastWeek": 273
+ },
+ {
+  "rank": 280,
+  "name": "Jacques Kruyswijk",
+  "country": "South Africa",
+  "ioc": "RSA",
+  "avg": 0.5512,
+  "total": 25.91,
+  "events": 47,
+  "lastWeek": 274
+ },
+ {
+  "rank": 281,
+  "name": "Yurav Premlall",
+  "country": "South Africa",
+  "ioc": "RSA",
+  "avg": 0.5501,
+  "total": 28.6,
+  "events": 52,
+  "lastWeek": 287
+ },
+ {
+  "rank": 282,
+  "name": "Richard Mansell",
+  "country": "England",
+  "ioc": "",
+  "avg": 0.5499,
+  "total": 23.65,
+  "events": 43,
+  "lastWeek": 276
+ },
+ {
+  "rank": 283,
+  "name": "Daniel van Tonder",
+  "country": "South Africa",
+  "ioc": "RSA",
+  "avg": 0.549,
+  "total": 28.55,
+  "events": 52,
+  "lastWeek": 277
+ },
+ {
+  "rank": 284,
+  "name": "Paul Peterson",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.5485,
+  "total": 27.97,
+  "events": 51,
+  "lastWeek": 278
+ },
+ {
+  "rank": 285,
+  "name": "Frederic LaCroix",
+  "country": "France",
+  "ioc": "FRA",
+  "avg": 0.5453,
+  "total": 26.17,
+  "events": 48,
+  "lastWeek": 297
+ },
+ {
+  "rank": 286,
+  "name": "Gregorio De Leo",
+  "country": "Italy",
+  "ioc": "ITA",
+  "avg": 0.5446,
+  "total": 25.6,
+  "events": 47,
+  "lastWeek": 289
+ },
+ {
+  "rank": 287,
+  "name": "Pablo Ereno Perez",
+  "country": "Spain",
+  "ioc": "ESP",
+  "avg": 0.5414,
+  "total": 21.65,
+  "events": 40,
+  "lastWeek": 280
+ },
+ {
+  "rank": 288,
+  "name": "Brice Garnett",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.5372,
+  "total": 24.17,
+  "events": 45,
+  "lastWeek": 284
+ },
+ {
+  "rank": 289,
+  "name": "Manuel Elvira",
+  "country": "Spain",
+  "ioc": "ESP",
+  "avg": 0.5368,
+  "total": 27.91,
+  "events": 52,
+  "lastWeek": 281
+ },
+ {
+  "rank": 290,
+  "name": "Ren Yonezawa",
+  "country": "Japan",
+  "ioc": "JPN",
+  "avg": 0.5354,
+  "total": 27.84,
+  "events": 52,
+  "lastWeek": 282
+ },
+ {
+  "rank": 291,
+  "name": "Michael La Sasso",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.5346,
+  "total": 21.38,
+  "events": 40,
+  "lastWeek": 288
+ },
+ {
+  "rank": 292,
+  "name": "Nicolai Von Dellingshausen",
+  "country": "Germany",
+  "ioc": "GER",
+  "avg": 0.5341,
+  "total": 27.77,
+  "events": 52,
+  "lastWeek": 283
+ },
+ {
+  "rank": 293,
+  "name": "Chan Choi",
+  "country": "South Korea",
+  "ioc": "KOR",
+  "avg": 0.5329,
+  "total": 21.31,
+  "events": 40,
+  "lastWeek": 286
+ },
+ {
+  "rank": 294,
+  "name": "Adrian Otaegui",
+  "country": "United Arab Emirates",
+  "ioc": "UAE",
+  "avg": 0.5317,
+  "total": 27.65,
+  "events": 52,
+  "lastWeek": 285
+ },
+ {
+  "rank": 295,
+  "name": "Zack Fischer",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.5258,
+  "total": 22.61,
+  "events": 43,
+  "lastWeek": 294
+ },
+ {
+  "rank": 296,
+  "name": "Julien-Alexandre Sale",
+  "country": "France",
+  "ioc": "FRA",
+  "avg": 0.5216,
+  "total": 26.08,
+  "events": 50,
+  "lastWeek": 298
+ },
+ {
+  "rank": 297,
+  "name": "Jeffrey Kang",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.5211,
+  "total": 22.93,
+  "events": 44,
+  "lastWeek": 290
+ },
+ {
+  "rank": 298,
+  "name": "Cole Hammer",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.5207,
+  "total": 25.51,
+  "events": 49,
+  "lastWeek": 291
+ },
+ {
+  "rank": 299,
+  "name": "David Law",
+  "country": "Scotland",
+  "ioc": "",
+  "avg": 0.5204,
+  "total": 27.06,
+  "events": 52,
+  "lastWeek": 296
+ },
+ {
+  "rank": 300,
+  "name": "Danny Walker",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.5134,
+  "total": 24.64,
+  "events": 48,
+  "lastWeek": 293
+ },
+ {
+  "rank": 301,
+  "name": "Sanghee Lee",
+  "country": "South Korea",
+  "ioc": "KOR",
+  "avg": 0.5057,
+  "total": 26.29,
+  "events": 52,
+  "lastWeek": 424
+ },
+ {
+  "rank": 302,
+  "name": "Luke Clanton",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.5043,
+  "total": 20.17,
+  "events": 40,
+  "lastWeek": 295
+ },
+ {
+  "rank": 303,
+  "name": "Taehoon Ok",
+  "country": "South Korea",
+  "ioc": "KOR",
+  "avg": 0.5028,
+  "total": 24.14,
+  "events": 48,
+  "lastWeek": 302
+ },
+ {
+  "rank": 304,
+  "name": "James Nicholas",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.5017,
+  "total": 26.09,
+  "events": 52,
+  "lastWeek": 299
+ },
+ {
+  "rank": 305,
+  "name": "Lars Van Der Vight",
+  "country": "Netherlands",
+  "ioc": "NED",
+  "avg": 0.5008,
+  "total": 20.03,
+  "events": 40,
+  "lastWeek": 303
+ },
+ {
+  "rank": 306,
+  "name": "Trevor Cone",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.4996,
+  "total": 23.98,
+  "events": 48,
+  "lastWeek": 300
+ },
+ {
+  "rank": 307,
+  "name": "Frankie Harris",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.4983,
+  "total": 19.93,
+  "events": 40,
+  "lastWeek": 305
+ },
+ {
+  "rank": 308,
+  "name": "Matthieu Pavon",
+  "country": "France",
+  "ioc": "FRA",
+  "avg": 0.4954,
+  "total": 25.76,
+  "events": 52,
+  "lastWeek": 311
+ },
+ {
+  "rank": 309,
+  "name": "Chris Wood",
+  "country": "England",
+  "ioc": "",
+  "avg": 0.4922,
+  "total": 19.69,
+  "events": 40,
+  "lastWeek": 310
+ },
+ {
+  "rank": 310,
+  "name": "Julian Suri",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.4915,
+  "total": 21.63,
+  "events": 44,
+  "lastWeek": 304
+ },
+ {
+  "rank": 311,
+  "name": "Ryo Ishikawa",
+  "country": "Japan",
+  "ioc": "JPN",
+  "avg": 0.4849,
+  "total": 25.22,
+  "events": 52,
+  "lastWeek": 306
+ },
+ {
+  "rank": 312,
+  "name": "Marcel Schneider",
+  "country": "Germany",
+  "ioc": "GER",
+  "avg": 0.4835,
+  "total": 25.14,
+  "events": 52,
+  "lastWeek": 312
+ },
+ {
+  "rank": 313,
+  "name": "Adam Hadwin",
+  "country": "Canada",
+  "ioc": "CAN",
+  "avg": 0.4832,
+  "total": 24.64,
+  "events": 51,
+  "lastWeek": 308
+ },
+ {
+  "rank": 314,
+  "name": "Mitchell Meissner",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.4825,
+  "total": 24.13,
+  "events": 50,
+  "lastWeek": 307
+ },
+ {
+  "rank": 315,
+  "name": "John VanDerLaan",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.4823,
+  "total": 22.67,
+  "events": 47,
+  "lastWeek": 309
+ },
+ {
+  "rank": 316,
+  "name": "Renato Paratore",
+  "country": "Italy",
+  "ioc": "ITA",
+  "avg": 0.4821,
+  "total": 25.07,
+  "events": 52,
+  "lastWeek": 315
+ },
+ {
+  "rank": 317,
+  "name": "Ben Carr",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.4805,
+  "total": 19.22,
+  "events": 40,
+  "lastWeek": 316
+ },
+ {
+  "rank": 318,
+  "name": "Ryosuke Kinoshita",
+  "country": "Japan",
+  "ioc": "JPN",
+  "avg": 0.4772,
+  "total": 24.34,
+  "events": 51,
+  "lastWeek": 313
+ },
+ {
+  "rank": 319,
+  "name": "Joseph Bramlett",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.4756,
+  "total": 23.78,
+  "events": 50,
+  "lastWeek": 317
+ },
+ {
+  "rank": 320,
+  "name": "Noah Goodwin",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.475,
+  "total": 22.8,
+  "events": 48,
+  "lastWeek": 318
+ },
+ {
+  "rank": 321,
+  "name": "Hayden Springer",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.4743,
+  "total": 23.24,
+  "events": 49,
+  "lastWeek": 314
+ },
+ {
+  "rank": 322,
+  "name": "Ian Snyman",
+  "country": "South Africa",
+  "ioc": "RSA",
+  "avg": 0.4688,
+  "total": 18.75,
+  "events": 40,
+  "lastWeek": 323
+ },
+ {
+  "rank": 323,
+  "name": "Brandon Robinson-Thompson",
+  "country": "England",
+  "ioc": "",
+  "avg": 0.468,
+  "total": 24.34,
+  "events": 52,
+  "lastWeek": 321
+ },
+ {
+  "rank": 324,
+  "name": "Joel Girrbach",
+  "country": "Switzerland",
+  "ioc": "SUI",
+  "avg": 0.4675,
+  "total": 24.31,
+  "events": 52,
+  "lastWeek": 320
+ },
+ {
+  "rank": 325,
+  "name": "Christo Lamprecht",
+  "country": "South Africa",
+  "ioc": "RSA",
+  "avg": 0.4655,
+  "total": 22.35,
+  "events": 48,
+  "lastWeek": 322
+ },
+ {
+  "rank": 326,
+  "name": "Romain Langasque",
+  "country": "France",
+  "ioc": "FRA",
+  "avg": 0.4653,
+  "total": 24.2,
+  "events": 52,
+  "lastWeek": 324
+ },
+ {
+  "rank": 327,
+  "name": "Justin Lower",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.4649,
+  "total": 24.18,
+  "events": 52,
+  "lastWeek": 319
+ },
+ {
+  "rank": 328,
+  "name": "Charlie Lindh",
+  "country": "Sweden",
+  "ioc": "SWE",
+  "avg": 0.4642,
+  "total": 19.5,
+  "events": 42,
+  "lastWeek": 326
+ },
+ {
+  "rank": 329,
+  "name": "Wang Wei Hsuan",
+  "country": "Taiwan (Chinese Taipei)",
+  "ioc": "TPE",
+  "avg": 0.4634,
+  "total": 20.39,
+  "events": 44,
+  "lastWeek": 328
+ },
+ {
+  "rank": 330,
+  "name": "Barend Botha",
+  "country": "South Africa",
+  "ioc": "RSA",
+  "avg": 0.4588,
+  "total": 23.86,
+  "events": 52,
+  "lastWeek": 327
+ },
+ {
+  "rank": 331,
+  "name": "Adam Wallin",
+  "country": "Sweden",
+  "ioc": "SWE",
+  "avg": 0.4574,
+  "total": 21.04,
+  "events": 46,
+  "lastWeek": 325
+ },
+ {
+  "rank": 332,
+  "name": "Travis Trace",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.4533,
+  "total": 18.13,
+  "events": 40,
+  "lastWeek": 330
+ },
+ {
+  "rank": 333,
+  "name": "Minhyuk Song",
+  "country": "South Korea",
+  "ioc": "KOR",
+  "avg": 0.4507,
+  "total": 18.03,
+  "events": 40,
+  "lastWeek": 329
+ },
+ {
+  "rank": 334,
+  "name": "Mason Andersen",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.4506,
+  "total": 21.63,
+  "events": 48,
+  "lastWeek": 331
+ },
+ {
+  "rank": 335,
+  "name": "Nick Gabrelcik",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.4493,
+  "total": 20.22,
+  "events": 45,
+  "lastWeek": 333
+ },
+ {
+  "rank": 336,
+  "name": "Junghwan Lee",
+  "country": "South Korea",
+  "ioc": "KOR",
+  "avg": 0.446,
+  "total": 23.19,
+  "events": 52,
+  "lastWeek": 332
+ },
+ {
+  "rank": 337,
+  "name": "Mikumu Horikawa",
+  "country": "Japan",
+  "ioc": "JPN",
+  "avg": 0.4442,
+  "total": 22.21,
+  "events": 50,
+  "lastWeek": 334
+ },
+ {
+  "rank": 338,
+  "name": "Gordon Sargent",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.4431,
+  "total": 17.73,
+  "events": 40,
+  "lastWeek": 339
+ },
+ {
+  "rank": 338,
+  "name": "Nicolo Galletti",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.4431,
+  "total": 21.27,
+  "events": 48,
+  "lastWeek": 341
+ },
+ {
+  "rank": 340,
+  "name": "Jorge Fernandez-Valdes",
+  "country": "Argentina",
+  "ioc": "ARG",
+  "avg": 0.4422,
+  "total": 19.46,
+  "events": 44,
+  "lastWeek": 335
+ },
+ {
+  "rank": 341,
+  "name": "Hugo Townsend",
+  "country": "Sweden",
+  "ioc": "SWE",
+  "avg": 0.4393,
+  "total": 20.21,
+  "events": 46,
+  "lastWeek": 337
+ },
+ {
+  "rank": 342,
+  "name": "Jeremy Paul",
+  "country": "Germany",
+  "ioc": "GER",
+  "avg": 0.4375,
+  "total": 22.75,
+  "events": 52,
+  "lastWeek": 338
+ },
+ {
+  "rank": 343,
+  "name": "David Ford",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.4349,
+  "total": 17.39,
+  "events": 40,
+  "lastWeek": 340
+ },
+ {
+  "rank": 344,
+  "name": "Jimmy Stanger",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.4337,
+  "total": 17.35,
+  "events": 40,
+  "lastWeek": 346
+ },
+ {
+  "rank": 345,
+  "name": "Tom Vaillant",
+  "country": "France",
+  "ioc": "FRA",
+  "avg": 0.4326,
+  "total": 22.49,
+  "events": 52,
+  "lastWeek": 361
+ },
+ {
+  "rank": 346,
+  "name": "Trent Phillips",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.4324,
+  "total": 22.49,
+  "events": 52,
+  "lastWeek": 343
+ },
+ {
+  "rank": 347,
+  "name": "Cameron Davis",
+  "country": "Australia",
+  "ioc": "AUS",
+  "avg": 0.4274,
+  "total": 17.95,
+  "events": 42,
+  "lastWeek": 344
+ },
+ {
+  "rank": 348,
+  "name": "Justin Biwer",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.4271,
+  "total": 17.08,
+  "events": 40,
+  "lastWeek": 630
+ },
+ {
+  "rank": 349,
+  "name": "Filippo Celli",
+  "country": "Italy",
+  "ioc": "ITA",
+  "avg": 0.4267,
+  "total": 22.19,
+  "events": 52,
+  "lastWeek": 348
+ },
+ {
+  "rank": 350,
+  "name": "John Marshall Butler",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.4257,
+  "total": 17.03,
+  "events": 40,
+  "lastWeek": 349
+ },
+ {
+  "rank": 351,
+  "name": "Marcus Kinhult",
+  "country": "Sweden",
+  "ioc": "SWE",
+  "avg": 0.4251,
+  "total": 21.25,
+  "events": 50,
+  "lastWeek": 347
+ },
+ {
+  "rank": 352,
+  "name": "Kensei Hirata",
+  "country": "Japan",
+  "ioc": "JPN",
+  "avg": 0.4249,
+  "total": 22.1,
+  "events": 52,
+  "lastWeek": 345
+ },
+ {
+  "rank": 353,
+  "name": "Kiradech Aphibarnrat",
+  "country": "Thailand",
+  "ioc": "THA",
+  "avg": 0.4247,
+  "total": 22.09,
+  "events": 52,
+  "lastWeek": 349
+ },
+ {
+  "rank": 354,
+  "name": "Younghan Song",
+  "country": "South Korea",
+  "ioc": "KOR",
+  "avg": 0.4239,
+  "total": 22.04,
+  "events": 52,
+  "lastWeek": 351
+ },
+ {
+  "rank": 355,
+  "name": "Harry Higgs",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.4217,
+  "total": 21.93,
+  "events": 52,
+  "lastWeek": 352
+ },
+ {
+  "rank": 355,
+  "name": "Lee Westwood",
+  "country": "England",
+  "ioc": "",
+  "avg": 0.4217,
+  "total": 16.87,
+  "events": 40,
+  "lastWeek": 356
+ },
+ {
+  "rank": 357,
+  "name": "Patrick Flavin",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.4201,
+  "total": 16.8,
+  "events": 40,
+  "lastWeek": 411
+ },
+ {
+  "rank": 358,
+  "name": "Wu Ashun",
+  "country": "China",
+  "ioc": "CHN",
+  "avg": 0.4186,
+  "total": 16.74,
+  "events": 40,
+  "lastWeek": 354
+ },
+ {
+  "rank": 359,
+  "name": "Isaiah Salinda",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.4184,
+  "total": 16.74,
+  "events": 40,
+  "lastWeek": 352
+ },
+ {
+  "rank": 360,
+  "name": "Kyle Westmoreland",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.4182,
+  "total": 21.74,
+  "events": 52,
+  "lastWeek": 355
+ },
+ {
+  "rank": 361,
+  "name": "Tomohiro Ishizaka",
+  "country": "Japan",
+  "ioc": "JPN",
+  "avg": 0.417,
+  "total": 18.77,
+  "events": 45,
+  "lastWeek": 357
+ },
+ {
+  "rank": 362,
+  "name": "Etienne Papineau",
+  "country": "Canada",
+  "ioc": "CAN",
+  "avg": 0.4106,
+  "total": 16.42,
+  "events": 40,
+  "lastWeek": 363
+ },
+ {
+  "rank": 363,
+  "name": "Taiga Semikawa",
+  "country": "Japan",
+  "ioc": "JPN",
+  "avg": 0.4085,
+  "total": 19.2,
+  "events": 47,
+  "lastWeek": 359
+ },
+ {
+  "rank": 364,
+  "name": "Johannes Veerman",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.406,
+  "total": 21.11,
+  "events": 52,
+  "lastWeek": 358
+ },
+ {
+  "rank": 364,
+  "name": "Tapio Pulkkanen",
+  "country": "Finland",
+  "ioc": "FIN",
+  "avg": 0.406,
+  "total": 19.89,
+  "events": 49,
+  "lastWeek": 362
+ },
+ {
+  "rank": 366,
+  "name": "Benjamin Taylor",
+  "country": "England",
+  "ioc": "",
+  "avg": 0.4054,
+  "total": 21.08,
+  "events": 52,
+  "lastWeek": 364
+ },
+ {
+  "rank": 367,
+  "name": "Matthew Anderson",
+  "country": "Canada",
+  "ioc": "CAN",
+  "avg": 0.4049,
+  "total": 19.43,
+  "events": 48,
+  "lastWeek": 369
+ },
+ {
+  "rank": 368,
+  "name": "Danny Willett",
+  "country": "England",
+  "ioc": "",
+  "avg": 0.4037,
+  "total": 18.17,
+  "events": 45,
+  "lastWeek": 367
+ },
+ {
+  "rank": 369,
+  "name": "Hamish Brown",
+  "country": "Denmark",
+  "ioc": "DEN",
+  "avg": 0.4028,
+  "total": 18.53,
+  "events": 46,
+  "lastWeek": 365
+ },
+ {
+  "rank": 370,
+  "name": "Angel Hidalgo Portillo",
+  "country": "Spain",
+  "ioc": "ESP",
+  "avg": 0.4024,
+  "total": 20.93,
+  "events": 52,
+  "lastWeek": 385
+ },
+ {
+  "rank": 371,
+  "name": "Talor Gooch",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.4015,
+  "total": 16.06,
+  "events": 40,
+  "lastWeek": 366
+ },
+ {
+  "rank": 372,
+  "name": "Sebastian Soderberg",
+  "country": "Sweden",
+  "ioc": "SWE",
+  "avg": 0.4003,
+  "total": 18.41,
+  "events": 46,
+  "lastWeek": 360
+ },
+ {
+  "rank": 373,
+  "name": "Corey Pereira",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.3984,
+  "total": 15.94,
+  "events": 40,
+  "lastWeek": 415
+ },
+ {
+  "rank": 374,
+  "name": "Jackson Buchanan",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.3972,
+  "total": 15.89,
+  "events": 40,
+  "lastWeek": 371
+ },
+ {
+  "rank": 375,
+  "name": "Seungyul Noh",
+  "country": "South Korea",
+  "ioc": "KOR",
+  "avg": 0.3954,
+  "total": 20.56,
+  "events": 52,
+  "lastWeek": 368
+ },
+ {
+  "rank": 376,
+  "name": "Riki Kawamoto",
+  "country": "Japan",
+  "ioc": "JPN",
+  "avg": 0.3951,
+  "total": 19.36,
+  "events": 49,
+  "lastWeek": 398
+ },
+ {
+  "rank": 377,
+  "name": "William Gordon",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.3937,
+  "total": 20.47,
+  "events": 52,
+  "lastWeek": 370
+ },
+ {
+  "rank": 378,
+  "name": "Sam Bairstow",
+  "country": "England",
+  "ioc": "",
+  "avg": 0.3929,
+  "total": 20.43,
+  "events": 52,
+  "lastWeek": 394
+ },
+ {
+  "rank": 379,
+  "name": "Danthai Boonma",
+  "country": "Thailand",
+  "ioc": "THA",
+  "avg": 0.3915,
+  "total": 15.66,
+  "events": 40,
+  "lastWeek": 372
+ },
+ {
+  "rank": 380,
+  "name": "Rory Franssen",
+  "country": "Scotland",
+  "ioc": "",
+  "avg": 0.3913,
+  "total": 15.65,
+  "events": 40,
+  "lastWeek": 378
+ },
+ {
+  "rank": 381,
+  "name": "Carson Bacha",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.391,
+  "total": 15.64,
+  "events": 40,
+  "lastWeek": 373
+ },
+ {
+  "rank": 382,
+  "name": "Jordan Gumberg",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.3881,
+  "total": 20.18,
+  "events": 52,
+  "lastWeek": 375
+ },
+ {
+  "rank": 383,
+  "name": "Andrea Pavan",
+  "country": "Italy",
+  "ioc": "ITA",
+  "avg": 0.3873,
+  "total": 16.66,
+  "events": 43,
+  "lastWeek": 382
+ },
+ {
+  "rank": 384,
+  "name": "Bronson Burgoon",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.3866,
+  "total": 15.46,
+  "events": 40,
+  "lastWeek": 379
+ },
+ {
+  "rank": 385,
+  "name": "Austin Bautista",
+  "country": "Australia",
+  "ioc": "AUS",
+  "avg": 0.3863,
+  "total": 20.09,
+  "events": 52,
+  "lastWeek": 380
+ },
+ {
+  "rank": 386,
+  "name": "Yosuke Asaji",
+  "country": "Japan",
+  "ioc": "JPN",
+  "avg": 0.3857,
+  "total": 20.05,
+  "events": 52,
+  "lastWeek": 375
+ },
+ {
+  "rank": 387,
+  "name": "Zach Johnson",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.3856,
+  "total": 15.42,
+  "events": 40,
+  "lastWeek": 377
+ },
+ {
+  "rank": 388,
+  "name": "Kieran Vincent",
+  "country": "Zimbabwe",
+  "ioc": "ZIM",
+  "avg": 0.3851,
+  "total": 16.94,
+  "events": 44,
+  "lastWeek": 397
+ },
+ {
+  "rank": 389,
+  "name": "Matthew Southgate",
+  "country": "England",
+  "ioc": "",
+  "avg": 0.385,
+  "total": 17.33,
+  "events": 45,
+  "lastWeek": 386
+ },
+ {
+  "rank": 390,
+  "name": "Jazz Janewattananond",
+  "country": "Thailand",
+  "ioc": "THA",
+  "avg": 0.3822,
+  "total": 17.2,
+  "events": 45,
+  "lastWeek": 383
+ },
+ {
+  "rank": 391,
+  "name": "John Catlin",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.3797,
+  "total": 17.85,
+  "events": 47,
+  "lastWeek": 374
+ },
+ {
+  "rank": 392,
+  "name": "Seungtaek Lee",
+  "country": "South Korea",
+  "ioc": "KOR",
+  "avg": 0.3771,
+  "total": 15.09,
+  "events": 40,
+  "lastWeek": 381
+ },
+ {
+  "rank": 393,
+  "name": "Aguri Iwasaki",
+  "country": "Japan",
+  "ioc": "JPN",
+  "avg": 0.3761,
+  "total": 17.3,
+  "events": 46,
+  "lastWeek": 417
+ },
+ {
+  "rank": 394,
+  "name": "Oliver Bekker",
+  "country": "South Africa",
+  "ioc": "RSA",
+  "avg": 0.3748,
+  "total": 16.87,
+  "events": 45,
+  "lastWeek": 395
+ },
+ {
+  "rank": 395,
+  "name": "Naoyuki Kataoka",
+  "country": "Japan",
+  "ioc": "JPN",
+  "avg": 0.3733,
+  "total": 18.67,
+  "events": 50,
+  "lastWeek": 399
+ },
+ {
+  "rank": 396,
+  "name": "Tomoyo Ikemura",
+  "country": "Japan",
+  "ioc": "JPN",
+  "avg": 0.3727,
+  "total": 19.38,
+  "events": 52,
+  "lastWeek": 384
+ },
+ {
+  "rank": 397,
+  "name": "Bubba Watson",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.3722,
+  "total": 14.89,
+  "events": 40,
+  "lastWeek": 390
+ },
+ {
+  "rank": 398,
+  "name": "Yoshinori Fujimoto",
+  "country": "Japan",
+  "ioc": "JPN",
+  "avg": 0.3709,
+  "total": 14.84,
+  "events": 40,
+  "lastWeek": 389
+ },
+ {
+  "rank": 399,
+  "name": "Ben Schmidt",
+  "country": "England",
+  "ioc": "",
+  "avg": 0.3689,
+  "total": 19.18,
+  "events": 52,
+  "lastWeek": 388
+ },
+ {
+  "rank": 400,
+  "name": "Will Chandler",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.3687,
+  "total": 18.8,
+  "events": 51,
+  "lastWeek": 391
+ },
+ {
+  "rank": 401,
+  "name": "Satoshi Kodaira",
+  "country": "Japan",
+  "ioc": "JPN",
+  "avg": 0.3683,
+  "total": 15.84,
+  "events": 43,
+  "lastWeek": 391
+ },
+ {
+  "rank": 402,
+  "name": "Tyler Duncan(Jul1989)",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.368,
+  "total": 19.14,
+  "events": 52,
+  "lastWeek": 395
+ },
+ {
+  "rank": 403,
+  "name": "Eddie Pepperell",
+  "country": "England",
+  "ioc": "",
+  "avg": 0.367,
+  "total": 17.98,
+  "events": 49,
+  "lastWeek": 402
+ },
+ {
+  "rank": 404,
+  "name": "Matteo Manassero",
+  "country": "Italy",
+  "ioc": "ITA",
+  "avg": 0.3665,
+  "total": 17.96,
+  "events": 49,
+  "lastWeek": 387
+ },
+ {
+  "rank": 404,
+  "name": "Kevin Streelman",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.3665,
+  "total": 14.66,
+  "events": 40,
+  "lastWeek": 393
+ },
+ {
+  "rank": 406,
+  "name": "Pavit Tangkamolprasert",
+  "country": "Thailand",
+  "ioc": "THA",
+  "avg": 0.3654,
+  "total": 18.64,
+  "events": 51,
+  "lastWeek": 400
+ },
+ {
+  "rank": 407,
+  "name": "Jeunghun Wang",
+  "country": "South Korea",
+  "ioc": "KOR",
+  "avg": 0.3633,
+  "total": 15.26,
+  "events": 42,
+  "lastWeek": 407
+ },
+ {
+  "rank": 408,
+  "name": "William Cannon",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.3609,
+  "total": 15.16,
+  "events": 42,
+  "lastWeek": 413
+ },
+ {
+  "rank": 408,
+  "name": "Will Enefer",
+  "country": "England",
+  "ioc": "",
+  "avg": 0.3609,
+  "total": 16.24,
+  "events": 45,
+  "lastWeek": 400
+ },
+ {
+  "rank": 410,
+  "name": "Samuel Simpson",
+  "country": "South Africa",
+  "ioc": "RSA",
+  "avg": 0.3595,
+  "total": 17.26,
+  "events": 48,
+  "lastWeek": 409
+ },
+ {
+  "rank": 411,
+  "name": "Troy Merritt",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.3574,
+  "total": 18.23,
+  "events": 51,
+  "lastWeek": 406
+ },
+ {
+  "rank": 412,
+  "name": "Cameron Champ",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.3573,
+  "total": 17.15,
+  "events": 48,
+  "lastWeek": 404
+ },
+ {
+  "rank": 413,
+  "name": "Hiroshi Iwata",
+  "country": "Japan",
+  "ioc": "JPN",
+  "avg": 0.3566,
+  "total": 18.54,
+  "events": 52,
+  "lastWeek": 412
+ },
+ {
+  "rank": 414,
+  "name": "Yuto Katsuragawa",
+  "country": "Japan",
+  "ioc": "JPN",
+  "avg": 0.3561,
+  "total": 18.52,
+  "events": 52,
+  "lastWeek": 427
+ },
+ {
+  "rank": 415,
+  "name": "Jason Scrivener",
+  "country": "Australia",
+  "ioc": "AUS",
+  "avg": 0.356,
+  "total": 18.51,
+  "events": 52,
+  "lastWeek": 403
+ },
+ {
+  "rank": 416,
+  "name": "David Ravetto",
+  "country": "France",
+  "ioc": "FRA",
+  "avg": 0.3541,
+  "total": 18.41,
+  "events": 52,
+  "lastWeek": 408
+ },
+ {
+  "rank": 417,
+  "name": "Connor Syme",
+  "country": "Scotland",
+  "ioc": "",
+  "avg": 0.3534,
+  "total": 18.02,
+  "events": 51,
+  "lastWeek": 405
+ },
+ {
+  "rank": 418,
+  "name": "Nick Dunlap",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.3513,
+  "total": 15.81,
+  "events": 45,
+  "lastWeek": 410
+ },
+ {
+  "rank": 419,
+  "name": "Suteepat Prateeptienchai",
+  "country": "Thailand",
+  "ioc": "THA",
+  "avg": 0.3492,
+  "total": 18.16,
+  "events": 52,
+  "lastWeek": 414
+ },
+ {
+  "rank": 420,
+  "name": "Ryo Katsumata",
+  "country": "Japan",
+  "ioc": "JPN",
+  "avg": 0.346,
+  "total": 15.92,
+  "events": 46,
+  "lastWeek": 422
+ },
+ {
+  "rank": 421,
+  "name": "Seungbin Choi",
+  "country": "South Korea",
+  "ioc": "KOR",
+  "avg": 0.3458,
+  "total": 13.83,
+  "events": 40,
+  "lastWeek": 418
+ },
+ {
+  "rank": 422,
+  "name": "Dylan Wu",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.3445,
+  "total": 16.88,
+  "events": 49,
+  "lastWeek": 419
+ },
+ {
+  "rank": 423,
+  "name": "Shugo Imahira",
+  "country": "Japan",
+  "ioc": "JPN",
+  "avg": 0.3435,
+  "total": 14.08,
+  "events": 41,
+  "lastWeek": 416
+ },
+ {
+  "rank": 424,
+  "name": "Justin Suh",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.3431,
+  "total": 17.84,
+  "events": 52,
+  "lastWeek": 420
+ },
+ {
+  "rank": 425,
+  "name": "Fabrizio Zanotti",
+  "country": "Paraguay",
+  "ioc": "PAR",
+  "avg": 0.3417,
+  "total": 14.69,
+  "events": 43,
+  "lastWeek": 499
+ },
+ {
+  "rank": 426,
+  "name": "Kevin Dougherty",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.3376,
+  "total": 17.55,
+  "events": 52,
+  "lastWeek": 425
+ },
+ {
+  "rank": 427,
+  "name": "Sadom Kaewkanjana",
+  "country": "Thailand",
+  "ioc": "THA",
+  "avg": 0.3371,
+  "total": 16.52,
+  "events": 49,
+  "lastWeek": 423
+ },
+ {
+  "rank": 428,
+  "name": "Jack Lundin",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.337,
+  "total": 13.48,
+  "events": 40,
+  "lastWeek": 428
+ },
+ {
+  "rank": 429,
+  "name": "Greyson Sigg",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.3369,
+  "total": 13.48,
+  "events": 40,
+  "lastWeek": 421
+ },
+ {
+  "rank": 430,
+  "name": "Sejung Hiramoto",
+  "country": "Japan",
+  "ioc": "JPN",
+  "avg": 0.3344,
+  "total": 14.71,
+  "events": 44,
+  "lastWeek": 429
+ },
+ {
+  "rank": 431,
+  "name": "Louis Albertse",
+  "country": "South Africa",
+  "ioc": "RSA",
+  "avg": 0.3339,
+  "total": 17.36,
+  "events": 52,
+  "lastWeek": 434
+ },
+ {
+  "rank": 432,
+  "name": "Fabian Gomez",
+  "country": "Argentina",
+  "ioc": "ARG",
+  "avg": 0.3307,
+  "total": 14.88,
+  "events": 45,
+  "lastWeek": 431
+ },
+ {
+  "rank": 433,
+  "name": "Sarut Vongchaisit",
+  "country": "Thailand",
+  "ioc": "THA",
+  "avg": 0.3304,
+  "total": 16.19,
+  "events": 49,
+  "lastWeek": 551
+ },
+ {
+  "rank": 434,
+  "name": "Filip Mruzek",
+  "country": "Czechia",
+  "ioc": "CZE",
+  "avg": 0.3291,
+  "total": 14.48,
+  "events": 44,
+  "lastWeek": 444
+ },
+ {
+  "rank": 435,
+  "name": "Stuart MacDonald",
+  "country": "Canada",
+  "ioc": "CAN",
+  "avg": 0.3288,
+  "total": 15.12,
+  "events": 46,
+  "lastWeek": 441
+ },
+ {
+  "rank": 436,
+  "name": "Justin Harding",
+  "country": "South Africa",
+  "ioc": "RSA",
+  "avg": 0.3286,
+  "total": 14.79,
+  "events": 45,
+  "lastWeek": 445
+ },
+ {
+  "rank": 437,
+  "name": "Justin Hastings",
+  "country": "Cayman Islands",
+  "ioc": "CAY",
+  "avg": 0.3279,
+  "total": 13.12,
+  "events": 40,
+  "lastWeek": 435
+ },
+ {
+  "rank": 438,
+  "name": "Anton Albers",
+  "country": "Germany",
+  "ioc": "GER",
+  "avg": 0.3268,
+  "total": 16.01,
+  "events": 49,
+  "lastWeek": 430
+ },
+ {
+  "rank": 439,
+  "name": "Ryuichi Oiwa",
+  "country": "Japan",
+  "ioc": "JPN",
+  "avg": 0.3267,
+  "total": 14.38,
+  "events": 44,
+  "lastWeek": 432
+ },
+ {
+  "rank": 440,
+  "name": "Paul Waring",
+  "country": "England",
+  "ioc": "",
+  "avg": 0.3264,
+  "total": 13.38,
+  "events": 41,
+  "lastWeek": 426
+ },
+ {
+  "rank": 441,
+  "name": "Daniel Young",
+  "country": "Scotland",
+  "ioc": "",
+  "avg": 0.3262,
+  "total": 16.96,
+  "events": 52,
+  "lastWeek": 436
+ },
+ {
+  "rank": 442,
+  "name": "David Horsey",
+  "country": "England",
+  "ioc": "",
+  "avg": 0.3259,
+  "total": 16.29,
+  "events": 50,
+  "lastWeek": 439
+ },
+ {
+  "rank": 443,
+  "name": "Rick Lamb",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.3257,
+  "total": 14.98,
+  "events": 46,
+  "lastWeek": 437
+ },
+ {
+  "rank": 444,
+  "name": "Austen Truslow",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.3254,
+  "total": 13.02,
+  "events": 40,
+  "lastWeek": 438
+ },
+ {
+  "rank": 445,
+  "name": "Myles Creighton",
+  "country": "Canada",
+  "ioc": "CAN",
+  "avg": 0.3252,
+  "total": 13.01,
+  "events": 40,
+  "lastWeek": 433
+ },
+ {
+  "rank": 446,
+  "name": "Brandon Stone",
+  "country": "South Africa",
+  "ioc": "RSA",
+  "avg": 0.3251,
+  "total": 16.91,
+  "events": 52,
+  "lastWeek": 457
+ },
+ {
+  "rank": 447,
+  "name": "Miguel Tabuena",
+  "country": "Philippines",
+  "ioc": "PHI",
+  "avg": 0.3222,
+  "total": 13.53,
+  "events": 42,
+  "lastWeek": 447
+ },
+ {
+  "rank": 448,
+  "name": "Roger Sloan",
+  "country": "Canada",
+  "ioc": "CAN",
+  "avg": 0.3216,
+  "total": 16.08,
+  "events": 50,
+  "lastWeek": 442
+ },
+ {
+  "rank": 449,
+  "name": "Andreas Halvorsen",
+  "country": "Norway",
+  "ioc": "NOR",
+  "avg": 0.3205,
+  "total": 13.46,
+  "events": 42,
+  "lastWeek": 451
+ },
+ {
+  "rank": 450,
+  "name": "Nick Voke",
+  "country": "New Zealand",
+  "ioc": "NZL",
+  "avg": 0.3191,
+  "total": 12.76,
+  "events": 40,
+  "lastWeek": 443
+ },
+ {
+  "rank": 451,
+  "name": "Alejandro Tosti",
+  "country": "Argentina",
+  "ioc": "ARG",
+  "avg": 0.3187,
+  "total": 14.66,
+  "events": 46,
+  "lastWeek": 440
+ },
+ {
+  "rank": 452,
+  "name": "James Morrison",
+  "country": "England",
+  "ioc": "",
+  "avg": 0.3184,
+  "total": 16.56,
+  "events": 52,
+  "lastWeek": 446
+ },
+ {
+  "rank": 453,
+  "name": "Taihei Sato",
+  "country": "Japan",
+  "ioc": "JPN",
+  "avg": 0.3171,
+  "total": 16.17,
+  "events": 51,
+  "lastWeek": 448
+ },
+ {
+  "rank": 453,
+  "name": "Richie Ramsay",
+  "country": "Scotland",
+  "ioc": "",
+  "avg": 0.3171,
+  "total": 14.91,
+  "events": 47,
+  "lastWeek": 450
+ },
+ {
+  "rank": 455,
+  "name": "Sarit Suwannarut",
+  "country": "Thailand",
+  "ioc": "THA",
+  "avg": 0.3152,
+  "total": 13.24,
+  "events": 42,
+  "lastWeek": 460
+ },
+ {
+  "rank": 456,
+  "name": "Donghyun Moon",
+  "country": "South Korea",
+  "ioc": "KOR",
+  "avg": 0.3141,
+  "total": 12.56,
+  "events": 40,
+  "lastWeek": 453
+ },
+ {
+  "rank": 457,
+  "name": "John Gough",
+  "country": "England",
+  "ioc": "",
+  "avg": 0.3127,
+  "total": 14.7,
+  "events": 47,
+  "lastWeek": 449
+ },
+ {
+  "rank": 458,
+  "name": "Chris Francoeur",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.3108,
+  "total": 12.43,
+  "events": 40,
+  "lastWeek": 458
+ },
+ {
+  "rank": 458,
+  "name": "Hunter Wolcott",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.3108,
+  "total": 12.43,
+  "events": 40,
+  "lastWeek": 461
+ },
+ {
+  "rank": 460,
+  "name": "Rattanon Wannasrichan",
+  "country": "Thailand",
+  "ioc": "THA",
+  "avg": 0.3099,
+  "total": 16.12,
+  "events": 52,
+  "lastWeek": 456
+ },
+ {
+  "rank": 461,
+  "name": "Drew Doyle",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.3089,
+  "total": 12.36,
+  "events": 40,
+  "lastWeek": 477
+ },
+ {
+  "rank": 462,
+  "name": "Quade Cummins",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.3077,
+  "total": 12.31,
+  "events": 40,
+  "lastWeek": 454
+ },
+ {
+  "rank": 463,
+  "name": "Jens Dantorp",
+  "country": "Sweden",
+  "ioc": "SWE",
+  "avg": 0.3061,
+  "total": 15.92,
+  "events": 52,
+  "lastWeek": 459
+ },
+ {
+  "rank": 464,
+  "name": "Frankie Capan",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.305,
+  "total": 12.2,
+  "events": 40,
+  "lastWeek": 452
+ },
+ {
+  "rank": 465,
+  "name": "Jeongwoo Ham",
+  "country": "South Korea",
+  "ioc": "KOR",
+  "avg": 0.3047,
+  "total": 13.1,
+  "events": 43,
+  "lastWeek": 466
+ },
+ {
+  "rank": 466,
+  "name": "Hayden Buckley",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.3032,
+  "total": 14.86,
+  "events": 49,
+  "lastWeek": 463
+ },
+ {
+  "rank": 467,
+  "name": "Ryan Van Velzen",
+  "country": "South Africa",
+  "ioc": "RSA",
+  "avg": 0.3027,
+  "total": 15.74,
+  "events": 52,
+  "lastWeek": 462
+ },
+ {
+  "rank": 468,
+  "name": "Rocco Paolo Repetto Taylor",
+  "country": "Spain",
+  "ioc": "ESP",
+  "avg": 0.3023,
+  "total": 13.9,
+  "events": 46,
+  "lastWeek": 455
+ },
+ {
+  "rank": 469,
+  "name": "Louis Oosthuizen",
+  "country": "South Africa",
+  "ioc": "RSA",
+  "avg": 0.3009,
+  "total": 12.04,
+  "events": 40,
+  "lastWeek": 464
+ },
+ {
+  "rank": 470,
+  "name": "Dylan Frittelli",
+  "country": "South Africa",
+  "ioc": "RSA",
+  "avg": 0.2989,
+  "total": 15.54,
+  "events": 52,
+  "lastWeek": 465
+ },
+ {
+  "rank": 471,
+  "name": "Aaron Wise",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.2985,
+  "total": 11.94,
+  "events": 40,
+  "lastWeek": 472
+ },
+ {
+  "rank": 472,
+  "name": "Sebastian Garcia Rodriguez",
+  "country": "Spain",
+  "ioc": "ESP",
+  "avg": 0.2968,
+  "total": 15.43,
+  "events": 52,
+  "lastWeek": 466
+ },
+ {
+  "rank": 473,
+  "name": "Jeong Weon Ko",
+  "country": "France",
+  "ioc": "FRA",
+  "avg": 0.2965,
+  "total": 15.42,
+  "events": 52,
+  "lastWeek": 470
+ },
+ {
+  "rank": 474,
+  "name": "Peter Kuest",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.296,
+  "total": 11.84,
+  "events": 40,
+  "lastWeek": 468
+ },
+ {
+  "rank": 475,
+  "name": "Brett White",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.2955,
+  "total": 11.82,
+  "events": 40,
+  "lastWeek": 471
+ },
+ {
+  "rank": 476,
+  "name": "Chris Korte",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.2943,
+  "total": 11.77,
+  "events": 40,
+  "lastWeek": 478
+ },
+ {
+  "rank": 477,
+  "name": "Takanori Konishi",
+  "country": "Japan",
+  "ioc": "JPN",
+  "avg": 0.2936,
+  "total": 13.5,
+  "events": 46,
+  "lastWeek": 482
+ },
+ {
+  "rank": 478,
+  "name": "Patrick Welch",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.2929,
+  "total": 11.72,
+  "events": 40,
+  "lastWeek": 473
+ },
+ {
+  "rank": 479,
+  "name": "Euan Walker",
+  "country": "Scotland",
+  "ioc": "",
+  "avg": 0.2928,
+  "total": 15.23,
+  "events": 52,
+  "lastWeek": 476
+ },
+ {
+  "rank": 480,
+  "name": "Julian Perico",
+  "country": "Peru",
+  "ioc": "PER",
+  "avg": 0.2927,
+  "total": 11.71,
+  "events": 40,
+  "lastWeek": 480
+ },
+ {
+  "rank": 481,
+  "name": "Marcel Siem",
+  "country": "Germany",
+  "ioc": "GER",
+  "avg": 0.2925,
+  "total": 14.33,
+  "events": 49,
+  "lastWeek": 475
+ },
+ {
+  "rank": 482,
+  "name": "Takashi Ogiso",
+  "country": "Japan",
+  "ioc": "JPN",
+  "avg": 0.2924,
+  "total": 14.04,
+  "events": 48,
+  "lastWeek": 473
+ },
+ {
+  "rank": 483,
+  "name": "Charles Howell III",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.2916,
+  "total": 11.67,
+  "events": 40,
+  "lastWeek": 481
+ },
+ {
+  "rank": 484,
+  "name": "Jonathan Broomhead",
+  "country": "South Africa",
+  "ioc": "RSA",
+  "avg": 0.2915,
+  "total": 14.57,
+  "events": 50,
+  "lastWeek": 484
+ },
+ {
+  "rank": 485,
+  "name": "Zander Lombard",
+  "country": "South Africa",
+  "ioc": "RSA",
+  "avg": 0.2911,
+  "total": 13.97,
+  "events": 48,
+  "lastWeek": 469
+ },
+ {
+  "rank": 486,
+  "name": "Mateo Fernandez de Oliveira",
+  "country": "Argentina",
+  "ioc": "ARG",
+  "avg": 0.2899,
+  "total": 11.6,
+  "events": 40,
+  "lastWeek": 489
+ },
+ {
+  "rank": 487,
+  "name": "Theo Humphrey",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.2873,
+  "total": 11.49,
+  "events": 40,
+  "lastWeek": 483
+ },
+ {
+  "rank": 488,
+  "name": "Jackson Van Paris",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.286,
+  "total": 11.44,
+  "events": 40,
+  "lastWeek": 487
+ },
+ {
+  "rank": 489,
+  "name": "Matthew Riedel",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.2855,
+  "total": 13.42,
+  "events": 47,
+  "lastWeek": 485
+ },
+ {
+  "rank": 490,
+  "name": "Rayhan Thomas",
+  "country": "India",
+  "ioc": "IND",
+  "avg": 0.2854,
+  "total": 13.7,
+  "events": 48,
+  "lastWeek": 486
+ },
+ {
+  "rank": 491,
+  "name": "Patton Kizzire",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.2826,
+  "total": 13.57,
+  "events": 48,
+  "lastWeek": 479
+ },
+ {
+  "rank": 492,
+  "name": "Webb Simpson",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.2805,
+  "total": 11.22,
+  "events": 40,
+  "lastWeek": 488
+ },
+ {
+  "rank": 493,
+  "name": "Wilco Nienaber",
+  "country": "South Africa",
+  "ioc": "RSA",
+  "avg": 0.2787,
+  "total": 14.49,
+  "events": 52,
+  "lastWeek": 583
+ },
+ {
+  "rank": 494,
+  "name": "Quim Vidal Mora",
+  "country": "Spain",
+  "ioc": "ESP",
+  "avg": 0.2776,
+  "total": 14.43,
+  "events": 52,
+  "lastWeek": 493
+ },
+ {
+  "rank": 495,
+  "name": "Jack Senior",
+  "country": "England",
+  "ioc": "",
+  "avg": 0.2775,
+  "total": 14.43,
+  "events": 52,
+  "lastWeek": 492
+ },
+ {
+  "rank": 496,
+  "name": "Josh Teater",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.2773,
+  "total": 12.2,
+  "events": 44,
+  "lastWeek": 490
+ },
+ {
+  "rank": 497,
+  "name": "Mahanth Chirravuri",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.2765,
+  "total": 11.06,
+  "events": 40,
+  "lastWeek": 501
+ },
+ {
+  "rank": 497,
+  "name": "Russell Knox",
+  "country": "Scotland",
+  "ioc": "",
+  "avg": 0.2765,
+  "total": 12.17,
+  "events": 44,
+  "lastWeek": 491
+ },
+ {
+  "rank": 499,
+  "name": "Petr Hruby",
+  "country": "Czechia",
+  "ioc": "CZE",
+  "avg": 0.2761,
+  "total": 12.7,
+  "events": 46,
+  "lastWeek": 508
+ },
+ {
+  "rank": 500,
+  "name": "Alexander Levy",
+  "country": "France",
+  "ioc": "FRA",
+  "avg": 0.2753,
+  "total": 12.66,
+  "events": 46,
+  "lastWeek": 494
+ },
+ {
+  "rank": 500,
+  "name": "MJ Viljoen",
+  "country": "South Africa",
+  "ioc": "RSA",
+  "avg": 0.2753,
+  "total": 14.32,
+  "events": 52,
+  "lastWeek": 497
+ },
+ {
+  "rank": 502,
+  "name": "Jonathan Goth-Rasmussen",
+  "country": "Denmark",
+  "ioc": "DEN",
+  "avg": 0.2743,
+  "total": 14.27,
+  "events": 52,
+  "lastWeek": 534
+ },
+ {
+  "rank": 503,
+  "name": "Henrik Norlander",
+  "country": "Sweden",
+  "ioc": "SWE",
+  "avg": 0.2742,
+  "total": 12.06,
+  "events": 44,
+  "lastWeek": 498
+ },
+ {
+  "rank": 504,
+  "name": "Dawson Armstrong",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.2741,
+  "total": 10.96,
+  "events": 40,
+  "lastWeek": 505
+ },
+ {
+  "rank": 505,
+  "name": "Shad Tuten",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.2734,
+  "total": 10.94,
+  "events": 40,
+  "lastWeek": 495
+ },
+ {
+  "rank": 506,
+  "name": "Bryce Lewis",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.2729,
+  "total": 11.74,
+  "events": 43,
+  "lastWeek": 509
+ },
+ {
+  "rank": 507,
+  "name": "Hanmil Jung",
+  "country": "South Korea",
+  "ioc": "KOR",
+  "avg": 0.2725,
+  "total": 10.9,
+  "events": 40,
+  "lastWeek": 506
+ },
+ {
+  "rank": 508,
+  "name": "Joey Savoie",
+  "country": "Canada",
+  "ioc": "CAN",
+  "avg": 0.2724,
+  "total": 10.89,
+  "events": 40,
+  "lastWeek": 504
+ },
+ {
+  "rank": 509,
+  "name": "Wade Ormsby",
+  "country": "Australia",
+  "ioc": "AUS",
+  "avg": 0.2719,
+  "total": 10.87,
+  "events": 40,
+  "lastWeek": 499
+ },
+ {
+  "rank": 510,
+  "name": "Camilo Villegas",
+  "country": "Colombia",
+  "ioc": "COL",
+  "avg": 0.2708,
+  "total": 13.54,
+  "events": 50,
+  "lastWeek": 502
+ },
+ {
+  "rank": 510,
+  "name": "Taiki Yoshida",
+  "country": "Japan",
+  "ioc": "JPN",
+  "avg": 0.2708,
+  "total": 14.08,
+  "events": 52,
+  "lastWeek": 503
+ },
+ {
+  "rank": 512,
+  "name": "Ryutaro Nagano",
+  "country": "Japan",
+  "ioc": "JPN",
+  "avg": 0.2703,
+  "total": 12.43,
+  "events": 46,
+  "lastWeek": 533
+ },
+ {
+  "rank": 513,
+  "name": "Andrew Wilson",
+  "country": "England",
+  "ioc": "",
+  "avg": 0.2702,
+  "total": 12.16,
+  "events": 45,
+  "lastWeek": 517
+ },
+ {
+  "rank": 514,
+  "name": "Poom Saksansin",
+  "country": "Thailand",
+  "ioc": "THA",
+  "avg": 0.2701,
+  "total": 13.5,
+  "events": 50,
+  "lastWeek": 496
+ },
+ {
+  "rank": 515,
+  "name": "Maxwell Moldovan",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.27,
+  "total": 10.8,
+  "events": 40,
+  "lastWeek": 507
+ },
+ {
+  "rank": 516,
+  "name": "Deon Germishuys",
+  "country": "South Africa",
+  "ioc": "RSA",
+  "avg": 0.2696,
+  "total": 14.02,
+  "events": 52,
+  "lastWeek": 512
+ },
+ {
+  "rank": 517,
+  "name": "Matthew Wolff",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.2689,
+  "total": 10.76,
+  "events": 40,
+  "lastWeek": 510
+ },
+ {
+  "rank": 518,
+  "name": "Andrew Kozan",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.2676,
+  "total": 10.7,
+  "events": 40,
+  "lastWeek": 515
+ },
+ {
+  "rank": 519,
+  "name": "Connor Howe",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.2672,
+  "total": 10.69,
+  "events": 40,
+  "lastWeek": 514
+ },
+ {
+  "rank": 520,
+  "name": "Bryson Nimmer",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.2664,
+  "total": 11.45,
+  "events": 43,
+  "lastWeek": 511
+ },
+ {
+  "rank": 521,
+  "name": "Adam Svensson",
+  "country": "Canada",
+  "ioc": "CAN",
+  "avg": 0.2661,
+  "total": 13.84,
+  "events": 52,
+  "lastWeek": 513
+ },
+ {
+  "rank": 522,
+  "name": "Norman Xiong",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.2634,
+  "total": 10.54,
+  "events": 40,
+  "lastWeek": 516
+ },
+ {
+  "rank": 523,
+  "name": "Yusuke Sakamoto",
+  "country": "Japan",
+  "ioc": "JPN",
+  "avg": 0.2619,
+  "total": 11.0,
+  "events": 42,
+  "lastWeek": 518
+ },
+ {
+  "rank": 524,
+  "name": "Luke List",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.2611,
+  "total": 13.05,
+  "events": 50,
+  "lastWeek": 539
+ },
+ {
+  "rank": 525,
+  "name": "Will Zalatoris",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.2577,
+  "total": 10.31,
+  "events": 40,
+  "lastWeek": 519
+ },
+ {
+  "rank": 526,
+  "name": "Baekjun Kim",
+  "country": "South Korea",
+  "ioc": "KOR",
+  "avg": 0.2572,
+  "total": 10.55,
+  "events": 41,
+  "lastWeek": 528
+ },
+ {
+  "rank": 527,
+  "name": "Felix Mory",
+  "country": "France",
+  "ioc": "FRA",
+  "avg": 0.2562,
+  "total": 13.32,
+  "events": 52,
+  "lastWeek": 520
+ },
+ {
+  "rank": 527,
+  "name": "Riley Lewis",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.2562,
+  "total": 10.25,
+  "events": 40,
+  "lastWeek": 522
+ },
+ {
+  "rank": 529,
+  "name": "Pedro Figueiredo",
+  "country": "Portugal",
+  "ioc": "POR",
+  "avg": 0.2548,
+  "total": 11.98,
+  "events": 47,
+  "lastWeek": 536
+ },
+ {
+  "rank": 530,
+  "name": "Haydn Porteous",
+  "country": "South Africa",
+  "ioc": "RSA",
+  "avg": 0.2541,
+  "total": 10.67,
+  "events": 42,
+  "lastWeek": 530
+ },
+ {
+  "rank": 531,
+  "name": "Mason Williams",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.254,
+  "total": 10.16,
+  "events": 40,
+  "lastWeek": 526
+ },
+ {
+  "rank": 532,
+  "name": "Patrick Newcomb",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.2537,
+  "total": 10.15,
+  "events": 40,
+  "lastWeek": 525
+ },
+ {
+  "rank": 533,
+  "name": "Matt Atkins",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.2531,
+  "total": 12.65,
+  "events": 50,
+  "lastWeek": 523
+ },
+ {
+  "rank": 534,
+  "name": "Seungtaek Oh",
+  "country": "South Korea",
+  "ioc": "KOR",
+  "avg": 0.2529,
+  "total": 10.12,
+  "events": 40,
+  "lastWeek": 530
+ },
+ {
+  "rank": 535,
+  "name": "Martin Laird",
+  "country": "Scotland",
+  "ioc": "",
+  "avg": 0.2513,
+  "total": 10.3,
+  "events": 41,
+  "lastWeek": 524
+ },
+ {
+  "rank": 536,
+  "name": "Christiaan Maas",
+  "country": "South Africa",
+  "ioc": "RSA",
+  "avg": 0.2509,
+  "total": 10.03,
+  "events": 40,
+  "lastWeek": 535
+ },
+ {
+  "rank": 537,
+  "name": "Haydn Barron",
+  "country": "Australia",
+  "ioc": "AUS",
+  "avg": 0.2507,
+  "total": 10.53,
+  "events": 42,
+  "lastWeek": 546
+ },
+ {
+  "rank": 537,
+  "name": "Wooyoung Cho",
+  "country": "South Korea",
+  "ioc": "KOR",
+  "avg": 0.2507,
+  "total": 13.03,
+  "events": 52,
+  "lastWeek": 529
+ },
+ {
+  "rank": 539,
+  "name": "Sean Crocker",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.2505,
+  "total": 13.03,
+  "events": 52,
+  "lastWeek": 548
+ },
+ {
+  "rank": 540,
+  "name": "Blaine Hale, Jr.",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.2503,
+  "total": 12.01,
+  "events": 48,
+  "lastWeek": 532
+ },
+ {
+  "rank": 540,
+  "name": "Darren Fichardt",
+  "country": "South Africa",
+  "ioc": "RSA",
+  "avg": 0.2503,
+  "total": 10.01,
+  "events": 40,
+  "lastWeek": 527
+ },
+ {
+  "rank": 542,
+  "name": "Rikuya Hoshino",
+  "country": "Japan",
+  "ioc": "JPN",
+  "avg": 0.2501,
+  "total": 13.01,
+  "events": 52,
+  "lastWeek": 545
+ },
+ {
+  "rank": 543,
+  "name": "Niklas Lemke",
+  "country": "Sweden",
+  "ioc": "SWE",
+  "avg": 0.249,
+  "total": 10.71,
+  "events": 43,
+  "lastWeek": 521
+ },
+ {
+  "rank": 544,
+  "name": "Yuwa Kosaihira",
+  "country": "Japan",
+  "ioc": "JPN",
+  "avg": 0.248,
+  "total": 12.4,
+  "events": 50,
+  "lastWeek": 537
+ },
+ {
+  "rank": 545,
+  "name": "Jack Thompson",
+  "country": "Australia",
+  "ioc": "AUS",
+  "avg": 0.2475,
+  "total": 9.9,
+  "events": 40,
+  "lastWeek": 549
+ },
+ {
+  "rank": 546,
+  "name": "Ricardo Celia",
+  "country": "Colombia",
+  "ioc": "COL",
+  "avg": 0.2465,
+  "total": 9.86,
+  "events": 40,
+  "lastWeek": 543
+ },
+ {
+  "rank": 547,
+  "name": "Jiho Yang",
+  "country": "South Korea",
+  "ioc": "KOR",
+  "avg": 0.2462,
+  "total": 12.06,
+  "events": 49,
+  "lastWeek": 552
+ },
+ {
+  "rank": 548,
+  "name": "Joe Weiler",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.2459,
+  "total": 12.3,
+  "events": 50,
+  "lastWeek": 541
+ },
+ {
+  "rank": 549,
+  "name": "Suguru Shimoke",
+  "country": "Japan",
+  "ioc": "JPN",
+  "avg": 0.2453,
+  "total": 10.55,
+  "events": 43,
+  "lastWeek": 539
+ },
+ {
+  "rank": 550,
+  "name": "Tobias Jonsson",
+  "country": "Sweden",
+  "ioc": "SWE",
+  "avg": 0.2451,
+  "total": 12.75,
+  "events": 52,
+  "lastWeek": 542
+ },
+ {
+  "rank": 551,
+  "name": "Taisei Shimizu",
+  "country": "Japan",
+  "ioc": "JPN",
+  "avg": 0.2447,
+  "total": 10.77,
+  "events": 44,
+  "lastWeek": 538
+ },
+ {
+  "rank": 552,
+  "name": "Ben Martin",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.2445,
+  "total": 11.25,
+  "events": 46,
+  "lastWeek": 544
+ },
+ {
+  "rank": 553,
+  "name": "Maxence Giboudot",
+  "country": "France",
+  "ioc": "FRA",
+  "avg": 0.2425,
+  "total": 12.12,
+  "events": 50,
+  "lastWeek": 555
+ },
+ {
+  "rank": 554,
+  "name": "Dan Erickson",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.2424,
+  "total": 9.7,
+  "events": 40,
+  "lastWeek": 547
+ },
+ {
+  "rank": 555,
+  "name": "Taiga Nagano",
+  "country": "Japan",
+  "ioc": "JPN",
+  "avg": 0.242,
+  "total": 11.38,
+  "events": 47,
+  "lastWeek": 572
+ },
+ {
+  "rank": 556,
+  "name": "Yuvraj Sandhu",
+  "country": "India",
+  "ioc": "IND",
+  "avg": 0.2399,
+  "total": 12.48,
+  "events": 52,
+  "lastWeek": 550
+ },
+ {
+  "rank": 557,
+  "name": "Santiago De la Fuente",
+  "country": "Mexico",
+  "ioc": "MEX",
+  "avg": 0.2396,
+  "total": 9.58,
+  "events": 40,
+  "lastWeek": 554
+ },
+ {
+  "rank": 558,
+  "name": "Yongjun Bae",
+  "country": "South Korea",
+  "ioc": "KOR",
+  "avg": 0.2381,
+  "total": 10.0,
+  "events": 42,
+  "lastWeek": 560
+ },
+ {
+  "rank": 559,
+  "name": "Ivan Cantero Gutierrez",
+  "country": "Spain",
+  "ioc": "ESP",
+  "avg": 0.2379,
+  "total": 12.37,
+  "events": 52,
+  "lastWeek": 553
+ },
+ {
+  "rank": 560,
+  "name": "Daniel Svard",
+  "country": "Sweden",
+  "ioc": "SWE",
+  "avg": 0.2377,
+  "total": 9.51,
+  "events": 40,
+  "lastWeek": 559
+ },
+ {
+  "rank": 561,
+  "name": "Chanwoo Kim(Nov-1999)",
+  "country": "South Korea",
+  "ioc": "KOR",
+  "avg": 0.2373,
+  "total": 9.49,
+  "events": 40,
+  "lastWeek": 556
+ },
+ {
+  "rank": 562,
+  "name": "Pieter Moolman",
+  "country": "South Africa",
+  "ioc": "RSA",
+  "avg": 0.2349,
+  "total": 12.22,
+  "events": 52,
+  "lastWeek": 558
+ },
+ {
+  "rank": 563,
+  "name": "Sanghyun Park(Apr1983)",
+  "country": "South Korea",
+  "ioc": "KOR",
+  "avg": 0.2345,
+  "total": 9.38,
+  "events": 40,
+  "lastWeek": 557
+ },
+ {
+  "rank": 564,
+  "name": "Eunshin Park",
+  "country": "South Korea",
+  "ioc": "KOR",
+  "avg": 0.2333,
+  "total": 9.33,
+  "events": 40,
+  "lastWeek": 573
+ },
+ {
+  "rank": 565,
+  "name": "Mikiya Akutsu",
+  "country": "Japan",
+  "ioc": "JPN",
+  "avg": 0.233,
+  "total": 11.88,
+  "events": 51,
+  "lastWeek": 569
+ },
+ {
+  "rank": 565,
+  "name": "Peter Malnati",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.233,
+  "total": 10.72,
+  "events": 46,
+  "lastWeek": 561
+ },
+ {
+  "rank": 567,
+  "name": "Phichaksn Maichon",
+  "country": "Thailand",
+  "ioc": "THA",
+  "avg": 0.2327,
+  "total": 9.31,
+  "events": 40,
+  "lastWeek": 565
+ },
+ {
+  "rank": 568,
+  "name": "Martin Leth Simonsen",
+  "country": "Denmark",
+  "ioc": "DEN",
+  "avg": 0.232,
+  "total": 9.28,
+  "events": 40,
+  "lastWeek": 562
+ },
+ {
+  "rank": 569,
+  "name": "Cristobal Del Solar",
+  "country": "Chile",
+  "ioc": "CHI",
+  "avg": 0.2309,
+  "total": 12.0,
+  "events": 52,
+  "lastWeek": 568
+ },
+ {
+  "rank": 569,
+  "name": "Richard Bland",
+  "country": "England",
+  "ioc": "",
+  "avg": 0.2309,
+  "total": 9.24,
+  "events": 40,
+  "lastWeek": 566
+ },
+ {
+  "rank": 571,
+  "name": "Yechun Carl Yuan",
+  "country": "China",
+  "ioc": "CHN",
+  "avg": 0.2303,
+  "total": 11.52,
+  "events": 50,
+  "lastWeek": 567
+ },
+ {
+  "rank": 572,
+  "name": "Clement Charmasson",
+  "country": "France",
+  "ioc": "FRA",
+  "avg": 0.2302,
+  "total": 9.44,
+  "events": 41,
+  "lastWeek": 563
+ },
+ {
+  "rank": 573,
+  "name": "Zheng Sampson Yunhe",
+  "country": "China",
+  "ioc": "CHN",
+  "avg": 0.23,
+  "total": 9.2,
+  "events": 40,
+  "lastWeek": 564
+ },
+ {
+  "rank": 574,
+  "name": "Jinho Choi",
+  "country": "South Korea",
+  "ioc": "KOR",
+  "avg": 0.2283,
+  "total": 9.13,
+  "events": 40,
+  "lastWeek": 570
+ },
+ {
+  "rank": 575,
+  "name": "Luke Brown",
+  "country": "South Africa",
+  "ioc": "RSA",
+  "avg": 0.2264,
+  "total": 11.77,
+  "events": 52,
+  "lastWeek": 584
+ },
+ {
+  "rank": 576,
+  "name": "Billy Tom Sargent",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.226,
+  "total": 9.04,
+  "events": 40,
+  "lastWeek": 574
+ },
+ {
+  "rank": 577,
+  "name": "David Perkins",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.2258,
+  "total": 9.03,
+  "events": 40,
+  "lastWeek": 618
+ },
+ {
+  "rank": 578,
+  "name": "Ryunosuke Furukawa",
+  "country": "Japan",
+  "ioc": "JPN",
+  "avg": 0.2256,
+  "total": 10.38,
+  "events": 46,
+  "lastWeek": 577
+ },
+ {
+  "rank": 579,
+  "name": "Martin Vorster",
+  "country": "South Africa",
+  "ioc": "RSA",
+  "avg": 0.2255,
+  "total": 11.73,
+  "events": 52,
+  "lastWeek": 575
+ },
+ {
+  "rank": 580,
+  "name": "MJ Maguire",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.2254,
+  "total": 9.02,
+  "events": 40,
+  "lastWeek": 571
+ },
+ {
+  "rank": 581,
+  "name": "Jinichiro Kozuma",
+  "country": "Japan",
+  "ioc": "JPN",
+  "avg": 0.224,
+  "total": 8.96,
+  "events": 40,
+  "lastWeek": 699
+ },
+ {
+  "rank": 582,
+  "name": "Clement Sordet",
+  "country": "France",
+  "ioc": "FRA",
+  "avg": 0.2231,
+  "total": 11.6,
+  "events": 52,
+  "lastWeek": 579
+ },
+ {
+  "rank": 583,
+  "name": "Hung Chien-Yao",
+  "country": "Taiwan (Chinese Taipei)",
+  "ioc": "TPE",
+  "avg": 0.2228,
+  "total": 10.92,
+  "events": 49,
+  "lastWeek": 585
+ },
+ {
+  "rank": 584,
+  "name": "Callum Farr",
+  "country": "England",
+  "ioc": "",
+  "avg": 0.2218,
+  "total": 9.54,
+  "events": 43,
+  "lastWeek": 576
+ },
+ {
+  "rank": 585,
+  "name": "Albin Bergstrom",
+  "country": "Sweden",
+  "ioc": "SWE",
+  "avg": 0.2211,
+  "total": 11.06,
+  "events": 50,
+  "lastWeek": 592
+ },
+ {
+  "rank": 585,
+  "name": "Jonathan Byrd",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.2211,
+  "total": 8.84,
+  "events": 40,
+  "lastWeek": 578
+ },
+ {
+  "rank": 587,
+  "name": "Herman Loubser",
+  "country": "South Africa",
+  "ioc": "RSA",
+  "avg": 0.22,
+  "total": 11.44,
+  "events": 52,
+  "lastWeek": 579
+ },
+ {
+  "rank": 588,
+  "name": "Mats Ege",
+  "country": "Norway",
+  "ioc": "NOR",
+  "avg": 0.2197,
+  "total": 8.79,
+  "events": 40,
+  "lastWeek": 582
+ },
+ {
+  "rank": 589,
+  "name": "Sebastian Cappelen",
+  "country": "Denmark",
+  "ioc": "DEN",
+  "avg": 0.2191,
+  "total": 10.08,
+  "events": 46,
+  "lastWeek": 581
+ },
+ {
+  "rank": 590,
+  "name": "Cameron Adam",
+  "country": "Scotland",
+  "ioc": "",
+  "avg": 0.2184,
+  "total": 8.74,
+  "events": 40,
+  "lastWeek": 586
+ },
+ {
+  "rank": 591,
+  "name": "James Piot",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.2183,
+  "total": 8.73,
+  "events": 40,
+  "lastWeek": 637
+ },
+ {
+  "rank": 592,
+  "name": "Patrick Sheehan(Feb01)",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.2171,
+  "total": 8.68,
+  "events": 40,
+  "lastWeek": 599
+ },
+ {
+  "rank": 593,
+  "name": "Chad Sewell",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.2156,
+  "total": 8.62,
+  "events": 40,
+  "lastWeek": 590
+ },
+ {
+  "rank": 594,
+  "name": "Marcelo Rozo",
+  "country": "Colombia",
+  "ioc": "COL",
+  "avg": 0.2149,
+  "total": 9.89,
+  "events": 46,
+  "lastWeek": 588
+ },
+ {
+  "rank": 595,
+  "name": "Joshua Berry",
+  "country": "England",
+  "ioc": "",
+  "avg": 0.2145,
+  "total": 11.16,
+  "events": 52,
+  "lastWeek": 587
+ },
+ {
+  "rank": 596,
+  "name": "Kevin Yuan",
+  "country": "Australia",
+  "ioc": "AUS",
+  "avg": 0.2144,
+  "total": 9.22,
+  "events": 43,
+  "lastWeek": 593
+ },
+ {
+  "rank": 597,
+  "name": "Trey Mullinax",
+  "country": "United States",
+  "ioc": "USA",
+  "avg": 0.2127,
+  "total": 8.51,
+  "events": 40,
+  "lastWeek": 589
+ },
+ {
+  "rank": 598,
+  "name": "Sebastian Munoz",
+  "country": "Colombia",
+  "ioc": "COL",
+  "avg": 0.2119,
+  "total": 8.48,
+  "events": 40,
+  "lastWeek": 591
+ },
+ {
+  "rank": 599,
+  "name": "Runchanapong Youprayong",
+  "country": "Thailand",
+  "ioc": "THA",
+  "avg": 0.2118,
+  "total": 11.01,
+  "events": 52,
+  "lastWeek": 597
+ },
+ {
+  "rank": 600,
+  "name": "Bryce Easton",
+  "country": "South Africa",
+  "ioc": "RSA",
+  "avg": 0.2111,
+  "total": 10.98,
+  "events": 52,
+  "lastWeek": 596
+ }
+]
