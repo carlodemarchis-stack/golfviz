@@ -154,6 +154,14 @@ def fetch_team_leaderboard(tid, pp):
     return {"tid": tid, "winner": winner, "players": rows, "team": True}
 
 
+# ---------------------------------------------------------------- career
+def fetch_career(pid):
+    html = get(f"https://www.pgatour.com/player/{pid}/x/career", f"career_{pid}.html")
+    pp = next_data(html)
+    d = query(pp, "playerProfileCareer")
+    return {"id": pid, "career": (d or {}).get("career")}
+
+
 def main():
     cmd = sys.argv[1] if len(sys.argv) > 1 else "all"
     data = ROOT / "data"
@@ -168,6 +176,19 @@ def main():
         owgr = fetch_owgr()
         (data / "owgr_raw.json").write_text(json.dumps(owgr, indent=1))
         print(f"owgr: {len(owgr)} players")
+
+    if cmd in ("all", "career"):
+        top = json.loads((data / "players.json").read_text())
+        ids = [p["id"] for p in top]
+        print(f"fetching {len(ids)} career pages ...")
+        out = {}
+        with ThreadPoolExecutor(max_workers=5) as ex:
+            for i, r in enumerate(ex.map(fetch_career, ids), 1):
+                out[r["id"]] = r["career"]
+                if i % 20 == 0:
+                    print(f"  {i}/{len(ids)}")
+        (data / "career_raw.json").write_text(json.dumps(out, indent=1))
+        print(f"career: {sum(1 for v in out.values() if v)}/{len(out)} with data")
 
     if cmd in ("all", "tournaments"):
         sched = json.loads((data / "schedule_raw.json").read_text())

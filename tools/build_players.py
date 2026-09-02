@@ -25,6 +25,7 @@ points = json.loads((data / "points_list.json").read_text())[:TOP]
 raw = json.loads((data / "players_raw.json").read_text())
 standings = {p["id"]: p for p in json.loads((data / "standings_raw.json").read_text())}
 owgr = json.loads((data / "owgr_raw.json").read_text())
+career_raw = json.loads((data / "career_raw.json").read_text()) if (data / "career_raw.json").exists() else {}
 ow_full = {norm(o["name"]): o for o in owgr}
 ow_k2 = {}
 for o in owgr:
@@ -38,6 +39,33 @@ def widget_map(res):
         for d in w.get("data") or []:
             out[d["label"]] = d["data"]
     return out
+
+
+def career_of(pid):
+    """Flatten the PGA TOUR career widgets into one label->value dict."""
+    blocks = career_raw.get(pid) or []
+    tour = next((b for b in blocks if b.get("tourCode") == "R"), None) or (blocks[0] if blocks else None)
+    if not tour:
+        return {}
+    out = {}
+    for section in tour.get("careerData") or []:
+        for st in section.get("stats") or []:
+            title = st.get("title", "")
+            for d in st.get("data") or []:
+                out[f'{title}|{d["label"]}'] = d["data"]
+    return {
+        "events": out.get("Starts|Events"),
+        "cuts": out.get("Starts|Cuts"),
+        "wins": out.get("Wins|On Tour"),
+        "intlWins": out.get("Wins|Intl."),
+        "money": out.get("Earnings|Official Money"),
+        "tourCard": out.get("Joined Tour|Tour Card"),
+        "second": out.get("Finishes|2nd"),
+        "third": out.get("Finishes|3rd"),
+        "top5": out.get("Finishes|Top 5"),
+        "top10": out.get("Finishes|Top 10"),
+        "top25": out.get("Finishes|Top 25"),
+    }
 
 
 players = []
@@ -83,6 +111,7 @@ for p in points:
             "top5": w.get("Top 5"), "top10": w.get("Top 10"), "top25": w.get("Top 25"),
             "wd": w.get("WD"), "dq": w.get("DQ"),
         },
+        "career": career_of(pid),
         "events": p["events"],
         "recap": recap,
     })
@@ -98,6 +127,8 @@ print(f"missing OWGR: {no_owgr or 'none'}")
 print(f"missing bio:  {no_bio or 'none'}")
 print(f"missing money:{no_money or 'none'}")
 print(f"with recap prose: {sum(1 for p in players if p['recap'])}/{len(players)}")
+no_car = [p["name"] for p in players if not p["career"].get("money")]
+print(f"missing career money: {no_car or 'none'}")
 print()
 for p in players[:5]:
     o = p["owgr"]

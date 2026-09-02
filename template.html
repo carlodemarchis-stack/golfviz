@@ -47,13 +47,14 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 /* top bar = card chrome (experience + credit), never player data */
 .pl-inner{flex-direction:column;gap:0}
 .pbody{flex:1 1 auto;min-height:0;display:flex;gap:clamp(16px,2.6vw,44px)}
-.pcol{flex:0 0 40%;min-width:0;display:flex;flex-direction:column;
-  gap:clamp(10px,1.8vh,22px)}
+.pcol{flex:0 0 45%;min-width:0;display:flex;flex-direction:column;
+  gap:clamp(10px,1.9vh,24px);justify-content:center}
 
-/* left top: photo, with the rank numeral BESIDE it - never behind */
-.ptop{flex:0 0 auto;height:clamp(158px,30vh,286px);display:flex;
-  gap:clamp(12px,1.8vw,26px);align-items:stretch;min-width:0}
-.pphoto{flex:0 0 auto;height:100%;aspect-ratio:7/9;position:relative;border-radius:var(--r);
+/* left top: photo, with personal info + all-time record beside it */
+.ptop{flex:0 0 auto;display:flex;gap:clamp(12px,1.8vw,26px);
+  align-items:stretch;min-width:0}
+.pphoto{flex:0 0 clamp(140px,15.5vw,232px);height:auto;aspect-ratio:7/9;
+  position:relative;border-radius:var(--r);
   overflow:hidden;background:linear-gradient(160deg,var(--panel),var(--panel2));
   border:1px solid var(--line)}
 .pphoto::after{content:"";position:absolute;inset:0;
@@ -61,21 +62,41 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .pphoto img{position:absolute;left:50%;bottom:0;transform:translateX(-50%);
   height:100%;width:auto;object-fit:contain;object-position:bottom;z-index:1;
   filter:drop-shadow(0 14px 32px rgba(0,0,0,.55))}
-.prankwrap{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;
-  justify-content:center;gap:2px}
-.prank{font-size:clamp(62px,10.5vw,158px);font-weight:700;line-height:.76;color:var(--acc);
-  letter-spacing:-.05em}
-.prank small{display:block;font-size:clamp(9px,.9vw,11.5px);letter-spacing:.18em;
-  text-transform:uppercase;color:var(--dim2);font-weight:700;margin-bottom:6px;
-  letter-spacing:.18em}
-.pworld{font-size:clamp(10px,1.02vw,13px);color:var(--dim);margin-top:10px}
-.pworld b{color:var(--acc2);font-weight:700}
+.pinfo{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;
+  justify-content:center;gap:clamp(5px,.9vh,11px)}
+.pinfo > *{flex:0 0 auto}
+.alltime{margin-top:clamp(4px,1vh,12px);padding-top:clamp(7px,1.2vh,14px);
+  border-top:1px solid var(--line)}
+.atlegend{font-size:clamp(8.5px,.82vw,10.5px);letter-spacing:.2em;text-transform:uppercase;
+  color:var(--dim2);font-weight:700;margin-bottom:clamp(5px,.9vh,10px)}
+.atgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(6px,.9vw,16px)}
+.atgrid div{min-width:0}
+.atgrid b{display:block;font-size:clamp(13px,1.35vw,20px);font-weight:700;line-height:1;
+  letter-spacing:-.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.atgrid i{display:block;font-style:normal;font-size:clamp(8.5px,.82vw,10.5px);
+  letter-spacing:.12em;text-transform:uppercase;color:var(--dim2);margin-top:4px;
+  white-space:nowrap}
 
-/* left bottom: everything about the player */
-.pbot{flex:1 1 auto;min-height:0;display:flex;flex-direction:column;
-  gap:clamp(6px,1.15vh,15px);justify-content:flex-start}
-.pbot > *{flex:0 0 auto}
-.pres{flex:1 1 60%;min-width:0;display:flex;flex-direction:column;
+/* full-width stat boxes below the photo block */
+.pbox{flex:0 0 auto;background:linear-gradient(160deg,var(--panel),var(--panel2));
+  border:1px solid var(--line);border-radius:16px;
+  padding:clamp(10px,1.5vh,18px) clamp(12px,1.3vw,20px)}
+.boxlegend{font-size:clamp(8.5px,.82vw,10.5px);letter-spacing:.2em;text-transform:uppercase;
+  color:var(--dim2);font-weight:700;margin-bottom:clamp(5px,.85vh,10px)}
+.boxgrid{display:grid;gap:clamp(6px,1vw,16px)}
+.boxgrid.four{grid-template-columns:repeat(4,1fr)}
+.boxgrid.six{grid-template-columns:repeat(6,1fr)}
+.cell{min-width:0}
+.cell b{display:block;font-size:clamp(14px,1.5vw,23px);font-weight:700;line-height:1;
+  letter-spacing:-.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cell i{display:block;font-style:normal;font-size:clamp(8.5px,.8vw,10.5px);
+  letter-spacing:.12em;text-transform:uppercase;color:var(--dim2);margin-top:5px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cell.hero b{color:var(--acc)}
+.cell.world b{color:var(--acc2)}
+.cell b small{font-size:.55em;font-weight:300;color:var(--dim);letter-spacing:0}
+
+.pres{flex:1 1 55%;min-width:0;display:flex;flex-direction:column;
   gap:clamp(8px,1.3vh,16px)}
 
 .crumb{display:flex;align-items:center;gap:10px;flex-wrap:wrap;
@@ -89,15 +110,6 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   font-size:clamp(11px,1.15vw,14px);color:var(--dim)}
 .psub b{color:var(--ink);font-weight:400}
 
-.kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(6px,.8vw,12px)}
-.kpi{background:linear-gradient(160deg,var(--panel),var(--panel2));border:1px solid var(--line);
-  border-radius:14px;padding:clamp(7px,.9vw,13px)}
-.kpi .k{font-size:clamp(9px,.85vw,11px);letter-spacing:.13em;text-transform:uppercase;color:var(--dim2)}
-.kpi .v{font-size:clamp(16px,1.85vw,27px);font-weight:700;letter-spacing:-.02em;margin-top:2px;
-  line-height:1;white-space:nowrap}
-.kpi .v small{font-size:.5em;font-weight:300;color:var(--dim);letter-spacing:0}
-.kpi.hero .v{color:var(--acc)}
-.kpi.owgr .v{color:var(--acc2)}
 
 .tabs{display:flex;gap:6px}
 .tab{padding:6px 14px;border-radius:999px;border:1px solid var(--line);
@@ -307,17 +319,34 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 
 /* -------------------------------------------------------- portrait/mobile */
 @media(max-aspect-ratio:1/1){
-  .inner{flex-direction:column;overflow-y:auto;padding-bottom:clamp(96px,13vh,120px)}
+  /* the top bar stacks: context, pills, credit */
+  #topbar{flex-wrap:wrap;row-gap:5px;padding:9px clamp(14px,4vw,22px) 10px}
+  #topbar .tb-l{order:1;flex:1 1 100%;font-size:9.5px;letter-spacing:.14em}
+  #tb-tabs{order:2;flex:1 1 auto}
+  #tb-tabs button{padding:5px 12px;font-size:9.5px}
+  #topbar .tb-r{order:3;flex:1 1 100%;text-align:left;font-size:9.5px}
+
+  .inner{flex-direction:column;overflow-y:auto;
+    padding-top:clamp(96px,13vh,124px);padding-bottom:clamp(90px,12vh,116px)}
   .t-left,.t-right{flex:0 0 auto}
-  .pbody{flex-direction:column;gap:clamp(12px,2vh,20px)}
+  .pbody{flex-direction:column;gap:clamp(11px,1.8vh,18px)}
   .pcol,.pres{flex:0 0 auto}
-  .ptop{height:clamp(160px,28vh,250px)}
-  .prank{font-size:clamp(52px,15vw,110px)}
-  .kpis{grid-template-columns:repeat(2,1fr)}
+  .pcol{gap:clamp(9px,1.5vh,16px);justify-content:flex-start}
+  .ptop{flex:0 0 auto}
+  .pphoto{flex:0 0 clamp(112px,32vw,170px)}
+  .pinfo{justify-content:flex-start;gap:5px}
+  .atgrid{grid-template-columns:repeat(4,1fr);gap:6px}
+  .atgrid b{font-size:clamp(13px,3.6vw,18px)}
+  .boxgrid.four{grid-template-columns:repeat(2,1fr);row-gap:11px}
+  .boxgrid.six{grid-template-columns:repeat(3,1fr);row-gap:11px}
+  .cell b{font-size:clamp(15px,4.2vw,21px)}
+
   .pane{min-height:46vh}
   .evlist,.lb,.rows{overflow-y:auto}
   .evlist{max-width:none}
-  .ev,.lbrow{flex:0 0 auto;max-height:none;padding:5px 9px;line-height:1.25}
+  .ev{grid-template-columns:38px minmax(0,1fr) 34px 76px 40px;gap:5px;font-size:10.5px}
+  .ev,.lbrow{flex:0 0 auto;max-height:none;padding:5px 7px;line-height:1.25}
+  .lbrow,.lbhead{grid-template-columns:34px minmax(0,1fr) 78px 42px;gap:5px}
   .rrow{flex:0 0 auto}
   .rrow .bar{height:22px}
   .dcols,.mcols{grid-template-columns:1fr;grid-auto-flow:row;grid-template-rows:none}
@@ -329,6 +358,13 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .t-bg img{opacity:.3}
   .t-bg::after{background:linear-gradient(180deg,rgba(7,9,16,.7),rgba(7,9,16,.95) 45%)}
 }
+
+/* phones: the info column beside the photo is too narrow for a 4-up all-time row */
+@media(max-width:560px){
+  .atgrid{grid-template-columns:repeat(2,1fr);gap:8px 10px}
+  .boxgrid.six{grid-template-columns:repeat(2,1fr)}
+}
+
 </style>
 </head>
 <body>
@@ -401,8 +437,9 @@ const SEC = [0, P.length, P.length + T.length];
 
 /* -------------------------------------------------------- player card */
 function playerCard(p) {
-  const nameSize = Math.min(46, 470 / Math.max(9, p.name.length));
+  const nameSize = Math.min(40, 400 / Math.max(9, p.name.length));
   const ow = p.owgr;
+  const c = p.career || {};
   const evs = p.events;                      // already chronological, Jan -> Aug
   return `<div class="card" data-k="player">
     <div class="inner pl-inner">
@@ -411,32 +448,47 @@ function playerCard(p) {
 
           <div class="ptop">
             <div class="pphoto"><img src="img/full/${p.id}.webp" alt="${esc(p.name)}" loading="lazy"></div>
-            <div class="prankwrap">
-              <div class="prank"><small>FedExCup</small>${p.rank}</div>
-              ${ow ? `<div class="pworld">World rank <b>#${ow.rank}</b> · ${ow.avg} avg</div>` : ""}
+            <div class="pinfo">
+              <div class="pname" style="font-size:clamp(20px,${nameSize / 13}vw,${nameSize}px)">${esc(p.name)}</div>
+              <div class="crumb"><span>${flag(p.flag)}${esc(p.country)}</span></div>
+              <div class="psub">
+                <span>Age <b>${esc(p.bio.age || "—")}</b></span>
+                <span>Turned pro <b>${esc(p.bio.turnedPro || "—")}</b></span>
+                ${c.tourCard ? `<span>TOUR card <b>${esc(c.tourCard)}</b></span>` : ""}
+              </div>
+              ${p.bio.college ? `<div class="psub"><span>College <b>${esc(p.bio.college)}</b></span></div>` : ""}
+              ${p.bio.birthplace ? `<div class="psub"><span>Born <b>${esc(p.bio.birthplace)}</b></span></div>` : ""}
+              <div class="alltime">
+                <div class="atlegend">All-time on TOUR</div>
+                <div class="atgrid">
+                  <div><b>${esc(c.events || "—")}</b><i>Starts</i></div>
+                  <div><b>${esc(c.wins || p.bio.careerWins || "—")}</b><i>Wins</i></div>
+                  <div><b>${esc(c.top10 || "—")}</b><i>Top 10s</i></div>
+                  <div><b>${abbrMoney(c.money)}</b><i>Earnings</i></div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="pbot">
-            <div class="crumb"><span>${flag(p.flag)}${esc(p.country)}</span></div>
-            <div class="pname" style="font-size:clamp(22px,${nameSize / 13}vw,${nameSize}px)">${esc(p.name)}</div>
-            <div class="psub">
-              <span>Age <b>${esc(p.bio.age || "—")}</b></span>
-              <span>Turned pro <b>${esc(p.bio.turnedPro || "—")}</b></span>
-              <span>Career wins <b>${esc(p.bio.careerWins || "—")}</b></span>
-              ${p.bio.college ? `<span>College <b>${esc(p.bio.college)}</b></span>` : ""}
+          <div class="pbox">
+            <div class="boxlegend">Rankings</div>
+            <div class="boxgrid four">
+              <div class="cell hero"><b>${p.rank}</b><i>FedExCup</i></div>
+              <div class="cell"><b>${pts(p.points)}</b><i>Points</i></div>
+              <div class="cell world"><b>${ow ? ow.rank : "—"}</b><i>World rank</i></div>
+              <div class="cell"><b>${ow ? ow.avg : "—"}</b><i>World avg</i></div>
             </div>
-            <div class="kpis">
-              <div class="kpi hero"><div class="k">FedExCup pts</div><div class="v">${pts(p.points)}</div></div>
-              <div class="kpi"><div class="k">Earnings</div><div class="v">${abbrMoney(p.season.money)}</div></div>
-              <div class="kpi"><div class="k">Season</div><div class="v">${esc(p.season.wins || 0)}<small> win${p.season.wins == 1 ? "" : "s"}</small></div></div>
-              <div class="kpi"><div class="k">Top 10s</div><div class="v">${esc(p.season.top10 || 0)}</div></div>
-            </div>
-            <div class="psub">
-              <span>Events <b>${esc(p.season.events || evs.length)}</b></span>
-              <span>Cuts made <b>${esc(p.season.cuts || "—")}</b></span>
-              <span>Top 25 <b>${esc(p.season.top25 || 0)}</b></span>
-              <span>Runner-up <b>${esc(p.season.second || 0)}</b></span>
+          </div>
+
+          <div class="pbox">
+            <div class="boxlegend">2026 season</div>
+            <div class="boxgrid six">
+              <div class="cell"><b>${esc(p.season.events || evs.length)}</b><i>Events</i></div>
+              <div class="cell"><b>${esc(p.season.cuts || "—")}</b><i>Cuts made</i></div>
+              <div class="cell${p.season.wins > 0 ? " hero" : ""}"><b>${esc(p.season.wins || 0)}</b><i>Wins</i></div>
+              <div class="cell"><b>${esc(p.season.top10 || 0)}</b><i>Top 10</i></div>
+              <div class="cell"><b>${esc(p.season.top25 || 0)}</b><i>Top 25</i></div>
+              <div class="cell"><b>${abbrMoney(p.season.money)}</b><i>Earnings</i></div>
             </div>
           </div>
         </div>
