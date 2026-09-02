@@ -40,37 +40,60 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   will-change:transform}
 .card{flex:0 0 100vw;width:100vw;height:100dvh;position:relative;overflow:hidden}
 .inner{position:absolute;inset:0;padding:clamp(18px,3.2vw,54px);
-  padding-bottom:clamp(104px,13vh,132px);display:flex;gap:clamp(16px,2.4vw,40px)}
+  padding-top:clamp(50px,7.5vh,78px);
+  padding-bottom:clamp(76px,9.5vh,104px);display:flex;gap:clamp(16px,2.4vw,40px)}
 
 /* ------------------------------------------------------------- player */
-.pl-left{flex:1 1 58%;min-width:0;display:flex;flex-direction:column;gap:clamp(10px,1.5vh,20px)}
-.pl-right{flex:0 0 38%;position:relative}
-.idpanel{position:absolute;inset:0;border-radius:var(--r);overflow:hidden;
-  background:linear-gradient(160deg,var(--panel),var(--panel2));border:1px solid var(--line)}
-.idpanel::after{content:"";position:absolute;inset:0;
-  background:radial-gradient(120% 80% at 50% 105%,rgba(242,149,46,.20),transparent 62%)}
-.idpanel img{position:absolute;left:50%;bottom:0;transform:translateX(-50%);
-  height:91%;width:auto;object-fit:contain;object-position:bottom;z-index:1;
-  filter:drop-shadow(0 18px 40px rgba(0,0,0,.55))}
-.bigrank{position:absolute;left:0;right:0;top:2%;z-index:0;text-align:center;
-  font-size:clamp(120px,15vw,230px);font-weight:700;line-height:.78;
-  color:rgba(242,149,46,.16);letter-spacing:-.05em}
+/* top bar = card chrome (experience + credit), never player data */
+.pl-inner{flex-direction:column;gap:0}
+.pbody{flex:1 1 auto;min-height:0;display:flex;gap:clamp(16px,2.6vw,44px)}
+.pcol{flex:0 0 40%;min-width:0;display:flex;flex-direction:column;
+  gap:clamp(10px,1.8vh,22px)}
+
+/* left top: photo, with the rank numeral BESIDE it - never behind */
+.ptop{flex:0 0 auto;height:clamp(158px,30vh,286px);display:flex;
+  gap:clamp(12px,1.8vw,26px);align-items:stretch;min-width:0}
+.pphoto{flex:0 0 auto;height:100%;aspect-ratio:7/9;position:relative;border-radius:var(--r);
+  overflow:hidden;background:linear-gradient(160deg,var(--panel),var(--panel2));
+  border:1px solid var(--line)}
+.pphoto::after{content:"";position:absolute;inset:0;
+  background:radial-gradient(120% 80% at 50% 108%,rgba(242,149,46,.22),transparent 62%)}
+.pphoto img{position:absolute;left:50%;bottom:0;transform:translateX(-50%);
+  height:100%;width:auto;object-fit:contain;object-position:bottom;z-index:1;
+  filter:drop-shadow(0 14px 32px rgba(0,0,0,.55))}
+.prankwrap{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;
+  justify-content:center;gap:2px}
+.prank{font-size:clamp(62px,10.5vw,158px);font-weight:700;line-height:.76;color:var(--acc);
+  letter-spacing:-.05em}
+.prank small{display:block;font-size:clamp(9px,.9vw,11.5px);letter-spacing:.18em;
+  text-transform:uppercase;color:var(--dim2);font-weight:700;margin-bottom:6px;
+  letter-spacing:.18em}
+.pworld{font-size:clamp(10px,1.02vw,13px);color:var(--dim);margin-top:10px}
+.pworld b{color:var(--acc2);font-weight:700}
+
+/* left bottom: everything about the player */
+.pbot{flex:1 1 auto;min-height:0;display:flex;flex-direction:column;
+  gap:clamp(6px,1.15vh,15px);justify-content:flex-start}
+.pbot > *{flex:0 0 auto}
+.pres{flex:1 1 60%;min-width:0;display:flex;flex-direction:column;
+  gap:clamp(8px,1.3vh,16px)}
 
 .crumb{display:flex;align-items:center;gap:10px;flex-wrap:wrap;
   font-size:clamp(10px,1.05vw,13px);letter-spacing:.16em;text-transform:uppercase;color:var(--dim2)}
 .crumb b{color:var(--acc);font-weight:700}
 .fl{height:.95em;width:auto;vertical-align:-.08em;margin-right:6px;border-radius:2px;
   box-shadow:0 0 0 1px rgba(255,255,255,.12)}
-.pname{font-weight:700;letter-spacing:-.03em;line-height:.94;white-space:nowrap}
+.pname{font-weight:700;letter-spacing:-.03em;line-height:.96;white-space:nowrap;
+  overflow:hidden;text-overflow:ellipsis}
 .psub{display:flex;gap:clamp(10px,1.6vw,26px);flex-wrap:wrap;align-items:baseline;
   font-size:clamp(11px,1.15vw,14px);color:var(--dim)}
 .psub b{color:var(--ink);font-weight:400}
 
-.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(6px,.8vw,12px)}
+.kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(6px,.8vw,12px)}
 .kpi{background:linear-gradient(160deg,var(--panel),var(--panel2));border:1px solid var(--line);
-  border-radius:14px;padding:clamp(8px,1.1vw,15px)}
+  border-radius:14px;padding:clamp(7px,.9vw,13px)}
 .kpi .k{font-size:clamp(9px,.85vw,11px);letter-spacing:.13em;text-transform:uppercase;color:var(--dim2)}
-.kpi .v{font-size:clamp(17px,2.1vw,30px);font-weight:700;letter-spacing:-.02em;margin-top:2px;
+.kpi .v{font-size:clamp(16px,1.85vw,27px);font-weight:700;letter-spacing:-.02em;margin-top:2px;
   line-height:1;white-space:nowrap}
 .kpi .v small{font-size:.5em;font-weight:300;color:var(--dim);letter-spacing:0}
 .kpi.hero .v{color:var(--acc)}
@@ -82,8 +105,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .tab.on{background:var(--acc);color:#140b02;border-color:var(--acc);font-weight:700}
 
 .pane{flex:1 1 auto;min-height:0;overflow:hidden;position:relative}
-.evlist{height:100%;display:flex;flex-direction:column;gap:1px;overflow:hidden;
-  max-width:660px}
+.evlist{height:100%;display:flex;flex-direction:column;gap:1px;overflow:hidden}
 .ev{display:grid;grid-template-columns:48px minmax(0,1fr) 42px 92px 56px;gap:8px;align-items:center;
   padding:0 9px;border-radius:9px;font-size:clamp(9.5px,.98vw,13px);
   cursor:pointer;border:1px solid transparent;line-height:1;overflow:hidden;
@@ -211,33 +233,53 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .mrow .nm i{font-style:normal;color:var(--dim2);font-size:.86em;margin-left:6px}
 
 /* ---------------------------------------------------------- controls */
+#topbar{position:fixed;top:0;left:0;right:0;z-index:38;display:flex;align-items:center;
+  gap:clamp(10px,2vw,28px);padding:clamp(9px,1.5vh,15px) clamp(18px,3.2vw,54px);
+  background:linear-gradient(180deg,rgba(7,9,16,.94),rgba(7,9,16,.72) 68%,transparent);
+  backdrop-filter:blur(9px);pointer-events:none}
+#topbar > *{pointer-events:auto}
+#topbar .tb-l{flex:0 1 auto;min-width:0;font-size:clamp(10px,1.05vw,13px);letter-spacing:.18em;
+  text-transform:uppercase;color:var(--dim2);white-space:nowrap;overflow:hidden;
+  text-overflow:ellipsis}
+#topbar .tb-l b{color:var(--acc);font-weight:700}
+#topbar .tb-r{flex:1 1 auto;min-width:0;text-align:right;font-size:clamp(9px,.92vw,11.5px);
+  color:var(--dim2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#topbar .tb-r a{color:var(--dim);text-decoration:none;border-bottom:1px solid var(--line)}
+#topbar .tb-r a:hover{color:var(--acc)}
+#tb-tabs{flex:0 0 auto;display:flex;gap:5px}
+#tb-tabs button{padding:5px 15px;border-radius:999px;border:1px solid var(--line);
+  font-size:clamp(9.5px,.95vw,11.5px);letter-spacing:.13em;text-transform:uppercase;
+  color:var(--dim);background:rgba(12,16,26,.6);transition:.18s}
+#tb-tabs button:hover{color:var(--ink);border-color:var(--dim2)}
+#tb-tabs button.on{color:#140b02;background:var(--acc);border-color:var(--acc);font-weight:700}
+
+#jq{width:100%;margin:14px 0 4px;padding:11px 14px;border-radius:12px;
+  border:1px solid var(--line);background:rgba(255,255,255,.05);color:var(--ink);
+  font-size:15px;outline:none}
+#jq:focus{border-color:var(--acc)}
+#jlist{max-height:46dvh;overflow-y:auto;margin-top:10px;display:flex;flex-direction:column;gap:2px}
+.jrow{display:grid;grid-template-columns:44px 1fr auto;gap:10px;align-items:center;
+  padding:7px 10px;border-radius:9px;cursor:pointer;font-size:13px;border:1px solid transparent}
+.jrow:hover,.jrow.sel{background:var(--panel);border-color:var(--line)}
+.jrow .jn{color:var(--dim2);font-variant-numeric:tabular-nums;text-align:right}
+.jrow .jt{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim2)}
+.jrow b{font-weight:400}
+.jrow.sel .jn{color:var(--acc)}
+
 #bar{position:fixed;left:50%;bottom:max(12px,env(safe-area-inset-bottom));
   transform:translateX(-50%);z-index:40;display:flex;align-items:center;gap:4px;
   background:rgba(12,16,26,.82);backdrop-filter:blur(16px);border:1px solid var(--line);
   border-radius:999px;padding:5px 7px}
-#bar button{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;
+#bar button:not(#count){width:34px;height:34px;border-radius:50%;display:grid;place-items:center;
   color:var(--dim);transition:.18s}
-#bar button:hover{background:rgba(255,255,255,.09);color:var(--ink)}
+#bar button:not(#count):hover{background:rgba(255,255,255,.09);color:var(--ink)}
 #bar svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.9;
   stroke-linecap:round;stroke-linejoin:round}
-#count{font-size:11px;letter-spacing:.1em;color:var(--dim);padding:0 9px;
-  font-variant-numeric:tabular-nums;white-space:nowrap}
+#count{font-size:11px;letter-spacing:.1em;color:var(--dim);padding:5px 11px;
+  font-variant-numeric:tabular-nums;white-space:nowrap;border-radius:999px;
+  border:1px solid transparent;transition:.18s}
+#count:hover{border-color:var(--line);background:rgba(255,255,255,.06);color:var(--ink)}
 #count b{color:var(--ink);font-weight:700}
-#jump{position:fixed;left:50%;bottom:calc(max(12px,env(safe-area-inset-bottom)) + 50px);
-  transform:translateX(-50%);z-index:40;display:flex;gap:4px}
-#jump button{padding:4px 13px;border-radius:999px;border:1px solid var(--line);
-  background:rgba(12,16,26,.82);backdrop-filter:blur(16px);font-size:10px;
-  letter-spacing:.13em;text-transform:uppercase;color:var(--dim)}
-#jump button.on{color:var(--acc);border-color:rgba(242,149,46,.45)}
-
-.topcredit{position:fixed;right:14px;bottom:14px;z-index:39;font-size:10.5px;color:var(--dim2);
-  letter-spacing:.03em}
-.topcredit a{color:var(--dim);text-decoration:none;border-bottom:1px solid var(--line)}
-.topcredit a:hover{color:var(--acc)}
-.pgcredit{font-size:10.5px;color:var(--dim2);text-align:center;padding:10px 0 2px}
-.pgcredit a{color:var(--dim);text-decoration:none}
-@media(min-width:861px){.pgcredit{display:none}}
-@media(max-width:860px){.topcredit{display:none}}
 
 /* ------------------------------------------------------------- modal */
 .modal{position:fixed;inset:0;z-index:60;background:rgba(4,6,12,.82);
@@ -266,17 +308,18 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 /* -------------------------------------------------------- portrait/mobile */
 @media(max-aspect-ratio:1/1){
   .inner{flex-direction:column;overflow-y:auto;padding-bottom:clamp(96px,13vh,120px)}
-  .pl-left,.pl-right,.t-left,.t-right{flex:0 0 auto}
-  .pl-right{height:34vh;min-height:210px;order:-1}
-  .idpanel img{height:100%}
-  .bigrank{font-size:clamp(110px,32vw,220px)}
-  .pane{min-height:44vh}
+  .t-left,.t-right{flex:0 0 auto}
+  .pbody{flex-direction:column;gap:clamp(12px,2vh,20px)}
+  .pcol,.pres{flex:0 0 auto}
+  .ptop{height:clamp(160px,28vh,250px)}
+  .prank{font-size:clamp(52px,15vw,110px)}
+  .kpis{grid-template-columns:repeat(2,1fr)}
+  .pane{min-height:46vh}
   .evlist,.lb,.rows{overflow-y:auto}
   .evlist{max-width:none}
   .ev,.lbrow{flex:0 0 auto;max-height:none;padding:5px 9px;line-height:1.25}
   .rrow{flex:0 0 auto}
   .rrow .bar{height:22px}
-  .kpis{grid-template-columns:repeat(2,1fr)}
   .dcols,.mcols{grid-template-columns:1fr;grid-auto-flow:row;grid-template-rows:none}
   .mcols{gap:3px}
   .mrow{min-height:26px}
@@ -291,27 +334,33 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 <body>
 <div id="film"></div>
 
-<div id="jump">
-  <button data-sec="0">Players</button>
-  <button data-sec="1">Tournaments</button>
-  <button data-sec="2">Charts</button>
+<div id="topbar">
+  <div class="tb-l"><b>PGA TOUR 2026</b> <span id="tb-ctx">· FedExCup Ranking</span></div>
+  <div id="tb-tabs">
+    <button data-sec="0">Players</button>
+    <button data-sec="1">Tournaments</button>
+    <button data-sec="2">Charts</button>
+  </div>
+  <div class="tb-r">Produced with passion by A guy with a scarf (Carlo De Marchis) ·
+    <a href="#" onclick="openCredits();return false">Credits</a></div>
 </div>
 
 <div id="bar">
   <button id="b-first" title="Restart"><svg viewBox="0 0 24 24"><path d="M19 5v14L8 12z"/><path d="M5 5v14"/></svg></button>
   <button id="b-prev" title="Previous"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
   <button id="b-play" title="Play"><svg viewBox="0 0 24 24"><path d="M7 4l12 8-12 8z"/></svg></button>
-  <span id="count"><b>1</b> / 110</span>
+  <button id="count" title="Jump to a card (g)"><b>1</b> / 110</button>
   <button id="b-next" title="Next"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
   <button id="b-help" title="Help">
     <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.2 9.3a2.9 2.9 0 015.6 1c0 1.9-2.8 2.3-2.8 4"/><path d="M12 17.4h.01"/></svg></button>
   <button id="b-full" title="Fullscreen"><svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 15v5h-5M15 4h5v5M9 20H4v-5"/></svg></button>
 </div>
 
-<div class="topcredit">Produced with passion by A guy with a scarf (Carlo De Marchis) ·
-  <a href="#" onclick="openCredits();return false">Credits</a></div>
-
 <div class="modal" id="emodal"><div class="mbox"><button class="mclose" onclick="closeModal('emodal')">&times;</button><div id="ebody"></div></div></div>
+<div class="modal" id="jmodal"><div class="mbox"><button class="mclose" onclick="closeModal('jmodal')">&times;</button>
+  <h3>Jump to a card</h3>
+  <input id="jq" type="text" autocomplete="off" placeholder="Type a name, a tournament or a card number…">
+  <div id="jlist"></div></div></div>
 <div class="modal" id="hmodal"><div class="mbox"><button class="mclose" onclick="closeModal('hmodal')">&times;</button><div id="hbody"></div></div></div>
 <div class="modal" id="cmodal"><div class="mbox"><button class="mclose" onclick="closeModal('cmodal')">&times;</button><div id="cbody"></div></div></div>
 
@@ -352,53 +401,59 @@ const SEC = [0, P.length, P.length + T.length];
 
 /* -------------------------------------------------------- player card */
 function playerCard(p) {
-  const nameSize = Math.min(58, 780 / Math.max(9, p.name.length));
-  const cuts = p.season.cuts || "—";
+  const nameSize = Math.min(46, 470 / Math.max(9, p.name.length));
   const ow = p.owgr;
   const evs = p.events;                      // already chronological, Jan -> Aug
   return `<div class="card" data-k="player">
-    <div class="inner">
-      <div class="pl-left">
-        <div class="crumb"><b>FedExCup No. ${p.rank}</b> <span>·</span>
-          <span>${flag(p.flag)}${esc(p.country)}</span>${ow ? ` <span>·</span> <span>World No. ${ow.rank}</span>` : ""}</div>
-        <div class="pname" style="font-size:clamp(26px,${nameSize / 14}vw,${nameSize}px)">${esc(p.name)}</div>
-        <div class="psub">
-          <span>Age <b>${esc(p.bio.age || "—")}</b></span>
-          <span>Turned pro <b>${esc(p.bio.turnedPro || "—")}</b></span>
-          ${p.bio.college ? `<span>College <b>${esc(p.bio.college)}</b></span>` : ""}
-          <span>Career wins <b>${esc(p.bio.careerWins || "—")}</b></span>
+    <div class="inner pl-inner">
+      <div class="pbody">
+        <div class="pcol">
+
+          <div class="ptop">
+            <div class="pphoto"><img src="img/full/${p.id}.webp" alt="${esc(p.name)}" loading="lazy"></div>
+            <div class="prankwrap">
+              <div class="prank"><small>FedExCup</small>${p.rank}</div>
+              ${ow ? `<div class="pworld">World rank <b>#${ow.rank}</b> · ${ow.avg} avg</div>` : ""}
+            </div>
+          </div>
+
+          <div class="pbot">
+            <div class="crumb"><span>${flag(p.flag)}${esc(p.country)}</span></div>
+            <div class="pname" style="font-size:clamp(22px,${nameSize / 13}vw,${nameSize}px)">${esc(p.name)}</div>
+            <div class="psub">
+              <span>Age <b>${esc(p.bio.age || "—")}</b></span>
+              <span>Turned pro <b>${esc(p.bio.turnedPro || "—")}</b></span>
+              <span>Career wins <b>${esc(p.bio.careerWins || "—")}</b></span>
+              ${p.bio.college ? `<span>College <b>${esc(p.bio.college)}</b></span>` : ""}
+            </div>
+            <div class="kpis">
+              <div class="kpi hero"><div class="k">FedExCup pts</div><div class="v">${pts(p.points)}</div></div>
+              <div class="kpi"><div class="k">Earnings</div><div class="v">${abbrMoney(p.season.money)}</div></div>
+              <div class="kpi"><div class="k">Season</div><div class="v">${esc(p.season.wins || 0)}<small> win${p.season.wins == 1 ? "" : "s"}</small></div></div>
+              <div class="kpi"><div class="k">Top 10s</div><div class="v">${esc(p.season.top10 || 0)}</div></div>
+            </div>
+            <div class="psub">
+              <span>Events <b>${esc(p.season.events || evs.length)}</b></span>
+              <span>Cuts made <b>${esc(p.season.cuts || "—")}</b></span>
+              <span>Top 25 <b>${esc(p.season.top25 || 0)}</b></span>
+              <span>Runner-up <b>${esc(p.season.second || 0)}</b></span>
+            </div>
+          </div>
         </div>
-        <div class="kpis">
-          <div class="kpi hero"><div class="k">FedExCup pts</div><div class="v">${pts(p.points)}</div></div>
-          <div class="kpi owgr"><div class="k">World rank</div><div class="v">${ow ? "#" + ow.rank : "—"}
-            ${ow ? `<small> ${ow.avg} avg</small>` : ""}</div></div>
-          <div class="kpi"><div class="k">Season</div><div class="v">${esc(p.season.wins || 0)}<small> win${p.season.wins == 1 ? "" : "s"}</small></div></div>
-          <div class="kpi"><div class="k">Earnings</div><div class="v">${abbrMoney(p.season.money)}</div></div>
+
+        <div class="pres">
+          <div class="tabs">
+            <button class="tab on" data-tab="results">Results</button>
+            <button class="tab" data-tab="majors">Majors</button>
+            <button class="tab" data-tab="story">Story</button>
+          </div>
+          <div class="pane">
+            <div class="evlist" data-pane="results">${evs.map(e => evRow(e, p)).join("")}</div>
+            <div class="evlist" data-pane="majors" hidden>${majorRows(evs, p)}</div>
+            <div class="story" data-pane="story" hidden>${storyHtml(p)}</div>
+          </div>
         </div>
-        <div class="psub">
-          <span>Events <b>${esc(p.season.events || evs.length)}</b></span>
-          <span>Cuts made <b>${esc(cuts)}</b></span>
-          <span>Top 10 <b>${esc(p.season.top10 || 0)}</b></span>
-          <span>Top 25 <b>${esc(p.season.top25 || 0)}</b></span>
-          <span>Runner-up <b>${esc(p.season.second || 0)}</b></span>
-        </div>
-        <div class="tabs">
-          <button class="tab on" data-tab="results">Results</button>
-          <button class="tab" data-tab="majors">Majors</button>
-          <button class="tab" data-tab="story">Story</button>
-        </div>
-        <div class="pane">
-          <div class="evlist" data-pane="results">${evs.map(e => evRow(e, p)).join("")}</div>
-          <div class="evlist" data-pane="majors" hidden>${majorRows(evs, p)}</div>
-          <div class="story" data-pane="story" hidden>${storyHtml(p)}</div>
-        </div>
-        <div class="pgcredit">Produced with passion by A guy with a scarf (Carlo De Marchis) ·
-          <a href="#" onclick="openCredits();return false">Credits</a></div>
       </div>
-      <div class="pl-right"><div class="idpanel">
-        <div class="bigrank">${p.rank}</div>
-        <img src="img/full/${p.id}.webp" alt="${esc(p.name)}" loading="lazy">
-      </div></div>
     </div></div>`;
 }
 
@@ -472,8 +527,6 @@ function tournamentCard(t) {
               ${ch.earnings ? ` · ${esc(ch.earnings)}` : ""}</div>
           </div>
         </div>
-        <div class="pgcredit">Produced with passion by A guy with a scarf (Carlo De Marchis) ·
-          <a href="#" onclick="openCredits();return false">Credits</a></div>
       </div>
       <div class="t-right">
         <div class="lbhead"><span>Pos</span><span>${t.team ? "Team" : "Player"}</span>
@@ -506,8 +559,6 @@ function raceCard() {
           <div class="blab"><span class="who">${esc(p.name)}</span>
             <span class="val">${pts(p.points)}</span></div></div></div>`).join("")}
     </div>
-    <div class="pgcredit">Produced with passion by A guy with a scarf (Carlo De Marchis) ·
-      <a href="#" onclick="openCredits();return false">Credits</a></div>
   </div></div></div>`;
 }
 
@@ -537,8 +588,6 @@ function divergeCard() {
         Tyrrell Hatton at No. 24 — finished outside the FedExCup 70 and so have no card here.</div>
     </div>
     <div class="dcols">${head}${rows.slice(0, 14).map(cell).join("")}${head}${rows.slice(14, 28).map(cell).join("")}</div>
-    <div class="pgcredit">Produced with passion by A guy with a scarf (Carlo De Marchis) ·
-      <a href="#" onclick="openCredits();return false">Credits</a></div>
   </div></div></div>`;
 }
 
@@ -561,8 +610,6 @@ function moneyCard() {
         and ranks 6th for money against 26th for points. Top 30 of 70 shown.</div>
     </div>
     <div class="mcols">${by.map(row).join("")}</div>
-    <div class="pgcredit">Produced with passion by A guy with a scarf (Carlo De Marchis) ·
-      <a href="#" onclick="openCredits();return false">Credits</a></div>
   </div></div></div>`;
 }
 
@@ -582,9 +629,13 @@ function go(n) {
   cur = Math.max(0, Math.min(total - 1, n));
   film.style.transform = `translateX(${-cur * 100}vw)`;
   document.getElementById("count").innerHTML = `<b>${cur + 1}</b> / ${total}`;
+  document.body.classList.toggle("onplayer", CARDS[cur].kind === "player");
   const sec = cur >= SEC[2] ? 2 : cur >= SEC[1] ? 1 : 0;
-  document.querySelectorAll("#jump button").forEach((b, i) =>
+  document.querySelectorAll("#tb-tabs button").forEach((b, i) =>
     b.classList.toggle("on", i === sec));
+  document.getElementById("tb-ctx").textContent =
+    sec === 0 ? `· FedExCup Ranking · Nos. 1\u2013${P.length}` :
+    sec === 1 ? `· The Season · ${T.length} tournaments` : "· Season charts";
   location.hash = cur ? "#" + (cur + 1) : "";
 }
 const next = () => go(cur + 1 >= total ? 0 : cur + 1);
@@ -604,8 +655,9 @@ document.getElementById("b-play").onclick = e => {
 document.getElementById("b-full").onclick = () =>
   document.fullscreenElement ? document.exitFullscreen() :
     document.documentElement.requestFullscreen?.();
-document.querySelectorAll("#jump button").forEach(b =>
+document.querySelectorAll("#tb-tabs button").forEach(b =>
   b.onclick = () => go(SEC[+b.dataset.sec]));
+document.getElementById("count").onclick = openJump;
 
 addEventListener("keydown", e => {
   if (e.key === "Escape") return document.querySelectorAll(".modal.on")
@@ -616,6 +668,7 @@ addEventListener("keydown", e => {
   if (e.key === "Home") go(0);
   if (e.key === "End") go(total - 1);
   if (e.key === "?" || e.key === "h") openHelp();
+  if (e.key === "g" || e.key === "/") { e.preventDefault(); openJump(); }
   if (e.key === "f") document.getElementById("b-full").click();
 });
 
@@ -631,7 +684,7 @@ addEventListener("hashchange", () => {
   if (n && n - 1 !== cur) go(n - 1);
 });
 const start = parseInt(location.hash.slice(1), 10);
-if (start) go(start - 1);
+go(start ? start - 1 : 0);   // always run once so body.onplayer is set on first paint
 
 /* ------------------------------------------------------- tabs + modals */
 film.addEventListener("click", e => {
@@ -676,6 +729,69 @@ function closeModal(id) { document.getElementById(id).classList.remove("on"); }
 document.querySelectorAll(".modal").forEach(m =>
   m.addEventListener("click", e => { if (e.target === m) m.classList.remove("on"); }));
 
+/* ---------------------------------------------------- jump to a card */
+const INDEX = CARDS.map((c, i) => ({
+  n: i + 1,
+  kind: c.kind,
+  label: c.kind === "player" ? c.d.name
+       : c.kind === "tournament" ? c.d.name
+       : c.kind === "race" ? "The Race — 2026 FedExCup points"
+       : c.kind === "money" ? "The Money — 2026 official earnings"
+       : "FedExCup vs the world",
+  meta: c.kind === "player" ? `No. ${c.d.rank} · ${c.d.country}`
+      : c.kind === "tournament" ? `${c.d.date} · ${c.d.champion.name || ""}`
+      : "Chart",
+  hay: (c.kind === "player"
+      ? `${c.d.name} ${c.d.country} ${c.d.bio.college || ""}`
+      : c.kind === "tournament"
+      ? `${c.d.name} ${c.d.course || ""} ${c.d.city || ""} ${c.d.champion.name || ""}`
+      : c.kind === "race" ? "chart race fedexcup points standings"
+      : c.kind === "money" ? "chart money earnings prize purse"
+      : "chart world ranking owgr gap comparison").toLowerCase(),
+}));
+
+let jSel = 0;
+function jRender(rows) {
+  document.getElementById("jlist").innerHTML = rows.map((r, i) =>
+    `<div class="jrow ${i === jSel ? "sel" : ""}" data-n="${r.n}">
+       <span class="jn">${r.n}</span>
+       <span><b>${esc(r.label)}</b></span>
+       <span class="jt">${esc(r.meta)}</span></div>`).join("")
+    || `<div class="jrow"><span class="jn">—</span><span>No card matches that.</span><span></span></div>`;
+}
+function jMatches() {
+  const q = document.getElementById("jq").value.trim().toLowerCase();
+  if (!q) return INDEX;
+  if (/^\d+$/.test(q)) {
+    const n = +q;
+    return INDEX.filter(r => String(r.n).startsWith(q) || r.n === n).slice(0, 40);
+  }
+  return INDEX.filter(r => r.hay.includes(q)).slice(0, 40);
+}
+function jUpdate() { jRender(jMatches()); }
+
+function openJump() {
+  jSel = 0;
+  const q = document.getElementById("jq");
+  q.value = "";
+  jUpdate();
+  document.getElementById("jmodal").classList.add("on");
+  setTimeout(() => q.focus(), 40);
+}
+document.getElementById("jq").addEventListener("input", () => { jSel = 0; jUpdate(); });
+document.getElementById("jq").addEventListener("keydown", e => {
+  const rows = jMatches();
+  if (e.key === "ArrowDown") { e.preventDefault(); jSel = Math.min(rows.length - 1, jSel + 1); jRender(rows);
+    document.querySelector(".jrow.sel")?.scrollIntoView({block: "nearest"}); }
+  if (e.key === "ArrowUp") { e.preventDefault(); jSel = Math.max(0, jSel - 1); jRender(rows);
+    document.querySelector(".jrow.sel")?.scrollIntoView({block: "nearest"}); }
+  if (e.key === "Enter" && rows[jSel]) { closeModal("jmodal"); go(rows[jSel].n - 1); }
+});
+document.getElementById("jlist").addEventListener("click", e => {
+  const row = e.target.closest(".jrow[data-n]");
+  if (row) { closeModal("jmodal"); go(+row.dataset.n - 1); }
+});
+
 function openHelp() {
   document.getElementById("hbody").innerHTML = `
     <h3>How to watch</h3>
@@ -686,9 +802,10 @@ function openHelp() {
     <ul>
       <li><b>→</b> or <b>space</b> — next card &nbsp;·&nbsp; <b>←</b> — previous</li>
       <li><b>Home</b> / <b>End</b> — first / last card</li>
+      <li><b>g</b> or <b>/</b> — jump to any card by name or number (or click the counter)</li>
       <li><b>f</b> — fullscreen &nbsp;·&nbsp; <b>h</b> or <b>?</b> — this panel &nbsp;·&nbsp; <b>Esc</b> — close</li>
       <li>On a touchscreen, <b>swipe</b> left and right</li>
-      <li>The <b>Players / Tournaments / Charts</b> pills jump between sections</li>
+      <li>The <b>Players / Tournaments / Charts</b> pills in the top bar jump between sections</li>
       <li>Every card has its own address — card 12 is <b>#12</b> — so any card can be linked</li>
     </ul>
     <h5>On a player card</h5>
@@ -738,7 +855,6 @@ function openCredits() {
   document.getElementById("cmodal").classList.add("on");
 }
 
-/* mobile: the fixed bottom-right credit is hidden, so cards carry their own (see .pgcredit) */
 </script>
 </body>
 </html>
