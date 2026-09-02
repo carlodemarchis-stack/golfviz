@@ -34,6 +34,7 @@ html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--ink);
   font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:300;
   -webkit-font-smoothing:antialiased}
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+[hidden]{display:none!important}   /* author display rules otherwise beat the hidden attribute */
 
 /* ---------------------------------------------------------------- film */
 #film{position:fixed;inset:0;display:flex;transition:transform .55s cubic-bezier(.16,.84,.34,1);
@@ -109,7 +110,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 
 .pane{flex:1 1 auto;min-height:0;overflow:hidden;position:relative}
 .evlist{height:100%;display:flex;flex-direction:column;gap:1px;overflow:hidden}
-.ev{display:grid;grid-template-columns:48px minmax(0,1fr) 42px 92px 56px;gap:8px;align-items:center;
+.ev{display:grid;grid-template-columns:58px minmax(0,1fr) 42px 92px 56px;gap:8px;align-items:center;
   padding:0 9px;border-radius:9px;font-size:clamp(9.5px,.98vw,13px);
   cursor:pointer;border:1px solid transparent;line-height:1;overflow:hidden;
   flex:1 1 0;min-height:0;max-height:30px}
@@ -333,7 +334,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .pane{min-height:46vh}
   .evlist,.lb,.rows{overflow-y:auto}
   .evlist{max-width:none}
-  .ev{grid-template-columns:38px minmax(0,1fr) 34px 76px 40px;gap:5px;font-size:10.5px}
+  .ev{grid-template-columns:50px minmax(0,1fr) 34px 76px 40px;gap:5px;font-size:10.5px}
   .ev,.lbrow{flex:0 0 auto;max-height:none;padding:5px 7px;line-height:1.25}
   .lbrow,.lbhead{grid-template-columns:34px minmax(0,1fr) 78px 42px;gap:5px}
   .rrow{flex:0 0 auto}
@@ -405,6 +406,11 @@ const abbrMoney = s => {
   return n >= 1e6 ? "$" + (n / 1e6).toFixed(1) + "M" : "$" + Math.round(n / 1e3) + "K";
 };
 const pts = n => (+n).toLocaleString("en-US", {maximumFractionDigits: 0});
+const MON = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const shortDate = d => {                       // the TOUR sends "1.25.2026"
+  const p = String(d || "").split(".");
+  return p.length >= 2 && MON[+p[0] - 1] ? `${MON[+p[0] - 1]} ${+p[1]}` : (d || "");
+};
 const flag = c => c ? `<img class="fl" src="https://flagcdn.com/24x18/${iso(c)}.png" alt="">` : "";
 /* PGA uses IOC-ish 3-letter codes incl. UK home nations; flagcdn wants 2-letter (+gb-eng etc.) */
 const ISO = {USA:"us",ENG:"gb-eng",SCO:"gb-sct",NIR:"gb-nir",WAL:"gb-wls",IRL:"ie",RSA:"za",
@@ -488,12 +494,10 @@ function playerCard(p) {
           <div class="tabs">
             <button class="tab on" data-tab="results">Results</button>
             <button class="tab" data-tab="majors">Majors</button>
-            <button class="tab" data-tab="story">Story</button>
           </div>
           <div class="pane">
             <div class="evlist" data-pane="results">${evs.map(e => evRow(e, p)).join("")}</div>
             <div class="evlist" data-pane="majors" hidden>${majorRows(evs, p)}</div>
-            <div class="story" data-pane="story" hidden>${storyHtml(p)}</div>
           </div>
         </div>
       </div>
@@ -511,7 +515,7 @@ function posClass(e) {
 }
 function evRow(e, p) {
   return `<div class="ev ${posClass(e)}" data-ev="${esc(e.tid)}" data-pid="${p.id}">
-    <span class="d">${esc((e.date || "").split(".").slice(0, 2).join("/"))}</span>
+    <span class="d">${esc(shortDate(e.date))}</span>
     <span class="n">${esc(e.name)}</span>
     <span class="p">${esc(e.pos || "—")}</span>
     <span class="r">${(e.rounds || []).filter(Boolean).join(" ") || "—"}</span>
@@ -521,12 +525,6 @@ function majorRows(evs, p) {
   const m = evs.filter(e => MAJORS.includes(e.name));
   if (!m.length) return `<div class="story"><p class="none">No major or PLAYERS starts in 2026.</p></div>`;
   return m.map(e => evRow(e, p)).join("");
-}
-function storyHtml(p) {
-  if (!p.recap.length)
-    return `<p class="none">The PGA TOUR publishes a written season recap only for players who won in 2026.
-      ${esc(p.name.split(" ").slice(-1)[0])} did not win this season — the Results tab has the full record.</p>`;
-  return p.recap.map(r => `<div><h4>${esc(r.title)}</h4><p>${esc(r.body)}</p></div>`).join("");
 }
 </script>
 <script>
@@ -854,8 +852,7 @@ function openHelp() {
     <h5>On a player card</h5>
     <ul>
       <li><b>Results</b> lists every 2026 start; <b>click any row</b> for the round-by-round detail</li>
-      <li><b>Majors</b> filters to the four majors and THE PLAYERS</li>
-      <li><b>Story</b> is the TOUR's own written recap — winners only</li>
+      <li><b>Majors</b> filters the same list to the four majors and THE PLAYERS</li>
     </ul>
     <p style="margin-top:14px">Best in landscape on a laptop or iPad; it works in portrait on a
       phone, where each card scrolls.</p>`;
