@@ -46,6 +46,24 @@ for p in players:
         rounds_total += len(rounds)
         attached += 1
 
+# ---- season scoring tally, from the scorecards we have
+for p in players:
+    tally = {"eagle": 0, "birdie": 0, "par": 0, "bogey": 0, "dbl": 0, "holes": 0}
+    shots = 0
+    for e in p["events"]:
+        if str(e.get("total") or "").isdigit():
+            shots += int(e["total"])          # official strokes, independent of the cards
+        for r in e.get("card") or []:
+            par = [int(c) for c in r["p"]]
+            for i, v in enumerate(r["s"]):
+                if not v:
+                    continue
+                d = v - par[i]
+                tally["holes"] += 1
+                tally["eagle" if d <= -2 else "birdie" if d == -1 else "par" if d == 0
+                      else "bogey" if d == 1 else "dbl"] += 1
+    p["scoring"] = {"shots": shots, **tally}
+
 (DATA / "players.json").write_text(json.dumps(players, separators=(",", ":")))
 size = (DATA / "players.json").stat().st_size / 1024
 print(f"attached {attached} scorecards ({rounds_total} rounds) -> players.json {size:,.0f} KB")

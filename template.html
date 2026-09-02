@@ -300,20 +300,44 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .modal{position:fixed;inset:0;z-index:60;background:rgba(4,6,12,.82);
   backdrop-filter:blur(10px);display:none;place-items:center;padding:4vw}
 .modal.on{display:grid}
-.mbox{width:min(880px,94vw);max-height:88dvh;overflow-y:auto;
+.mbox{position:relative;width:min(880px,94vw);max-height:92dvh;overflow-y:auto;
   background:linear-gradient(160deg,#111827,#0a0e18);border:1px solid var(--line);
-  border-radius:var(--r);padding:clamp(18px,2.6vw,34px)}
+  border-radius:var(--r);padding:clamp(14px,2vw,26px)}
+#emodal .mbox{overflow:hidden}
+.marrow{position:absolute;top:50%;transform:translateY(-50%);z-index:3;
+  width:32px;height:62px;display:grid;place-items:center;border-radius:12px;
+  background:rgba(255,255,255,.05);border:1px solid var(--line);color:var(--dim);
+  transition:.18s}
+.marrow:hover{background:rgba(242,149,46,.16);border-color:rgba(242,149,46,.5);
+  color:var(--acc)}
+.marrow[disabled]{opacity:.22;pointer-events:none}
+.marrow.l{left:6px} .marrow.r{right:6px}
+.marrow svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:2;
+  stroke-linecap:round;stroke-linejoin:round}
+#emodal .mbox{padding-left:44px;padding-right:44px}
+.mplayer{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--acc);
+  font-weight:700;margin-bottom:3px}
+.mpager{font-size:10.5px;letter-spacing:.1em;color:var(--dim2);margin-top:9px;
+  text-align:center;font-variant-numeric:tabular-nums}
+@media(max-width:640px){
+  #emodal .mbox{padding-left:14px;padding-right:14px}
+  .marrow{top:auto;bottom:8px;transform:none;width:44px;height:34px}
+  .mgrid{grid-template-columns:repeat(3,1fr)}
+}
 .mbox h3{font-size:clamp(16px,2vw,26px);font-weight:700;letter-spacing:-.02em;margin-bottom:4px}
-.mbox h5{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);
-  font-weight:700;margin:18px 0 7px}
+.mbox h5{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);
+  font-weight:700;margin:12px 0 5px}
 .mbox p,.mbox li{font-size:13px;line-height:1.6;color:var(--dim)}
 .mbox ul{padding-left:17px}
 .mbox a{color:var(--acc);text-decoration:none}
 .mclose{position:sticky;top:0;float:right;font-size:24px;line-height:1;color:var(--dim)}
-.mgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(78px,1fr));gap:8px;margin:14px 0}
-.mgrid div{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:9px}
-.mgrid .k{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim2)}
-.mgrid .v{font-size:17px;font-weight:700;margin-top:2px}
+.mgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;margin:11px 0 4px}
+.mgrid > div{background:var(--panel);border:1px solid var(--line);border-radius:11px;
+  padding:7px 10px;min-width:0}
+.mgrid .k{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim2);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mgrid .v{font-size:clamp(15px,1.6vw,20px);font-weight:700;margin-top:2px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .mrounds{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}
 .mrounds span{background:var(--panel);border:1px solid var(--line);border-radius:9px;
   padding:6px 12px;font-variant-numeric:tabular-nums;font-size:13px}
@@ -321,23 +345,23 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   letter-spacing:.12em}
 
 /* ---- hole-by-hole scorecard ---- */
-.scwrap{margin-top:6px;overflow-x:auto;padding-bottom:4px}
-.sc{margin-top:14px;min-width:600px}
-.scr{display:flex;align-items:baseline;gap:9px;margin-bottom:6px;
-  font-size:12px;color:var(--dim)}
+.scwrap{margin-top:4px;overflow-x:auto;padding-bottom:2px}
+.sc{margin-top:9px;min-width:566px}
+.scr{display:flex;align-items:baseline;gap:9px;margin-bottom:4px;
+  font-size:11.5px;color:var(--dim)}
 .scr b{color:var(--ink);font-size:13px;font-weight:700}
 .scr em{font-style:normal;color:var(--acc);font-weight:700}
-.scg{display:grid;grid-template-columns:34px repeat(9,1fr) 38px repeat(9,1fr) 38px 42px;
+.scg{display:grid;grid-template-columns:30px repeat(9,1fr) 33px repeat(9,1fr) 33px 37px;
   gap:2px;align-items:center}
-.scg > div{text-align:center;font-size:11px;padding:3px 0;font-variant-numeric:tabular-nums}
+.scg > div{text-align:center;font-size:10.5px;padding:0;font-variant-numeric:tabular-nums}
 .scg .lab{text-align:left;font-size:9px;letter-spacing:.12em;text-transform:uppercase;
   color:var(--dim2)}
 .scg .hn{color:var(--dim2);font-size:9.5px}
 .scg .pr{color:var(--dim);font-size:10px}
 .scg .sub{font-weight:700;color:var(--dim);background:rgba(255,255,255,.04);border-radius:5px}
 .scg .tot{font-weight:700;color:var(--ink);background:rgba(255,255,255,.07);border-radius:5px}
-.sq{display:inline-grid;place-items:center;width:21px;height:21px;font-weight:700;
-  font-size:11.5px;line-height:1}
+.sq{display:inline-grid;place-items:center;width:19px;height:19px;font-weight:700;
+  font-size:11px;line-height:1}
 .sq.eagle{background:var(--acc);color:#160c02;border-radius:50%;
   box-shadow:0 0 0 2px rgba(242,149,46,.35)}
 .sq.birdie{border:1.5px solid var(--acc);color:var(--acc);border-radius:50%}
@@ -345,7 +369,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .sq.bogey{border:1.5px solid rgba(150,166,205,.4);color:var(--ink);border-radius:4px}
 .sq.dbl{background:rgba(232,83,78,.22);border:1.5px solid rgba(232,83,78,.5);
   color:#ffb3b0;border-radius:4px}
-.sclegend{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px;font-size:10.5px;
+.sclegend{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px;font-size:10px;
   color:var(--dim2);align-items:center}
 .sclegend span{display:flex;gap:5px;align-items:center}
 @media(max-width:600px){.sc{min-width:560px}}
@@ -436,7 +460,13 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   <button id="b-full" title="Fullscreen"><svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 15v5h-5M15 4h5v5M9 20H4v-5"/></svg></button>
 </div>
 
-<div class="modal" id="emodal"><div class="mbox"><button class="mclose" onclick="closeModal('emodal')">&times;</button><div id="ebody"></div></div></div>
+<div class="modal" id="emodal"><div class="mbox">
+  <button class="mclose" onclick="closeModal('emodal')">&times;</button>
+  <button class="marrow l" id="e-prev" title="Previous tournament (←)">
+    <svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <button class="marrow r" id="e-next" title="Next tournament (→)">
+    <svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+  <div id="ebody"></div></div></div>
 <div class="modal" id="jmodal"><div class="mbox"><button class="mclose" onclick="closeModal('jmodal')">&times;</button>
   <h3>Jump to a card</h3>
   <input id="jq" type="text" autocomplete="off" placeholder="Type a name, a tournament or a card number…">
@@ -489,6 +519,7 @@ function playerCard(p) {
   const nameSize = Math.min(40, 400 / Math.max(9, p.name.length));
   const ow = p.owgr;
   const c = p.career || {};
+  const sc = p.scoring || {};
   const evs = p.events;                      // already chronological, Jan -> Aug
   return `<div class="card" data-k="player">
     <div class="inner pl-inner">
@@ -529,6 +560,18 @@ function playerCard(p) {
               <div class="cell"><b>${esc(p.season.top10 || 0)}</b><i>Top 10</i></div>
               <div class="cell"><b>${esc(p.season.top25 || 0)}</b><i>Top 25</i></div>
               <div class="cell"><b>${abbrMoney(p.season.money)}</b><i>Earnings</i></div>
+            </div>
+          </div>
+
+          <div class="pbox">
+            <div class="boxlegend">2026 Scoring</div>
+            <div class="boxgrid six">
+              <div class="cell"><b>${pts(sc.shots || 0)}</b><i>Shots</i></div>
+              <div class="cell${sc.eagle ? " hero" : ""}"><b>${esc(sc.eagle || 0)}</b><i>Eagles</i></div>
+              <div class="cell"><b>${pts(sc.birdie || 0)}</b><i>Birdies</i></div>
+              <div class="cell"><b>${pts(sc.par || 0)}</b><i>Pars</i></div>
+              <div class="cell"><b>${pts(sc.bogey || 0)}</b><i>Bogeys</i></div>
+              <div class="cell"><b>${esc(sc.dbl || 0)}</b><i>Double+</i></div>
             </div>
           </div>
 
@@ -766,6 +809,11 @@ document.getElementById("count").onclick = openJump;
 addEventListener("keydown", e => {
   if (e.key === "Escape") return document.querySelectorAll(".modal.on")
     .forEach(m => m.classList.remove("on"));
+  if (document.getElementById("emodal").classList.contains("on")) {
+    if (e.key === "ArrowRight") { e.preventDefault(); stepEvent(1); }
+    if (e.key === "ArrowLeft") { e.preventDefault(); stepEvent(-1); }
+    return;
+  }
   if (document.querySelector(".modal.on")) return;
   if (e.key === "ArrowRight" || e.key === " ") { e.preventDefault(); next(); }
   if (e.key === "ArrowLeft") prev();
@@ -807,13 +855,34 @@ film.addEventListener("click", e => {
 const byId = {};
 T.forEach(t => byId[t.id] = t);
 
+let mPid = null, mIdx = 0;
+
 function openEvent(pid, tid) {
   const p = P.find(x => x.id === pid);
-  const e = p && p.events.find(x => x.tid === tid);
-  if (!e) return;
-  const t = byId[tid];
-  const rounds = (e.rounds || []).filter(Boolean);
+  if (!p) return;
+  const i = p.events.findIndex(x => x.tid === tid);
+  if (i < 0) return;
+  mPid = pid; mIdx = i;
+  renderEvent();
+  document.getElementById("emodal").classList.add("on");
+}
+
+function stepEvent(d) {
+  const p = P.find(x => x.id === mPid);
+  if (!p) return;
+  const n = Math.max(0, Math.min(p.events.length - 1, mIdx + d));
+  if (n === mIdx) return;
+  mIdx = n;
+  renderEvent();
+}
+
+function renderEvent() {
+  const p = P.find(x => x.id === mPid);
+  const e = p.events[mIdx];
+  const t = byId[e.tid];
+  const rounds = (e.rounds || []).filter(r => r && r !== "-");
   document.getElementById("ebody").innerHTML = `
+    <div class="mplayer">${esc(p.name)} · FedExCup No. ${p.rank}</div>
     <h3>${esc(e.name)}</h3>
     <p>${esc(t ? t.date + " 2026 · " + (t.course || "") : e.date)}</p>
     <div class="mgrid">
@@ -826,9 +895,12 @@ function openEvent(pid, tid) {
     ${rounds.length && !(e.card || []).length ? `<div class="mrounds">${rounds.map((r, i) =>
       `<span><i>R${i + 1}</i>${esc(r)}</span>`).join("")}</div>` : ""}
     ${scorecard(e.card)}
-    ${t ? `<h5>Champion</h5><p>${esc(t.champion.name)} · ${esc(t.champion.score || "")}
-      ${t.champion.earnings ? " · " + esc(t.champion.earnings) : ""}</p>` : ""}`;
-  document.getElementById("emodal").classList.add("on");
+    ${t && t.champion.name !== p.name
+      ? `<div class="mpager">Won by ${esc(t.champion.name)} · ${esc(t.champion.score || "")}</div>`
+      : ""}
+    <div class="mpager">${mIdx + 1} / ${p.events.length} · ← → to move through the season</div>`;
+  document.getElementById("e-prev").disabled = mIdx === 0;
+  document.getElementById("e-next").disabled = mIdx === p.events.length - 1;
 }
 const SCLASS = d => d <= -2 ? "eagle" : d === -1 ? "birdie" : d === 0 ? "par"
   : d === 1 ? "bogey" : "dbl";
@@ -877,6 +949,9 @@ function scorecard(card) {
       <span><i class="sq dbl" style="font-style:normal">6</i> Double or worse</span>
     </div>`;
 }
+
+document.getElementById("e-prev").onclick = () => stepEvent(-1);
+document.getElementById("e-next").onclick = () => stepEvent(1);
 
 function closeModal(id) { document.getElementById(id).classList.remove("on"); }
 document.querySelectorAll(".modal").forEach(m =>
