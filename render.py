@@ -23,6 +23,6 @@ html = html.replace("/*__PHOTOS__*/[]", json.dumps(photos, separators=(",", ":")
 (ROOT / "index.html").write_text(html)
 
 kb = (ROOT / "index.html").stat().st_size / 1024
-print(f"index.html  {kb:,.0f} KB  ·  {len(players)} players + {len(tours)} tournaments + 3 charts "
-      f"= {len(players) + len(tours) + 3} cards")
+print(f"index.html  {kb:,.0f} KB  ·  {len(players)} players + {len(tours)} tournaments + 4 charts "
+      f"= {len(players) + len(tours) + 4} cards")
 print(f"course photos: {len(photos)}/{len(tours)}")

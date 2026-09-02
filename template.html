@@ -230,6 +230,29 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .drow .dd{text-align:right;font-variant-numeric:tabular-nums;font-weight:700}
 .up{color:#3fbe72}.down{color:#e8534e}.flat{color:var(--dim2)}
 
+/* holes-played composition */
+.hcols{flex:1 1 auto;min-height:0;display:grid;grid-template-columns:repeat(2,1fr);
+  gap:0 clamp(16px,2.6vw,40px);grid-auto-flow:column;grid-template-rows:repeat(35,1fr)}
+.hrow{display:grid;grid-template-columns:26px 96px 1fr 42px;gap:7px;align-items:center;
+  min-height:0;font-size:clamp(8.5px,.86vw,11px)}
+.hrow .rk{color:var(--dim2);text-align:right;font-variant-numeric:tabular-nums}
+.hrow .nm{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--dim)}
+.hrow .hn{text-align:right;font-variant-numeric:tabular-nums;color:var(--dim);font-weight:700}
+.htrack{height:clamp(9px,1.5vh,15px);border-radius:4px;overflow:hidden;
+  background:rgba(255,255,255,.03)}
+.hbar{height:100%;display:flex;border-radius:4px;overflow:hidden}
+.hbar i{display:block;height:100%}
+.s-eagle{background:#ffd98f}
+.s-birdie{background:var(--acc)}
+.s-par{background:rgba(150,166,205,.34)}
+.s-bogey{background:#5d6b8f}
+.s-dbl{background:#c9453f}
+.hkey{display:flex;gap:15px;flex-wrap:wrap;font-size:clamp(9px,.9vw,11px);color:var(--dim2);
+  align-items:center;margin-top:2px}
+.hkey span{display:flex;gap:6px;align-items:center}
+.hkey b{width:11px;height:11px;border-radius:3px;display:block;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.16)}
+
 .mcols{flex:1 1 auto;min-height:0;display:grid;grid-template-columns:repeat(2,1fr);
   gap:0 clamp(18px,3vw,46px);grid-auto-flow:column;grid-template-rows:repeat(15,1fr)}
 .mrow{display:grid;grid-template-columns:24px auto minmax(74px,124px) 1fr auto;gap:8px;
@@ -419,7 +442,9 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .lbrow,.lbhead{grid-template-columns:34px minmax(0,1fr) 78px 42px;gap:5px}
   .rrow{flex:0 0 auto}
   .rrow .bar{height:22px}
-  .dcols,.mcols{grid-template-columns:1fr;grid-auto-flow:row;grid-template-rows:none}
+  .dcols,.mcols,.hcols{grid-template-columns:1fr;grid-auto-flow:row;grid-template-rows:none}
+  .hcols{gap:3px}
+  .hrow{min-height:22px}
   .mcols{gap:3px}
   .mrow{min-height:26px}
   .drow{grid-template-columns:26px 1fr 62px 62px 48px}
@@ -454,7 +479,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   <button id="b-first" title="Restart"><svg viewBox="0 0 24 24"><path d="M19 5v14L8 12z"/><path d="M5 5v14"/></svg></button>
   <button id="b-prev" title="Previous"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
   <button id="b-play" title="Play"><svg viewBox="0 0 24 24"><path d="M7 4l12 8-12 8z"/></svg></button>
-  <button id="count" title="Jump to a card (g)"><b>1</b> / 110</button>
+  <button id="count" title="Jump to a card (g)"><b>1</b> / 111</button>
   <button id="b-next" title="Next"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
   <button id="b-help" title="Help">
     <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.2 9.3a2.9 2.9 0 015.6 1c0 1.9-2.8 2.3-2.8 4"/><path d="M12 17.4h.01"/></svg></button>
@@ -509,10 +534,21 @@ const CAT = {major:["Major","--major"], playoff:["Playoff","--playoff"],
   signature:["Signature","--signature"], players:["The Players","--players"],
   full:["Full field","--full"], opposite:["Opposite field","--opposite"]};
 
+/* three different Kims in this top 70 - only add an initial where it is needed */
+const SURNAME_DUPES = (() => {
+  const c = {};
+  P.forEach(p => { const l = p.last || p.name.split(" ").slice(-1)[0]; c[l] = (c[l] || 0) + 1; });
+  return c;
+})();
+const shortName = p => {
+  const l = p.last || p.name.split(" ").slice(-1)[0];
+  return SURNAME_DUPES[l] > 1 && p.first ? `${p.first[0]}. ${l}` : l;
+};
+
 const CARDS = [];
 P.forEach((p, i) => CARDS.push({kind: "player", d: p, i}));
 T.forEach((t, i) => CARDS.push({kind: "tournament", d: t, i}));
-CARDS.push({kind: "race"}, {kind: "money"}, {kind: "diverge"});
+CARDS.push({kind: "race"}, {kind: "money"}, {kind: "holes"}, {kind: "diverge"});
 const SEC = [0, P.length, P.length + T.length];
 
 /* -------------------------------------------------------- player card */
@@ -746,7 +782,7 @@ function moneyCard() {
   const row = (p, i) => `<div class="mrow">
     <span class="rk">${i + 1}</span>
     <img class="fc" src="img/face/${p.id}.webp" alt="" loading="lazy">
-    <span class="nm"><b>${esc(p.last || p.name.split(" ").slice(-1)[0])}</b><i>#${p.rank}</i></span>
+    <span class="nm"><b>${esc(shortName(p))}</b><i>#${p.rank}</i></span>
     <div class="bar"><div class="fill" style="width:${(cash(p.season.money) / max * 100).toFixed(1)}%"></div></div>
     <span class="amt">${abbrMoney(p.season.money)}</span></div>`;
   return `<div class="card" data-k="money"><div class="inner"><div class="chartwrap">
@@ -762,13 +798,45 @@ function moneyCard() {
   </div></div></div>`;
 }
 
+function holesCard() {
+  const by = P.slice().sort((a, b) => (b.scoring?.holes || 0) - (a.scoring?.holes || 0));
+  const max = by[0].scoring.holes;
+  const SEG = [["eagle", "Eagle or better"], ["birdie", "Birdie"], ["par", "Par"],
+               ["bogey", "Bogey"], ["dbl", "Double or worse"]];
+  const row = (p, i) => {
+    const sc = p.scoring, h = sc.holes || 1;
+    const segs = SEG.map(([k]) =>
+      `<i class="s-${k}" style="width:${(sc[k] / h * 100).toFixed(2)}%"></i>`).join("");
+    const pct = k => (sc[k] / h * 100).toFixed(1);
+    return `<div class="hrow" title="${esc(p.name)} — ${sc.holes} holes · ${pct("birdie")}% birdies">
+      <span class="rk">${i + 1}</span>
+      <span class="nm">${esc(shortName(p))}</span>
+      <div class="htrack"><div class="hbar" style="width:${(h / max * 100).toFixed(1)}%">${segs}</div></div>
+      <span class="hn">${pts(sc.holes)}</span></div>`;
+  };
+  return `<div class="card" data-k="holes"><div class="inner"><div class="chartwrap">
+    <div class="chead">
+      <div><div class="crumb"><b>Every hole played</b></div>
+        <div class="ctitle">2026 holes &amp; how they were scored</div></div>
+      <div class="cnote">All 70 players, ranked by holes played in the FedExCup season — bar length
+        is the number of holes, the fill is what those holes were scored. 95,000 holes in all:
+        62% pars, 22% birdies, 13% bogeys. Alternate-shot rounds record no individual scores, so the
+        Zurich Classic is not counted here.</div>
+    </div>
+    <div class="hkey">${SEG.map(([k, lbl]) =>
+      `<span><b class="s-${k}"></b>${lbl}</span>`).join("")}</div>
+    <div class="hcols">${by.map(row).join("")}</div>
+  </div></div></div>`;
+}
+
 /* -------------------------------------------------------------- render */
 const film = document.getElementById("film");
 film.innerHTML = CARDS.map(c =>
   c.kind === "player" ? playerCard(c.d) :
   c.kind === "tournament" ? tournamentCard(c.d) :
   c.kind === "race" ? raceCard() :
-  c.kind === "money" ? moneyCard() : divergeCard()).join("");
+  c.kind === "money" ? moneyCard() :
+  c.kind === "holes" ? holesCard() : divergeCard()).join("");
 
 let cur = 0, playing = null;
 const total = CARDS.length;
@@ -966,6 +1034,7 @@ const INDEX = CARDS.map((c, i) => ({
   label: c.kind === "player" ? c.d.name
        : c.kind === "tournament" ? c.d.name
        : c.kind === "race" ? "The Race — 2026 FedExCup points"
+       : c.kind === "holes" ? "Every hole played — 2026 scoring mix"
        : c.kind === "money" ? "The Money — 2026 official earnings"
        : "FedExCup vs the world",
   meta: c.kind === "player" ? `No. ${c.d.rank} · ${c.d.country}`
@@ -976,6 +1045,7 @@ const INDEX = CARDS.map((c, i) => ({
       : c.kind === "tournament"
       ? `${c.d.name} ${c.d.course || ""} ${c.d.city || ""} ${c.d.champion.name || ""}`
       : c.kind === "race" ? "chart race fedexcup points standings"
+      : c.kind === "holes" ? "chart holes scoring birdies eagles bogeys mix"
       : c.kind === "money" ? "chart money earnings prize purse"
       : "chart world ranking owgr gap comparison").toLowerCase(),
 }));
