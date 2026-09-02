@@ -48,7 +48,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 /* top bar = card chrome (experience + credit), never player data */
 .pl-inner{flex-direction:column;gap:0}
 .pbody{flex:1 1 auto;min-height:0;display:flex;gap:clamp(16px,2.6vw,44px)}
-.pcol{flex:0 0 45%;min-width:0;display:flex;flex-direction:column;
+.pcol{flex:0 0 43%;min-width:0;display:flex;flex-direction:column;
   gap:clamp(9px,1.5vh,18px);justify-content:flex-start}
 
 /* left top: photo, with personal info + all-time record beside it */
@@ -79,7 +79,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .boxgrid.four{grid-template-columns:repeat(4,1fr)}
 .boxgrid.six{grid-template-columns:repeat(6,1fr)}
 .cell{min-width:0}
-.cell b{display:block;font-size:clamp(14px,1.5vw,23px);font-weight:700;line-height:1;
+.cell b{display:block;font-size:clamp(13px,1.32vw,20px);font-weight:700;line-height:1;
   letter-spacing:-.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .cell i{display:block;font-style:normal;font-size:clamp(8.5px,.8vw,10.5px);
   letter-spacing:.12em;text-transform:uppercase;color:var(--dim2);margin-top:5px;
@@ -88,7 +88,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .cell.world b{color:var(--acc2)}
 .cell b small{font-size:.55em;font-weight:300;color:var(--dim);letter-spacing:0}
 
-.pres{flex:1 1 55%;min-width:0;display:flex;flex-direction:column;
+.pres{flex:1 1 57%;min-width:0;display:flex;flex-direction:column;
   gap:clamp(8px,1.3vh,16px)}
 
 .crumb{display:flex;align-items:center;gap:10px;flex-wrap:wrap;
@@ -110,10 +110,20 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 
 .pane{flex:1 1 auto;min-height:0;overflow:hidden;position:relative}
 .evlist{height:100%;display:flex;flex-direction:column;gap:1px;overflow:hidden}
-.ev{display:grid;grid-template-columns:58px minmax(0,1fr) 42px 92px 56px;gap:8px;align-items:center;
-  padding:0 9px;border-radius:9px;font-size:clamp(9.5px,.98vw,13px);
+.ev,.evhead{display:grid;
+  grid-template-columns:58px minmax(0,1fr) 46px 92px 44px 46px 52px 62px;
+  gap:8px;align-items:center;padding:0 9px}
+.ev{border-radius:9px;font-size:clamp(9.5px,.98vw,13px);
   cursor:pointer;border:1px solid transparent;line-height:1;overflow:hidden;
   flex:1 1 0;min-height:0;max-height:30px}
+.evhead{flex:0 0 auto;color:var(--dim2);font-size:clamp(8.5px,.82vw,10.5px);
+  letter-spacing:.13em;text-transform:uppercase;padding-bottom:6px;margin-bottom:3px;
+  border-bottom:1px solid var(--line)}
+.evhead .r,.evhead .tt,.evhead .tp,.evhead .pt,.evhead .mo{text-align:right}
+.ev .tt,.ev .tp{text-align:right;font-variant-numeric:tabular-nums;color:var(--dim)}
+.ev .mo{text-align:right;font-variant-numeric:tabular-nums;color:var(--dim);
+  overflow:hidden;text-overflow:ellipsis}
+.ev.win .tt,.ev.win .tp,.ev.win .mo{color:var(--ink)}
 .ev:hover{background:var(--panel);border-color:var(--line)}
 .ev .d{color:var(--dim2);font-size:.88em;font-variant-numeric:tabular-nums}
 .ev .n{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -121,6 +131,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .ev .r{color:var(--dim);font-variant-numeric:tabular-nums;letter-spacing:.06em;
   text-align:right;font-size:.92em}
 .ev .pt{text-align:right;color:var(--acc);font-variant-numeric:tabular-nums;font-size:.95em}
+.ev.cut .pt,.ev.cut .tt,.ev.cut .tp,.ev.cut .mo{color:var(--dim2)}
 .ev.win{background:linear-gradient(90deg,rgba(242,149,46,.20),rgba(242,149,46,.03));
   border-color:rgba(242,149,46,.34)}
 .ev.win .n{font-weight:700}
@@ -334,7 +345,9 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .pane{min-height:46vh}
   .evlist,.lb,.rows{overflow-y:auto}
   .evlist{max-width:none}
-  .ev{grid-template-columns:50px minmax(0,1fr) 34px 76px 40px;gap:5px;font-size:10.5px}
+  .ev,.evhead{grid-template-columns:48px minmax(0,1fr) 34px 42px 46px;gap:5px}
+  .ev{font-size:10.5px}
+  .ev .r,.evhead .r,.ev .tt,.evhead .tt{display:none}
   .ev,.lbrow{flex:0 0 auto;max-height:none;padding:5px 7px;line-height:1.25}
   .lbrow,.lbhead{grid-template-columns:34px minmax(0,1fr) 78px 42px;gap:5px}
   .rrow{flex:0 0 auto}
@@ -496,8 +509,8 @@ function playerCard(p) {
             <button class="tab" data-tab="majors">Majors</button>
           </div>
           <div class="pane">
-            <div class="evlist" data-pane="results">${evs.map(e => evRow(e, p)).join("")}</div>
-            <div class="evlist" data-pane="majors" hidden>${majorRows(evs, p)}</div>
+            <div class="evlist" data-pane="results">${EVHEAD}${evs.map(e => evRow(e, p)).join("")}</div>
+            <div class="evlist" data-pane="majors" hidden>${EVHEAD}${majorRows(evs, p)}</div>
           </div>
         </div>
       </div>
@@ -518,9 +531,17 @@ function evRow(e, p) {
     <span class="d">${esc(shortDate(e.date))}</span>
     <span class="n">${esc(e.name)}</span>
     <span class="p">${esc(e.pos || "—")}</span>
-    <span class="r">${(e.rounds || []).filter(Boolean).join(" ") || "—"}</span>
-    <span class="pt">${e.pts ? pts(e.pts) : ""}</span></div>`;
+    <span class="r">${(e.rounds || []).filter(r => r && r !== "-").join(" ") || "—"}</span>
+    <span class="tt">${esc(e.total || "—")}</span>
+    <span class="tp">${esc(e.toPar || "—")}</span>
+    <span class="pt">${e.pts ? pts(e.pts) : "—"}</span>
+    <span class="mo">${e.money && e.money !== "-" ? abbrMoney(e.money) : "—"}</span></div>`;
 }
+
+const EVHEAD = `<div class="evhead">
+  <span>Date</span><span>Tournament</span><span>Pos</span><span class="r">Rounds</span>
+  <span class="tt">Total</span><span class="tp">To par</span><span class="pt">Pts</span>
+  <span class="mo">Money</span></div>`;
 function majorRows(evs, p) {
   const m = evs.filter(e => MAJORS.includes(e.name));
   if (!m.length) return `<div class="story"><p class="none">No major or PLAYERS starts in 2026.</p></div>`;
