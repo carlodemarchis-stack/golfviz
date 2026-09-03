@@ -502,6 +502,14 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .scr em{font-style:normal;color:var(--acc);font-weight:700}
 .scg{display:grid;grid-template-columns:30px repeat(9,1fr) 33px repeat(9,1fr) 33px 37px;
   gap:2px;align-items:center}
+.scg.wide{grid-template-columns:84px repeat(9,1fr) 33px repeat(9,1fr) 33px 37px;
+  row-gap:3px}
+.scg .rlab{text-align:left;font-size:9px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--dim2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.scg.wide .rlab{font-size:11px;letter-spacing:0;text-transform:none;color:var(--dim)}
+.scg.wide .rlab b{color:var(--ink);font-weight:700;margin-right:5px}
+.scg.wide .rlab i{font-style:normal;color:var(--acc);font-weight:700}
+.scg.wide .lab{padding-bottom:1px}
 .scg > div{text-align:center;font-size:10.5px;padding:0;font-variant-numeric:tabular-nums}
 .scg .lab{text-align:left;font-size:9px;letter-spacing:.12em;text-transform:uppercase;
   color:var(--dim2)}
@@ -1383,40 +1391,51 @@ const SCLASS = d => d <= -2 ? "eagle" : d === -1 ? "birdie" : d === 0 ? "par"
 function scorecard(card) {
   if (!card || !card.length) return "";
   const sum = a => a.reduce((x, y) => x + y, 0);
-  const rounds = card.map(r => {
-    const par = r.p.split("").map(Number);
-    const sc = r.s;
-    const out = sum(sc.slice(0, 9)), inn = sum(sc.slice(9)), tot = out + inn;
+  const hole = (v, p) => v ? `<div><span class="sq ${SCLASS(v - p)}">${v}</span></div>`
+                           : `<div><span class="sq par">\u2013</span></div>`;
+  const headRows = par => {
     const pOut = sum(par.slice(0, 9)), pIn = sum(par.slice(9));
-    const cells = (from, to, cls, fn) => sc.slice(from, to)
-      .map((v, i) => fn(v, par[from + i])).join("");
-    const hole = (v, p) => v ? `<div><span class="sq ${SCLASS(v - p)}">${v}</span></div>`
-                             : `<div><span class="sq par">–</span></div>`;
-    return `<div class="sc">
-      <div class="scr"><b>Round ${r.n}</b>
-        ${r.c ? `<span>${esc(r.c)}</span>` : ""}
+    return `<div class="lab">Hole</div>
+      ${par.slice(0, 9).map((_, i) => `<div class="hn">${i + 1}</div>`).join("")}
+      <div class="hn">Out</div>
+      ${par.slice(9).map((_, i) => `<div class="hn">${i + 10}</div>`).join("")}
+      <div class="hn">In</div><div class="hn">Tot</div>
+      <div class="lab">Par</div>
+      ${par.slice(0, 9).map(p => `<div class="pr">${p}</div>`).join("")}
+      <div class="pr">${pOut}</div>
+      ${par.slice(9).map(p => `<div class="pr">${p}</div>`).join("")}
+      <div class="pr">${pIn}</div><div class="pr">${pOut + pIn}</div>`;
+  };
+  const scoreRow = (r, withLabel) => {
+    const par = r.p.split("").map(Number), sc = r.s;
+    const out = sum(sc.slice(0, 9)), inn = sum(sc.slice(9));
+    return (withLabel
+        ? `<div class="rlab"><b>R${r.n}</b> ${esc(r.t)} <i>${esc(r.tp)}</i></div>`
+        : `<div class="lab">Score</div>`) + `
+      ${sc.slice(0, 9).map((v, i) => hole(v, par[i])).join("")}
+      <div class="sub">${out}</div>
+      ${sc.slice(9).map((v, i) => hole(v, par[i + 9])).join("")}
+      <div class="sub">${inn}</div><div class="tot">${out + inn}</div>`;
+  };
+
+  const pars = new Set(card.map(r => r.p));
+  let body;
+  if (pars.size === 1) {
+    /* one course all week - the hole and par lines are stated once */
+    body = `<div class="sc"><div class="scg wide">
+      ${headRows(card[0].p.split("").map(Number))}
+      ${card.map(r => scoreRow(r, true)).join("")}
+    </div></div>`;
+  } else {
+    /* the week rotated courses, so each round carries its own par */
+    body = card.map(r => `<div class="sc"><div class="scr">
+        <b>Round ${r.n}</b>${r.c ? `<span>${esc(r.c)}</span>` : ""}
         <span>${esc(r.t)} <em>(${esc(r.tp)})</em></span></div>
-      <div class="scg">
-        <div class="lab">Hole</div>
-        ${par.slice(0, 9).map((_, i) => `<div class="hn">${i + 1}</div>`).join("")}
-        <div class="hn">Out</div>
-        ${par.slice(9).map((_, i) => `<div class="hn">${i + 10}</div>`).join("")}
-        <div class="hn">In</div><div class="hn">Tot</div>
+      <div class="scg">${headRows(r.p.split("").map(Number))}${scoreRow(r, false)}</div>
+      </div>`).join("");
+  }
 
-        <div class="lab">Par</div>
-        ${par.slice(0, 9).map(p => `<div class="pr">${p}</div>`).join("")}
-        <div class="pr">${pOut}</div>
-        ${par.slice(9).map(p => `<div class="pr">${p}</div>`).join("")}
-        <div class="pr">${pIn}</div><div class="pr">${pOut + pIn}</div>
-
-        <div class="lab">Score</div>
-        ${cells(0, 9, "", hole)}
-        <div class="sub">${out}</div>
-        ${cells(9, 18, "", hole)}
-        <div class="sub">${inn}</div><div class="tot">${tot}</div>
-      </div></div>`;
-  }).join("");
-  return `<h5>Scorecard</h5><div class="scwrap">${rounds}</div>
+  return `<h5>Scorecard</h5><div class="scwrap">${body}</div>
     <div class="sclegend">
       <span><i class="sq eagle" style="font-style:normal">2</i> Eagle or better</span>
       <span><i class="sq birdie" style="font-style:normal">3</i> Birdie</span>
@@ -1424,9 +1443,6 @@ function scorecard(card) {
       <span><i class="sq dbl" style="font-style:normal">6</i> Double or worse</span>
     </div>`;
 }
-
-document.getElementById("e-prev").onclick = () => stepEvent(-1);
-document.getElementById("e-next").onclick = () => stepEvent(1);
 
 function closeModal(id) { document.getElementById(id).classList.remove("on"); }
 document.querySelectorAll(".modal").forEach(m =>
