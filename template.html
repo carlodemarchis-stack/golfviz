@@ -248,9 +248,11 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .d2{background:rgba(232,83,78,.42)}.d1{background:rgba(232,83,78,.20)}
 .d0{background:rgba(150,166,205,.13)}
 .e1{background:rgba(63,224,138,.20)}.e2{background:rgba(63,224,138,.40)}
-.hdet{flex:0 0 auto;display:grid;grid-template-columns:auto 1fr;gap:clamp(8px,1.4vw,20px);align-items:center;
-  background:linear-gradient(120deg,var(--panel),var(--panel2));border:1px solid var(--line);
+.hbox{flex:0 1 auto;min-height:0;display:flex;flex-direction:column;
+  background:linear-gradient(140deg,var(--panel),var(--panel2));border:1px solid var(--line);
   border-radius:14px;padding:clamp(8px,1.2vh,14px) clamp(10px,1.2vw,16px)}
+.hdet{flex:0 0 auto;display:grid;grid-template-columns:auto 1fr;gap:clamp(8px,1.4vw,20px);
+  align-items:center}
 .hdet .lead{font-size:clamp(10px,1vw,13px);color:var(--dim);white-space:nowrap}
 .hdet .lead b{color:var(--ink);font-size:clamp(13px,1.35vw,18px);font-weight:700}
 .hdet .lead i{font-style:normal;color:var(--acc);font-weight:700}
@@ -262,6 +264,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .hwho{flex:1 1 auto;min-height:0;display:flex;flex-direction:column;
   margin-top:clamp(7px,1.1vh,13px);padding-top:clamp(7px,1.1vh,13px);
   border-top:1px solid var(--line)}
+.hwho:only-child{margin-top:0;padding-top:0;border-top:0}
 .hwho .lbl{font-size:clamp(8px,.76vw,10px);letter-spacing:.16em;text-transform:uppercase;
   color:var(--dim2);font-weight:700;margin-bottom:clamp(4px,.7vh,8px)}
 .hwcols{flex:1 1 auto;min-height:0;display:grid;gap:clamp(6px,1vw,14px)}
@@ -270,8 +273,9 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   margin-bottom:4px;border-bottom:1px solid var(--line);display:flex;
   justify-content:space-between;gap:6px}
 .hwhead span:last-child{color:var(--dim2);font-weight:400}
-.hwcol ul{list-style:none;display:flex;flex-direction:column;gap:1px;
-  flex:1 1 auto;min-height:0;overflow-y:auto;scrollbar-width:thin}
+.hwcol ul{list-style:none;flex:1 1 auto;min-height:0;overflow:hidden;
+  column-width:clamp(58px,6vw,84px);column-gap:clamp(6px,.9vw,14px)}
+.hwcol li{break-inside:avoid}
 .hwcol li{font-size:clamp(8.5px,.82vw,11px);color:var(--dim);overflow:hidden;
   text-overflow:ellipsis;white-space:nowrap}
 .hwnote{font-size:clamp(9px,.86vw,11px);color:var(--dim2);font-style:italic}
@@ -952,9 +956,11 @@ function scorerCols(t, c, rd, sel) {
         <span>${byScore[k].length}</span></div>
       <ul>${byScore[k].map(n => `<li>${esc(n)}</li>`).join("")}</ul></div>`;
   }).join("");
+  const weights = keys.map(k => Math.max(1, Math.ceil(byScore[k].length / 7)));
   return `<div class="hwho">
     <div class="lbl">Round ${rn} · ${list.length} of the FedExCup top 70 played this hole</div>
-    <div class="hwcols" style="grid-template-columns:repeat(${keys.length},minmax(0,1fr))">${cols}</div>
+    <div class="hwcols" style="grid-template-columns:${
+      weights.map(w => `minmax(0,${w}fr)`).join(" ")}">${cols}</div>
   </div>`;
 }
 
@@ -1015,6 +1021,7 @@ function holePanel(t, ci = 0, ri = 0, hole = 0) {
       ${gridRows}
     </div>
 
+    <div class="hbox">
     <div class="hdet">
       <div class="lead">Hole <b>${sel[0]}</b> · par ${sel[1]} · ${pts(sel[2])} yds ·
         <span style="color:var(--dim2)">${esc(rd.r === "All" ? "all rounds" : "round " + rd.r.slice(1))}</span><br>
@@ -1030,6 +1037,7 @@ function holePanel(t, ci = 0, ri = 0, hole = 0) {
       </div>
     </div>
     ${scorerCols(t, c, rd, sel)}
+    </div>
   </div>`;
 }
 
