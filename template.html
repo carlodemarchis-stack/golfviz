@@ -228,7 +228,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   font-size:clamp(9px,.88vw,11.5px);color:var(--dim2)}
 .hkpis b{color:var(--ink);font-weight:700}
 .hkpis .hard{color:#e8534e}.hkpis .easy{color:#3fe08a}
-.hgrid{display:grid;grid-template-columns:30px repeat(18,minmax(0,1fr));
+.hgrid{flex:0 0 auto;display:grid;grid-template-columns:30px repeat(18,minmax(0,1fr));
   gap:2px;align-content:start}
 .hgrid > div{min-width:0}
 .hhead{text-align:center;line-height:1.1;padding-bottom:2px}
@@ -237,6 +237,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .hrlab{display:flex;align-items:center;font-size:clamp(7.5px,.72vw,9.5px);
   letter-spacing:.1em;color:var(--dim2);font-weight:700}
 .hrlab.all{color:var(--acc)}
+.hgrid .gap{grid-column:1 / -1;height:clamp(4px,.7vh,9px)}
 .hcell{border-radius:5px;text-align:center;cursor:pointer;border:1px solid transparent;
   display:flex;align-items:center;justify-content:center;
   font-size:clamp(7.5px,.73vw,9.5px);font-variant-numeric:tabular-nums;
@@ -247,7 +248,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .d2{background:rgba(232,83,78,.42)}.d1{background:rgba(232,83,78,.20)}
 .d0{background:rgba(150,166,205,.13)}
 .e1{background:rgba(63,224,138,.20)}.e2{background:rgba(63,224,138,.40)}
-.hdet{display:grid;grid-template-columns:auto 1fr;gap:clamp(8px,1.4vw,20px);align-items:center;
+.hdet{flex:0 0 auto;display:grid;grid-template-columns:auto 1fr;gap:clamp(8px,1.4vw,20px);align-items:center;
   background:linear-gradient(120deg,var(--panel),var(--panel2));border:1px solid var(--line);
   border-radius:14px;padding:clamp(8px,1.2vh,14px) clamp(10px,1.2vw,16px)}
 .hdet .lead{font-size:clamp(10px,1vw,13px);color:var(--dim);white-space:nowrap}
@@ -258,6 +259,22 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .hcounts{display:flex;gap:clamp(7px,1.2vw,16px);flex-wrap:wrap;margin-top:5px;
   font-size:clamp(8.5px,.8vw,10.5px);color:var(--dim2)}
 .hcounts span b{color:var(--ink);font-weight:700;margin-right:3px}
+.hwho{flex:1 1 auto;min-height:0;display:flex;flex-direction:column;
+  margin-top:clamp(7px,1.1vh,13px);padding-top:clamp(7px,1.1vh,13px);
+  border-top:1px solid var(--line)}
+.hwho .lbl{font-size:clamp(8px,.76vw,10px);letter-spacing:.16em;text-transform:uppercase;
+  color:var(--dim2);font-weight:700;margin-bottom:clamp(4px,.7vh,8px)}
+.hwcols{flex:1 1 auto;min-height:0;display:grid;gap:clamp(6px,1vw,14px)}
+.hwcol{min-width:0;min-height:0;display:flex;flex-direction:column}
+.hwhead{font-size:clamp(8.5px,.8vw,10.5px);font-weight:700;padding-bottom:3px;
+  margin-bottom:4px;border-bottom:1px solid var(--line);display:flex;
+  justify-content:space-between;gap:6px}
+.hwhead span:last-child{color:var(--dim2);font-weight:400}
+.hwcol ul{list-style:none;display:flex;flex-direction:column;gap:1px;
+  flex:1 1 auto;min-height:0;overflow-y:auto;scrollbar-width:thin}
+.hwcol li{font-size:clamp(8.5px,.82vw,11px);color:var(--dim);overflow:hidden;
+  text-overflow:ellipsis;white-space:nowrap}
+.hwnote{font-size:clamp(9px,.86vw,11px);color:var(--dim2);font-style:italic}
 
 .tchamp{display:flex;align-items:center;gap:9px;flex-wrap:wrap;
   font-size:clamp(10px,1.02vw,13px);color:var(--dim)}
@@ -893,11 +910,61 @@ const courseLabel = n => {
     || base;
 };
 
+/* Scores on one hole from the players we hold cards for - the FedExCup top 70,
+   not the whole field. At the rotating events a player's round may have been on
+   another course, so the card's own course name has to match. */
+function holeScorers(t, courseName, roundNum, hole) {
+  const out = [];
+  P.forEach(p => {
+    const e = p.events.find(x => x.tid === t.id);
+    if (!e || !e.card) return;
+    e.card.forEach(r => {
+      if (r.n !== roundNum) return;
+      if (r.c && r.c !== courseName) return;      // played a different course that day
+      const v = r.s[hole - 1];
+      if (v) out.push({n: shortName(p), rank: p.rank, v});
+    });
+  });
+  return out.sort((a, b) => a.v - b.v || a.rank - b.rank);
+}
+
+function scorerCols(t, c, rd, sel) {
+  if (rd.r === "All")
+    return `<div class="hwho"><div class="hwnote">Pick a round above to see which of the
+      ranked players made what on this hole.</div></div>`;
+  const rn = +rd.r.slice(1);
+  const list = holeScorers(t, c.name, rn, sel[0]);
+  if (!list.length)
+    return `<div class="hwho"><div class="hwnote">None of the FedExCup top 70 played this
+      course in round ${rn}.</div></div>`;
+  const byScore = {};
+  list.forEach(x => (byScore[x.v] = byScore[x.v] || []).push(x.n));
+  const keys = Object.keys(byScore).map(Number).sort((a, b) => a - b);
+  const NAMES = {"-3": "Albatross", "-2": "Eagle", "-1": "Birdie", "0": "Par",
+                 "1": "Bogey", "2": "Double"};
+  const cols = keys.map(k => {
+    const d = k - sel[1];
+    const label = NAMES[d] || (d > 0 ? `+${d}` : `${d}`);
+    return `<div class="hwcol">
+      <div class="hwhead"><span class="${SCLASS(d) === "par" ? "" : ""}"
+        style="color:${d <= -2 ? "#3fe08a" : d === -1 ? "var(--acc)" : d === 0 ? "var(--ink)"
+          : d === 1 ? "#8d9bbd" : "#e8534e"}">${k} · ${label}</span>
+        <span>${byScore[k].length}</span></div>
+      <ul>${byScore[k].map(n => `<li>${esc(n)}</li>`).join("")}</ul></div>`;
+  }).join("");
+  return `<div class="hwho">
+    <div class="lbl">Round ${rn} · ${list.length} of the FedExCup top 70 played this hole</div>
+    <div class="hwcols" style="grid-template-columns:repeat(${keys.length},minmax(0,1fr))">${cols}</div>
+  </div>`;
+}
+
 function holePanel(t, ci = 0, ri = 0, hole = 0) {
   const cs = t.holes;
   if (!cs || !cs.length) return "";
   const c = cs[Math.min(ci, cs.length - 1)];
-  const rounds = c.rounds;
+  /* the feed returns All, R4..R1 - read it chronologically instead */
+  const rounds = c.rounds.slice().sort((a, b) =>
+    a.r === "All" ? -1 : b.r === "All" ? 1 : (+a.r.slice(1)) - (+b.r.slice(1)));
   const rd = rounds[Math.min(ri, rounds.length - 1)];
   const byHole = r => { const m = {}; r.h.forEach(h => m[h[0]] = h); return m; };
   const nums = rounds[0].h.map(h => h[0]);
@@ -913,7 +980,8 @@ function holePanel(t, ci = 0, ri = 0, hole = 0) {
 
   const gridRows = rounds.map((r, i) => {
     const m = byHole(r);
-    return `<div class="hrlab ${r.r === "All" ? "all" : ""}">${esc(r.r)}</div>` +
+    return (r.r === "All" ? "" : i === 1 ? `<div class="gap"></div>` : "") +
+      `<div class="hrlab ${r.r === "All" ? "all" : ""}">${esc(r.r)}</div>` +
       nums.map(n => {
         const h = m[n];
         if (!h) return `<div class="hcell na"></div>`;
@@ -961,6 +1029,7 @@ function holePanel(t, ci = 0, ri = 0, hole = 0) {
         </div>
       </div>
     </div>
+    ${scorerCols(t, c, rd, sel)}
   </div>`;
 }
 

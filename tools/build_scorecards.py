@@ -24,6 +24,9 @@ for p in players:
             holes = (r["firstNine"]["holes"] or []) + (r["secondNine"]["holes"] or [])
             if not holes:
                 continue
+            # firstNine is the player's first nine PLAYED, so a two-tee start puts
+            # holes 10-18 first. 20% of rounds. Re-order by the actual hole number.
+            holes.sort(key=lambda h: h.get("holeNumber") or 0)
             scores = [int(h["score"]) if str(h["score"]).isdigit() else 0 for h in holes]
             if not any(scores):
                 continue      # alternate-shot rounds record no individual holes
