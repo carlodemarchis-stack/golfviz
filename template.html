@@ -79,6 +79,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .boxgrid.four{grid-template-columns:repeat(4,1fr)}
 .boxgrid.six{grid-template-columns:repeat(6,1fr)}
 .boxgrid.seven{grid-template-columns:repeat(7,1fr)}
+.pbox.mix{padding-bottom:0;overflow:hidden}
+.pmix{display:flex;height:clamp(7px,1.05vh,11px);overflow:hidden;
+  margin:clamp(8px,1.1vh,14px) calc(-1 * clamp(12px,1.35vw,20px)) 0}
+.pmix i{display:block;height:100%}
 .cell{min-width:0}
 .cell b{display:block;font-size:clamp(13px,1.32vw,20px);font-weight:700;line-height:1;
   letter-spacing:-.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -600,7 +604,7 @@ function playerCard(p) {
             </div>
           </div>
 
-          <div class="pbox">
+          <div class="pbox mix">
             <div class="boxlegend">2026 Scoring</div>
             <div class="boxgrid seven">
               <div class="cell"><b>${pts(sc.holes || 0)}</b><i>Holes</i></div>
@@ -610,6 +614,12 @@ function playerCard(p) {
               <div class="cell"><b>${pts(sc.par || 0)}</b><i>Pars</i></div>
               <div class="cell"><b>${pts(sc.bogey || 0)}</b><i>Bogeys</i></div>
               <div class="cell"><b>${esc(sc.dbl || 0)}</b><i>Double+</i></div>
+            </div>
+            <div class="pmix" title="${["eagle","birdie","par","bogey","dbl"]
+              .map(k => `${sc[k] || 0} ${k}`).join(" · ")}">
+              ${["eagle", "birdie", "par", "bogey", "dbl"].map(k =>
+                `<i class="s-${k}" style="width:${((sc[k] || 0) / (sc.holes || 1) * 100).toFixed(2)}%"></i>`
+              ).join("")}
             </div>
           </div>
 
