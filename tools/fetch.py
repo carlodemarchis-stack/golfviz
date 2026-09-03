@@ -162,6 +162,15 @@ def fetch_career(pid):
     return {"id": pid, "career": (d or {}).get("career")}
 
 
+# ---------------------------------------------------------------- stats
+def fetch_stats(pid):
+    html = get(f"https://www.pgatour.com/player/{pid}/x/stats", f"stats_{pid}.html")
+    pp = next_data(html)
+    d = query(pp, "playerProfileStats",
+              lambda k: len(k) > 1 and k[1].get("season") == SEASON)
+    return {"id": pid, "overview": (d or {}).get("statsOverview")}
+
+
 def main():
     cmd = sys.argv[1] if len(sys.argv) > 1 else "all"
     data = ROOT / "data"
@@ -176,6 +185,19 @@ def main():
         owgr = fetch_owgr()
         (data / "owgr_raw.json").write_text(json.dumps(owgr, indent=1))
         print(f"owgr: {len(owgr)} players")
+
+    if cmd in ("all", "stats"):
+        top = json.loads((data / "players.json").read_text())
+        ids = [p["id"] for p in top]
+        print(f"fetching {len(ids)} stats pages ...")
+        out = {}
+        with ThreadPoolExecutor(max_workers=5) as ex:
+            for i, r in enumerate(ex.map(fetch_stats, ids), 1):
+                out[r["id"]] = r["overview"]
+                if i % 20 == 0:
+                    print(f"  {i}/{len(ids)}")
+        (data / "stats_raw.json").write_text(json.dumps(out, indent=1))
+        print(f"stats: {sum(1 for v in out.values() if v)}/{len(out)}")
 
     if cmd in ("all", "career"):
         top = json.loads((data / "players.json").read_text())

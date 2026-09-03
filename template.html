@@ -143,6 +143,43 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .ev.top10 .p{color:var(--acc)}
 .ev.cut .p,.ev.cut .n{color:var(--dim2)}
 
+.statpane{height:100%;overflow:hidden;display:flex;flex-direction:column;
+  gap:clamp(6px,1vh,12px)}
+.sgblock{flex:0 0 auto}
+.sglab{font-size:clamp(8.5px,.82vw,10.5px);letter-spacing:.18em;text-transform:uppercase;
+  color:var(--dim2);font-weight:700;margin-bottom:clamp(4px,.8vh,9px)}
+.sgrow{display:grid;grid-template-columns:118px 1fr 56px 42px;gap:9px;align-items:center;
+  font-size:clamp(9.5px,.95vw,12px);margin-bottom:clamp(3px,.55vh,7px)}
+.sgrow .t{color:var(--dim);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sgrow.tot .t{color:var(--ink);font-weight:700}
+.sgaxis{position:relative;height:clamp(11px,1.8vh,18px);background:rgba(255,255,255,.03);
+  border-radius:4px}
+.sgaxis::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;
+  background:rgba(150,166,205,.35)}
+.sgfill{position:absolute;top:2px;bottom:2px;border-radius:3px}
+.sgfill.pos{background:linear-gradient(90deg,rgba(63,224,138,.55),#3fe08a)}
+.sgfill.neg{background:linear-gradient(90deg,#e8534e,rgba(232,83,78,.55))}
+.sgrow .v{text-align:right;font-variant-numeric:tabular-nums;font-weight:700}
+.sgrow .rk{text-align:right;font-variant-numeric:tabular-nums;color:var(--dim2);
+  font-size:.88em}
+.sgrow .rk b{color:var(--acc);font-weight:700}
+.stgrid{flex:1 1 auto;min-height:0;display:grid;grid-template-columns:repeat(2,1fr);
+  gap:0 clamp(14px,2.2vw,34px);align-content:start}
+.stcol{display:flex;flex-direction:column;gap:clamp(2px,.45vh,6px);min-width:0}
+.sgnote{flex:0 0 auto;margin-top:clamp(8px,1.4vh,18px);padding-top:clamp(7px,1.1vh,13px);
+  border-top:1px solid var(--line);font-size:clamp(9px,.9vw,11.5px);line-height:1.5;
+  color:var(--dim2);max-width:70ch}
+.sgnote b{color:#3fe08a;font-weight:700}
+.stgrp{font-size:clamp(8px,.78vw,10px);letter-spacing:.16em;text-transform:uppercase;
+  color:var(--acc);font-weight:700;margin-top:clamp(4px,.8vh,10px)}
+.stcol > .stgrp:first-child{margin-top:0}
+.strow{display:grid;grid-template-columns:1fr 62px 40px;gap:8px;align-items:center;
+  font-size:clamp(9px,.92vw,11.5px);min-height:0}
+.strow .t{color:var(--dim);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.strow .v{text-align:right;font-variant-numeric:tabular-nums}
+.strow .rk{text-align:right;font-variant-numeric:tabular-nums;color:var(--dim2);font-size:.88em}
+.strow .rk b{color:var(--acc);font-weight:700}
+
 .story{height:100%;overflow-y:auto;padding-right:8px;display:flex;flex-direction:column;
   gap:clamp(9px,1.3vh,16px);scrollbar-width:thin}
 .story h4{font-size:clamp(11px,1.1vw,14px);font-weight:700;color:var(--acc);
@@ -246,7 +283,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   background:rgba(255,255,255,.03)}
 .hbar{height:100%;display:flex;border-radius:4px;overflow:hidden}
 .hbar i{display:block;height:100%}
-.s-eagle{background:#ffd98f}
+.s-eagle{background:#3fe08a}
 .s-birdie{background:var(--acc)}
 .s-par{background:rgba(150,166,205,.34)}
 .s-bogey{background:#5d6b8f}
@@ -425,7 +462,9 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .cell b{font-size:clamp(15px,4.2vw,21px)}
 
   .pane{min-height:46vh}
-  .evlist,.lb,.rows{overflow-y:auto}
+  .evlist,.lb,.rows,.statpane{overflow-y:auto}
+  .stgrid{grid-template-columns:1fr;row-gap:6px}
+  .sgrow{grid-template-columns:96px 1fr 52px 38px}
   .evlist{max-width:none}
   /* two lines per event so nothing has to be dropped on a phone */
   .evhead{display:none}
@@ -640,14 +679,52 @@ function playerCard(p) {
           <div class="tabs">
             <button class="tab on" data-tab="results">Results</button>
             <button class="tab" data-tab="majors">Majors</button>
+            <button class="tab" data-tab="stats">Stats</button>
           </div>
           <div class="pane">
             <div class="evlist" data-pane="results">${EVHEAD}${evs.map(e => evRow(e, p)).join("")}</div>
             <div class="evlist" data-pane="majors" hidden>${EVHEAD}${majorRows(evs, p)}</div>
+            <div class="statpane" data-pane="stats" hidden>${statsPane(p)}</div>
           </div>
         </div>
       </div>
     </div></div>`;
+}
+
+const SG_ROWS = [["total", "SG: Total"], ["ott", "Off the tee"], ["app", "Approach"],
+                 ["arg", "Around the green"], ["putt", "Putting"]];
+const SG_MAX = 2.6;   // strokes gained per round; nobody in this field exceeds it
+
+function statsPane(p) {
+  if (!p.sg) return `<p class="none">No 2026 stats published for this player.</p>`;
+  const sgRow = ([k, label]) => {
+    const d = p.sg[k], v = d.v;
+    const w = Math.min(50, Math.abs(v) / SG_MAX * 50);
+    const style = v >= 0 ? `left:50%;width:${w}%` : `right:50%;width:${w}%`;
+    return `<div class="sgrow ${k === "total" ? "tot" : ""}">
+      <span class="t">${label}</span>
+      <div class="sgaxis"><div class="sgfill ${v >= 0 ? "pos" : "neg"}" style="${style}"></div></div>
+      <span class="v" style="color:${v >= 0 ? "#3fe08a" : "#e8534e"}">${v >= 0 ? "+" : ""}${v.toFixed(3)}</span>
+      <span class="rk">${d.r ? `<b>${d.r}</b>` : "—"}</span></div>`;
+  };
+  const grp = ([g, items]) => `<div class="stgrp">${esc(g)}</div>` +
+    items.map(([t, v, r]) =>
+      `<div class="strow"><span class="t">${esc(t)}</span>
+        <span class="v">${esc(v)}</span>
+        <span class="rk">${r ? `<b>${esc(r)}</b>` : "—"}</span></div>`).join("");
+  const g = p.stats || [];
+  return `<div class="sgblock">
+      <div class="sglab">Strokes gained per round · TOUR rank</div>
+      ${SG_ROWS.map(sgRow).join("")}
+    </div>
+    <div class="stgrid">
+      <div class="stcol">${g.slice(0, 3).map(grp).join("")}</div>
+      <div class="stcol">${g.slice(3).map(grp).join("")}</div>
+    </div>
+    <div class="sgnote">Strokes gained measures a player against the field: <b>+1.0</b> means a
+      stroke a round better than the average player in the same events. The four parts add up to
+      the total. The TOUR does not publish an around-the-green figure in this feed, so it is
+      derived — total minus the other three — and has no rank.</div>`;
 }
 
 const MAJORS = ["Masters Tournament", "PGA Championship", "U.S. Open", "The Open Championship",
