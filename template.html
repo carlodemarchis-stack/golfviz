@@ -232,6 +232,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .hpills button.on{background:var(--acc);color:#140b02;border-color:var(--acc);font-weight:700}
 .hcourse{font-size:clamp(9px,.88vw,11px);color:var(--dim2);letter-spacing:.06em;
   overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.hcov{font-size:clamp(9px,.88vw,11.5px);color:var(--dim2)}
+.hcov b{color:var(--dim);font-weight:700}
 .hkpis{display:flex;gap:clamp(10px,1.8vw,26px);flex-wrap:wrap;
   font-size:clamp(9px,.88vw,11.5px);color:var(--dim2)}
 .hkpis b{color:var(--ink);font-weight:700}
@@ -924,6 +926,22 @@ const courseLabel = n => {
     || base;
 };
 
+/* How many started a given course/round, and how many of them we hold cards for.
+   Per-hole counts dip when someone withdraws mid-round, so take the busiest hole. */
+function roundField(rd) {
+  return Math.max(...rd.h.map(h => h[5] + h[6] + h[7] + h[8] + h[9]));
+}
+
+function roundOurs(t, courseName, roundNum) {
+  let n = 0;
+  P.forEach(p => {
+    const e = p.events.find(x => x.tid === t.id);
+    if (!e || !e.card) return;
+    if (e.card.some(r => r.n === roundNum && (!r.c || r.c === courseName) && r.s.some(Boolean))) n++;
+  });
+  return n;
+}
+
 /* Scores on one hole from the players we hold cards for - the FedExCup top 70,
    not the whole field. At the rotating events a player's round may have been on
    another course, so the card's own course name has to match. */
@@ -1015,6 +1033,21 @@ function holePanel(t, ci = 0, ri = 0, hole = 0) {
               title="${esc(x.name)}">${esc(courseLabel(x.name))}</button>`).join("")}</div>`
         : `<div class="hcourse">${esc(c.name)}</div>`}
     </div>
+
+    <div class="hcov">${(() => {
+      if (rd.r === "All") {
+        const played = rounds.filter(r => r.r !== "All").length;
+        const days = cs.reduce((n, x) =>
+          Math.max(n, x.rounds.filter(r => r.r !== "All").length), 0);
+        return `<b>All rounds</b> · ${pts(roundField(rd))} rounds played on this course` +
+          (played < days ? ` — only ${played} of the event's ${days} days` : "");
+      }
+      const rn = +rd.r.slice(1);
+      const fieldN = roundField(rd);
+      const our = roundOurs(t, c.name, rn);
+      return `<b>Round ${rn}</b> · ${fieldN} of the ${t.field} in the field played here` +
+        (our ? ` · ${our} of them in the FedExCup top 70` : "");
+    })()}</div>
 
     <div class="hkpis">
       <span>Par <b>${c.par}</b></span>
