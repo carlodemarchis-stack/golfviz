@@ -5,9 +5,11 @@ ROOT = pathlib.Path(__file__).resolve().parent
 players = json.loads((ROOT / "data" / "players.json").read_text())
 tours = json.loads((ROOT / "data" / "tournaments.json").read_text())
 
-# only ship the leaderboard rows the card actually renders
+# ship the whole field, but only the fields the card renders
+KEEP = ("name", "pos", "total", "rounds", "amateur", "members")
 for t in tours:
-    t["leaderboard"] = t["leaderboard"][:22]
+    t["leaderboard"] = [{k: r[k] for k in KEEP if k in r and r[k] not in (None, False)}
+                        for r in t["leaderboard"]]
 
 photos = sorted(p.stem for p in (ROOT / "img" / "course").glob("*.webp"))
 

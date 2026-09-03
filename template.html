@@ -293,9 +293,14 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 
 
 .lb{flex:1 1 auto;min-height:0;overflow:hidden;display:flex;flex-direction:column;gap:1px}
+.lb.open{overflow-y:auto;scrollbar-width:thin}
+.lbmore{flex:0 0 auto;align-self:flex-start;margin-top:6px;padding:3px 12px;border-radius:999px;
+  border:1px solid var(--line);font-size:clamp(8.5px,.82vw,10.5px);letter-spacing:.11em;
+  text-transform:uppercase;color:var(--dim);background:rgba(12,16,26,.55);transition:.18s}
+.lbmore:hover{color:var(--acc);border-color:rgba(242,149,46,.45)}
 .lbhead,.lbrow{display:grid;grid-template-columns:42px 1fr 116px 52px;gap:8px;align-items:center;
   padding:0 10px;font-size:clamp(9.5px,.98vw,12.5px)}
-.lbrow{flex:1 1 0;min-height:0;max-height:28px;line-height:1;overflow:hidden}
+.lbrow{flex:0 0 auto;height:clamp(17px,2.45vh,23px);line-height:1;overflow:hidden}
 .lbhead{color:var(--dim2);font-size:clamp(9px,.85vw,11px);letter-spacing:.13em;
   text-transform:uppercase;border-bottom:1px solid var(--line);padding-bottom:6px;margin-bottom:3px}
 .lbrow{border-radius:8px}
@@ -554,7 +559,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .cell b{font-size:clamp(15px,4.2vw,21px)}
 
   .pane{min-height:46vh}
-  .evlist,.lb,.rows,.statpane{overflow-y:auto}
+  .evlist,.rows,.statpane{overflow-y:auto}
+  /* the full field would make the card enormous on a phone - clip until asked */
+  .lb{max-height:56vh;overflow:hidden}
+  .lb.open{max-height:70vh;overflow-y:auto}
   .stgrid{grid-template-columns:1fr;row-gap:6px}
   .sgrow{grid-template-columns:96px 1fr 52px 38px}
   .evlist{max-width:none}
@@ -573,7 +581,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .ev .mo{grid-area:mo}
   .ev .pt::after{content:" pts";font-size:.82em;letter-spacing:.04em}
   .ev .pt:empty::after,.ev .pt[data-none]::after{content:""}
-  .ev,.lbrow{flex:0 0 auto;max-height:none;padding:5px 7px;line-height:1.25}
+  .ev{flex:0 0 auto;max-height:none;padding:5px 7px;line-height:1.25}
+  .lbrow{height:auto;padding:5px 7px;line-height:1.25}
   .lbrow,.lbhead{grid-template-columns:34px minmax(0,1fr) 78px 42px;gap:5px}
   .rrow{flex:0 0 auto}
   .rrow .bar{height:22px}
@@ -865,7 +874,7 @@ function tournamentCard(t) {
   const [label, varname] = CAT[t.category] || CAT.full;
   const photo = HAS_PHOTO.has(t.id);
   const ch = t.champion;
-  const rows = t.leaderboard.slice(0, 22);
+  const rows = t.leaderboard;
   const where = [t.city, t.state || (t.countryCode !== "USA" ? t.countryCode : "")]
     .filter(Boolean).join(", ");
   const nameMax = t.name.length > 34 ? 27 : t.name.length > 24 ? 33 : 40;
@@ -917,6 +926,9 @@ function tournamentCard(t) {
             <span class="rd">${(r.rounds || []).filter(Boolean).join(" ")}</span>
             <span class="tot">${esc(r.total || "")}</span>
           </div>`).join("")}</div>
+        ${rows.length > 12
+          ? `<button class="lbmore" data-n="${rows.length}">Show all ${rows.length}</button>`
+          : ""}
       </div>
     </div></div>`;
 }
@@ -1315,6 +1327,14 @@ function setHoleMode(mode, remember) {
 film.addEventListener("click", e => {
   const tab = e.target.closest(".tab");
   if (tab) { setTab(tab.dataset.tab, true); return; }
+  const more = e.target.closest(".lbmore");
+  if (more) {
+    const lb = more.closest(".t-right").querySelector(".lb");
+    const open = lb.classList.toggle("open");
+    more.textContent = open ? "Show fewer" : `Show all ${more.dataset.n}`;
+    if (!open) lb.scrollTop = 0;
+    return;
+  }
   const hp = e.target.closest(".hpanel");
   if (hp) {
     const cell = e.target.closest(".hcell:not(.na)");
