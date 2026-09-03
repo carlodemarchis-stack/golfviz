@@ -200,17 +200,25 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .t-inner{z-index:1}
 .t-left{flex:1 1 52%;min-width:0;display:flex;flex-direction:column;gap:clamp(9px,1.4vh,18px)}
 .t-right{flex:1 1 46%;min-width:0;display:flex;flex-direction:column;gap:clamp(8px,1.2vh,14px)}
-.thead{display:flex;align-items:center;gap:clamp(12px,1.6vw,24px);min-width:0}
-.thead-t{min-width:0;display:flex;flex-direction:column;align-items:flex-start;
-  gap:clamp(5px,.9vh,10px)}
+.thead{display:flex;align-items:center;gap:clamp(12px,1.6vw,22px);min-width:0}
 .tlogo{height:clamp(52px,8.4vh,104px);width:auto;flex:0 0 auto;object-fit:contain;
   filter:drop-shadow(0 6px 18px rgba(0,0,0,.6))}
-.tname{font-weight:700;letter-spacing:-.028em;line-height:1.02;
-  font-size:clamp(19px,2.6vw,42px)}
+.tname{flex:1 1 auto;min-width:0;font-weight:700;letter-spacing:-.028em;line-height:1.05}
+.twin{flex:0 0 auto;display:flex;align-items:center;gap:clamp(8px,1vw,14px);
+  padding-left:clamp(10px,1.4vw,20px);border-left:1px solid var(--line);max-width:46%}
+.twin img{width:clamp(34px,4vw,54px);height:clamp(34px,4vw,54px);border-radius:50%;
+  object-fit:cover;background:rgba(255,255,255,.05);flex:0 0 auto}
+.tw-t{min-width:0;display:flex;flex-direction:column;align-items:flex-end;text-align:right}
+.tw-t .lbl{font-size:clamp(8.5px,.8vw,10.5px);letter-spacing:.18em;text-transform:uppercase;
+  color:var(--acc);font-weight:700}
+.tw-t .nm{color:var(--ink);font-weight:700;letter-spacing:-.02em;line-height:1.14;
+  margin:1px 0 2px;max-width:100%;overflow-wrap:anywhere}
+.tw-t .cd{font-size:clamp(9px,.92vw,11.5px);color:var(--dim);max-width:100%;
+  overflow-wrap:anywhere}
 .tmeta{display:flex;gap:clamp(9px,1.5vw,22px);flex-wrap:wrap;
   font-size:clamp(10px,1.08vw,13.5px);color:var(--dim)}
 .tmeta b{color:var(--ink);font-weight:400}
-.badge{display:inline-block;padding:4px 11px;border-radius:999px;font-size:clamp(9px,.9vw,11px);
+.badge{display:inline-block;padding:3px 10px;border-radius:999px;font-size:clamp(9px,.9vw,11px);
   letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#0a0d14}
 /* ---- per-hole field scoring, below the tournament's info ---- */
 .hpanel{flex:1 1 auto;min-height:0;display:flex;flex-direction:column;
@@ -280,14 +288,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   text-overflow:ellipsis;white-space:nowrap}
 .hwnote{font-size:clamp(9px,.86vw,11px);color:var(--dim2);font-style:italic}
 
-.tchamp{display:flex;align-items:center;gap:9px;flex-wrap:wrap;
-  font-size:clamp(10px,1.02vw,13px);color:var(--dim)}
-.tchamp img{width:clamp(26px,3vw,38px);height:clamp(26px,3vw,38px);border-radius:50%;
-  object-fit:cover;background:rgba(255,255,255,.05);flex:0 0 auto}
-.tchamp .lbl{font-size:clamp(9px,.85vw,11px);letter-spacing:.16em;text-transform:uppercase;
-  color:var(--acc);font-weight:700}
-.tchamp .nm{color:var(--ink);font-weight:700;font-size:clamp(13px,1.5vw,20px);
-  letter-spacing:-.02em}
+
 
 .lb{flex:1 1 auto;min-height:0;overflow:hidden;display:flex;flex-direction:column;gap:1px}
 .lbhead,.lbrow{display:grid;grid-template-columns:42px 1fr 116px 52px;gap:8px;align-items:center;
@@ -573,6 +574,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .mrow{min-height:26px}
   .drow{grid-template-columns:26px 1fr 62px 62px 48px}
   .tlogo{height:clamp(44px,11vw,70px)}
+  .thead{flex-wrap:wrap}
+  .twin{max-width:none;flex:1 1 100%;padding-left:0;border-left:0;
+    border-top:1px solid var(--line);padding-top:9px;justify-content:flex-start}
+  .tw-t{align-items:flex-start;text-align:left}
 
   .t-bg img{opacity:.3}
   .t-bg::after{background:linear-gradient(180deg,rgba(7,9,16,.7),rgba(7,9,16,.95) 45%)}
@@ -853,6 +858,10 @@ function tournamentCard(t) {
   const rows = t.leaderboard.slice(0, 22);
   const where = [t.city, t.state || (t.countryCode !== "USA" ? t.countryCode : "")]
     .filter(Boolean).join(", ");
+  const nameMax = t.name.length > 34 ? 27 : t.name.length > 24 ? 33 : 40;
+  const nameVw = (nameMax / 15).toFixed(2);
+  const wLen = (ch.name || "").length;
+  const winMax = wLen > 26 ? 13 : wLen > 18 ? 16 : 21;
   const faces = (ch.ids && ch.ids.length ? ch.ids : [ch.id]).filter(Boolean);
   return `<div class="card" data-k="tournament" data-tid="${t.id}">
     <div class="t-bg ${photo ? "" : "nophoto"}">
@@ -862,12 +871,18 @@ function tournamentCard(t) {
       <div class="t-left">
         <div class="thead">
           <img class="tlogo" src="img/logo/${t.id}.png" alt="" loading="lazy">
-          <div class="thead-t">
-            <span class="badge" style="background:var(${varname})">${label}</span>
-            <div class="tname">${esc(t.name)}</div>
+          <div class="tname" style="font-size:clamp(17px,${nameVw}vw,${nameMax}px)">${esc(t.name)}</div>
+          <div class="twin">
+            ${faces.map(id => `<img src="img/face/${id}.webp" alt="" loading="lazy">`).join("")}
+            <div class="tw-t">
+              <span class="lbl">Won by</span>
+              <span class="nm" style="font-size:clamp(12px,${(winMax / 14).toFixed(2)}vw,${winMax}px)">${esc(ch.name || "—")}</span>
+              <span class="cd">${esc(ch.score || "")}${ch.strokes ? ` · ${ch.strokes} strokes` : ""}${ch.earnings ? ` · ${esc(ch.earnings)}` : ""}</span>
+            </div>
           </div>
         </div>
         <div class="tmeta">
+          <span class="badge" style="background:var(${varname})">${label}</span>
           <span><b>${esc(t.date)}</b> 2026</span>
           <span>${esc(t.course || "")}</span>
           ${where ? `<span>${esc(where)}</span>` : ""}
@@ -878,12 +893,7 @@ function tournamentCard(t) {
           ${ch.points && ch.points !== "0" ? `<span>Winner's points <b>${esc(ch.points)}</b></span>` : ""}
           ${t.team ? `<span><b>Two-man teams</b></span>` : ""}
         </div>
-        <div class="tchamp">
-          ${faces.map(id => `<img src="img/face/${id}.webp" alt="" loading="lazy">`).join("")}
-          <span class="lbl">Won by</span>
-          <span class="nm">${esc(ch.name || "—")}</span>
-          <span class="cd">${esc(ch.score || "")}${ch.strokes ? ` · ${ch.strokes} strokes` : ""}${ch.earnings ? ` · ${esc(ch.earnings)}` : ""}</span>
-        </div>
+
         ${holePanel(t)}
 
       </div>
