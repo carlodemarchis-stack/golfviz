@@ -337,9 +337,13 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   border:1px solid var(--line);background:rgba(255,255,255,.05);color:var(--ink);
   font-size:15px;outline:none}
 #jq:focus{border-color:var(--acc)}
-#jlist{max-height:46dvh;overflow-y:auto;margin-top:10px;display:flex;flex-direction:column;gap:2px}
-.jrow{display:grid;grid-template-columns:44px 1fr auto;gap:10px;align-items:center;
-  padding:7px 10px;border-radius:9px;cursor:pointer;font-size:13px;border:1px solid transparent}
+#jlist{max-height:58dvh;overflow-y:auto;margin-top:10px;
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 16px;align-content:start}
+.jrow{display:grid;grid-template-columns:34px minmax(0,1fr) auto;gap:9px;align-items:center;
+  padding:6px 9px;border-radius:9px;cursor:pointer;font-size:12.5px;border:1px solid transparent;
+  min-width:0}
+.jrow > span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+@media(max-width:640px){#jlist{grid-template-columns:1fr}}
 .jrow:hover,.jrow.sel{background:var(--panel);border-color:var(--line)}
 .jrow .jn{color:var(--dim2);font-variant-numeric:tabular-nums;text-align:right}
 .jrow .jt{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim2)}
@@ -1119,13 +1123,13 @@ const INDEX = CARDS.map((c, i) => ({
   n: i + 1,
   kind: c.kind,
   label: c.kind === "player" ? c.d.name
-       : c.kind === "tournament" ? c.d.name
+       : c.kind === "tournament" ? c.d.name.replace(/ presented by .*$/i, "")
        : c.kind === "race" ? "The Race — 2026 FedExCup points"
        : c.kind === "holes" ? "Every hole played — 2026 scoring mix"
        : c.kind === "money" ? "The Money — 2026 official earnings"
        : "FedExCup vs the world",
-  meta: c.kind === "player" ? `No. ${c.d.rank} · ${c.d.country}`
-      : c.kind === "tournament" ? `${c.d.date} · ${c.d.champion.name || ""}`
+  meta: c.kind === "player" ? `No. ${c.d.rank} · ${c.d.flag || c.d.country}`
+      : c.kind === "tournament" ? c.d.date
       : "Chart",
   hay: (c.kind === "player"
       ? `${c.d.name} ${c.d.country} ${c.d.bio.college || ""}`
