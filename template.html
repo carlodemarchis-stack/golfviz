@@ -1011,23 +1011,45 @@ addEventListener("hashchange", () => {
 const start = parseInt(location.hash.slice(1), 10);
 go(start ? start - 1 : 0);   // always run once so body.onplayer is set on first paint
 
+/* --------------------------------------------- remembered preferences */
+/* localStorage throws in some privacy modes, so every access is guarded */
+const PREF = {
+  get(k, d) { try { return localStorage.getItem("pga." + k) || d; } catch (e) { return d; } },
+  set(k, v) { try { localStorage.setItem("pga." + k, v); } catch (e) {} },
+};
+
+/* the tab is a single choice across every player card, so paging through
+   the field keeps showing whatever you asked for */
+function setTab(name, remember) {
+  document.querySelectorAll('.card[data-k="player"]').forEach(card => {
+    card.querySelectorAll(".tab").forEach(t => t.classList.toggle("on", t.dataset.tab === name));
+    card.querySelectorAll("[data-pane]").forEach(p => p.hidden = p.dataset.pane !== name);
+  });
+  if (remember) PREF.set("tab", name);
+}
+
+function setHoleMode(mode, remember) {
+  const card = document.querySelector('.card[data-k="holes"]');
+  if (!card) return;
+  card.querySelectorAll(".hmode button").forEach(b =>
+    b.classList.toggle("on", b.dataset.mode === mode));
+  card.querySelector(".hcols").classList.toggle("pct", mode === "pct");
+  if (remember) PREF.set("holeMode", mode);
+}
+
+(() => {
+  const t = PREF.get("tab", "results");
+  if (["results", "majors", "stats"].includes(t) && t !== "results") setTab(t, false);
+  const m = PREF.get("holeMode", "abs");
+  if (m === "pct") setHoleMode(m, false);
+})();
+
 /* ------------------------------------------------------- tabs + modals */
 film.addEventListener("click", e => {
   const tab = e.target.closest(".tab");
-  if (tab) {
-    const card = tab.closest(".card");
-    card.querySelectorAll(".tab").forEach(t => t.classList.toggle("on", t === tab));
-    card.querySelectorAll("[data-pane]").forEach(p =>
-      p.hidden = p.dataset.pane !== tab.dataset.tab);
-    return;
-  }
+  if (tab) { setTab(tab.dataset.tab, true); return; }
   const mode = e.target.closest(".hmode button");
-  if (mode) {
-    const card = mode.closest(".card");
-    card.querySelectorAll(".hmode button").forEach(b => b.classList.toggle("on", b === mode));
-    card.querySelector(".hcols").classList.toggle("pct", mode.dataset.mode === "pct");
-    return;
-  }
+  if (mode) { setHoleMode(mode.dataset.mode, true); return; }
   const ev = e.target.closest(".ev");
   if (ev) openEvent(ev.dataset.pid, ev.dataset.ev);
 });
