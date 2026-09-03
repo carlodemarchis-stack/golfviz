@@ -92,6 +92,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .cell.hero b{color:var(--acc)}
 .cell.world b{color:var(--acc2)}
 .cell b small{font-size:.55em;font-weight:300;color:var(--dim);letter-spacing:0}
+.cell b em{font-style:normal;font-size:.44em;font-weight:400;color:var(--dim2);
+  letter-spacing:.01em;margin-left:.35em}
 
 .pres{flex:1 1 57%;min-width:0;display:flex;flex-direction:column;
   gap:clamp(8px,1.3vh,16px)}
@@ -565,6 +567,9 @@ const esc = s => String(s ?? "").replace(/[&<>"]/g, c =>
   ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const money = s => s || "—";
 const cash = s => +String(s || "").replace(/[^0-9]/g, "") || 0;
+/* share of holes, shown small and grey beside the count */
+const share = (n, holes) => holes
+  ? `<em>${(n / holes * 100).toFixed(n / holes < 0.02 ? 1 : 0)}%</em>` : "";
 const abbrMoney = s => {
   const n = cash(s);
   if (!n) return "—";
@@ -659,11 +664,11 @@ function playerCard(p) {
             <div class="boxgrid seven">
               <div class="cell"><b>${pts(sc.holes || 0)}</b><i>Holes</i></div>
               <div class="cell"><b>${pts(sc.shots || 0)}</b><i>Shots</i></div>
-              <div class="cell${sc.eagle ? " hero" : ""}"><b>${esc(sc.eagle || 0)}</b><i>Eagles</i></div>
-              <div class="cell"><b>${pts(sc.birdie || 0)}</b><i>Birdies</i></div>
-              <div class="cell"><b>${pts(sc.par || 0)}</b><i>Pars</i></div>
-              <div class="cell"><b>${pts(sc.bogey || 0)}</b><i>Bogeys</i></div>
-              <div class="cell"><b>${esc(sc.dbl || 0)}</b><i>Double+</i></div>
+              <div class="cell${sc.eagle ? " hero" : ""}"><b>${esc(sc.eagle || 0)}${share(sc.eagle, sc.holes)}</b><i>Eagles+</i></div>
+              <div class="cell"><b>${pts(sc.birdie || 0)}${share(sc.birdie, sc.holes)}</b><i>Birdies</i></div>
+              <div class="cell"><b>${pts(sc.par || 0)}${share(sc.par, sc.holes)}</b><i>Pars</i></div>
+              <div class="cell"><b>${pts(sc.bogey || 0)}${share(sc.bogey, sc.holes)}</b><i>Bogeys</i></div>
+              <div class="cell"><b>${esc(sc.dbl || 0)}${share(sc.dbl, sc.holes)}</b><i>Double+</i></div>
             </div>
             <div class="pmix" title="${["eagle","birdie","par","bogey","dbl"]
               .map(k => `${sc[k] || 0} ${k}`).join(" · ")}">
