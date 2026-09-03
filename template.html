@@ -228,12 +228,22 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   font-size:clamp(9px,.88vw,11.5px);color:var(--dim2)}
 .hkpis b{color:var(--ink);font-weight:700}
 .hkpis .hard{color:#e8534e}.hkpis .easy{color:#3fe08a}
-.hstrip{display:grid;grid-template-columns:repeat(18,1fr);gap:3px}
-.hcell{border-radius:6px;padding:clamp(4px,.8vh,8px) 0;text-align:center;cursor:pointer;
-  border:1px solid transparent;line-height:1.15;min-width:0}
-.hcell .hn{display:block;font-size:clamp(8.5px,.82vw,11px);font-weight:700}
-.hcell .hp{display:block;font-size:clamp(7px,.66vw,9px);color:var(--dim2);margin-top:1px}
-.hcell.sel{border-color:var(--acc);box-shadow:0 0 0 1px rgba(242,149,46,.5)}
+.hgrid{display:grid;grid-template-columns:30px repeat(18,minmax(0,1fr));
+  gap:2px;align-content:start}
+.hgrid > div{min-width:0}
+.hhead{text-align:center;line-height:1.1;padding-bottom:2px}
+.hhead .hn{display:block;font-size:clamp(8.5px,.8vw,11px);font-weight:700;color:var(--dim)}
+.hhead .hp{display:block;font-size:clamp(7px,.64vw,9px);color:var(--dim2)}
+.hrlab{display:flex;align-items:center;font-size:clamp(7.5px,.72vw,9.5px);
+  letter-spacing:.1em;color:var(--dim2);font-weight:700}
+.hrlab.all{color:var(--acc)}
+.hcell{border-radius:5px;text-align:center;cursor:pointer;border:1px solid transparent;
+  display:flex;align-items:center;justify-content:center;
+  font-size:clamp(7.5px,.73vw,9.5px);font-variant-numeric:tabular-nums;
+  color:rgba(255,255,255,.72);min-height:clamp(15px,2.5vh,26px)}
+.hcell.na{background:none;cursor:default;color:transparent}
+.hcell.sel{border-color:var(--acc);box-shadow:0 0 0 1px rgba(242,149,46,.55);
+  color:var(--ink);font-weight:700}
 .d2{background:rgba(232,83,78,.42)}.d1{background:rgba(232,83,78,.20)}
 .d0{background:rgba(150,166,205,.13)}
 .e1{background:rgba(63,224,138,.20)}.e2{background:rgba(63,224,138,.40)}
@@ -249,17 +259,14 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   font-size:clamp(8.5px,.8vw,10.5px);color:var(--dim2)}
 .hcounts span b{color:var(--ink);font-weight:700;margin-right:3px}
 
-.champ{margin-top:0;display:flex;gap:clamp(10px,1.5vw,18px);align-items:center;
-  background:linear-gradient(120deg,var(--panel),var(--panel2));border:1px solid var(--line);
-  border-radius:var(--r);padding:clamp(9px,1.2vw,16px)}
-.champ img{width:clamp(56px,7vw,96px);height:clamp(56px,7vw,96px);border-radius:50%;
+.tchamp{display:flex;align-items:center;gap:9px;flex-wrap:wrap;
+  font-size:clamp(10px,1.02vw,13px);color:var(--dim)}
+.tchamp img{width:clamp(26px,3vw,38px);height:clamp(26px,3vw,38px);border-radius:50%;
   object-fit:cover;background:rgba(255,255,255,.05);flex:0 0 auto}
-.champ .cw{min-width:0}
-.champ .lbl{font-size:clamp(9px,.85vw,11px);letter-spacing:.16em;text-transform:uppercase;
+.tchamp .lbl{font-size:clamp(9px,.85vw,11px);letter-spacing:.16em;text-transform:uppercase;
   color:var(--acc);font-weight:700}
-.champ .cn{font-size:clamp(15px,1.9vw,27px);font-weight:700;letter-spacing:-.02em;
-  line-height:1.1;margin:2px 0}
-.champ .cd{font-size:clamp(10px,1.02vw,13px);color:var(--dim)}
+.tchamp .nm{color:var(--ink);font-weight:700;font-size:clamp(13px,1.5vw,20px);
+  letter-spacing:-.02em}
 
 .lb{flex:1 1 auto;min-height:0;overflow:hidden;display:flex;flex-direction:column;gap:1px}
 .lbhead,.lbrow{display:grid;grid-template-columns:42px 1fr 116px 52px;gap:8px;align-items:center;
@@ -545,7 +552,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .mrow{min-height:26px}
   .drow{grid-template-columns:26px 1fr 62px 62px 48px}
   .tlogo{height:clamp(44px,11vw,70px)}
-  .champ{margin-top:0}
+
   .t-bg img{opacity:.3}
   .t-bg::after{background:linear-gradient(180deg,rgba(7,9,16,.7),rgba(7,9,16,.95) 45%)}
 }
@@ -850,16 +857,14 @@ function tournamentCard(t) {
           ${ch.points && ch.points !== "0" ? `<span>Winner's points <b>${esc(ch.points)}</b></span>` : ""}
           ${t.team ? `<span><b>Two-man teams</b></span>` : ""}
         </div>
-        ${holePanel(t)}
-        <div class="champ">
+        <div class="tchamp">
           ${faces.map(id => `<img src="img/face/${id}.webp" alt="" loading="lazy">`).join("")}
-          <div class="cw">
-            <div class="lbl">Champion</div>
-            <div class="cn">${esc(ch.name || "—")}</div>
-            <div class="cd">${esc(ch.score || "")}${ch.strokes ? ` · ${ch.strokes} strokes` : ""}
-              ${ch.earnings ? ` · ${esc(ch.earnings)}` : ""}</div>
-          </div>
+          <span class="lbl">Won by</span>
+          <span class="nm">${esc(ch.name || "—")}</span>
+          <span class="cd">${esc(ch.score || "")}${ch.strokes ? ` · ${ch.strokes} strokes` : ""}${ch.earnings ? ` · ${esc(ch.earnings)}` : ""}</span>
         </div>
+        ${holePanel(t)}
+
       </div>
       <div class="t-right">
         <div class="lbhead"><span>Pos</span><span>${t.team ? "Team" : "Player"}</span>
@@ -880,26 +885,50 @@ function tournamentCard(t) {
 const diffClass = d => d >= .15 ? "d2" : d >= .05 ? "d1"
   : d <= -.25 ? "e2" : d <= -.05 ? "e1" : "d0";
 
+/* "Torrey Pines Golf Course (South Course)" -> "South"; otherwise trim the filler */
+const courseLabel = n => {
+  const p = /\(([^)]+)\)/.exec(n || "");
+  const base = p ? p[1] : n || "";
+  return base.replace(/\s*(Golf Club|Golf Course|Golf Links|Country Club|Course)\s*$/i, "").trim()
+    || base;
+};
+
 function holePanel(t, ci = 0, ri = 0, hole = 0) {
   const cs = t.holes;
   if (!cs || !cs.length) return "";
   const c = cs[Math.min(ci, cs.length - 1)];
-  const rd = c.rounds[Math.min(ri, c.rounds.length - 1)];
-  const holes = rd.h;
-  const sel = holes.find(h => h[0] === hole) || holes.reduce((a, b) => a[10] < b[10] ? a : b);
-  const hardest = holes.reduce((a, b) => a[10] < b[10] ? a : b);
-  const easiest = holes.reduce((a, b) => a[10] > b[10] ? a : b);
-  const fieldAvg = holes.reduce((n, h) => n + h[3], 0);
+  const rounds = c.rounds;
+  const rd = rounds[Math.min(ri, rounds.length - 1)];
+  const byHole = r => { const m = {}; r.h.forEach(h => m[h[0]] = h); return m; };
+  const nums = rounds[0].h.map(h => h[0]);
+  const pars = byHole(rounds[0]);
+  const sel = byHole(rd)[hole] || rd.h.reduce((a, b) => a[10] < b[10] ? a : b);
+  const all = rounds.find(r => r.r === "All") || rounds[0];
+  const hardest = all.h.reduce((a, b) => a[10] < b[10] ? a : b);
+  const easiest = all.h.reduce((a, b) => a[10] > b[10] ? a : b);
+  const fieldAvg = all.h.reduce((n, h) => n + h[3], 0);
   const tot = sel[5] + sel[6] + sel[7] + sel[8] + sel[9];
   const seg = (i, k) => `<i class="s-${k}" style="width:${(sel[i] / tot * 100).toFixed(2)}%"></i>`;
+  const d2 = v => (v >= 0 ? "+" : "\u2212") + Math.abs(v).toFixed(2).replace(/^0/, "");
+
+  const gridRows = rounds.map((r, i) => {
+    const m = byHole(r);
+    return `<div class="hrlab ${r.r === "All" ? "all" : ""}">${esc(r.r)}</div>` +
+      nums.map(n => {
+        const h = m[n];
+        if (!h) return `<div class="hcell na"></div>`;
+        const on = i === ri && h[0] === sel[0];
+        return `<div class="hcell ${diffClass(h[4])} ${on ? "sel" : ""}" data-h="${h[0]}" data-r="${i}"
+          title="Hole ${h[0]} · ${esc(r.r)} · par ${h[1]} · ${h[2]}y · avg ${h[3]}">${d2(h[4])}</div>`;
+      }).join("");
+  }).join("");
 
   return `<div class="hpanel" data-ci="${ci}" data-ri="${ri}" data-hole="${sel[0]}">
     <div class="hptop">
-      <div class="hpills">${c.rounds.map((r, i) =>
-        `<button class="${i === ri ? "on" : ""}" data-r="${i}">${esc(r.r)}</button>`).join("")}</div>
       ${cs.length > 1
         ? `<div class="hpills">${cs.map((x, i) =>
-            `<button class="${i === ci ? "on" : ""}" data-c="${i}">${esc(x.name.replace(/.*\(|\)/g, "") || x.name)}</button>`).join("")}</div>`
+            `<button class="${i === ci ? "on" : ""}" data-c="${i}"
+              title="${esc(x.name)}">${esc(courseLabel(x.name))}</button>`).join("")}</div>`
         : `<div class="hcourse">${esc(c.name)}</div>`}
     </div>
 
@@ -907,18 +936,21 @@ function holePanel(t, ci = 0, ri = 0, hole = 0) {
       <span>Par <b>${c.par}</b></span>
       <span><b>${esc(c.yards || "")}</b> yds</span>
       <span>Field average <b>${fieldAvg.toFixed(2)}</b></span>
-      <span class="hard">Hardest <b>${hardest[0]}</b> (${hardest[4] >= 0 ? "+" : ""}${hardest[4].toFixed(2)})</span>
-      <span class="easy">Easiest <b>${easiest[0]}</b> (${easiest[4].toFixed(2)})</span>
+      <span class="hard">Hardest <b>${hardest[0]}</b> (${d2(hardest[4])})</span>
+      <span class="easy">Easiest <b>${easiest[0]}</b> (${d2(easiest[4])})</span>
     </div>
 
-    <div class="hstrip">${holes.map(h =>
-      `<div class="hcell ${diffClass(h[4])} ${h[0] === sel[0] ? "sel" : ""}" data-h="${h[0]}"
-        title="Hole ${h[0]} · par ${h[1]} · ${h[2]}y · avg ${h[3]}">
-        <span class="hn">${h[0]}</span><span class="hp">${h[1]}</span></div>`).join("")}</div>
+    <div class="hgrid">
+      <div></div>
+      ${nums.map(n => `<div class="hhead"><span class="hn">${n}</span>
+        <span class="hp">${pars[n][1]}</span></div>`).join("")}
+      ${gridRows}
+    </div>
 
     <div class="hdet">
-      <div class="lead">Hole <b>${sel[0]}</b> · par ${sel[1]} · ${pts(sel[2])} yds<br>
-        avg <i>${sel[3].toFixed(3)}</i> (${sel[4] >= 0 ? "+" : ""}${sel[4].toFixed(3)}) ·
+      <div class="lead">Hole <b>${sel[0]}</b> · par ${sel[1]} · ${pts(sel[2])} yds ·
+        <span style="color:var(--dim2)">${esc(rd.r === "All" ? "all rounds" : "round " + rd.r.slice(1))}</span><br>
+        avg <i>${sel[3].toFixed(3)}</i> (${d2(sel[4])}) ·
         ${sel[10]}${sel[10] === 1 ? "st" : sel[10] === 2 ? "nd" : sel[10] === 3 ? "rd" : "th"} hardest</div>
       <div>
         <div class="hmix">${seg(5, "eagle")}${seg(6, "birdie")}${seg(7, "par")}${seg(8, "bogey")}${seg(9, "dbl")}</div>
@@ -1157,15 +1189,14 @@ film.addEventListener("click", e => {
   if (tab) { setTab(tab.dataset.tab, true); return; }
   const hp = e.target.closest(".hpanel");
   if (hp) {
-    const cell = e.target.closest(".hcell");
-    const rBtn = e.target.closest(".hpills button[data-r]");
+    const cell = e.target.closest(".hcell:not(.na)");
     const cBtn = e.target.closest(".hpills button[data-c]");
-    if (cell || rBtn || cBtn) {
+    if (cell || cBtn) {
       const card = hp.closest(".card");
       const t = T.find(x => x.id === card.dataset.tid);
       const ci = cBtn ? +cBtn.dataset.c : +hp.dataset.ci;
-      const ri = cBtn ? 0 : (rBtn ? +rBtn.dataset.r : +hp.dataset.ri);
-      const hole = cell ? +cell.dataset.h : (cBtn || rBtn ? +hp.dataset.hole : 0);
+      const ri = cBtn ? 0 : +cell.dataset.r;
+      const hole = cBtn ? +hp.dataset.hole : +cell.dataset.h;
       hp.outerHTML = holePanel(t, ci, ri, hole);
       return;
     }
