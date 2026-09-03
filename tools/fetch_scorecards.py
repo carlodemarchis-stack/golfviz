@@ -40,8 +40,11 @@ def fetch(args):
 
 
 def main():
-    players = json.loads((DATA / "players.json").read_text())
-    jobs = [(e["tid"], p["id"]) for p in players for e in p["events"] if e.get("tid")]
+    # the whole field, not just the FedExCup 70: every leaderboard row already
+    # carries the tour player id, so the job list is just the leaderboards.
+    tours = json.loads((DATA / "tournaments.json").read_text())
+    jobs = sorted({(t["id"], r["id"]) for t in tours
+                   for r in t["leaderboard"] if r.get("id")})
     print(f"{len(jobs)} player-tournament scorecards ...")
 
     out, t0 = {}, time.time()

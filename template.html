@@ -313,6 +313,11 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .lbrow .rd{color:var(--dim2);font-variant-numeric:tabular-nums;letter-spacing:.08em;
   text-align:right;font-size:.92em}
 .lbrow .tot{text-align:right;font-variant-numeric:tabular-nums;font-weight:700}
+/* a row we hold a scorecard for opens it; the Zurich teams do not have one */
+.lbrow.has{cursor:pointer;border:1px solid transparent}
+.lbrow.has:hover{background:var(--panel);border-color:rgba(242,149,46,.35)}
+.lbrow.has:hover .nm{color:var(--acc)}
+.lbrow.w.has:hover{background:linear-gradient(90deg,rgba(242,149,46,.30),rgba(242,149,46,.05))}
 
 /* -------------------------------------------------------------- chart */
 .chartwrap{flex:1 1 100%;min-width:0;display:flex;flex-direction:column;
@@ -636,9 +641,9 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 
 <div class="modal" id="emodal"><div class="mbox">
   <button class="mclose" onclick="closeModal('emodal')">&times;</button>
-  <button class="marrow l" id="e-prev" title="Previous tournament (←)">
+  <button class="marrow l" id="e-prev" onclick="stepEvent(-1)">
     <svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
-  <button class="marrow r" id="e-next" title="Next tournament (→)">
+  <button class="marrow r" id="e-next" onclick="stepEvent(1)">
     <svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
   <div id="ebody"></div></div></div>
 <div class="modal" id="jmodal"><div class="mbox"><button class="mclose" onclick="closeModal('jmodal')">&times;</button>
@@ -653,6 +658,41 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 <script>
 const DATA = /*__DATA__*/{players:[],tournaments:[]};
 const P = DATA.players, T = DATA.tournaments;
+
+/* ---------------------------------------------------- the scorecard store
+   Every card of the season, whole field, keyed "<playerId>_<tournamentId>".
+   Rounds arrive packed - [n, total, toPar, parIdx, courseIdx, scores] with one
+   base-36 character a hole - and are unpacked on demand, then memoised, so a
+   card costs nothing until something asks to draw it. */
+const SC = DATA.cards || {}, SCPAR = DATA.pars || [], SCCOURSE = DATA.courses || [];
+const scCache = new Map();
+function scoreCard(pid, tid) {
+  const k = pid + "_" + tid;
+  if (scCache.has(k)) return scCache.get(k);
+  const raw = SC[k];
+  const v = raw ? raw.map(r => ({
+    n: r[0], t: r[1], tp: r[2],
+    p: SCPAR[r[3]],
+    c: r[4] >= 0 ? SCCOURSE[r[4]] : "",
+    s: Array.from(r[5], ch => parseInt(ch, 36) || 0),
+  })) : null;
+  scCache.set(k, v);
+  return v;
+}
+const toPar = v => v == null ? "" : v > 0 ? "+" + v : v === 0 ? "E" : String(v);
+
+/* every card at one tournament, in leaderboard order - built once per event */
+const fieldCache = new Map();
+function fieldCards(t) {
+  if (fieldCache.has(t.id)) return fieldCache.get(t.id);
+  const out = [];
+  t.leaderboard.forEach((r, i) => {
+    const c = scoreCard(r.id, t.id);
+    if (c) out.push({id: r.id, name: r.name, order: i, rank: rankOf(r.id), card: c});
+  });
+  fieldCache.set(t.id, out);
+  return out;
+}
 
 /* ------------------------------------------------------------- helpers */
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c =>
@@ -685,16 +725,31 @@ const CAT = {major:["Major","--major"], playoff:["Playoff","--playoff"],
   signature:["Signature","--signature"], players:["The Players","--players"],
   full:["Full field","--full"], opposite:["Opposite field","--opposite"]};
 
-/* three different Kims in this top 70 - only add an initial where it is needed */
+/* three different Kims in the top 70 alone, and many more across the full field -
+   only add an initial where the surname is actually shared */
 const SURNAME_DUPES = (() => {
-  const c = {};
-  P.forEach(p => { const l = p.last || p.name.split(" ").slice(-1)[0]; c[l] = (c[l] || 0) + 1; });
+  const c = {}, seen = new Set();
+  const add = (name) => {
+    if (seen.has(name)) return;
+    seen.add(name);
+    const l = name.split(" ").slice(-1)[0];
+    c[l] = (c[l] || 0) + 1;
+  };
+  P.forEach(p => add(p.name));
+  T.forEach(t => t.leaderboard.forEach(r => add(r.name)));
   return c;
 })();
 const shortName = p => {
-  const l = p.last || p.name.split(" ").slice(-1)[0];
-  return SURNAME_DUPES[l] > 1 && p.first ? `${p.first[0]}. ${l}` : l;
+  const name = typeof p === "string" ? p : p.name;
+  const first = typeof p === "string" ? name.split(" ")[0] : (p.first || name.split(" ")[0]);
+  const l = typeof p === "string" ? name.split(" ").slice(-1)[0]
+                                  : (p.last || name.split(" ").slice(-1)[0]);
+  return SURNAME_DUPES[l] > 1 && first ? `${first[0]}. ${l}` : l;
 };
+const pById = (() => { const m = {}; P.forEach(p => m[p.id] = p); return m; })();
+const rankOf = id => (pById[id] || {}).rank || 999;
+/* the 70 carry a parsed surname in their bio, so prefer that over a last-token guess */
+const nameOf = (id, fallback) => shortName(pById[id] || fallback);
 
 const CARDS = [];
 P.forEach((p, i) => CARDS.push({kind: "player", d: p, i}));
@@ -920,7 +975,8 @@ function tournamentCard(t) {
         <div class="lbhead"><span>Pos</span><span>${t.team ? "Team" : "Player"}</span>
           <span style="text-align:right">Rounds</span><span style="text-align:right">Total</span></div>
         <div class="lb">${rows.map((r, i) => `
-          <div class="lbrow ${i === 0 ? "w" : ""}">
+          <div class="lbrow ${i === 0 ? "w" : ""}${SC[r.id + "_" + t.id] ? " has" : ""}"
+            data-i="${i}"${SC[r.id + "_" + t.id] ? ` title="Scorecard"` : ""}>
             <span class="pos">${esc(r.pos || "")}</span>
             <span class="nm">${esc(r.name)}${r.amateur ? " (a)" : ""}</span>
             <span class="rd">${(r.rounds || []).filter(Boolean).join(" ")}</span>
@@ -953,42 +1009,36 @@ function roundField(rd) {
 }
 
 function roundOurs(t, courseName, roundNum) {
-  let n = 0;
-  P.forEach(p => {
-    const e = p.events.find(x => x.tid === t.id);
-    if (!e || !e.card) return;
-    if (e.card.some(r => r.n === roundNum && (!r.c || r.c === courseName) && r.s.some(Boolean))) n++;
-  });
-  return n;
+  return fieldCards(t).filter(f => f.card.some(r =>
+    r.n === roundNum && (!r.c || r.c === courseName) && r.s.some(Boolean))).length;
 }
 
-/* Scores on one hole from the players we hold cards for - the FedExCup top 70,
-   not the whole field. At the rotating events a player's round may have been on
-   another course, so the card's own course name has to match. */
+/* Scores on one hole, whole field. At the rotating events a player's round may
+   have been on another course, so the card's own course name has to match. */
 function holeScorers(t, courseName, roundNum, hole) {
   const out = [];
-  P.forEach(p => {
-    const e = p.events.find(x => x.tid === t.id);
-    if (!e || !e.card) return;
-    e.card.forEach(r => {
+  fieldCards(t).forEach(f => {
+    f.card.forEach(r => {
       if (r.n !== roundNum) return;
       if (r.c && r.c !== courseName) return;      // played a different course that day
       const v = r.s[hole - 1];
-      if (v) out.push({n: shortName(p), rank: p.rank, v});
+      if (v) out.push({n: nameOf(f.id, f.name), order: f.order, v});
     });
   });
-  return out.sort((a, b) => a.v - b.v || a.rank - b.rank);
+  return out.sort((a, b) => a.v - b.v || a.order - b.order);
 }
 
 function scorerCols(t, c, rd, sel) {
   if (rd.r === "All")
-    return `<div class="hwho"><div class="hwnote">Pick a round above to see which of the
-      ranked players made what on this hole.</div></div>`;
+    return `<div class="hwho"><div class="hwnote">Pick a round above to see who made
+      what on this hole.</div></div>`;
   const rn = +rd.r.slice(1);
   const list = holeScorers(t, c.name, rn, sel[0]);
   if (!list.length)
-    return `<div class="hwho"><div class="hwnote">None of the FedExCup top 70 played this
-      course in round ${rn}.</div></div>`;
+    return `<div class="hwho"><div class="hwnote">${t.team
+      ? `A team week — the TOUR records one ball a side in the alternate-shot rounds,
+         so there are no individual scorecards to break out.`
+      : `No scorecards for this course in round ${rn}.`}</div></div>`;
   const byScore = {};
   list.forEach(x => (byScore[x.v] = byScore[x.v] || []).push(x.n));
   const keys = Object.keys(byScore).map(Number).sort((a, b) => a - b);
@@ -1006,7 +1056,7 @@ function scorerCols(t, c, rd, sel) {
   }).join("");
   const weights = keys.map(k => Math.max(1, Math.ceil(byScore[k].length / 7)));
   return `<div class="hwho">
-    <div class="lbl">Round ${rn} · ${list.length} of the FedExCup top 70 played this hole</div>
+    <div class="lbl">Round ${rn} · the whole field, ${list.length} players</div>
     <div class="hwcols" style="grid-template-columns:${
       weights.map(w => `minmax(0,${w}fr)`).join(" ")}">${cols}</div>
   </div>`;
@@ -1066,7 +1116,7 @@ function holePanel(t, ci = 0, ri = 0, hole = 0) {
       const fieldN = roundField(rd);
       const our = roundOurs(t, c.name, rn);
       return `<b>Round ${rn}</b> · ${fieldN} of the ${t.field} in the field played here` +
-        (our ? ` · ${our} of them in the FedExCup top 70` : "");
+        (our > 0 && our < fieldN ? ` · ${our} scorecards held` : "");
     })()}</div>
 
     <div class="hkpis">
@@ -1327,6 +1377,11 @@ function setHoleMode(mode, remember) {
 film.addEventListener("click", e => {
   const tab = e.target.closest(".tab");
   if (tab) { setTab(tab.dataset.tab, true); return; }
+  const lbr = e.target.closest(".lbrow.has");
+  if (lbr) {
+    openFieldCard(lbr.closest(".card").dataset.tid, +lbr.dataset.i);
+    return;
+  }
   const more = e.target.closest(".lbmore");
   if (more) {
     const lb = more.closest(".t-right").querySelector(".lb");
@@ -1358,52 +1413,106 @@ film.addEventListener("click", e => {
 const byId = {};
 T.forEach(t => byId[t.id] = t);
 
-let mPid = null, mIdx = 0;
+/* The scorecard modal reads two ways. Opened from a player card it walks that
+   player's season; opened from a leaderboard it walks that tournament's field.
+   Either way the arrows follow the list you clicked out of. */
+let mMode = "season", mPid = null, mTid = null, mIdx = 0;
+
+const mLen = () => mMode === "field"
+  ? byId[mTid].leaderboard.length
+  : (P.find(x => x.id === mPid) || {events: []}).events.length;
 
 function openEvent(pid, tid) {
   const p = P.find(x => x.id === pid);
   if (!p) return;
   const i = p.events.findIndex(x => x.tid === tid);
   if (i < 0) return;
-  mPid = pid; mIdx = i;
+  mMode = "season"; mPid = pid; mIdx = i;
+  renderEvent();
+  document.getElementById("emodal").classList.add("on");
+}
+
+function openFieldCard(tid, i) {
+  if (!byId[tid] || !byId[tid].leaderboard[i]) return;
+  mMode = "field"; mTid = tid; mIdx = i;
   renderEvent();
   document.getElementById("emodal").classList.add("on");
 }
 
 function stepEvent(d) {
-  const p = P.find(x => x.id === mPid);
-  if (!p) return;
-  const n = Math.max(0, Math.min(p.events.length - 1, mIdx + d));
+  const n = Math.max(0, Math.min(mLen() - 1, mIdx + d));
   if (n === mIdx) return;
   mIdx = n;
   renderEvent();
 }
 
 function renderEvent() {
+  const v = mMode === "field" ? fieldView() : seasonView();
+  const rounds = (v.rounds || []).filter(r => r && r !== "-");
+  document.getElementById("ebody").innerHTML = `
+    <div class="mplayer">${esc(v.who)}</div>
+    <h3>${esc(v.title)}</h3>
+    <p>${esc(v.sub)}</p>
+    <div class="mgrid">
+      <div><div class="k">Position</div><div class="v">${esc(v.pos || "—")}</div></div>
+      <div><div class="k">Total</div><div class="v">${esc(v.total || "—")}</div></div>
+      <div><div class="k">To par</div><div class="v">${esc(v.toPar || "—")}</div></div>
+      ${v.pts !== undefined
+        ? `<div><div class="k">FedExCup</div><div class="v">${v.pts ? pts(v.pts) : "0"}</div></div>` : ""}
+      ${v.money !== undefined
+        ? `<div><div class="k">Earnings</div><div class="v">${abbrMoney(v.money)}</div></div>` : ""}
+    </div>
+    ${rounds.length && !v.card ? `<div class="mrounds">${rounds.map((r, i) =>
+      `<span><i>R${i + 1}</i>${esc(r)}</span>`).join("")}</div>` : ""}
+    ${scorecard(v.card)}
+    ${v.foot ? `<div class="mpager">${v.foot}</div>` : ""}
+    <div class="mpager">${mIdx + 1} / ${mLen()} · ${v.nav}</div>`;
+  const step = mMode === "field" ? "player" : "tournament";
+  const prev = document.getElementById("e-prev"), next = document.getElementById("e-next");
+  prev.disabled = mIdx === 0;
+  next.disabled = mIdx === mLen() - 1;
+  prev.title = `Previous ${step} (\u2190)`;
+  next.title = `Next ${step} (\u2192)`;
+}
+
+/* one of the 70, stepping through their own season */
+function seasonView() {
   const p = P.find(x => x.id === mPid);
   const e = p.events[mIdx];
   const t = byId[e.tid];
-  const rounds = (e.rounds || []).filter(r => r && r !== "-");
-  document.getElementById("ebody").innerHTML = `
-    <div class="mplayer">${esc(p.name)} · FedExCup No. ${p.rank}</div>
-    <h3>${esc(e.name)}</h3>
-    <p>${esc(t ? t.date + " 2026 · " + (t.course || "") : e.date)}</p>
-    <div class="mgrid">
-      <div><div class="k">Position</div><div class="v">${esc(e.pos || "—")}</div></div>
-      <div><div class="k">Total</div><div class="v">${esc(e.total || "—")}</div></div>
-      <div><div class="k">To par</div><div class="v">${esc(e.toPar || "—")}</div></div>
-      <div><div class="k">FedExCup</div><div class="v">${e.pts ? pts(e.pts) : "0"}</div></div>
-      <div><div class="k">Earnings</div><div class="v">${abbrMoney(e.money)}</div></div>
-    </div>
-    ${rounds.length && !(e.card || []).length ? `<div class="mrounds">${rounds.map((r, i) =>
-      `<span><i>R${i + 1}</i>${esc(r)}</span>`).join("")}</div>` : ""}
-    ${scorecard(e.card)}
-    ${t && t.champion.name !== p.name
-      ? `<div class="mpager">Won by ${esc(t.champion.name)} · ${esc(t.champion.score || "")}</div>`
-      : ""}
-    <div class="mpager">${mIdx + 1} / ${p.events.length} · ← → to move through the season</div>`;
-  document.getElementById("e-prev").disabled = mIdx === 0;
-  document.getElementById("e-next").disabled = mIdx === p.events.length - 1;
+  return {
+    who: `${p.name} · FedExCup No. ${p.rank}`,
+    title: e.name,
+    sub: t ? `${t.date} 2026 · ${t.course || ""}` : e.date,
+    pos: e.pos, total: e.total, toPar: e.toPar, pts: e.pts || 0, money: e.money,
+    rounds: e.rounds,
+    card: scoreCard(p.id, e.tid),
+    foot: t && t.champion.name !== p.name
+      ? `Won by ${esc(t.champion.name)} · ${esc(t.champion.score || "")}` : "",
+    nav: "\u2190 \u2192 to move through the season",
+  };
+}
+
+/* anyone in the field, stepping down that week's leaderboard */
+function fieldView() {
+  const t = byId[mTid];
+  const r = t.leaderboard[mIdx];
+  const p = pById[r.id];
+  const e = p && p.events.find(x => x.tid === t.id);
+  const rounds = (r.rounds || []).filter(x => x && x !== "-");
+  const strokes = rounds.reduce((n, x) => n + (+x || 0), 0);
+  return {
+    who: p ? `${p.name} · FedExCup No. ${p.rank}` : r.name + (r.amateur ? " (a)" : ""),
+    title: t.name,
+    sub: `${t.date} 2026 · ${t.course || ""}`,
+    pos: r.pos, total: strokes || "", toPar: r.total,
+    pts: e ? (e.pts || 0) : undefined,
+    money: e ? e.money : undefined,
+    rounds: r.rounds,
+    card: scoreCard(r.id, t.id),
+    foot: mIdx === 0 ? "" : `Won by ${esc(t.champion.name)} · ${esc(t.champion.score || "")}`,
+    nav: "\u2190 \u2192 to move down the leaderboard",
+  };
 }
 const SCLASS = d => d <= -2 ? "eagle" : d === -1 ? "birdie" : d === 0 ? "par"
   : d === 1 ? "bogey" : "dbl";
@@ -1430,7 +1539,7 @@ function scorecard(card) {
     const par = r.p.split("").map(Number), sc = r.s;
     const out = sum(sc.slice(0, 9)), inn = sum(sc.slice(9));
     return (withLabel
-        ? `<div class="rlab"><b>R${r.n}</b> ${esc(r.t)} <i>${esc(r.tp)}</i></div>`
+        ? `<div class="rlab"><b>R${r.n}</b> ${r.t} <i>${toPar(r.tp)}</i></div>`
         : `<div class="lab">Score</div>`) + `
       ${sc.slice(0, 9).map((v, i) => hole(v, par[i])).join("")}
       <div class="sub">${out}</div>
@@ -1450,7 +1559,7 @@ function scorecard(card) {
     /* the week rotated courses, so each round carries its own par */
     body = card.map(r => `<div class="sc"><div class="scr">
         <b>Round ${r.n}</b>${r.c ? `<span>${esc(r.c)}</span>` : ""}
-        <span>${esc(r.t)} <em>(${esc(r.tp)})</em></span></div>
+        <span>${r.t} <em>(${toPar(r.tp)})</em></span></div>
       <div class="scg">${headRows(r.p.split("").map(Number))}${scoreRow(r, false)}</div>
       </div>`).join("");
   }
@@ -1554,6 +1663,13 @@ function openHelp() {
       <li><b>Results</b> lists every 2026 start; <b>click any row</b> for the round-by-round detail</li>
       <li><b>Majors</b> filters the same list to the four majors and THE PLAYERS</li>
     </ul>
+    <h5>On a tournament card</h5>
+    <ul>
+      <li><b>Click any leaderboard row</b> for that player's hole-by-hole card — the whole field,
+        not just the ranked 70. <b>← →</b> then walks down the leaderboard</li>
+      <li><b>Click a hole</b> in the grid for its scoring, and the name of everyone who made what</li>
+      <li><b>Show all</b> opens the full field; the round pills switch course at the rotating events</li>
+    </ul>
     <p style="margin-top:14px">Best in landscape on a laptop or iPad; it works in portrait on a
       phone, where each card scrolls.</p>`;
   document.getElementById("hmodal").classList.add("on");
@@ -1571,6 +1687,9 @@ function openCredits() {
       <a href="https://www.pgatour.com" target="_blank" rel="noopener">pgatour.com</a>.
       World ranking: <a href="https://www.owgr.com" target="_blank" rel="noopener">owgr.com</a>.
       Flags: flagcdn.com. Data captured ${DATA.captured}.</p>
+    <p>The deck holds <b>${pts(Object.keys(SC).length)}</b> scorecards — every round played by
+      every player at all ${T.length} events, hole by hole. The one gap is the Zurich Classic:
+      it is a team week, and the TOUR records one ball a side in the alternate-shot rounds.</p>
     <h5>A note on the order</h5>
     <p>Cards run in <b>FedExCup points</b> order — the season-long list, rebuilt by summing each
       player's per-event points across the 37 events. This is deliberately <i>not</i> the Tour's
@@ -1582,7 +1701,8 @@ function openCredits() {
       be ranked among the best in the world and still have no card — the ranking rewards a full PGA
       TOUR season, not form. Jon Rahm (world No. 14) and Tyrrell Hatton (world No. 24) are the two
       players from the current world top 25 with no card in this deck. Players outside the top 70
-      still appear on the tournament cards, on the leaderboards of the events they played. The
+      are not left out of the data, though: every leaderboard is the full field, and every one of
+      those players has the same hole-by-hole scorecard, one click away on the tournament card. The
       <i>FedExCup vs the world</i> card sets the two rankings side by side.</p>
     <h5>Built with</h5>
     <p>Plain HTML, CSS and JavaScript. No frameworks, no tracking beyond privacy-friendly

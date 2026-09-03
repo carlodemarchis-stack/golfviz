@@ -4,9 +4,11 @@ import json, pathlib, datetime
 ROOT = pathlib.Path(__file__).resolve().parent
 players = json.loads((ROOT / "data" / "players.json").read_text())
 tours = json.loads((ROOT / "data" / "tournaments.json").read_text())
+cards = json.loads((ROOT / "data" / "cards.json").read_text())
 
-# ship the whole field, but only the fields the card renders
-KEEP = ("name", "pos", "total", "rounds", "amateur", "members")
+# ship the whole field, but only the fields the card renders. "id" is what lets a
+# leaderboard row find its scorecard; total strokes are summed from rounds in JS.
+KEEP = ("id", "name", "pos", "total", "rounds", "amateur", "members")
 for t in tours:
     t["leaderboard"] = [{k: r[k] for k in KEEP if k in r and r[k] not in (None, False)}
                         for r in t["leaderboard"]]
@@ -16,6 +18,9 @@ photos = sorted(p.stem for p in (ROOT / "img" / "course").glob("*.webp"))
 blob = json.dumps({
     "players": players,
     "tournaments": tours,
+    "cards": cards["cards"],
+    "pars": cards["pars"],
+    "courses": cards["courses"],
     "captured": datetime.date.today().strftime("%-d %B %Y"),
 }, separators=(",", ":"), ensure_ascii=False)
 
@@ -27,4 +32,6 @@ html = html.replace("/*__PHOTOS__*/[]", json.dumps(photos, separators=(",", ":")
 kb = (ROOT / "index.html").stat().st_size / 1024
 print(f"index.html  {kb:,.0f} KB  ·  {len(players)} players + {len(tours)} tournaments + 4 charts "
       f"= {len(players) + len(tours) + 4} cards")
+field = sum(len(t["leaderboard"]) for t in tours)
+print(f"scorecards: {len(cards['cards'])}/{field} of the field")
 print(f"course photos: {len(photos)}/{len(tours)}")
