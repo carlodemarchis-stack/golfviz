@@ -84,7 +84,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   margin:clamp(8px,1.1vh,14px) calc(-1 * clamp(12px,1.35vw,20px)) 0}
 .pmix i{display:block;height:100%}
 .cell{min-width:0}
-.cell b{display:block;font-size:clamp(13px,1.32vw,20px);font-weight:700;line-height:1;
+.cell b{display:block;font-size:clamp(12px,1.13vw,17.5px);font-weight:700;line-height:1;
   letter-spacing:-.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .cell i{display:block;font-style:normal;font-size:clamp(8.5px,.8vw,10.5px);
   letter-spacing:.12em;text-transform:uppercase;color:var(--dim2);margin-top:5px;
@@ -92,8 +92,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .cell.hero b{color:var(--acc)}
 .cell.world b{color:var(--acc2)}
 .cell b small{font-size:.55em;font-weight:300;color:var(--dim);letter-spacing:0}
-.cell b em{font-style:normal;font-size:.44em;font-weight:400;color:var(--dim2);
-  letter-spacing:.01em;margin-left:.35em}
+.cell b em{font-style:normal;font-size:.42em;font-weight:400;color:var(--dim2);
+  letter-spacing:0;margin-left:.3em}
 
 .pres{flex:1 1 57%;min-width:0;display:flex;flex-direction:column;
   gap:clamp(8px,1.3vh,16px)}
@@ -200,10 +200,13 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .t-inner{z-index:1}
 .t-left{flex:1 1 52%;min-width:0;display:flex;flex-direction:column;gap:clamp(9px,1.4vh,18px)}
 .t-right{flex:1 1 46%;min-width:0;display:flex;flex-direction:column;gap:clamp(8px,1.2vh,14px)}
-.tlogo{height:clamp(46px,6.4vh,86px);width:auto;max-width:52%;object-fit:contain;
-  align-self:flex-start;filter:drop-shadow(0 6px 18px rgba(0,0,0,.6))}
-.tname{font-weight:700;letter-spacing:-.028em;line-height:1.0;
-  font-size:clamp(21px,3.1vw,50px)}
+.thead{display:flex;align-items:center;gap:clamp(12px,1.6vw,24px);min-width:0}
+.thead-t{min-width:0;display:flex;flex-direction:column;align-items:flex-start;
+  gap:clamp(5px,.9vh,10px)}
+.tlogo{height:clamp(52px,8.4vh,104px);width:auto;flex:0 0 auto;object-fit:contain;
+  filter:drop-shadow(0 6px 18px rgba(0,0,0,.6))}
+.tname{font-weight:700;letter-spacing:-.028em;line-height:1.02;
+  font-size:clamp(19px,2.6vw,42px)}
 .tmeta{display:flex;gap:clamp(9px,1.5vw,22px);flex-wrap:wrap;
   font-size:clamp(10px,1.08vw,13.5px);color:var(--dim)}
 .tmeta b{color:var(--ink);font-weight:400}
@@ -504,7 +507,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .mcols{gap:3px}
   .mrow{min-height:26px}
   .drow{grid-template-columns:26px 1fr 62px 62px 48px}
-  .tlogo{max-width:64%}
+  .tlogo{height:clamp(44px,11vw,70px)}
   .champ{margin-top:0}
   .t-bg img{opacity:.3}
   .t-bg::after{background:linear-gradient(180deg,rgba(7,9,16,.7),rgba(7,9,16,.95) 45%)}
@@ -792,9 +795,13 @@ function tournamentCard(t) {
     </div>
     <div class="inner t-inner">
       <div class="t-left">
-        <img class="tlogo" src="img/logo/${t.id}.png" alt="${esc(t.name)}" loading="lazy">
-        <div><span class="badge" style="background:var(${varname})">${label}</span></div>
-        <div class="tname">${esc(t.name)}</div>
+        <div class="thead">
+          <img class="tlogo" src="img/logo/${t.id}.png" alt="" loading="lazy">
+          <div class="thead-t">
+            <span class="badge" style="background:var(${varname})">${label}</span>
+            <div class="tname">${esc(t.name)}</div>
+          </div>
+        </div>
         <div class="tmeta">
           <span><b>${esc(t.date)}</b> 2026</span>
           <span>${esc(t.course || "")}</span>
