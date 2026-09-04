@@ -91,6 +91,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .pehead h4{font-weight:700;line-height:1.15;letter-spacing:-.01em;
   white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .pehead p{font-size:clamp(9.5px,.9vw,12px);color:var(--dim2);margin-top:3px}
+.pehead p b{color:var(--ink);font-weight:700}
 .pback{position:absolute;top:0;right:0;padding:4px 11px;border-radius:999px;
   border:1px solid var(--line);background:rgba(12,16,26,.55);color:var(--dim);
   font-size:clamp(8.5px,.8vw,10.5px);letter-spacing:.1em;text-transform:uppercase;
@@ -987,7 +988,11 @@ function eventPanel(p, e) {
       <button class="pback" title="Back to the season (Esc)">&larr; 2026 season</button>
       <h4 style="font-size:clamp(12px,calc((40.4vw - 144px) / ${
         (e.name.length * 0.6).toFixed(1)}),23px)" title="${esc(e.name)}">${esc(e.name)}</h4>
-      <p>${t ? `${esc(t.date)} 2026 · ${esc(t.course || "")}` : esc(e.date)}</p>
+      <p>${t ? `${esc(t.date)} 2026 · ${esc(t.course || "")}` : esc(e.date)}${(() => {
+        const cs = (t && t.holes) || [];
+        const pars = [...new Set(cs.map(c => c.par).filter(Boolean))];
+        return pars.length === 1 ? ` · Par <b>${pars[0]}</b>` : "";
+      })()}</p>
     </div>
     <div class="mgrid">
       ${kpi("Position", esc(e.pos || "\u2014"))}
@@ -1569,6 +1574,12 @@ addEventListener("keydown", e => {
     return;
   }
   if (document.querySelector(".modal.on")) return;
+  if (e.key === "ArrowUp" || e.key === "ArrowDown") {
+    if (stepList(film.children[cur], e.key === "ArrowDown" ? 1 : -1)) {
+      e.preventDefault();
+      return;
+    }
+  }
   if (e.key === "ArrowRight" || e.key === " ") { e.preventDefault(); next(); }
   if (e.key === "ArrowLeft") prev();
   if (e.key === "Home") go(0);
@@ -1660,6 +1671,31 @@ function syncTournament(card, ci, ri, hole, pid) {
                      : `<i>\u2013</i>`;
     el.title = v ? `${esc(r.name)} · hole ${h} · round ${rn}` : "";
   });
+}
+
+/* Up and down step the list the card is reading from - a player's season while
+   an event panel is open, a tournament's leaderboard while a card is drawn.
+   Returns false when there is nothing to step, so the key falls through. */
+function stepList(card, d) {
+  const kind = CARDS[cur].kind;
+  let rows;
+  if (kind === "player") {
+    const box = card.querySelector(".pevent");
+    if (!box || box.hidden) return false;
+    rows = [...card.querySelectorAll('.evlist[data-pane="results"] .ev')];
+  } else if (kind === "tournament") {
+    const hp = card.querySelector(".hpanel");
+    if (!hp || !hp.dataset.pid) return false;
+    rows = [...card.querySelectorAll(".lbrow.has")];
+  } else return false;
+
+  const i = rows.findIndex(r => r.classList.contains("sel"));
+  if (i < 0) return false;
+  const n = Math.max(0, Math.min(rows.length - 1, i + d));
+  if (n === i) return true;                       // already at an end, but ours
+  rows[n].click();
+  rows[n].scrollIntoView({block: "nearest", inline: "nearest"});
+  return true;
 }
 
 /* ------------------------------------------------------- tabs + modals */
@@ -1957,14 +1993,16 @@ function openHelp() {
     <h5>On a player card</h5>
     <ul>
       <li><b>Results</b> lists every 2026 start; <b>click any row</b> and that week takes over the
-        left column, hole by hole. <b>Esc</b> or <b>← 2026 season</b> puts the stats back</li>
+        left column, hole by hole. <b>↑ ↓</b> then walk the season, and <b>Esc</b> or
+        <b>← 2026 season</b> puts the stats back</li>
       <li><b>Majors</b> filters the same list to the four majors and THE PLAYERS</li>
     </ul>
     <h5>On a tournament card</h5>
     <ul>
       <li><b>Click any leaderboard row</b> — the whole field, not just the ranked 70 — and that
         player's card is drawn <i>in the heat map's own columns</i>, so every score sits under the
-        hole it was made on. The card opens on the winner; click the row again to clear it</li>
+        hole it was made on. <b>↑ ↓</b> then walk the leaderboard. The card opens on
+        the winner; click the row again to clear it</li>
       <li><b>Click a hole</b> in the grid and the leaderboard gains a column: what every player in
         the field made there, in finishing order</li>
       <li><b>Show all</b> opens the full field; the round pills switch course at the rotating events</li>
