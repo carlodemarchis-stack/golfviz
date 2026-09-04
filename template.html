@@ -364,7 +364,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   border:1px solid var(--line);font-size:clamp(8.5px,.82vw,10.5px);letter-spacing:.11em;
   text-transform:uppercase;color:var(--dim);background:rgba(12,16,26,.55);transition:.18s}
 .lbmore:hover{color:var(--acc);border-color:rgba(242,149,46,.45)}
-.lbhead,.lbrow{display:grid;grid-template-columns:42px 1fr 116px 52px;gap:8px;align-items:center;
+.lbhead,.lbrow{display:grid;grid-template-columns:42px 1fr 104px 52px;gap:8px;align-items:center;
   padding:0 10px;font-size:clamp(9.5px,.98vw,12.5px)}
 .lbrow{flex:0 0 auto;height:clamp(17px,2.45vh,23px);line-height:1;overflow:hidden}
 .lbhead{color:var(--dim2);font-size:clamp(9px,.85vw,11px);letter-spacing:.13em;
@@ -376,15 +376,16 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .lbrow .pos{color:var(--dim);font-variant-numeric:tabular-nums}
 .lbrow.w .pos{color:var(--acc)}
 .lbrow .nm{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.lbrow .rd{color:var(--dim2);font-variant-numeric:tabular-nums;letter-spacing:.08em;
-  text-align:right;font-size:.92em}
+.lbrow .rd{color:var(--dim2);font-variant-numeric:tabular-nums;letter-spacing:.05em;
+  text-align:right;font-size:.84em}
 .lbrow .tot{text-align:right;font-variant-numeric:tabular-nums;font-weight:700}
 /* the selected hole's score, per player, in leaderboard order */
 .t-right:not(.hole) .hs{display:none}
 .t-right.hole .lbhead,.t-right.hole .lbrow{
-  grid-template-columns:42px 1fr 116px 52px clamp(30px,3vw,40px)}
+  grid-template-columns:42px 1fr 104px 52px clamp(28px,2.6vw,36px)}
 .lbrow .hs{display:flex;align-items:center;justify-content:center}
-.lbrow .hs .sq{width:clamp(15px,1.5vw,21px);height:clamp(15px,1.5vw,21px);font-size:10.5px}
+.lbrow .hs .sq{width:clamp(13px,2vh,19px);height:clamp(13px,2vh,19px);
+  font-size:clamp(8.5px,1.05vh,10.5px)}
 .lbrow .hs i{font-style:normal;color:var(--dim2);opacity:.35}
 .lbhead .hs{text-align:center;color:var(--acc);font-variant-numeric:tabular-nums}
 /* the row whose card is drawn on the left - neutral, so it never reads as the
