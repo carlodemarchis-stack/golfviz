@@ -96,6 +96,18 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   transition:.18s;white-space:nowrap}
 .pback:hover{color:var(--acc);border-color:rgba(242,149,46,.45)}
 .pevent .mgrid{margin:clamp(9px,1.3vh,15px) 0 2px}
+.hgrid.eg{margin-top:clamp(8px,1.1vh,13px)}
+.hgrid.eg .hcell,.hgrid.eg .scell{min-height:clamp(15px,2.6vh,29px)}
+.hgrid.eg .sq{width:clamp(17px,1.35vw,23px);height:clamp(17px,1.35vw,23px);font-size:11px}
+.hgrid.eg.tight .hcell,.hgrid.eg.tight .scell{min-height:clamp(14px,1.9vh,21px)}
+.hgrid.eg.tight .sq{width:clamp(14px,1.1vw,19px);height:clamp(14px,1.1vw,19px);font-size:10px}
+.hgrid.eg.tight{margin-top:4px}
+.egcourse + .hgrid.eg{margin-top:3px}
+.egcourse{margin-top:clamp(8px,1.1vh,13px);font-size:clamp(8.5px,.8vw,10.5px);
+  letter-spacing:.16em;text-transform:uppercase;color:var(--dim2);font-weight:700}
+.pevent .sclegend{margin-top:clamp(7px,1vh,12px)}
+.egnote{color:var(--dim2);opacity:.85}
+.egnote b{color:var(--dim)}
 .pewon{margin-top:9px;font-size:clamp(9px,.86vw,11px);color:var(--dim2)}
 .ev.sel{background:rgba(242,149,46,.16);border-color:rgba(242,149,46,.5)}
 .ev.sel .n{color:var(--acc);font-weight:700}
@@ -655,6 +667,9 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
      hole. On a phone the row opens the modal instead, so hide the extra track. */
   .hgrid{grid-template-columns:30px repeat(18,minmax(0,1fr))}
   .hhead.sum,.hsum,.scgap,.sclab,.hrlab.sc,.scell{display:none}
+  /* the inline event panel is a landscape idea too - the modal covers it here */
+  .pevent{display:none!important}
+  .pstats{display:flex!important}
   .rrow{flex:0 0 auto}
   .rrow .bar{height:22px}
   .dcols,.mcols,.hcols{grid-template-columns:1fr;grid-auto-flow:row;grid-template-rows:none}
@@ -927,6 +942,39 @@ function playerCard(p) {
     </div></div>`;
 }
 
+/* The same grid the tournament card draws, for one player's week: the field's
+   own difficulty on each hole, then that player's rounds under it. Rotating
+   weeks get one block a course, since par and difficulty both change. */
+function eventGrid(p, e) {
+  const card = scoreCard(p.id, e.tid);
+  if (!card || !card.length) return "";
+  const t = byId[e.tid];
+  const courses = (t && t.holes) || [];
+
+  const groups = [];
+  card.forEach(r => {
+    const name = r.c || (courses.length === 1 ? courses[0].name : "");
+    let g = groups.find(x => x.name === name);
+    if (!g) groups.push(g = {name, rounds: []});
+    g.rounds.push(r);
+  });
+
+  return groups.map(g => {
+    const par = Object.fromEntries([...Array(18)].map((_, i) => [i + 1, +g.rounds[0].p[i]]));
+    const nums = Object.keys(par).map(Number);
+    const cs = courses.find(c => c.name === g.name) || (courses.length === 1 ? courses[0] : null);
+    const all = cs && cs.rounds.find(r => r.r === "All");
+    const byHole = all ? Object.fromEntries(all.h.map(h => [h[0], h])) : null;
+    return `${groups.length > 1
+        ? `<div class="egcourse">${esc(courseLabel(g.name) || g.name)}</div>` : ""}
+      <div class="hgrid eg${groups.length > 1 ? " tight" : ""}">
+        ${gridHead(nums, par)}
+        ${byHole ? fieldRow("Field", nums, byHole, {cls: "all"}) + `<div class="gap"></div>` : ""}
+        ${g.rounds.map(scoreRowCells).join("")}
+      </div>`;
+  }).join("");
+}
+
 /* One start, drawn in the left column in place of the season boxes. The results
    list stays live beside it, so clicking another row walks the season. */
 function eventPanel(p, e) {
@@ -944,7 +992,16 @@ function eventPanel(p, e) {
       ${kpi("FedExCup", e.pts ? pts(e.pts) : "0")}
       ${kpi("Earnings", abbrMoney(e.money))}
     </div>
-    ${scorecard(scoreCard(p.id, e.tid))}
+    ${eventGrid(p, e)}
+    ${scoreCard(p.id, e.tid) ? `<div class="sclegend">
+      <span><i class="sq eagle" style="font-style:normal">2</i> Eagle or better</span>
+      <span><i class="sq birdie" style="font-style:normal">3</i> Birdie</span>
+      <span><i class="sq bogey" style="font-style:normal">5</i> Bogey</span>
+      <span><i class="sq dbl" style="font-style:normal">6</i> Double or worse</span>
+      ${byId[e.tid] && byId[e.tid].holes && byId[e.tid].holes.length
+        ? `<span class="egnote">The <b>Field</b> row is the whole field's average against par,
+           hole by hole \u2014 red played over, green under.</span>` : ""}
+    </div>` : ""}
     ${t && t.champion.name !== p.name
       ? `<p class="pewon">Won by ${esc(t.champion.name)} · ${esc(t.champion.score || "")}</p>`
       : ""}`;
@@ -1114,6 +1171,53 @@ function tournamentCard(t) {
 /* hole row = [num, par, yards, avg, diffVsPar, eagles, birdies, pars, bogeys, doubles, rank] */
 const diffClass = d => d >= .15 ? "d2" : d >= .05 ? "d1"
   : d <= -.25 ? "e2" : d <= -.05 ? "e1" : "d0";
+const d2 = v => (v >= 0 ? "+" : "\u2212") + Math.abs(v).toFixed(2).replace(/^0/, "");
+
+/* ---- the three pieces every hole grid is built from, so the tournament card
+   and the player card cannot drift apart again. All share one column track:
+   a label, 18 holes, then Out / In / Tot. ---- */
+const gridHead = (nums, par) => {
+  const out = nums.filter(n => n <= 9).reduce((a, n) => a + par[n], 0);
+  const inn = nums.filter(n => n > 9).reduce((a, n) => a + par[n], 0);
+  return `<div></div>` +
+    nums.map(n => `<div class="hhead"><span class="hn">${n}</span>
+      <span class="hp">${par[n]}</span></div>`).join("") +
+    [["Out", out], ["In", inn], ["Tot", out + inn]].map(([l, v]) =>
+      `<div class="hhead sum"><span class="hn">${l}</span><span class="hp">${v}</span></div>`).join("");
+};
+
+/* how the field played each hole - h is [num,par,yards,avg,diff,...] */
+const fieldRow = (label, nums, byHole, opts = {}) => {
+  const nine = lo => nums.filter(n => (lo ? n <= 9 : n > 9))
+    .reduce((a, n) => a + (byHole[n] ? byHole[n][4] : 0), 0);
+  const out = nine(true), inn = nine(false);
+  return `<div class="hrlab ${opts.cls || ""}">${esc(label)}</div>` +
+    nums.map(n => {
+      const h = byHole[n];
+      if (!h) return `<div class="hcell na"></div>`;
+      const on = opts.selHole === h[0];
+      return `<div class="hcell ${diffClass(h[4])} ${on ? "sel" : ""}"${
+        opts.data === undefined ? "" : ` data-h="${h[0]}" data-r="${opts.data}"`}
+        title="Hole ${h[0]} · ${esc(label)} · par ${h[1]} · ${h[2]}y · avg ${h[3]}">${d2(h[4])}</div>`;
+    }).join("") +
+    [out, inn, out + inn].map(v => `<div class="hsum">${d2(v)}</div>`).join("");
+};
+
+/* one round of one player's card */
+const scoreRowCells = r => {
+  const nine = lo => [...Array(18)].map((_, i) => i + 1)
+    .filter(n => (lo ? n <= 9 : n > 9)).reduce((a, n) => a + (r.s[n - 1] || 0), 0);
+  const out = nine(true), inn = nine(false);
+  return `<div class="hrlab sc">R${r.n}</div>` +
+    [...Array(18)].map((_, i) => {
+      const v = r.s[i], par = +r.p[i];
+      return v ? `<div class="scell" title="Hole ${i + 1} · par ${par} · ${v}"><span
+          class="sq ${SCLASS(v - par)}">${v}</span></div>`
+        : `<div class="scell"></div>`;
+    }).join("") +
+    `<div class="hsum">${out || ""}</div><div class="hsum">${inn || ""}</div>
+     <div class="hsum tot">${r.t}</div>`;
+};
 
 /* "Torrey Pines Golf Course (South Course)" -> "South"; otherwise trim the filler */
 const courseLabel = n => {
@@ -1152,21 +1256,7 @@ function playerRows(t, c, nums, pid) {
   const strokes = (row.rounds || []).filter(x => x && x !== "-")
     .reduce((n, x) => n + (+x || 0), 0);
 
-  const nine = (r, lo) => nums.filter(n => (lo ? n <= 9 : n > 9))
-    .reduce((a, n) => a + (r.s[n - 1] || 0), 0);
-
-  const rows = here.map(r => {
-    const out = nine(r, true), inn = nine(r, false);
-    return `<div class="hrlab sc">R${r.n}</div>` +
-      nums.map(n => {
-        const v = r.s[n - 1], par = +r.p[n - 1];
-        return v ? `<div class="scell" title="Hole ${n} · par ${par} · ${v}"><span
-            class="sq ${SCLASS(v - par)}">${v}</span></div>`
-          : `<div class="scell"></div>`;
-      }).join("") +
-      `<div class="hsum">${out || ""}</div><div class="hsum">${inn || ""}</div>
-       <div class="hsum tot">${r.t}</div>`;
-  }).join("");
+  const rows = here.map(scoreRowCells).join("");
 
   return `<div class="gap scgap"></div>
     <div class="sclab">
@@ -1198,30 +1288,11 @@ function holePanel(t, ci = 0, ri = 0, hole = 0, pid = null) {
   const fieldAvg = all.h.reduce((n, h) => n + h[3], 0);
   const tot = sel[5] + sel[6] + sel[7] + sel[8] + sel[9];
   const seg = (i, k) => `<i class="s-${k}" style="width:${(sel[i] / tot * 100).toFixed(2)}%"></i>`;
-  const d2 = v => (v >= 0 ? "+" : "\u2212") + Math.abs(v).toFixed(2).replace(/^0/, "");
 
-  const parOut = nums.filter(n => n <= 9).reduce((a, n) => a + pars[n][1], 0);
-  const parIn = nums.filter(n => n > 9).reduce((a, n) => a + pars[n][1], 0);
-
-  const gridRows = rounds.map((r, i) => {
-    const m = byHole(r);
-    /* the three trailing columns carry how the nine played, not a hole -
-       a sum of the differences, so they are text and never clickable */
-    const nine = lo => nums.filter(n => (lo ? n <= 9 : n > 9))
-      .reduce((a, n) => a + (m[n] ? m[n][4] : 0), 0);
-    const out = nine(true), inn = nine(false);
-    return (r.r === "All" ? "" : i === 1 ? `<div class="gap"></div>` : "") +
-      `<div class="hrlab ${r.r === "All" ? "all" : ""}">${esc(r.r)}</div>` +
-      nums.map(n => {
-        const h = m[n];
-        if (!h) return `<div class="hcell na"></div>`;
-        const on = i === ri && h[0] === sel[0];
-        return `<div class="hcell ${diffClass(h[4])} ${on ? "sel" : ""}" data-h="${h[0]}" data-r="${i}"
-          title="Hole ${h[0]} · ${esc(r.r)} · par ${h[1]} · ${h[2]}y · avg ${h[3]}">${d2(h[4])}</div>`;
-      }).join("") +
-      [out, inn, out + inn].map(v =>
-        `<div class="hsum">${d2(v)}</div>`).join("");
-  }).join("");
+  const gridRows = rounds.map((r, i) =>
+    (r.r === "All" ? "" : i === 1 ? `<div class="gap"></div>` : "") +
+    fieldRow(r.r, nums, byHole(r), {cls: r.r === "All" ? "all" : "", data: i,
+                                    selHole: i === ri ? sel[0] : -1})).join("");
 
   return `<div class="hpanel" data-ci="${ci}" data-ri="${ri}" data-hole="${sel[0]}" data-pid="${esc(pid)}">
     <div class="hptop">
@@ -1256,11 +1327,7 @@ function holePanel(t, ci = 0, ri = 0, hole = 0, pid = null) {
     </div>
 
     <div class="hgrid">
-      <div></div>
-      ${nums.map(n => `<div class="hhead"><span class="hn">${n}</span>
-        <span class="hp">${pars[n][1]}</span></div>`).join("")}
-      ${[["Out", parOut], ["In", parIn], ["Tot", parOut + parIn]].map(([l, v]) =>
-        `<div class="hhead sum"><span class="hn">${l}</span><span class="hp">${v}</span></div>`).join("")}
+      ${gridHead(nums, Object.fromEntries(nums.map(n => [n, pars[n][1]])))}
       ${gridRows}
       ${playerRows(t, c, nums, pid)}
     </div>
