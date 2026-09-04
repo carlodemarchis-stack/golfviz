@@ -104,8 +104,9 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .egcourse{margin-top:clamp(8px,1.1vh,13px);font-size:clamp(8.5px,.8vw,10.5px);
   letter-spacing:.16em;text-transform:uppercase;color:var(--dim2);font-weight:700}
 .pevent .sclegend{margin-top:clamp(7px,1vh,12px)}
-.egnote{color:var(--dim2);opacity:.85}
-.egnote b{color:var(--dim)}
+.egnote{margin-top:clamp(6px,.9vh,10px);font-size:clamp(9px,.84vw,11px);
+  line-height:1.35;color:var(--dim2)}
+.egnote b{color:var(--dim);font-weight:700}
 .pewon{margin-top:9px;font-size:clamp(9px,.86vw,11px);color:var(--dim2)}
 .ev.sel{background:rgba(242,149,46,.16);border-color:rgba(242,149,46,.5)}
 .ev.sel .n{color:var(--acc);font-weight:700}
@@ -270,7 +271,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .hkpis b{color:var(--ink);font-weight:700}
 .hkpis .hard{color:#e8534e}.hkpis .easy{color:#3fe08a}
 .hgrid{flex:0 0 auto;display:grid;
-  grid-template-columns:30px repeat(9,minmax(0,1fr)) minmax(0,1.3fr)
+  grid-template-columns:42px repeat(9,minmax(0,1fr)) minmax(0,1.3fr)
                               repeat(9,minmax(0,1fr)) minmax(0,1.3fr) minmax(0,1.3fr);
   gap:2px;align-content:start}
 .hhead.sum .hn{color:var(--dim2);letter-spacing:.04em}
@@ -290,7 +291,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .hcell{border-radius:5px;text-align:center;cursor:pointer;border:1px solid transparent;
   display:flex;align-items:center;justify-content:center;
   font-size:clamp(7.5px,.73vw,9.5px);font-variant-numeric:tabular-nums;
-  color:rgba(255,255,255,.72);min-height:clamp(15px,4.4vh,48px)}
+  color:rgba(255,255,255,.72);min-height:clamp(14px,3vh,33px)}
 .hcell.na{background:none;cursor:default;color:transparent}
 .hcell.sel{border-color:var(--acc);box-shadow:0 0 0 1px rgba(242,149,46,.55);
   color:var(--ink);font-weight:700}
@@ -302,11 +303,13 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .sclab em{font-style:normal;color:var(--dim2)}
 .sclab i{font-style:normal;margin-left:auto;color:var(--dim2);opacity:.7;
   font-size:clamp(7.5px,.7vw,9.5px);letter-spacing:.06em}
-.hrlab.sc{color:var(--acc)}
+.sclab.fieldlab b{color:var(--dim)}
+.hrlab.sc,.hrlab.me{color:var(--acc)}
+.hrlab.gaprow{color:var(--ink)}
 .scell{display:flex;align-items:center;justify-content:center;
-  min-height:clamp(15px,4.4vh,48px)}
-.hgrid .sq{width:clamp(19px,1.9vw,30px);height:clamp(19px,1.9vw,30px);
-  font-size:clamp(9px,.88vw,13px)}
+  min-height:clamp(14px,3vh,33px)}
+.hgrid .sq{width:clamp(17px,1.45vw,25px);height:clamp(17px,1.45vw,25px);
+  font-size:clamp(9px,.8vw,12px)}
 
 .d2{background:rgba(232,83,78,.42)}.d1{background:rgba(232,83,78,.20)}
 .d0{background:rgba(150,166,205,.13)}
@@ -664,7 +667,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 
   /* the aligned card is a landscape idea: at 375px those 21 columns leave 12px a
      hole. On a phone the row opens the modal instead, so hide the extra track. */
-  .hgrid{grid-template-columns:30px repeat(18,minmax(0,1fr))}
+  .hgrid{grid-template-columns:30px repeat(18,minmax(0,1fr));gap:1px}
+  .hgrid .hrlab{font-size:7px;letter-spacing:.02em;overflow:hidden}
   .hhead.sum,.hsum,.scgap,.sclab,.hrlab.sc,.scell{display:none}
   /* the inline event panel is a landscape idea too - the modal covers it here */
   .pevent{display:none!important}
@@ -968,8 +972,8 @@ function eventGrid(p, e) {
         ? `<div class="egcourse">${esc(courseLabel(g.name) || g.name)}</div>` : ""}
       <div class="hgrid eg">
         ${gridHead(nums, par)}
-        ${byHole ? fieldRow("Field", nums, byHole, {cls: "all"}) + `<div class="gap"></div>` : ""}
         ${g.rounds.map(scoreRowCells).join("")}
+        ${summaryRows(nums, byHole, g.rounds, shortName(p))}
       </div>`;
   }).join("");
 }
@@ -998,10 +1002,11 @@ function eventPanel(p, e) {
       <span><i class="sq birdie" style="font-style:normal">3</i> Birdie</span>
       <span><i class="sq bogey" style="font-style:normal">5</i> Bogey</span>
       <span><i class="sq dbl" style="font-style:normal">6</i> Double or worse</span>
-      ${byId[e.tid] && byId[e.tid].holes && byId[e.tid].holes.length
-        ? `<span class="egnote">The <b>Field</b> row is the whole field's average against par,
-           hole by hole \u2014 red played over, green under.</span>` : ""}
-    </div>` : ""}
+    </div>
+    ${byId[e.tid] && byId[e.tid].holes && byId[e.tid].holes.length
+      ? `<p class="egnote"><b>Field</b> is the whole field's average against par,
+         <b>Player</b> is ${esc(shortName(p))}'s own, and <b>Gap</b> the difference \u2014
+         green means he beat the field there.</p>` : ""}` : ""}
     ${t && t.champion.name !== p.name
       ? `<p class="pewon">Won by ${esc(t.champion.name)} · ${esc(t.champion.score || "")}</p>`
       : ""}`;
@@ -1191,23 +1196,55 @@ const gridHead = (nums, par) => {
     back(nums).map(head).join("") + sum("In", inn) + sum("Tot", out + inn);
 };
 
-/* how the field played each hole - h is [num,par,yards,avg,diff,...] */
-const fieldRow = (label, nums, byHole, opts = {}) => {
-  const nine = ns => ns.reduce((a, n) => a + (byHole[n] ? byHole[n][4] : 0), 0);
+/* A row of numbers against par - the field's, a player's, or the gap between.
+   Same shading either way: red played over, green under, and for the gap a
+   negative number means the player beat the field. */
+const diffRow = (label, nums, val, opts = {}) => {
+  const nine = ns => ns.reduce((a, n) => a + (val(n) ?? 0), 0);
   const out = nine(front(nums)), inn = nine(back(nums));
   const cell = n => {
-    const h = byHole[n];
-    if (!h) return `<div class="hcell na"></div>`;
-    const on = opts.selHole === h[0];
-    return `<div class="hcell ${diffClass(h[4])} ${on ? "sel" : ""}"${
-      opts.data === undefined ? "" : ` data-h="${h[0]}" data-r="${opts.data}"`}
-      title="Hole ${h[0]} · ${esc(label)} · par ${h[1]} · ${h[2]}y · avg ${h[3]}">${d2(h[4])}</div>`;
+    const v = val(n);
+    if (v === null || v === undefined) return `<div class="hcell na"></div>`;
+    const on = opts.selHole === n;
+    return `<div class="hcell ${diffClass(v)} ${on ? "sel" : ""}"${
+      opts.data === undefined ? "" : ` data-h="${n}" data-r="${opts.data}"`}${
+      opts.title ? ` title="${esc(opts.title(n))}"` : ""}>${d2(v)}</div>`;
   };
   const sum = v => `<div class="hsum">${d2(v)}</div>`;
   return `<div class="hrlab ${opts.cls || ""}">${esc(label)}</div>` +
     front(nums).map(cell).join("") + sum(out) +
     back(nums).map(cell).join("") + sum(inn) + sum(out + inn);
 };
+
+/* how the field played each hole - h is [num,par,yards,avg,diff,...] */
+const fieldRow = (label, nums, byHole, opts = {}) =>
+  diffRow(label, nums, n => byHole[n] ? byHole[n][4] : null, {...opts,
+    title: n => byHole[n]
+      ? `Hole ${n} · ${label} · par ${byHole[n][1]} · ${byHole[n][2]}y · avg ${byHole[n][3]}`
+      : ""});
+
+/* the player's own average against par on a hole, across the rounds he played */
+const playerAvg = (rounds, n) => {
+  const v = rounds.map(r => r.s[n - 1]).filter(Boolean);
+  if (!v.length) return null;
+  return v.reduce((a, b) => a + b, 0) / v.length - (+rounds[0].p[n - 1]);
+};
+
+/* Field / player / gap, the block that closes every hole grid */
+function summaryRows(nums, byHole, rounds, who, fieldOpts = {}) {
+  const field = n => byHole && byHole[n] ? byHole[n][4] : null;
+  const mine = n => rounds && rounds.length ? playerAvg(rounds, n) : null;
+  const rows = [];
+  if (byHole) rows.push(fieldRow("Field", nums, byHole, {cls: "all", ...fieldOpts}));
+  if (rounds && rounds.length) {
+    rows.push(diffRow("Player", nums, mine, {cls: "me",
+      title: n => `Hole ${n} · ${who}'s average against par`}));
+    if (byHole) rows.push(diffRow("Gap", nums,
+      n => (mine(n) === null || field(n) === null) ? null : mine(n) - field(n),
+      {cls: "gaprow", title: n => `Hole ${n} · ${who} against the field`}));
+  }
+  return rows.length ? `<div class="gap"></div>` + rows.join("") : "";
+}
 
 /* one round of one player's card */
 const scoreRowCells = r => {
@@ -1296,10 +1333,15 @@ function holePanel(t, ci = 0, ri = 0, hole = 0, pid = null) {
   const tot = sel[5] + sel[6] + sel[7] + sel[8] + sel[9];
   const seg = (i, k) => `<i class="s-${k}" style="width:${(sel[i] / tot * 100).toFixed(2)}%"></i>`;
 
-  const gridRows = rounds.map((r, i) =>
-    (r.r === "All" ? "" : i === 1 ? `<div class="gap"></div>` : "") +
-    fieldRow(r.r, nums, byHole(r), {cls: r.r === "All" ? "all" : "", data: i,
-                                    selHole: i === ri ? sel[0] : -1})).join("");
+  /* data-r stays the index into `rounds`, so click handling is unaffected by
+     where a row is drawn */
+  const gridRows = rounds.map((r, i) => r.r === "All" ? "" :
+    fieldRow(r.r, nums, byHole(r), {data: i, selHole: i === ri ? sel[0] : -1})).join("");
+  const allIdx = rounds.findIndex(r => r.r === "All");
+  const here = pid ? (scoreCard(pid, t.id) || []).filter(r => !r.c || r.c === c.name) : [];
+  const summary = summaryRows(nums, allIdx < 0 ? null : byHole(rounds[allIdx]), here,
+    pid ? nameOf(pid, (t.leaderboard.find(r => r.id === pid) || {}).name) : "",
+    {data: allIdx, selHole: allIdx === ri ? sel[0] : -1});
 
   return `<div class="hpanel" data-ci="${ci}" data-ri="${ri}" data-hole="${sel[0]}" data-pid="${esc(pid)}">
     <div class="hptop">
@@ -1335,8 +1377,11 @@ function holePanel(t, ci = 0, ri = 0, hole = 0, pid = null) {
 
     <div class="hgrid">
       ${gridHead(nums, Object.fromEntries(nums.map(n => [n, pars[n][1]])))}
+      <div class="sclab fieldlab"><b>The field</b><span>average against par, by round</span>
+        <i>click a cell for that hole</i></div>
       ${gridRows}
       ${playerRows(t, c, nums, pid)}
+      ${summary}
     </div>
 
     <div class="hbox">
