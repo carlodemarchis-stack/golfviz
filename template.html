@@ -79,6 +79,27 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .boxgrid.four{grid-template-columns:repeat(4,1fr)}
 .boxgrid.six{grid-template-columns:repeat(6,1fr)}
 .boxgrid.seven{grid-template-columns:repeat(7,1fr)}
+.pstats{flex:0 0 auto;min-width:0;display:flex;flex-direction:column;
+  gap:clamp(9px,1.5vh,18px)}
+/* one start, in place of the season boxes */
+.pevent{flex:0 1 auto;min-width:0;min-height:0;overflow:hidden;
+  background:linear-gradient(160deg,var(--panel),var(--panel2));
+  border:1px solid var(--line);border-radius:16px;
+  padding:clamp(10px,1.4vh,18px) clamp(12px,1.3vw,20px)}
+.pehead{position:relative;padding-right:104px}
+.pehead h4{font-size:clamp(15px,1.7vw,23px);font-weight:700;line-height:1.15;
+  letter-spacing:-.01em}
+.pehead p{font-size:clamp(9.5px,.9vw,12px);color:var(--dim2);margin-top:3px}
+.pback{position:absolute;top:0;right:0;padding:4px 11px;border-radius:999px;
+  border:1px solid var(--line);background:rgba(12,16,26,.55);color:var(--dim);
+  font-size:clamp(8.5px,.8vw,10.5px);letter-spacing:.1em;text-transform:uppercase;
+  transition:.18s;white-space:nowrap}
+.pback:hover{color:var(--acc);border-color:rgba(242,149,46,.45)}
+.pevent .mgrid{margin:clamp(9px,1.3vh,15px) 0 2px}
+.pewon{margin-top:9px;font-size:clamp(9px,.86vw,11px);color:var(--dim2)}
+.ev.sel{background:rgba(242,149,46,.16);border-color:rgba(242,149,46,.5)}
+.ev.sel .n{color:var(--acc);font-weight:700}
+
 .pbox.mix{padding-bottom:0;overflow:hidden}
 .pmix{display:flex;height:clamp(7px,1.05vh,11px);overflow:hidden;
   margin:clamp(8px,1.1vh,14px) calc(-1 * clamp(12px,1.35vw,20px)) 0}
@@ -238,8 +259,15 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   font-size:clamp(9px,.88vw,11.5px);color:var(--dim2)}
 .hkpis b{color:var(--ink);font-weight:700}
 .hkpis .hard{color:#e8534e}.hkpis .easy{color:#3fe08a}
-.hgrid{flex:0 0 auto;display:grid;grid-template-columns:30px repeat(18,minmax(0,1fr));
+.hgrid{flex:0 0 auto;display:grid;
+  grid-template-columns:30px repeat(18,minmax(0,1fr)) repeat(3,minmax(0,1.3fr));
   gap:2px;align-content:start}
+.hhead.sum .hn{color:var(--dim2);letter-spacing:.04em}
+/* how the nine played, summed - text, not a cell, and never clickable */
+.hsum{display:flex;align-items:center;justify-content:center;
+  font-size:clamp(7.5px,.73vw,9.5px);font-variant-numeric:tabular-nums;
+  color:var(--dim2);border-radius:5px;background:rgba(255,255,255,.035)}
+.hsum.tot{color:var(--ink);font-weight:700;background:rgba(255,255,255,.075)}
 .hgrid > div{min-width:0}
 .hhead{text-align:center;line-height:1.1;padding-bottom:2px}
 .hhead .hn{display:block;font-size:clamp(8.5px,.8vw,11px);font-weight:700;color:var(--dim)}
@@ -251,22 +279,41 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .hcell{border-radius:5px;text-align:center;cursor:pointer;border:1px solid transparent;
   display:flex;align-items:center;justify-content:center;
   font-size:clamp(7.5px,.73vw,9.5px);font-variant-numeric:tabular-nums;
-  color:rgba(255,255,255,.72);min-height:clamp(15px,2.5vh,26px)}
+  color:rgba(255,255,255,.72);min-height:clamp(15px,4.4vh,48px)}
 .hcell.na{background:none;cursor:default;color:transparent}
 .hcell.sel{border-color:var(--acc);box-shadow:0 0 0 1px rgba(242,149,46,.55);
   color:var(--ink);font-weight:700}
+/* one player's card, in the heat map's columns - a score sits under its hole */
+.sclab{grid-column:1 / -1;display:flex;align-items:baseline;gap:clamp(6px,.9vw,12px);
+  flex-wrap:wrap;padding-bottom:3px;font-size:clamp(8.5px,.82vw,11px);color:var(--dim2)}
+.sclab b{color:var(--acc);font-weight:700;font-size:clamp(10px,.96vw,13px)}
+.sclab span{font-variant-numeric:tabular-nums;color:var(--dim)}
+.sclab em{font-style:normal;color:var(--dim2)}
+.sclab i{font-style:normal;margin-left:auto;color:var(--dim2);opacity:.7;
+  font-size:clamp(7.5px,.7vw,9.5px);letter-spacing:.06em}
+.hrlab.sc{color:var(--acc)}
+.scell{display:flex;align-items:center;justify-content:center;
+  min-height:clamp(15px,4.4vh,48px)}
+.hgrid .sq{width:clamp(19px,1.9vw,30px);height:clamp(19px,1.9vw,30px);
+  font-size:clamp(9px,.88vw,13px)}
+
 .d2{background:rgba(232,83,78,.42)}.d1{background:rgba(232,83,78,.20)}
 .d0{background:rgba(150,166,205,.13)}
 .e1{background:rgba(63,224,138,.20)}.e2{background:rgba(63,224,138,.40)}
 .hbox{flex:0 1 auto;min-height:0;display:flex;flex-direction:column;
   background:linear-gradient(140deg,var(--panel),var(--panel2));border:1px solid var(--line);
   border-radius:14px;padding:clamp(8px,1.2vh,14px) clamp(10px,1.2vw,16px)}
-.hdet{flex:0 0 auto;display:grid;grid-template-columns:auto 1fr;gap:clamp(8px,1.4vw,20px);
-  align-items:center}
+/* the box takes whatever the two grids leave, and the distribution grows into it
+   rather than floating a thin bar in an empty panel */
+.hdet{flex:1 1 auto;min-height:0;display:grid;grid-template-columns:auto 1fr;
+  gap:clamp(8px,1.4vw,20px);align-items:stretch}
+.hdet .lead{align-self:center}
+.hdet > div:last-child{display:flex;flex-direction:column;justify-content:center;min-height:0}
 .hdet .lead{font-size:clamp(10px,1vw,13px);color:var(--dim);white-space:nowrap}
 .hdet .lead b{color:var(--ink);font-size:clamp(13px,1.35vw,18px);font-weight:700}
 .hdet .lead i{font-style:normal;color:var(--acc);font-weight:700}
-.hmix{display:flex;height:clamp(11px,1.7vh,17px);border-radius:5px;overflow:hidden}
+.hmix{display:flex;flex:1 1 auto;min-height:clamp(11px,2.2vh,22px);max-height:34px;
+  border-radius:6px;overflow:hidden}
 .hmix i{display:block;height:100%}
 .hcounts{display:flex;gap:clamp(7px,1.2vw,16px);flex-wrap:wrap;margin-top:5px;
   font-size:clamp(8.5px,.8vw,10.5px);color:var(--dim2)}
@@ -313,6 +360,17 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .lbrow .rd{color:var(--dim2);font-variant-numeric:tabular-nums;letter-spacing:.08em;
   text-align:right;font-size:.92em}
 .lbrow .tot{text-align:right;font-variant-numeric:tabular-nums;font-weight:700}
+/* the selected hole's score, per player, in leaderboard order */
+.t-right:not(.hole) .hs{display:none}
+.t-right.hole .lbhead,.t-right.hole .lbrow{
+  grid-template-columns:42px 1fr 116px 52px clamp(30px,3vw,40px)}
+.lbrow .hs{display:flex;align-items:center;justify-content:center}
+.lbrow .hs .sq{width:clamp(15px,1.5vw,21px);height:clamp(15px,1.5vw,21px);font-size:10.5px}
+.lbrow .hs i{font-style:normal;color:var(--dim2);opacity:.35}
+.lbhead .hs{text-align:center;color:var(--acc);font-variant-numeric:tabular-nums}
+/* the row whose card is drawn on the left */
+.lbrow.sel{background:rgba(242,149,46,.16);border-color:rgba(242,149,46,.55)}
+.lbrow.sel .nm{color:var(--acc);font-weight:700}
 /* a row we hold a scorecard for opens it; the Zurich teams do not have one */
 .lbrow.has{cursor:pointer;border:1px solid transparent}
 .lbrow.has:hover{background:var(--panel);border-color:rgba(242,149,46,.35)}
@@ -589,6 +647,14 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .ev{flex:0 0 auto;max-height:none;padding:5px 7px;line-height:1.25}
   .lbrow{height:auto;padding:5px 7px;line-height:1.25}
   .lbrow,.lbhead{grid-template-columns:34px minmax(0,1fr) 78px 42px;gap:5px}
+  .t-right.hole .lbrow,.t-right.hole .lbhead{
+    grid-template-columns:30px minmax(0,1fr) 62px 38px 24px;gap:4px}
+  .lbrow .hs .sq{width:17px;height:17px;font-size:9.5px}
+
+  /* the aligned card is a landscape idea: at 375px those 21 columns leave 12px a
+     hole. On a phone the row opens the modal instead, so hide the extra track. */
+  .hgrid{grid-template-columns:30px repeat(18,minmax(0,1fr))}
+  .hhead.sum,.hsum,.scgap,.sclab,.hrlab.sc,.scell{display:none}
   .rrow{flex:0 0 auto}
   .rrow .bar{height:22px}
   .dcols,.mcols,.hcols{grid-template-columns:1fr;grid-auto-flow:row;grid-template-rows:none}
@@ -680,6 +746,10 @@ function scoreCard(pid, tid) {
   return v;
 }
 const toPar = v => v == null ? "" : v > 0 ? "+" + v : v === 0 ? "E" : String(v);
+/* score against par -> the class every scorecard, heat map and leaderboard cell
+   shares. Declared here because the first render reads it. */
+const SCLASS = d => d <= -2 ? "eagle" : d === -1 ? "birdie" : d === 0 ? "par"
+  : d === 1 ? "bogey" : "dbl";
 
 /* every card at one tournament, in leaderboard order - built once per event */
 const fieldCache = new Map();
@@ -784,6 +854,7 @@ function playerCard(p) {
             </div>
           </div>
 
+          <div class="pstats">
           <div class="pbox">
             <div class="boxlegend">2026 Rankings</div>
             <div class="boxgrid four">
@@ -836,6 +907,8 @@ function playerCard(p) {
               <div class="cell"><b>${abbrMoney(c.money)}</b><i>Earnings</i></div>
             </div>
           </div>
+          </div>
+          <div class="pevent" hidden></div>
         </div>
 
         <div class="pres">
@@ -852,6 +925,50 @@ function playerCard(p) {
         </div>
       </div>
     </div></div>`;
+}
+
+/* One start, drawn in the left column in place of the season boxes. The results
+   list stays live beside it, so clicking another row walks the season. */
+function eventPanel(p, e) {
+  const t = byId[e.tid];
+  const kpi = (k, v) => `<div><div class="k">${k}</div><div class="v">${v}</div></div>`;
+  return `<div class="pehead">
+      <button class="pback" title="Back to the season (Esc)">&larr; 2026 season</button>
+      <h4>${esc(e.name)}</h4>
+      <p>${t ? `${esc(t.date)} 2026 · ${esc(t.course || "")}` : esc(e.date)}</p>
+    </div>
+    <div class="mgrid">
+      ${kpi("Position", esc(e.pos || "\u2014"))}
+      ${kpi("Total", esc(e.total || "\u2014"))}
+      ${kpi("To par", esc(e.toPar || "\u2014"))}
+      ${kpi("FedExCup", e.pts ? pts(e.pts) : "0")}
+      ${kpi("Earnings", abbrMoney(e.money))}
+    </div>
+    ${scorecard(scoreCard(p.id, e.tid))}
+    ${t && t.champion.name !== p.name
+      ? `<p class="pewon">Won by ${esc(t.champion.name)} · ${esc(t.champion.score || "")}</p>`
+      : ""}`;
+}
+
+function openInlineEvent(card, pid, tid) {
+  const p = P.find(x => x.id === pid);
+  const e = p && p.events.find(x => x.tid === tid);
+  if (!e) return;
+  card.querySelector(".pevent").innerHTML = eventPanel(p, e);
+  card.querySelector(".pevent").hidden = false;
+  card.querySelector(".pstats").hidden = true;
+  card.querySelectorAll(".ev.sel").forEach(x => x.classList.remove("sel"));
+  card.querySelectorAll(`.ev[data-ev="${tid}"]`).forEach(x => x.classList.add("sel"));
+}
+
+function closeInlineEvent(card) {
+  const box = card.querySelector(".pevent");
+  if (!box || box.hidden) return false;
+  box.hidden = true;
+  box.innerHTML = "";
+  card.querySelector(".pstats").hidden = false;
+  card.querySelectorAll(".ev.sel").forEach(x => x.classList.remove("sel"));
+  return true;
 }
 
 const SG_ROWS = [["total", "SG: Total"], ["ott", "Off the tee"], ["app", "Approach"],
@@ -930,6 +1047,7 @@ function tournamentCard(t) {
   const photo = HAS_PHOTO.has(t.id);
   const ch = t.champion;
   const rows = t.leaderboard;
+  const open = openingPid(t);
   const where = [t.city, t.state || (t.countryCode !== "USA" ? t.countryCode : "")]
     .filter(Boolean).join(", ");
   const nameMax = t.name.length > 34 ? 27 : t.name.length > 24 ? 33 : 40;
@@ -973,14 +1091,17 @@ function tournamentCard(t) {
       </div>
       <div class="t-right">
         <div class="lbhead"><span>Pos</span><span>${t.team ? "Team" : "Player"}</span>
-          <span style="text-align:right">Rounds</span><span style="text-align:right">Total</span></div>
+          <span style="text-align:right">Rounds</span><span style="text-align:right">Total</span>
+          <span class="hs"></span></div>
         <div class="lb">${rows.map((r, i) => `
-          <div class="lbrow ${i === 0 ? "w" : ""}${SC[r.id + "_" + t.id] ? " has" : ""}"
-            data-i="${i}"${SC[r.id + "_" + t.id] ? ` title="Scorecard"` : ""}>
+          <div class="lbrow ${i === 0 ? "w" : ""}${SC[r.id + "_" + t.id] ? " has" : ""}${
+              r.id === open ? " sel" : ""}"
+            data-i="${i}"${SC[r.id + "_" + t.id] ? ` title="Show this card on the left"` : ""}>
             <span class="pos">${esc(r.pos || "")}</span>
             <span class="nm">${esc(r.name)}${r.amateur ? " (a)" : ""}</span>
             <span class="rd">${(r.rounds || []).filter(Boolean).join(" ")}</span>
             <span class="tot">${esc(r.total || "")}</span>
+            <span class="hs"></span>
           </div>`).join("")}</div>
         ${rows.length > 12
           ? `<button class="lbmore" data-n="${rows.length}">Show all ${rows.length}</button>`
@@ -1013,58 +1134,55 @@ function roundOurs(t, courseName, roundNum) {
     r.n === roundNum && (!r.c || r.c === courseName) && r.s.some(Boolean))).length;
 }
 
-/* Scores on one hole, whole field. At the rotating events a player's round may
-   have been on another course, so the card's own course name has to match. */
-function holeScorers(t, courseName, roundNum, hole) {
-  const out = [];
-  fieldCards(t).forEach(f => {
-    f.card.forEach(r => {
-      if (r.n !== roundNum) return;
-      if (r.c && r.c !== courseName) return;      // played a different course that day
-      const v = r.s[hole - 1];
-      if (v) out.push({n: nameOf(f.id, f.name), order: f.order, v});
-    });
-  });
-  return out.sort((a, b) => a.v - b.v || a.order - b.order);
-}
+/* A tournament card opens on the winner's card rather than an empty half-column,
+   so the left panel is never blank and the link to the leaderboard is visible. */
+const openingPid = t => (t.leaderboard.find(r => SC[r.id + "_" + t.id]) || {}).id || "";
 
-function scorerCols(t, c, rd, sel) {
-  if (rd.r === "All")
-    return `<div class="hwho"><div class="hwnote">Pick a round above to see who made
-      what on this hole.</div></div>`;
-  const rn = +rd.r.slice(1);
-  const list = holeScorers(t, c.name, rn, sel[0]);
-  if (!list.length)
-    return `<div class="hwho"><div class="hwnote">${t.team
-      ? `A team week — the TOUR records one ball a side in the alternate-shot rounds,
-         so there are no individual scorecards to break out.`
-      : `No scorecards for this course in round ${rn}.`}</div></div>`;
-  const byScore = {};
-  list.forEach(x => (byScore[x.v] = byScore[x.v] || []).push(x.n));
-  const keys = Object.keys(byScore).map(Number).sort((a, b) => a - b);
-  const NAMES = {"-3": "Albatross", "-2": "Eagle", "-1": "Birdie", "0": "Par",
-                 "1": "Bogey", "2": "Double"};
-  const cols = keys.map(k => {
-    const d = k - sel[1];
-    const label = NAMES[d] || (d > 0 ? `+${d}` : `${d}`);
-    return `<div class="hwcol">
-      <div class="hwhead"><span class="${SCLASS(d) === "par" ? "" : ""}"
-        style="color:${d <= -2 ? "#3fe08a" : d === -1 ? "var(--acc)" : d === 0 ? "var(--ink)"
-          : d === 1 ? "#8d9bbd" : "#e8534e"}">${k} · ${label}</span>
-        <span>${byScore[k].length}</span></div>
-      <ul>${byScore[k].map(n => `<li>${esc(n)}</li>`).join("")}</ul></div>`;
+/* One player's rounds, dropped into the heat map's own column track so a score
+   sits directly under the hole it was made on. Only the rounds played on the
+   course the panel is showing - at the three rotating events the rest are named
+   in the footnote instead. */
+function playerRows(t, c, nums, pid) {
+  if (!pid) return "";
+  const row = t.leaderboard.find(r => r.id === pid);
+  const card = scoreCard(pid, t.id);
+  if (!row || !card) return "";
+  const here = card.filter(r => !r.c || r.c === c.name);
+  const away = card.filter(r => r.c && r.c !== c.name);
+  const strokes = (row.rounds || []).filter(x => x && x !== "-")
+    .reduce((n, x) => n + (+x || 0), 0);
+
+  const nine = (r, lo) => nums.filter(n => (lo ? n <= 9 : n > 9))
+    .reduce((a, n) => a + (r.s[n - 1] || 0), 0);
+
+  const rows = here.map(r => {
+    const out = nine(r, true), inn = nine(r, false);
+    return `<div class="hrlab sc">R${r.n}</div>` +
+      nums.map(n => {
+        const v = r.s[n - 1], par = +r.p[n - 1];
+        return v ? `<div class="scell" title="Hole ${n} · par ${par} · ${v}"><span
+            class="sq ${SCLASS(v - par)}">${v}</span></div>`
+          : `<div class="scell"></div>`;
+      }).join("") +
+      `<div class="hsum">${out || ""}</div><div class="hsum">${inn || ""}</div>
+       <div class="hsum tot">${r.t}</div>`;
   }).join("");
-  const weights = keys.map(k => Math.max(1, Math.ceil(byScore[k].length / 7)));
-  return `<div class="hwho">
-    <div class="lbl">Round ${rn} · the whole field, ${list.length} players</div>
-    <div class="hwcols" style="grid-template-columns:${
-      weights.map(w => `minmax(0,${w}fr)`).join(" ")}">${cols}</div>
-  </div>`;
+
+  return `<div class="gap scgap"></div>
+    <div class="sclab">
+      <b>${esc(row.name)}</b>
+      <span>${esc(row.pos || "")} · ${strokes || "—"} (${esc(row.total || "")})</span>
+      ${away.length ? `<em>R${away.map(r => r.n).join(", R")} played
+        ${away.length > 1 ? "elsewhere" : "on " + esc(courseLabel(away[0].c))}</em>` : ""}
+      <i>click the row again to clear</i>
+    </div>
+    ${rows}`;
 }
 
-function holePanel(t, ci = 0, ri = 0, hole = 0) {
+function holePanel(t, ci = 0, ri = 0, hole = 0, pid = null) {
   const cs = t.holes;
   if (!cs || !cs.length) return "";
+  if (pid === null) pid = openingPid(t);
   const c = cs[Math.min(ci, cs.length - 1)];
   /* the feed returns All, R4..R1 - read it chronologically instead */
   const rounds = c.rounds.slice().sort((a, b) =>
@@ -1082,8 +1200,16 @@ function holePanel(t, ci = 0, ri = 0, hole = 0) {
   const seg = (i, k) => `<i class="s-${k}" style="width:${(sel[i] / tot * 100).toFixed(2)}%"></i>`;
   const d2 = v => (v >= 0 ? "+" : "\u2212") + Math.abs(v).toFixed(2).replace(/^0/, "");
 
+  const parOut = nums.filter(n => n <= 9).reduce((a, n) => a + pars[n][1], 0);
+  const parIn = nums.filter(n => n > 9).reduce((a, n) => a + pars[n][1], 0);
+
   const gridRows = rounds.map((r, i) => {
     const m = byHole(r);
+    /* the three trailing columns carry how the nine played, not a hole -
+       a sum of the differences, so they are text and never clickable */
+    const nine = lo => nums.filter(n => (lo ? n <= 9 : n > 9))
+      .reduce((a, n) => a + (m[n] ? m[n][4] : 0), 0);
+    const out = nine(true), inn = nine(false);
     return (r.r === "All" ? "" : i === 1 ? `<div class="gap"></div>` : "") +
       `<div class="hrlab ${r.r === "All" ? "all" : ""}">${esc(r.r)}</div>` +
       nums.map(n => {
@@ -1092,10 +1218,12 @@ function holePanel(t, ci = 0, ri = 0, hole = 0) {
         const on = i === ri && h[0] === sel[0];
         return `<div class="hcell ${diffClass(h[4])} ${on ? "sel" : ""}" data-h="${h[0]}" data-r="${i}"
           title="Hole ${h[0]} · ${esc(r.r)} · par ${h[1]} · ${h[2]}y · avg ${h[3]}">${d2(h[4])}</div>`;
-      }).join("");
+      }).join("") +
+      [out, inn, out + inn].map(v =>
+        `<div class="hsum">${d2(v)}</div>`).join("");
   }).join("");
 
-  return `<div class="hpanel" data-ci="${ci}" data-ri="${ri}" data-hole="${sel[0]}">
+  return `<div class="hpanel" data-ci="${ci}" data-ri="${ri}" data-hole="${sel[0]}" data-pid="${esc(pid)}">
     <div class="hptop">
       ${cs.length > 1
         ? `<div class="hpills">${cs.map((x, i) =>
@@ -1131,7 +1259,10 @@ function holePanel(t, ci = 0, ri = 0, hole = 0) {
       <div></div>
       ${nums.map(n => `<div class="hhead"><span class="hn">${n}</span>
         <span class="hp">${pars[n][1]}</span></div>`).join("")}
+      ${[["Out", parOut], ["In", parIn], ["Tot", parOut + parIn]].map(([l, v]) =>
+        `<div class="hhead sum"><span class="hn">${l}</span><span class="hp">${v}</span></div>`).join("")}
       ${gridRows}
+      ${playerRows(t, c, nums, pid)}
     </div>
 
     <div class="hbox">
@@ -1149,7 +1280,6 @@ function holePanel(t, ci = 0, ri = 0, hole = 0) {
         </div>
       </div>
     </div>
-    ${scorerCols(t, c, rd, sel)}
     </div>
   </div>`;
 }
@@ -1309,8 +1439,11 @@ document.querySelectorAll("#tb-tabs button").forEach(b =>
 document.getElementById("count").onclick = openJump;
 
 addEventListener("keydown", e => {
-  if (e.key === "Escape") return document.querySelectorAll(".modal.on")
-    .forEach(m => m.classList.remove("on"));
+  if (e.key === "Escape") {
+    if (document.querySelector(".modal.on"))
+      return document.querySelectorAll(".modal.on").forEach(m => m.classList.remove("on"));
+    return closeInlineEvent(film.children[cur]);   // then the inline event panel
+  }
   if (document.getElementById("emodal").classList.contains("on")) {
     if (e.key === "ArrowRight") { e.preventDefault(); stepEvent(1); }
     if (e.key === "ArrowLeft") { e.preventDefault(); stepEvent(-1); }
@@ -1373,13 +1506,56 @@ function setHoleMode(mode, remember) {
   if (m === "pct") setHoleMode(m, false);
 })();
 
+/* The two columns of a tournament card are one instrument: the heat map draws
+   the selected player's card in its own columns, and the leaderboard carries the
+   selected hole's score for everyone. Portrait stacks them a screen apart, so
+   there the row still opens the modal instead. */
+const isLandscape = () => innerWidth > innerHeight;
+
+function syncTournament(card, ci, ri, hole, pid) {
+  const t = byId[card.dataset.tid];
+  card.querySelector(".hpanel").outerHTML = holePanel(t, ci, ri, hole, pid);
+  const hp = card.querySelector(".hpanel");
+  const right = card.querySelector(".t-right");
+  const c = t.holes[Math.min(+hp.dataset.ci, t.holes.length - 1)];
+  const rounds = c.rounds.slice().sort((a, b) =>
+    a.r === "All" ? -1 : b.r === "All" ? 1 : (+a.r.slice(1)) - (+b.r.slice(1)));
+  const rd = rounds[Math.min(+hp.dataset.ri, rounds.length - 1)];
+  const h = +hp.dataset.hole;
+
+  right.querySelectorAll(".lbrow").forEach(row => {
+    row.classList.toggle("sel", !!pid && t.leaderboard[+row.dataset.i].id === pid);
+  });
+
+  if (rd.r === "All") { right.classList.remove("hole"); return; }
+  const rn = +rd.r.slice(1);
+  right.classList.add("hole");
+  right.querySelector(".lbhead .hs").textContent = "H" + h;
+  right.querySelectorAll(".lbrow").forEach(row => {
+    const el = row.querySelector(".hs");
+    const r = t.leaderboard[+row.dataset.i];
+    const cd = scoreCard(r.id, t.id);
+    const played = cd && cd.find(x => x.n === rn && (!x.c || x.c === c.name));
+    const v = played && played.s[h - 1];
+    el.innerHTML = v ? `<span class="sq ${SCLASS(v - (+played.p[h - 1]))}">${v}</span>`
+                     : `<i>\u2013</i>`;
+    el.title = v ? `${esc(r.name)} · hole ${h} · round ${rn}` : "";
+  });
+}
+
 /* ------------------------------------------------------- tabs + modals */
 film.addEventListener("click", e => {
   const tab = e.target.closest(".tab");
   if (tab) { setTab(tab.dataset.tab, true); return; }
   const lbr = e.target.closest(".lbrow.has");
   if (lbr) {
-    openFieldCard(lbr.closest(".card").dataset.tid, +lbr.dataset.i);
+    const card = lbr.closest(".card");
+    if (!isLandscape()) { openFieldCard(card.dataset.tid, +lbr.dataset.i); return; }
+    const hp = card.querySelector(".hpanel");
+    if (!hp) { openFieldCard(card.dataset.tid, +lbr.dataset.i); return; }
+    const id = byId[card.dataset.tid].leaderboard[+lbr.dataset.i].id;
+    syncTournament(card, +hp.dataset.ci, +hp.dataset.ri, +hp.dataset.hole,
+                   hp.dataset.pid === id ? "" : id);   // clicking again clears
     return;
   }
   const more = e.target.closest(".lbmore");
@@ -1396,18 +1572,22 @@ film.addEventListener("click", e => {
     const cBtn = e.target.closest(".hpills button[data-c]");
     if (cell || cBtn) {
       const card = hp.closest(".card");
-      const t = T.find(x => x.id === card.dataset.tid);
       const ci = cBtn ? +cBtn.dataset.c : +hp.dataset.ci;
       const ri = cBtn ? 0 : +cell.dataset.r;
       const hole = cBtn ? +hp.dataset.hole : +cell.dataset.h;
-      hp.outerHTML = holePanel(t, ci, ri, hole);
+      syncTournament(card, ci, ri, hole, hp.dataset.pid || "");
       return;
     }
   }
   const mode = e.target.closest(".hmode button");
   if (mode) { setHoleMode(mode.dataset.mode, true); return; }
+  const back = e.target.closest(".pback");
+  if (back) { closeInlineEvent(back.closest(".card")); return; }
   const ev = e.target.closest(".ev");
-  if (ev) openEvent(ev.dataset.pid, ev.dataset.ev);
+  if (!ev) return;
+  const card = ev.closest(".card");
+  if (isLandscape()) openInlineEvent(card, ev.dataset.pid, ev.dataset.ev);
+  else openEvent(ev.dataset.pid, ev.dataset.ev);
 });
 
 const byId = {};
@@ -1514,9 +1694,6 @@ function fieldView() {
     nav: "\u2190 \u2192 to move down the leaderboard",
   };
 }
-const SCLASS = d => d <= -2 ? "eagle" : d === -1 ? "birdie" : d === 0 ? "par"
-  : d === 1 ? "bogey" : "dbl";
-
 function scorecard(card) {
   if (!card || !card.length) return "";
   const sum = a => a.reduce((x, y) => x + y, 0);
@@ -1660,16 +1837,21 @@ function openHelp() {
     </ul>
     <h5>On a player card</h5>
     <ul>
-      <li><b>Results</b> lists every 2026 start; <b>click any row</b> for the round-by-round detail</li>
+      <li><b>Results</b> lists every 2026 start; <b>click any row</b> and that week takes over the
+        left column, hole by hole. <b>Esc</b> or <b>← 2026 season</b> puts the stats back</li>
       <li><b>Majors</b> filters the same list to the four majors and THE PLAYERS</li>
     </ul>
     <h5>On a tournament card</h5>
     <ul>
-      <li><b>Click any leaderboard row</b> for that player's hole-by-hole card — the whole field,
-        not just the ranked 70. <b>← →</b> then walks down the leaderboard</li>
-      <li><b>Click a hole</b> in the grid for its scoring, and the name of everyone who made what</li>
+      <li><b>Click any leaderboard row</b> — the whole field, not just the ranked 70 — and that
+        player's card is drawn <i>in the heat map's own columns</i>, so every score sits under the
+        hole it was made on. The card opens on the winner; click the row again to clear it</li>
+      <li><b>Click a hole</b> in the grid and the leaderboard gains a column: what every player in
+        the field made there, in finishing order</li>
       <li><b>Show all</b> opens the full field; the round pills switch course at the rotating events</li>
     </ul>
+    <p style="margin-top:10px;color:var(--dim2)">On a phone the columns stack, so a row opens the
+      scorecard in a panel instead.</p>
     <p style="margin-top:14px">Best in landscape on a laptop or iPad; it works in portrait on a
       phone, where each card scrolls.</p>`;
   document.getElementById("hmodal").classList.add("on");
