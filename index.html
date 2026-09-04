@@ -54,7 +54,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 /* left top: photo, with personal info + all-time record beside it */
 .ptop{flex:0 0 auto;display:flex;gap:clamp(12px,1.8vw,26px);
   align-items:stretch;min-width:0}
-.pphoto{flex:0 0 clamp(128px,14.2vw,216px);height:auto;aspect-ratio:7/9;
+.pphoto{flex:0 0 clamp(128px,14.2vw,216px);height:auto;aspect-ratio:7/6;
   position:relative;border-radius:var(--r);
   overflow:hidden;background:linear-gradient(160deg,var(--panel),var(--panel2));
   border:1px solid var(--line)}
@@ -82,13 +82,14 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .pstats{flex:0 0 auto;min-width:0;display:flex;flex-direction:column;
   gap:clamp(9px,1.5vh,18px)}
 /* one start, in place of the season boxes */
-.pevent{flex:0 1 auto;min-width:0;min-height:0;overflow:hidden;
+.pevent{flex:0 1 auto;min-width:0;min-height:0;overflow-y:auto;overflow-x:hidden;
+  scrollbar-width:thin;overscroll-behavior:contain;
   background:linear-gradient(160deg,var(--panel),var(--panel2));
   border:1px solid var(--line);border-radius:16px;
   padding:clamp(10px,1.4vh,18px) clamp(12px,1.3vw,20px)}
 .pehead{position:relative;padding-right:104px}
-.pehead h4{font-size:clamp(15px,1.7vw,23px);font-weight:700;line-height:1.15;
-  letter-spacing:-.01em}
+.pehead h4{font-weight:700;line-height:1.15;letter-spacing:-.01em;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .pehead p{font-size:clamp(9.5px,.9vw,12px);color:var(--dim2);margin-top:3px}
 .pback{position:absolute;top:0;right:0;padding:4px 11px;border-radius:999px;
   border:1px solid var(--line);background:rgba(12,16,26,.55);color:var(--dim);
@@ -99,9 +100,6 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .hgrid.eg{margin-top:clamp(8px,1.1vh,13px)}
 .hgrid.eg .hcell,.hgrid.eg .scell{min-height:clamp(15px,2.6vh,29px)}
 .hgrid.eg .sq{width:clamp(17px,1.35vw,23px);height:clamp(17px,1.35vw,23px);font-size:11px}
-.hgrid.eg.tight .hcell,.hgrid.eg.tight .scell{min-height:clamp(14px,1.9vh,21px)}
-.hgrid.eg.tight .sq{width:clamp(14px,1.1vw,19px);height:clamp(14px,1.1vw,19px);font-size:10px}
-.hgrid.eg.tight{margin-top:4px}
 .egcourse + .hgrid.eg{margin-top:3px}
 .egcourse{margin-top:clamp(8px,1.1vh,13px);font-size:clamp(8.5px,.8vw,10.5px);
   letter-spacing:.16em;text-transform:uppercase;color:var(--dim2);font-weight:700}
@@ -272,7 +270,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .hkpis b{color:var(--ink);font-weight:700}
 .hkpis .hard{color:#e8534e}.hkpis .easy{color:#3fe08a}
 .hgrid{flex:0 0 auto;display:grid;
-  grid-template-columns:30px repeat(18,minmax(0,1fr)) repeat(3,minmax(0,1.3fr));
+  grid-template-columns:30px repeat(9,minmax(0,1fr)) minmax(0,1.3fr)
+                              repeat(9,minmax(0,1fr)) minmax(0,1.3fr) minmax(0,1.3fr);
   gap:2px;align-content:start}
 .hhead.sum .hn{color:var(--dim2);letter-spacing:.04em}
 /* how the nine played, summed - text, not a cell, and never clickable */
@@ -627,7 +626,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .pcol,.pres{flex:0 0 auto}
   .pcol{gap:clamp(9px,1.5vh,16px);justify-content:flex-start}
   .ptop{flex:0 0 auto}
-  .pphoto{flex:0 0 clamp(112px,32vw,170px)}
+  .pphoto{flex:0 0 clamp(112px,32vw,170px);aspect-ratio:7/9}
   .pinfo{justify-content:flex-start;gap:5px}
   .boxgrid.four{grid-template-columns:repeat(2,1fr);row-gap:11px}
   .boxgrid.six,.boxgrid.seven{grid-template-columns:repeat(3,1fr);row-gap:11px}
@@ -967,7 +966,7 @@ function eventGrid(p, e) {
     const byHole = all ? Object.fromEntries(all.h.map(h => [h[0], h])) : null;
     return `${groups.length > 1
         ? `<div class="egcourse">${esc(courseLabel(g.name) || g.name)}</div>` : ""}
-      <div class="hgrid eg${groups.length > 1 ? " tight" : ""}">
+      <div class="hgrid eg">
         ${gridHead(nums, par)}
         ${byHole ? fieldRow("Field", nums, byHole, {cls: "all"}) + `<div class="gap"></div>` : ""}
         ${g.rounds.map(scoreRowCells).join("")}
@@ -982,7 +981,8 @@ function eventPanel(p, e) {
   const kpi = (k, v) => `<div><div class="k">${k}</div><div class="v">${v}</div></div>`;
   return `<div class="pehead">
       <button class="pback" title="Back to the season (Esc)">&larr; 2026 season</button>
-      <h4>${esc(e.name)}</h4>
+      <h4 style="font-size:clamp(12px,calc((40.4vw - 144px) / ${
+        (e.name.length * 0.6).toFixed(1)}),23px)" title="${esc(e.name)}">${esc(e.name)}</h4>
       <p>${t ? `${esc(t.date)} 2026 · ${esc(t.course || "")}` : esc(e.date)}</p>
     </div>
     <div class="mgrid">
@@ -1176,47 +1176,54 @@ const d2 = v => (v >= 0 ? "+" : "\u2212") + Math.abs(v).toFixed(2).replace(/^0/,
 /* ---- the three pieces every hole grid is built from, so the tournament card
    and the player card cannot drift apart again. All share one column track:
    a label, 18 holes, then Out / In / Tot. ---- */
+const front = nums => nums.filter(n => n <= 9);
+const back = nums => nums.filter(n => n > 9);
+
 const gridHead = (nums, par) => {
-  const out = nums.filter(n => n <= 9).reduce((a, n) => a + par[n], 0);
-  const inn = nums.filter(n => n > 9).reduce((a, n) => a + par[n], 0);
+  const out = front(nums).reduce((a, n) => a + par[n], 0);
+  const inn = back(nums).reduce((a, n) => a + par[n], 0);
+  const head = n => `<div class="hhead"><span class="hn">${n}</span>
+    <span class="hp">${par[n]}</span></div>`;
+  const sum = (l, v) => `<div class="hhead sum"><span class="hn">${l}</span>
+    <span class="hp">${v}</span></div>`;
   return `<div></div>` +
-    nums.map(n => `<div class="hhead"><span class="hn">${n}</span>
-      <span class="hp">${par[n]}</span></div>`).join("") +
-    [["Out", out], ["In", inn], ["Tot", out + inn]].map(([l, v]) =>
-      `<div class="hhead sum"><span class="hn">${l}</span><span class="hp">${v}</span></div>`).join("");
+    front(nums).map(head).join("") + sum("Out", out) +
+    back(nums).map(head).join("") + sum("In", inn) + sum("Tot", out + inn);
 };
 
 /* how the field played each hole - h is [num,par,yards,avg,diff,...] */
 const fieldRow = (label, nums, byHole, opts = {}) => {
-  const nine = lo => nums.filter(n => (lo ? n <= 9 : n > 9))
-    .reduce((a, n) => a + (byHole[n] ? byHole[n][4] : 0), 0);
-  const out = nine(true), inn = nine(false);
+  const nine = ns => ns.reduce((a, n) => a + (byHole[n] ? byHole[n][4] : 0), 0);
+  const out = nine(front(nums)), inn = nine(back(nums));
+  const cell = n => {
+    const h = byHole[n];
+    if (!h) return `<div class="hcell na"></div>`;
+    const on = opts.selHole === h[0];
+    return `<div class="hcell ${diffClass(h[4])} ${on ? "sel" : ""}"${
+      opts.data === undefined ? "" : ` data-h="${h[0]}" data-r="${opts.data}"`}
+      title="Hole ${h[0]} · ${esc(label)} · par ${h[1]} · ${h[2]}y · avg ${h[3]}">${d2(h[4])}</div>`;
+  };
+  const sum = v => `<div class="hsum">${d2(v)}</div>`;
   return `<div class="hrlab ${opts.cls || ""}">${esc(label)}</div>` +
-    nums.map(n => {
-      const h = byHole[n];
-      if (!h) return `<div class="hcell na"></div>`;
-      const on = opts.selHole === h[0];
-      return `<div class="hcell ${diffClass(h[4])} ${on ? "sel" : ""}"${
-        opts.data === undefined ? "" : ` data-h="${h[0]}" data-r="${opts.data}"`}
-        title="Hole ${h[0]} · ${esc(label)} · par ${h[1]} · ${h[2]}y · avg ${h[3]}">${d2(h[4])}</div>`;
-    }).join("") +
-    [out, inn, out + inn].map(v => `<div class="hsum">${d2(v)}</div>`).join("");
+    front(nums).map(cell).join("") + sum(out) +
+    back(nums).map(cell).join("") + sum(inn) + sum(out + inn);
 };
 
 /* one round of one player's card */
 const scoreRowCells = r => {
-  const nine = lo => [...Array(18)].map((_, i) => i + 1)
-    .filter(n => (lo ? n <= 9 : n > 9)).reduce((a, n) => a + (r.s[n - 1] || 0), 0);
-  const out = nine(true), inn = nine(false);
+  const holes = [...Array(18)].map((_, i) => i + 1);
+  const nine = ns => ns.reduce((a, n) => a + (r.s[n - 1] || 0), 0);
+  const out = nine(front(holes)), inn = nine(back(holes));
+  const cell = n => {
+    const v = r.s[n - 1], par = +r.p[n - 1];
+    return v ? `<div class="scell" title="Hole ${n} · par ${par} · ${v}"><span
+        class="sq ${SCLASS(v - par)}">${v}</span></div>`
+      : `<div class="scell"></div>`;
+  };
   return `<div class="hrlab sc">R${r.n}</div>` +
-    [...Array(18)].map((_, i) => {
-      const v = r.s[i], par = +r.p[i];
-      return v ? `<div class="scell" title="Hole ${i + 1} · par ${par} · ${v}"><span
-          class="sq ${SCLASS(v - par)}">${v}</span></div>`
-        : `<div class="scell"></div>`;
-    }).join("") +
-    `<div class="hsum">${out || ""}</div><div class="hsum">${inn || ""}</div>
-     <div class="hsum tot">${r.t}</div>`;
+    front(holes).map(cell).join("") + `<div class="hsum">${out || ""}</div>` +
+    back(holes).map(cell).join("") + `<div class="hsum">${inn || ""}</div>` +
+    `<div class="hsum tot">${r.t}</div>`;
 };
 
 /* "Torrey Pines Golf Course (South Course)" -> "South"; otherwise trim the filler */
