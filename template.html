@@ -79,7 +79,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .boxgrid.four{grid-template-columns:repeat(4,1fr)}
 .boxgrid.six{grid-template-columns:repeat(6,1fr)}
 .boxgrid.seven{grid-template-columns:repeat(7,1fr)}
-.pstats{flex:0 0 auto;min-width:0;display:flex;flex-direction:column;
+.pstats{flex:1 1 auto;min-width:0;min-height:0;display:flex;flex-direction:column;
   gap:clamp(9px,1.5vh,18px)}
 /* one start, in place of the season boxes */
 .pevent{flex:0 1 auto;min-width:0;min-height:0;overflow-y:auto;overflow-x:hidden;
@@ -115,6 +115,23 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .pmix{display:flex;height:clamp(7px,1.05vh,11px);overflow:hidden;
   margin:clamp(8px,1.1vh,14px) calc(-1 * clamp(12px,1.35vw,20px)) 0}
 .pmix i{display:block;height:100%}
+
+/* the season's rounds, one bar a score - the spread behind the averages in the
+   stats table. Last box in the column, so it takes whatever height is left. */
+.pbox.chart{flex:1 1 auto;min-height:0;max-height:300px;
+  display:flex;flex-direction:column;overflow:hidden}
+.hist{flex:1 1 auto;min-height:0;display:grid;grid-auto-flow:column;
+  grid-auto-columns:minmax(0,1fr);gap:clamp(2px,.3vw,5px);align-items:end}
+.hb{height:100%;min-width:0;display:flex;flex-direction:column;justify-content:flex-end;gap:4px}
+.hb i{display:block;width:100%;min-height:2px;border-radius:3px 3px 0 0;background:var(--acc)}
+.hb i.e{background:rgba(150,166,205,.42)}
+.hb i.o{background:#c9453f}
+.hb u{flex:0 0 auto;font-style:normal;text-decoration:none;text-align:center;
+  font-size:clamp(7px,.62vw,9.5px);letter-spacing:.02em;color:var(--dim2);
+  white-space:nowrap;overflow:hidden}
+.hb.z u{color:var(--dim)}
+/* short laptops: the axis costs more than it gives */
+@media(min-aspect-ratio:1/1) and (max-height:760px){.hb u{display:none}}
 .cell{min-width:0}
 .cell b{display:block;font-size:clamp(12px,1.13vw,17.5px);font-weight:700;line-height:1;
   letter-spacing:-.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -689,6 +706,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   /* the inline event panel is a landscape idea too - the modal covers it here */
   .pevent{display:none!important}
   .pstats{display:flex!important}
+  /* no leftover height to take in a scrolling column */
+  .pbox.chart{flex:0 0 auto;height:clamp(96px,15vh,150px)}
   .rrow{flex:0 0 auto}
   .rrow .bar{height:22px}
   .dcols,.mcols,.hcols{grid-template-columns:1fr;grid-auto-flow:row;grid-template-rows:none}
@@ -888,6 +907,36 @@ function recordMix(s, fallbackEvents, winsOverride) {
 const seasonMix = p => recordMix(p.season, (p.events || []).length);
 const careerMix = p => recordMix(p.career, 0, p.bio && p.bio.careerWins);
 
+/* Every round of the season by its score to par. The stats table is averages and
+   ranks; this is the spread they came from. Intensity runs off a fixed scale so
+   a -6 reads the same on every card. */
+function roundHist(p) {
+  const tp = [];
+  p.events.forEach(e => {
+    const c = scoreCard(p.id, e.tid);
+    /* a mid-round withdrawal leaves a part round in the feed; it is not a score */
+    if (c) c.forEach(r => {
+      if (r.tp != null && r.s.filter(Boolean).length === 18) tp.push(r.tp);
+    });
+  });
+  if (!tp.length) return "";
+  const lo = Math.min(...tp), hi = Math.max(...tp), n = {};
+  tp.forEach(v => n[v] = (n[v] || 0) + 1);
+  const max = Math.max(...Object.values(n));
+  let bars = "";
+  for (let v = lo; v <= hi; v++) {
+    const c = n[v] || 0;
+    const op = v < 0 ? (.55 + .45 * Math.min(1, -v / 8)).toFixed(2) : 1;
+    bars += `<div class="hb${v === 0 ? " z" : ""}" title="${c} round${c === 1 ? "" : "s"} of ${toPar(v)}">
+      <i class="${v < 0 ? "u" : v ? "o" : "e"}" style="height:${(c / max * 100).toFixed(1)}%;opacity:${op}"></i>
+      <u>${toPar(v)}</u></div>`;
+  }
+  return `<div class="pbox chart">
+    <div class="boxlegend">2026 · ${tp.length} rounds by score</div>
+    <div class="hist">${bars}</div>
+  </div>`;
+}
+
 function playerCard(p) {
   const nameSize = Math.min(40, 400 / Math.max(9, p.name.length));
   const ow = p.owgr;
@@ -970,6 +1019,8 @@ function playerCard(p) {
             </div>
             ${careerMix(p)}
           </div>
+
+          ${roundHist(p)}
           </div>
           <div class="pevent" hidden></div>
         </div>
