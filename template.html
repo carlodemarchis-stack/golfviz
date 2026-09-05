@@ -218,12 +218,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .strow .rk{text-align:right;font-variant-numeric:tabular-nums;color:var(--dim2);font-size:.88em}
 .strow .rk b{color:var(--acc);font-weight:700}
 
-.story{height:100%;overflow-y:auto;padding-right:8px;display:flex;flex-direction:column;
-  gap:clamp(9px,1.3vh,16px);scrollbar-width:thin}
-.story h4{font-size:clamp(11px,1.1vw,14px);font-weight:700;color:var(--acc);
-  letter-spacing:.04em;margin-bottom:3px}
-.story p{font-size:clamp(11px,1.05vw,13.5px);line-height:1.55;color:var(--dim)}
-.story .none{color:var(--dim2);font-style:italic}
+.none{font-size:clamp(11px,1.05vw,13.5px);color:var(--dim2);font-style:italic}
 
 /* --------------------------------------------------------- tournament */
 .t-bg{position:absolute;inset:0;z-index:0}
@@ -982,12 +977,10 @@ function playerCard(p) {
         <div class="pres">
           <div class="tabs">
             <button class="tab on" data-tab="results">Results</button>
-            <button class="tab" data-tab="majors">Majors</button>
             <button class="tab" data-tab="stats">Stats</button>
           </div>
           <div class="pane">
             <div class="evlist" data-pane="results">${EVHEAD}${evs.map(e => evRow(e, p)).join("")}</div>
-            <div class="evlist" data-pane="majors" hidden>${EVHEAD}${majorRows(evs, p)}</div>
             <div class="statpane" data-pane="stats" hidden>${statsPane(p)}</div>
           </div>
         </div>
@@ -1141,9 +1134,6 @@ function statsPane(p) {
       derived — total minus the other three — and has no rank.</div>`;
 }
 
-const MAJORS = ["Masters Tournament", "PGA Championship", "U.S. Open", "The Open Championship",
-  "THE PLAYERS Championship"];
-
 function posClass(e) {
   const pos = (e.pos || "").replace("T", "");
   if (e.pos === "1") return "win";
@@ -1166,11 +1156,6 @@ const EVHEAD = `<div class="evhead">
   <span>Date</span><span>Tournament</span><span>Pos</span><span class="r">Rounds</span>
   <span class="tt">Total</span><span class="tp">To par</span><span class="pt">Pts</span>
   <span class="mo">Money</span></div>`;
-function majorRows(evs, p) {
-  const m = evs.filter(e => MAJORS.includes(e.name));
-  if (!m.length) return `<div class="story"><p class="none">No major or PLAYERS starts in 2026.</p></div>`;
-  return m.map(e => evRow(e, p)).join("");
-}
 </script>
 <script>
 /* ---------------------------------------------------- tournament card */
@@ -1706,7 +1691,7 @@ function setHoleMode(mode, remember) {
 
 (() => {
   const t = PREF.get("tab", "results");
-  if (["results", "majors", "stats"].includes(t) && t !== "results") setTab(t, false);
+  if (t === "stats") setTab(t, false);        // "majors" may sit in an old localStorage
   const m = PREF.get("holeMode", "abs");
   if (m === "pct") setHoleMode(m, false);
 })();
@@ -2082,7 +2067,6 @@ function openHelp() {
       <li><b>Results</b> lists every 2026 start; <b>click any row</b> and that week takes over the
         left column, hole by hole. <b>↑ ↓</b> then walk the season, and <b>Esc</b> or
         <b>← 2026 season</b> puts the stats back</li>
-      <li><b>Majors</b> filters the same list to the four majors and THE PLAYERS</li>
     </ul>
     <h5>On a tournament card</h5>
     <ul>
