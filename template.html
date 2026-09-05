@@ -302,6 +302,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   font-size:clamp(7.5px,.73vw,9.5px);font-variant-numeric:tabular-nums;
   color:var(--dim2);border-radius:5px;background:rgba(255,255,255,.035)}
 .hsum.tot{color:var(--ink);font-weight:700;background:rgba(255,255,255,.075)}
+.hsum.tot.u{color:var(--acc)}
+.hsum.tot.o{color:#ec7d78}
 .hgrid > div{min-width:0}
 .hhead{text-align:center;line-height:1.1;padding-bottom:2px}
 .hhead .hn{display:block;font-size:clamp(8.5px,.8vw,11px);font-weight:700;color:var(--dim)}
@@ -624,6 +626,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .scg.wide .rlab{font-size:11px;letter-spacing:0;text-transform:none;color:var(--dim)}
 .scg.wide .rlab b{color:var(--ink);font-weight:700;margin-right:5px}
 .scg.wide .rlab i{font-style:normal;color:var(--acc);font-weight:700}
+.scg.wide .rlab i.o,.scr em.o{color:#ec7d78}
+.scg.wide .rlab i.e,.scr em.e{color:var(--dim)}
 .scg.wide .lab{padding-bottom:1px}
 .scg > div{text-align:center;font-size:10.5px;padding:0;font-variant-numeric:tabular-nums}
 .scg .lab{text-align:left;font-size:9px;letter-spacing:.12em;text-transform:uppercase;
@@ -632,6 +636,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .scg .pr{color:var(--dim);font-size:10px}
 .scg .sub{font-weight:700;color:var(--dim);background:rgba(255,255,255,.04);border-radius:5px}
 .scg .tot{font-weight:700;color:var(--ink);background:rgba(255,255,255,.07);border-radius:5px}
+.scg .tot.u{color:var(--acc)}
+.scg .tot.o{color:#ec7d78}
 .sq{display:inline-grid;place-items:center;width:19px;height:19px;font-weight:700;
   font-size:11px;line-height:1}
 .sq.eagle{background:var(--acc);color:#160c02;border-radius:50%;
@@ -799,6 +805,9 @@ function scoreCard(pid, tid) {
   return v;
 }
 const toPar = v => v == null ? "" : v > 0 ? "+" + v : v === 0 ? "E" : String(v);
+/* under par / level / over - one class, so the round total, the modal and the
+   season histogram all read in the same three colours */
+const parClass = v => v == null ? "" : v < 0 ? "u" : v > 0 ? "o" : "e";
 /* score against par -> the class every scorecard, heat map and leaderboard cell
    shares. Declared here because the first render reads it. */
 const SCLASS = d => d <= -2 ? "eagle" : d === -1 ? "birdie" : d === 0 ? "par"
@@ -928,7 +937,7 @@ function roundHist(p) {
     const c = n[v] || 0;
     const op = v < 0 ? (.55 + .45 * Math.min(1, -v / 8)).toFixed(2) : 1;
     bars += `<div class="hb${v === 0 ? " z" : ""}" title="${c} round${c === 1 ? "" : "s"} of ${toPar(v)}">
-      <i class="${v < 0 ? "u" : v ? "o" : "e"}" style="height:${(c / max * 100).toFixed(1)}%;opacity:${op}"></i>
+      <i class="${parClass(v)}" style="height:${(c / max * 100).toFixed(1)}%;opacity:${op}"></i>
       <u>${toPar(v)}</u></div>`;
   }
   return `<div class="pbox chart">
@@ -1368,7 +1377,7 @@ const scoreRowCells = r => {
   return `<div class="hrlab sc">R${r.n}</div>` +
     front(holes).map(cell).join("") + `<div class="hsum">${out || ""}</div>` +
     back(holes).map(cell).join("") + `<div class="hsum">${inn || ""}</div>` +
-    `<div class="hsum tot">${r.t}</div>`;
+    `<div class="hsum tot ${parClass(r.tp)}" title="${toPar(r.tp)}">${r.t}</div>`;
 };
 
 /* "Torrey Pines Golf Course (South Course)" -> "South"; otherwise trim the filler */
@@ -1994,12 +2003,13 @@ function scorecard(card) {
     const par = r.p.split("").map(Number), sc = r.s;
     const out = sum(sc.slice(0, 9)), inn = sum(sc.slice(9));
     return (withLabel
-        ? `<div class="rlab"><b>R${r.n}</b> ${r.t} <i>${toPar(r.tp)}</i></div>`
+        ? `<div class="rlab"><b>R${r.n}</b> ${r.t} <i class="${parClass(r.tp)}">${toPar(r.tp)}</i></div>`
         : `<div class="lab">Score</div>`) + `
       ${sc.slice(0, 9).map((v, i) => hole(v, par[i])).join("")}
       <div class="sub">${out}</div>
       ${sc.slice(9).map((v, i) => hole(v, par[i + 9])).join("")}
-      <div class="sub">${inn}</div><div class="tot">${out + inn}</div>`;
+      <div class="sub">${inn}</div>
+      <div class="tot ${parClass(r.tp)}">${out + inn}</div>`;
   };
 
   const pars = new Set(card.map(r => r.p));
@@ -2014,7 +2024,7 @@ function scorecard(card) {
     /* the week rotated courses, so each round carries its own par */
     body = card.map(r => `<div class="sc"><div class="scr">
         <b>Round ${r.n}</b>${r.c ? `<span>${esc(r.c)}</span>` : ""}
-        <span>${r.t} <em>(${toPar(r.tp)})</em></span></div>
+        <span>${r.t} <em class="${parClass(r.tp)}">(${toPar(r.tp)})</em></span></div>
       <div class="scg">${headRows(r.p.split("").map(Number))}${scoreRow(r, false)}</div>
       </div>`).join("");
   }
