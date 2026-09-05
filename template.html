@@ -867,16 +867,16 @@ CARDS.push({kind: "race"}, {kind: "money"}, {kind: "holes"}, {kind: "diverge"});
 const SEC = [0, P.length, P.length + T.length];
 
 /* -------------------------------------------------------- player card */
-/* How a season broke down, as one bar. The TOUR's top-10 and top-25 counts are
-   cumulative - a win sits inside both - so each band is the difference from the
-   one above it, and the five sum to the events played. "Cuts made" arrives as
-   "19/20", hence the parse. */
-function seasonMix(p) {
-  const s = p.season || {};
-  const ev = +s.events || (p.events || []).length;
+/* How a run of events broke down, as one bar - a season or a whole career. The
+   TOUR's top-10 and top-25 counts are cumulative - a win sits inside both - so
+   each band is the difference from the one above it, and the five sum to the
+   events played. "Cuts made" arrives as "19/20", hence the parse. */
+function recordMix(s, fallbackEvents, winsOverride) {
+  s = s || {};
+  const ev = +s.events || fallbackEvents || 0;
   const cuts = parseInt(String(s.cuts || "").split("/")[0], 10);
   if (!ev || isNaN(cuts)) return "";
-  const w = +s.wins || 0, t10 = +s.top10 || 0, t25 = +s.top25 || 0;
+  const w = +(s.wins ?? winsOverride) || 0, t10 = +s.top10 || 0, t25 = +s.top25 || 0;
   const bands = [
     ["win", "Won", w],
     ["t10", "Top 10", t10 - w],
@@ -890,6 +890,8 @@ function seasonMix(p) {
       `<i class="s-${k}" style="width:${(n / ev * 100).toFixed(2)}%"></i>`).join("")}
   </div>`;
 }
+const seasonMix = p => recordMix(p.season, (p.events || []).length);
+const careerMix = p => recordMix(p.career, 0, p.bio && p.bio.careerWins);
 
 function playerCard(p) {
   const nameSize = Math.min(40, 400 / Math.max(9, p.name.length));
@@ -961,7 +963,7 @@ function playerCard(p) {
             </div>
           </div>
 
-          <div class="pbox">
+          <div class="pbox mix">
             <div class="boxlegend">All-time on TOUR</div>
             <div class="boxgrid six">
               <div class="cell"><b>${esc(c.events || "—")}</b><i>Events</i></div>
@@ -971,6 +973,7 @@ function playerCard(p) {
               <div class="cell"><b>${esc(c.top25 || "—")}</b><i>Top 25</i></div>
               <div class="cell"><b>${abbrMoney(c.money)}</b><i>Earnings</i></div>
             </div>
+            ${careerMix(p)}
           </div>
           </div>
           <div class="pevent" hidden></div>
