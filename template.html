@@ -233,6 +233,12 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .t-bg.nophoto{background:
   radial-gradient(90% 120% at 88% 10%,rgba(242,149,46,.16),transparent 60%),
   linear-gradient(140deg,#0d1420,#070910 60%)}
+/* the player card only carries a photo while a week is open */
+.p-bg{transition:opacity .35s}
+.p-bg.nophoto{background:none}
+.p-bg.nophoto img{display:none}
+.p-bg.nophoto::after{content:none}
+.pl-inner{z-index:1}
 .t-inner{z-index:1}
 .t-left{flex:1 1 52%;min-width:0;display:flex;flex-direction:column;gap:clamp(9px,1.4vh,18px)}
 .t-right{flex:1 1 46%;min-width:0;display:flex;flex-direction:column;gap:clamp(8px,1.2vh,14px)}
@@ -892,6 +898,7 @@ function playerCard(p) {
   const sc = p.scoring || {};
   const evs = p.events;                      // already chronological, Jan -> Aug
   return `<div class="card" data-k="player">
+    <div class="t-bg p-bg nophoto"><img alt="" loading="lazy"></div>
     <div class="inner pl-inner">
       <div class="pbody">
         <div class="pcol">
@@ -1056,10 +1063,27 @@ function eventPanel(p, e) {
       : ""}`;
 }
 
+/* the open week's course backs the card, when the deck holds a photo for it */
+function setCardPhoto(card, tid) {
+  const bg = card.querySelector(".p-bg");
+  if (!bg) return;
+  const img = bg.querySelector("img");
+  if (tid && HAS_PHOTO.has(tid)) {
+    const src = `img/course/${tid}.webp`;
+    if (!img.src.endsWith(src)) img.src = src;
+    img.alt = (byId[tid] || {}).course || "";
+    bg.classList.remove("nophoto");
+  } else {
+    bg.classList.add("nophoto");
+    img.removeAttribute("src");
+  }
+}
+
 function openInlineEvent(card, pid, tid) {
   const p = P.find(x => x.id === pid);
   const e = p && p.events.find(x => x.tid === tid);
   if (!e) return;
+  setCardPhoto(card, tid);
   card.querySelector(".pevent").innerHTML = eventPanel(p, e);
   card.querySelector(".pevent").hidden = false;
   card.querySelector(".pstats").hidden = true;
@@ -1070,6 +1094,7 @@ function openInlineEvent(card, pid, tid) {
 function closeInlineEvent(card) {
   const box = card.querySelector(".pevent");
   if (!box || box.hidden) return false;
+  setCardPhoto(card, null);
   box.hidden = true;
   box.innerHTML = "";
   card.querySelector(".pstats").hidden = false;
@@ -1275,11 +1300,11 @@ const playerAvg = (rounds, n) => {
 };
 
 /* Field / player / gap, the block that closes every hole grid */
-function summaryRows(nums, byHole, rounds, who, fieldOpts = {}) {
+function summaryRows(nums, byHole, rounds, who, fieldOpts = {}, showField = true) {
   const field = n => byHole && byHole[n] ? byHole[n][4] : null;
   const mine = n => rounds && rounds.length ? playerAvg(rounds, n) : null;
   const rows = [];
-  if (byHole) rows.push(fieldRow("Field", nums, byHole, {cls: "all", ...fieldOpts}));
+  if (byHole && showField) rows.push(fieldRow("Field", nums, byHole, {cls: "all", ...fieldOpts}));
   if (rounds && rounds.length) {
     rows.push(diffRow("Player", nums, mine, {cls: "me",
       title: n => `Hole ${n} · ${who}'s average against par`}));
@@ -1382,10 +1407,16 @@ function holePanel(t, ci = 0, ri = 0, hole = 0, pid = null) {
   const gridRows = rounds.map((r, i) => r.r === "All" ? "" :
     fieldRow(r.r, nums, byHole(r), {data: i, selHole: i === ri ? sel[0] : -1})).join("");
   const allIdx = rounds.findIndex(r => r.r === "All");
+  const allByHole = allIdx < 0 ? null : byHole(rounds[allIdx]);
   const here = pid ? (scoreCard(pid, t.id) || []).filter(r => !r.c || r.c === c.name) : [];
-  const summary = summaryRows(nums, allIdx < 0 ? null : byHole(rounds[allIdx]), here,
-    pid ? nameOf(pid, (t.leaderboard.find(r => r.id === pid) || {}).name) : "",
-    {data: allIdx, selHole: allIdx === ri ? sel[0] : -1});
+  /* the field's all-rounds line closes the field block, and stays clickable -
+     it is still how you get back to "All rounds" */
+  const fieldAll = allByHole
+    ? fieldRow("Field", nums, allByHole,
+               {cls: "all", data: allIdx, selHole: allIdx === ri ? sel[0] : -1})
+    : "";
+  const summary = summaryRows(nums, allByHole, here,
+    pid ? nameOf(pid, (t.leaderboard.find(r => r.id === pid) || {}).name) : "", {}, false);
 
   return `<div class="hpanel" data-ci="${ci}" data-ri="${ri}" data-hole="${sel[0]}" data-pid="${esc(pid)}">
     <div class="hptop">
@@ -1424,6 +1455,7 @@ function holePanel(t, ci = 0, ri = 0, hole = 0, pid = null) {
       <div class="sclab fieldlab"><b>The field</b><span>average against par, by round</span>
         <i>click a cell for that hole</i></div>
       ${gridRows}
+      ${fieldAll}
 
       <div class="hbox">
         <div class="hdet">
