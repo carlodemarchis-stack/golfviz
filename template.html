@@ -596,6 +596,18 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .mbox p,.mbox li{font-size:13px;line-height:1.6;color:var(--dim)}
 .mbox ul{padding-left:17px}
 .mbox a{color:var(--acc);text-decoration:none}
+/* the other experiences in the family, behind the + in the control bar */
+#mmodal .mbox{width:min(420px,94vw)}
+.applist{display:flex;flex-direction:column;gap:2px;margin-top:11px}
+.applist a{display:flex;align-items:center;gap:12px;padding:10px;border-radius:10px;
+  color:inherit;border:1px solid transparent;transition:.18s}
+.applist a:hover{background:rgba(255,255,255,.05);border-color:var(--line)}
+.applist i{flex:0 0 auto;width:9px;height:9px;border-radius:50%}
+.applist b{display:block;font-size:13.5px;font-weight:700;color:var(--ink)}
+.applist em{display:block;font-style:normal;font-size:11px;color:var(--dim2);margin-top:1px}
+.applist span{margin-left:auto;color:var(--dim2);font-size:14px;font-weight:700}
+.applist a:hover span{color:var(--acc)}
+.allapps{margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-size:12px}
 .mclose{position:sticky;top:0;float:right;font-size:24px;line-height:1;color:var(--dim)}
 .mgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;margin:11px 0 4px}
 .mgrid > div{background:var(--panel);border:1px solid var(--line);border-radius:11px;
@@ -759,6 +771,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   <button id="b-play" title="Play"><svg viewBox="0 0 24 24"><path d="M7 4l12 8-12 8z"/></svg></button>
   <button id="count" title="Jump to a card (g)"><b>1</b> / 111</button>
   <button id="b-next" title="Next"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+  <button id="b-more" title="More sports experiences">
+    <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button>
   <button id="b-help" title="Help">
     <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.2 9.3a2.9 2.9 0 015.6 1c0 1.9-2.8 2.3-2.8 4"/><path d="M12 17.4h.01"/></svg></button>
   <button id="b-full" title="Fullscreen"><svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 15v5h-5M15 4h5v5M9 20H4v-5"/></svg></button>
@@ -776,6 +790,25 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   <input id="jq" type="text" autocomplete="off" placeholder="Type a name, a tournament or a card number…">
   <div id="jlist"></div></div></div>
 <div class="modal" id="hmodal"><div class="mbox"><button class="mclose" onclick="closeModal('hmodal')">&times;</button><div id="hbody"></div></div></div>
+<div class="modal" id="mmodal"><div class="mbox">
+  <button class="mclose" onclick="closeModal('mmodal')">&times;</button>
+  <h3>More sports experiences</h3>
+  <div class="applist">
+    <a href="https://f1.aguywithascarf.com/" target="_blank" rel="noopener"><i style="background:#00d7b6"></i>
+      <div><b>Formula 1</b><em>A season read lap by lap</em></div><span>&#8599;</span></a>
+    <a href="https://tennis.aguywithascarf.com/" target="_blank" rel="noopener"><i style="background:#f2c14e"></i>
+      <div><b>Tennis</b><em>The season, one player at a time</em></div><span>&#8599;</span></a>
+    <a href="https://top5.aguywithascarf.com/" target="_blank" rel="noopener"><i style="background:#2f9e58"></i>
+      <div><b>Football</b><em>Season towers, top 5 leagues</em></div><span>&#8599;</span></a>
+    <a href="https://nfl.aguywithascarf.com/" target="_blank" rel="noopener"><i style="background:#4d94e0"></i>
+      <div><b>NFL</b><em>Wins up, losses down</em></div><span>&#8599;</span></a>
+    <a href="https://worldcupbracket.aguywithascarf.com/" target="_blank" rel="noopener"><i style="background:#3fbe72"></i>
+      <div><b>World Cup</b><em>Road to the Final</em></div><span>&#8599;</span></a>
+    <a href="https://athletics.aguywithascarf.com/" target="_blank" rel="noopener"><i style="background:#d98a3d"></i>
+      <div><b>Athletics</b><em>World Record Film</em></div><span>&#8599;</span></a>
+  </div>
+  <div class="allapps"><a href="https://dataviz.aguywithascarf.com" target="_blank"
+    rel="noopener">See them all &rarr;</a></div></div></div>
 <div class="modal" id="cmodal"><div class="mbox"><button class="mclose" onclick="closeModal('cmodal')">&times;</button><div id="cbody"></div></div></div>
 
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "80ed686569ad46808b674151bedf019c"}'></script><!-- End Cloudflare Web Analytics -->
@@ -1668,6 +1701,8 @@ document.getElementById("b-next").onclick = next;
 document.getElementById("b-prev").onclick = prev;
 document.getElementById("b-first").onclick = () => go(0);
 document.getElementById("b-help").onclick = openHelp;
+document.getElementById("b-more").onclick = () =>
+  document.getElementById("mmodal").classList.add("on");
 document.getElementById("b-play").onclick = e => {
   const btn = e.currentTarget;
   if (playing) { clearInterval(playing); playing = null;
