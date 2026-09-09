@@ -19,6 +19,13 @@
 <meta name="twitter:title" content="PGA TOUR 2026 — Season Film">
 <meta name="twitter:description" content="An interactive golf experience: the FedExCup top 70 and all 37 tournaments of the 2026 season.">
 <meta name="twitter:image" content="https://golf.aguywithascarf.com/img/og.png?v=1">
+
+<!-- AGWAS social capture -->
+<meta name="agwas:title"    content="Golf interactive experience">
+<meta name="agwas:cta"      content="Full interactive Golf experience below">
+<meta name="agwas:mentions" content="pgatour">
+<meta name="agwas:tags"     content="golf dataviz">
+<meta name="agwas:bg"       content="https://golf.aguywithascarf.com/img/og.png">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <style>
 :root{
@@ -1171,6 +1178,7 @@ function setCardPhoto(card, tid) {
     bg.classList.add("nophoto");
     img.removeAttribute("src");
   }
+  updateSocial();
 }
 
 function openInlineEvent(card, pid, tid) {
@@ -1686,6 +1694,33 @@ let cur = 0, playing = null;
 const total = CARDS.length;
 document.getElementById("count").innerHTML = `<b>1</b> / ${total}`;
 
+/* what a card is called - the jump list and the social meta say the same thing */
+function cardLabel(c) {
+  return c.kind === "player" ? c.d.name
+       : c.kind === "tournament" ? c.d.name.replace(/ presented by .*$/i, "")
+       : c.kind === "race" ? "The Race \u2014 2026 FedExCup points"
+       : c.kind === "holes" ? "Every hole played \u2014 2026 scoring mix"
+       : c.kind === "money" ? "The Money \u2014 2026 official earnings"
+       : "FedExCup vs the world";
+}
+
+/* The capture extension reads these off the page, so whatever card is on screen
+   becomes the sentence and the backdrop of the post. The background is the photo
+   the card is actually showing - a course, or the OG image when there is none. */
+function socMeta(name, content) {
+  let m = document.head.querySelector(`meta[name="${name}"]`);
+  if (!m) { m = document.createElement("meta"); m.name = name; document.head.appendChild(m); }
+  m.content = content;
+}
+function updateSocial() {
+  /* the chart labels carry their own dash, and two in a row read badly */
+  const name = cardLabel(CARDS[cur]).split(" \u2014 ")[0];
+  socMeta("agwas:cta", `${name} \u2014 Full interactive Golf experience below`);
+  const img = film.children[cur].querySelector(".t-bg:not(.nophoto) img");
+  socMeta("agwas:bg",
+    new URL((img && img.getAttribute("src")) || "img/og.png", location.href).href);
+}
+
 function go(n) {
   cur = Math.max(0, Math.min(total - 1, n));
   film.style.transform = `translateX(${-cur * 100}vw)`;
@@ -1698,6 +1733,7 @@ function go(n) {
     sec === 0 ? `· FedExCup Ranking · Nos. 1\u2013${P.length}` :
     sec === 1 ? `· The Season · ${T.length} tournaments` : "· Season charts";
   location.hash = cur ? "#" + (cur + 1) : "";
+  updateSocial();
 }
 const next = () => go(cur + 1 >= total ? 0 : cur + 1);
 const prev = () => go(cur - 1);
@@ -2086,12 +2122,7 @@ document.querySelectorAll(".modal").forEach(m =>
 const INDEX = CARDS.map((c, i) => ({
   n: i + 1,
   kind: c.kind,
-  label: c.kind === "player" ? c.d.name
-       : c.kind === "tournament" ? c.d.name.replace(/ presented by .*$/i, "")
-       : c.kind === "race" ? "The Race — 2026 FedExCup points"
-       : c.kind === "holes" ? "Every hole played — 2026 scoring mix"
-       : c.kind === "money" ? "The Money — 2026 official earnings"
-       : "FedExCup vs the world",
+  label: cardLabel(c),
   meta: c.kind === "player" ? `No. ${c.d.rank} · ${c.d.flag || c.d.country}`
       : c.kind === "tournament" ? c.d.date
       : "Chart",
